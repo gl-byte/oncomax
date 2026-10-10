@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- Documento HTML sencillo para demostrar una reserva. -->
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -14,6 +13,8 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Nunito:wght@400..900&amp;display=swap">
   <!-- Todos los estilos del sitio viven en un solo archivo compartido. -->
   <link rel="stylesheet" href="assets/css/estilos.css">
+  <!-- Envia la solicitud de cita a la clinica por WhatsApp. -->
+  <script src="assets/js/reserva.js" defer></script>
 </head>
 <body>
   <!-- Barra de progreso de lectura (solo decorativa). -->
@@ -71,7 +72,6 @@
     <!-- ================= PASOS ================= -->
     <section class="seccion">
       <div class="seccion__interior">
-        <!-- Estas tarjetas resumen lo que pasara desde la solicitud hasta la cita. -->
         <div class="pasos escalonado">
           <article class="paso">
             <div class="paso__numero">1</div>
@@ -98,7 +98,6 @@
         <div class="titulo-seccion revelar">
           <span class="etiqueta">Paso 1</span>
           <h2>Formulario <em>de solicitud</em></h2>
-          <p>Los campos son obligatorios: el navegador los revisa antes de enviar.</p>
         </div>
 
         <div class="reserva">
@@ -126,20 +125,18 @@
             </div>
           </aside>
 
-          <!-- action lleva a #enviado: el mensaje de esa caja aparece con :target.
-               Esta demostracion no guarda ni envia los datos a ningun lado. -->
-          <form class="formulario revelar" action="#enviado">
-            <p class="envio" id="enviado" role="status">Datos revisados. Esta demostración todavía no guarda ni envía la solicitud.</p>
+          <!-- reserva.js arma el mensaje y abre WhatsApp. Sin JavaScript,
+               action lleva a #enviado y se muestra ese mensaje con :target. -->
+          <form class="formulario revelar" id="form-reserva" action="#enviado">
+            <p class="envio" id="enviado" role="status" tabindex="-1"><span>Para confirmar tu cita, escríbenos por WhatsApp al <a href="https://wa.me/59164556725" target="_blank" rel="noopener">+591 64556725</a>.</span></p>
 
             <div class="campos">
               <div>
-                <!-- required obliga a completar el campo antes de aceptar el formulario. -->
                 <label for="nombre">Nombre completo</label>
                 <input id="nombre" name="nombre" type="text" placeholder="Ej. María Pérez" autocomplete="name" required>
               </div>
               <div>
                 <label for="telefono">Número de teléfono</label>
-                <!-- pattern acepta solo numeros, espacios y el signo +. -->
                 <input id="telefono" name="telefono" type="tel" placeholder="Ej. 64556725" pattern="[0-9+ ]{7,15}" autocomplete="tel" required>
                 <p class="ayuda-campo">Entre 7 y 15 dígitos.</p>
               </div>
@@ -167,47 +164,42 @@
                 <input id="fecha" name="fecha" type="date" required>
               </div>
               <div>
-                <!-- time permite elegir una hora usando el control del navegador. -->
-                <label for="hora">Hora preferida</label>
-                <input id="hora" name="hora" type="time" required>
+                <label for="turno">Turno preferido</label>
+                <select id="turno" name="turno" required>
+                  <option value="">Selecciona una opción</option>
+                  <option>Mañana</option>
+                  <option>Tarde</option>
+                </select>
               </div>
             </div>
 
-            <!-- Este grupo deja elegir solamente una forma de recibir la confirmacion. -->
             <fieldset>
               <legend>¿Cómo prefieres recibir la confirmación?</legend>
-              <label class="opcion"><input name="contacto" type="radio" value="whatsapp" required> WhatsApp</label>
-              <label class="opcion"><input name="contacto" type="radio" value="llamada"> Llamada telefónica</label>
+              <label class="opcion"><input name="contacto" type="radio" value="WhatsApp" required> WhatsApp</label>
+              <label class="opcion"><input name="contacto" type="radio" value="Llamada telefónica"> Llamada telefónica</label>
             </fieldset>
 
             <label for="mensaje">Mensaje adicional</label>
-            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos brevemente el motivo de tu consulta."></textarea>
+            <textarea id="mensaje" name="mensaje" rows="4" maxlength="600" placeholder="Cuéntanos brevemente el motivo de tu consulta."></textarea>
 
             <label class="opcion opcion--bloque">
-              <input type="checkbox" required> Acepto que la clínica me contacte por el medio elegido.
+              <input name="acepto" type="checkbox" required> Acepto que la clínica me contacte por el medio elegido.
             </label>
 
             <div class="acciones">
-              <!-- type submit hace que el navegador revise los campos obligatorios. -->
-              <button class="boton" type="submit">Solicitar cita</button>
+              <button class="boton" type="submit">Enviar solicitud por WhatsApp</button>
             </div>
           </form>
         </div>
 
-        <!-- Informacion que ayuda a comprender el limite de esta version escolar. -->
         <div class="escalonado bloque-extra">
           <details>
-            <summary>¿Qué ocurre al presionar el botón?</summary>
-            <p>El navegador revisa que los campos obligatorios estén completos y con el formato
-               correcto. Esta demostración todavía no guarda ni envía los datos.</p>
-          </details>
-          <details>
             <summary>¿Cuánto tarda la confirmación?</summary>
-            <p>En una versión real, la clínica respondería dentro del mismo día hábil.</p>
+            <p>La clínica responde dentro del mismo día hábil.</p>
           </details>
           <details>
             <summary>¿Puedo cambiar mi cita después?</summary>
-            <p>Sí. Bastaría con escribir por WhatsApp indicando el nombre y la fecha reservada.</p>
+            <p>Sí. Escríbenos por WhatsApp indicando tu nombre y la fecha reservada.</p>
           </details>
         </div>
       </div>
@@ -219,7 +211,6 @@
         <div class="titulo-seccion revelar">
           <span class="etiqueta etiqueta--menta">Paso 2</span>
           <h2>Cómo <em>llegar</em></h2>
-          <p>Croquis demostrativo construido solamente con cajas HTML y CSS.</p>
         </div>
 
         <div class="grid grid--2 escalonado">
@@ -305,7 +296,7 @@
     <!-- Palabra gigante decorativa. -->
     <div class="pie__gigante" aria-hidden="true">OncoMax</div>
     <div class="pie__abajo">
-      <p><b>OncoMax</b> · Proyecto educativo. La información del sitio no reemplaza una consulta médica.</p>
+      <p>© 2026 <b>OncoMax</b> · Centro Médico Integral Oncológico · Oruro, Bolivia. La información de este sitio no reemplaza una consulta médica.</p>
     </div>
   </footer>
 </body>

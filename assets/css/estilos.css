@@ -452,22 +452,6 @@ main { display: block; }
 .titulo-seccion--centro { text-align: center; margin-left: auto; margin-right: auto; }
 .titulo-seccion--centro p { margin-left: auto; margin-right: auto; }
 
-/* Aviso pequeño de como usar las tarjetas. */
-.pista-uso {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin-top: 6px;
-  padding: 8px 14px;
-  border-radius: 999px;
-  background: var(--blanco);
-  border: 1px dashed var(--lavanda-300);
-  color: var(--tinta-suave);
-  font-size: 14px;
-  font-weight: 600;
-}
-.pista-uso::before { content: "\261D"; font-size: 15px; animation: tocar 1.8s var(--curva) infinite; }
-@keyframes tocar { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
 
 /* ---------- 9. Fondo vivo (manchas de color que flotan) ----------
    Se usa en la portada, en la cabecera de cada pagina y en los llamados. */
@@ -570,22 +554,19 @@ main { display: block; }
 .confianza p { margin: 0; color: #CDBBE0; font-size: 15px; line-height: 1.4; }
 .confianza b { display: block; color: var(--blanco); font-size: 1.15rem; }
 
-/* Lado derecho: el video en un marco de celular, con tarjetitas que flotan. */
-.portada__visual { position: relative; justify-self: center; width: min(100%, 420px); padding: 20px 40px; }
+/* Lado derecho: el video en un marco de celular, quieto para que se vea
+   con comodidad. Las tarjetitas quedan al costado, sin tapar el video. */
+.portada__visual { position: relative; justify-self: center; width: min(100%, 480px); padding: 48px 0 20px; }
 .telefono {
   position: relative;
-  width: min(100%, 300px);
+  width: min(100%, 280px);
   margin: auto;
   padding: 10px;
   border-radius: 42px;
   background: linear-gradient(160deg, rgba(255, 255, 255, .3), rgba(255, 255, 255, .06));
   border: 1px solid rgba(255, 255, 255, .25);
   box-shadow: 0 50px 90px -30px rgba(0, 0, 0, .7), 0 0 0 1px rgba(0, 0, 0, .2);
-  transform: rotate(3deg);
-  transition: transform .9s var(--curva);
-  animation: levitar 7s ease-in-out infinite;
 }
-.portada__visual:hover .telefono { transform: rotate(0deg) scale(1.02); }
 .video {
   display: block;
   width: 100%;
@@ -599,48 +580,53 @@ main { display: block; }
   50%      { translate: 0 -14px; }
 }
 
+/* Tarjetitas compactas, apenas apoyadas en el borde del celular. */
 .flotante {
   position: absolute;
   z-index: 2;
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 12px 16px 12px 12px;
-  border-radius: 20px;
-  background: rgba(255, 255, 255, .94);
+  gap: 8px;
+  max-width: 150px;
+  padding: 7px 12px 7px 7px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, .95);
   color: var(--tinta);
-  box-shadow: 0 24px 50px -20px rgba(0, 0, 0, .6);
-  line-height: 1.2;
-  animation: levitar 6s ease-in-out infinite;
+  box-shadow: 0 16px 34px -16px rgba(0, 0, 0, .6);
+  line-height: 1.15;
 }
-.flotante b { display: block; font-size: 17px; color: var(--ciruela-900); }
-.flotante small { color: var(--tinta-suave); font-size: 13px; font-weight: 600; }
-.flotante--1 { top: 16%; left: -8%; animation-delay: -2s; }
-.flotante--2 { bottom: 14%; right: -10%; animation-delay: -4s; }
+.flotante .icono { width: 30px; height: 30px; border-radius: 10px; }
+.flotante .icono img { width: 16px; height: 16px; }
+.flotante b { display: block; font-size: 14px; color: var(--ciruela-900); }
+.flotante small { display: block; color: var(--tinta-suave); font-size: 11px; font-weight: 600; }
+.flotante--1 { top: 18%; left: calc(50% - 140px - 118px); }   /* 140px = mitad del celular. */
+.flotante--2 { top: 52%; right: calc(50% - 140px - 118px); }
 .video-pie {
   position: absolute;
   z-index: 2;
-  top: 0;
-  right: 6%;
+  top: 6px;
+  left: 50%;
   margin: 0;
-  padding: 8px 14px;
+  padding: 7px 14px;
   border-radius: 999px;
   background: var(--coral-500);
   color: var(--blanco);
-  font-size: 13px;
+  font-size: 12.5px;
   font-weight: 800;
+  white-space: nowrap;
   box-shadow: 0 12px 24px -10px rgba(255, 123, 107, .8);
-  transform: rotate(4deg);
+  transform: translateX(-50%);
 }
 
-/* Sello circular con texto que gira alrededor del simbolo del logo. */
+/* Sello circular con el texto alrededor del simbolo del logo.
+   Queda quieto y fuera del video para no tapar sus controles. */
 .sello {
   position: absolute;
   z-index: 3;
-  left: -4%;
-  bottom: -2%;
-  width: 132px;
-  height: 132px;
+  left: calc(50% - 140px - 104px);
+  bottom: 24px;
+  width: 96px;
+  height: 96px;
   display: grid;
   place-items: center;
   border-radius: 50%;
@@ -650,9 +636,9 @@ main { display: block; }
   transition: transform .6s var(--rebote);
 }
 .sello:hover { transform: scale(1.08); }
-.sello svg { position: absolute; inset: 0; width: 100%; height: 100%; animation: girar 18s linear infinite; }
+.sello svg { position: absolute; inset: 0; width: 100%; height: 100%; }
 .sello text { fill: #E6D6F7; font: 800 13.5px var(--fuente); letter-spacing: 3.2px; text-transform: uppercase; }
-.sello img { width: 60px; height: 60px; border-radius: 50%; background: var(--blanco); padding: 3px; }
+.sello img { width: 44px; height: 44px; border-radius: 50%; background: var(--blanco); padding: 2px; }
 @keyframes girar { to { transform: rotate(360deg); } }
 
 /* ---------- 11. Cabecera de las paginas internas ---------- */
@@ -1626,7 +1612,10 @@ legend { margin-bottom: 10px; padding: 0; font-weight: 800; font-size: 14.5px; c
   font-weight: 700;
 }
 .envio::before { content: "\2713"; display: grid; place-items: center; flex: none; width: 34px; height: 34px; border-radius: 50%; background: var(--menta-500); color: var(--blanco); font-weight: 900; }
-.envio:target { display: flex; animation: abrir .6s var(--rebote) both; }
+.envio:target,
+.envio--visible { display: flex; animation: abrir .6s var(--rebote) both; }
+.envio:focus { outline: none; }
+.envio a { color: inherit; font-weight: 800; white-space: nowrap; }
 
 /* ---------- 26. Croquis de ubicacion ----------
    Un pequeño mapa hecho solo con cajas: tres calles y la clinica. */
@@ -1986,11 +1975,11 @@ legend { margin-bottom: 10px; padding: 0; font-weight: 800; font-size: 14.5px; c
   .cabecera { padding: 10px 10px 0; }
   .marca img { height: 40px; }
   .portada, .cabeza { padding-left: 16px; padding-right: 16px; }
-  .portada__visual { padding: 20px 10px; }
-  .flotante--1 { left: -2%; }
-  .flotante--2 { right: -2%; }
-  .sello { width: 108px; height: 108px; left: -2%; }
-  .sello img { width: 48px; height: 48px; }
+  /* En celular no hay espacio al costado: las tarjetitas van en fila debajo del video. */
+  .portada__visual { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; padding: 48px 0 0; }
+  .telefono { flex: 0 0 100%; max-width: 270px; }
+  .flotante { position: static; margin-top: 8px; }
+  .sello { display: none; }   /* El boton "Reservar una cita" ya cumple esa funcion. */
   .rutas, .cifras { grid-template-columns: 1fr; }
   .galeria { grid-template-columns: 1fr; grid-template-rows: 300px 220px 220px; }
   .galeria figure:first-child { grid-row: auto; }
