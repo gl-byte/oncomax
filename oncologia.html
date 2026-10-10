@@ -1,141 +1,308 @@
 <!DOCTYPE html>
+<!-- APRENDE A EDITAR oncologia.html
+Oncología: información, tarjetas de mitos y cuestionario de cinco preguntas.
+Este archivo decide los textos, imágenes y enlaces. estilos.css decide su apariencia.
+Los comentarios como este son instrucciones: no aparecen en la página.
+Empieza cambiando un texto, guarda el archivo y recarga la página para ver el resultado.
+Las palabras entre > y < suelen ser texto visible. Conserva las etiquetas que las rodean.
+class conecta un bloque con su diseño en estilos.css; id le da un nombre único.
+Las etiquetas /div, /section y similares cierran lo que se abrió antes: mueve los bloques completos.
+Para cambiar un estilo, busca el nombre de class en assets/css/estilos.css.
+Para cambiar reservas, abre assets/js/reserva.js y conserva los name del formulario.
+Menú, pie y teléfonos están escritos en cada página: repite allí los cambios comunes. -->
+<!-- APRENDE: Abre la página; lang="es" indica que sus textos están en español. Conserva el cierre /html al
+     final. -->
 <html lang="es">
+<!-- APRENDE: Datos de la página que no forman parte del contenido visible; aquí se conectan los estilos y las
+     letras. -->
 <head>
+  <!-- APRENDE: Permite mostrar tildes y ñ correctamente; conserva UTF-8. -->
   <meta charset="UTF-8">
+  <!-- APRENDE: Adapta la página al ancho del celular; conserva este ajuste para que el diseño móvil funcione. -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- APRENDE: Resumen para buscadores; cambia el texto de content para describir esta página. -->
   <meta name="description" content="Información sobre oncología: qué es, mitos y realidades, señales de alerta y un cuestionario interactivo.">
+  <!-- APRENDE: Color sugerido para la barra del navegador en móviles compatibles; cambia el código # de content. -->
   <meta name="theme-color" content="#260D37">
+  <!-- APRENDE: Nombre que aparece en la pestaña del navegador; cambia el texto entre title y /title. -->
   <title>Oncología | OncoMax</title>
+  <!-- APRENDE: Icono de la pestaña: cambia href por la ruta de otra imagen pequeña. -->
   <link rel="icon" href="assets/img/logo-simbolo.png">
   <!-- Tipografias: Nunito (redondeada como el logo) e Instrument Serif para los acentos. -->
+  <!-- APRENDE: Prepara la conexión con el servicio de letras para que carguen antes; conserva estas líneas si
+       usas Google Fonts. -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- APRENDE: Prepara la conexión con el servicio de letras para que carguen antes; conserva estas líneas si
+       usas Google Fonts. -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- APRENDE: Descarga Nunito e Instrument Serif. Para cambiar las letras, reemplaza este enlace y los valores
+       "fuente" con dos guiones delante y "fuente-acento" con dos guiones delante de estilos.css. -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Nunito:wght@400..900&amp;display=swap">
   <!-- Todos los estilos del sitio viven en un solo archivo compartido. -->
+  <!-- APRENDE: Conecta assets/css/estilos.css, que cambia la apariencia de las siete páginas; abre ese archivo
+       para modificar colores y medidas. -->
   <link rel="stylesheet" href="assets/css/estilos.css">
 </head>
+<!-- APRENDE: Comienza todo lo que ve el visitante. Los bloques aparecen en el orden en que los escribes aquí. -->
 <body>
   <!-- Barra de progreso de lectura (solo decorativa). -->
+  <!-- APRENDE: Barra decorativa que se llena al bajar por la página; cambia su altura y colores buscando
+       .progreso en estilos.css. -->
   <div class="progreso" aria-hidden="true"></div>
 
   <!-- ================= CABECERA ================= -->
+  <!-- APRENDE: Menú superior compartido visualmente por el sitio. Sus enlaces se repiten en las siete páginas:
+       actualízalos en todas si cambias el menú. -->
   <header class="cabecera">
+    <!-- APRENDE: Reúne el logo y el menú dentro de una franja centrada; cambia separación y ancho en
+         .cabecera__interior de estilos.css. -->
     <div class="cabecera__interior">
       <!-- El logo siempre lleva al inicio. -->
+      <!-- APRENDE: Logo que lleva a Inicio; cambia href para elegir el destino y src de su imagen para usar otro
+           logo. Enlace: href="index.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
       <a class="marca" href="index.html" aria-label="OncoMax, ir al inicio">
+        <!-- APRENDE: Imagen: cambia src="assets/img/logo-oncomax-horizontal.png" por otro archivo; alt describe la
+             foto si no se ve o se usa lectura por voz. -->
         <img src="assets/img/logo-oncomax-horizontal.png" alt="OncoMax" width="152" height="46">
       </a>
 
       <!-- Casilla escondida que abre el menu en celular; el label es el boton. -->
+      <!-- APRENDE: Casilla del menú móvil: al marcarse abre el menú mediante estilos.css. Conserva id="nav-toggle" y
+           su label con el mismo for. -->
       <input class="nav-toggle" id="nav-toggle" type="checkbox" aria-label="Abrir o cerrar el menu">
+      <!-- APRENDE: Botón del menú de celular. Sus tres span dibujan las rayas; for debe coincidir con el id de la
+           casilla nav-toggle. Texto para elegir o rellenar el campo "nav-toggle"; for debe coincidir con su id.
+           Cambia las palabras para otra indicación. -->
       <label class="hamburguesa" for="nav-toggle" aria-hidden="true">
+        <!-- APRENDE: Texto o pieza pequeña dentro de otro bloque; si contiene palabras, puedes reemplazarlas entre las
+             etiquetas. -->
         <span></span><span></span><span></span>
       </label>
 
+      <!-- APRENDE: Lista de páginas del menú; agrega otro enlace a dentro de este bloque para sumar una página. -->
       <nav class="nav" aria-label="Principal">
+        <!-- APRENDE: Enlace: href="index.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
         <a href="index.html">Inicio</a>
+        <!-- APRENDE: Enlace: href="servicios.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
         <a href="servicios.html">Servicios</a>
+        <!-- APRENDE: Enlace: href="asistencia.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
         <a href="asistencia.html">Asistencia</a>
+        <!-- APRENDE: Enlace: href="nosotros.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
         <a href="nosotros.html">Nosotros</a>
+        <!-- APRENDE: Enlace: href="oncologia.html" elige el destino; el texto entre a y /a es lo que se pulsa. activo
+             resalta esta página y aria-current="page" la identifica como actual; al crear otra página mueve ambas
+             marcas a su enlace. -->
         <a class="activo" aria-current="page" href="oncologia.html">Oncología</a>
+        <!-- APRENDE: Enlace: href="lazos.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
         <a href="lazos.html">Lazos</a>
+        <!-- APRENDE: Enlace: href="reserva.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
         <a class="nav__cta" href="reserva.html">Reservar cita</a>
       </nav>
     </div>
   </header>
 
+  <!-- APRENDE: Contenido principal de esta página; mueve o añade secciones dentro de este bloque. -->
   <main>
     <!-- ================= INTRODUCCION ================= -->
+    <!-- APRENDE: Presentación de esta página: título, explicación y enlaces rápidos. Cambia esos textos dentro de
+         este bloque. id="informacion" permite llegar a este bloque usando un enlace con #informacion. -->
     <section class="cabeza" id="informacion">
+      <!-- APRENDE: Fondo con tres manchas que se mueven. Cambia sus colores en .fondo-vivo y .mancha de estilos.css;
+           los span son decoración. -->
       <div class="fondo-vivo" aria-hidden="true"><span class="mancha mancha--1"></span><span class="mancha mancha--2"></span><span class="mancha mancha--3"></span></div>
+      <!-- APRENDE: Coloca la presentación junto al logo animado; en pantallas pequeñas se convierte en una columna. -->
       <div class="cabeza__interior">
+        <!-- APRENDE: Agrupa la ruta, el título y la explicación de esta página; puedes editar cada texto dentro de sus
+             etiquetas. -->
         <div class="cabeza__texto">
+          <!-- APRENDE: Muestra el recorrido Inicio / página actual; cambia el último texto al cambiar el nombre de esta
+               página. Enlace: href="index.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
           <nav class="migas entrada" aria-label="Ruta"><a href="index.html">Inicio</a><span aria-hidden="true">/</span><span>Oncología</span></nav>
+          <!-- APRENDE: Texto corto que presenta una sección; escribe otro nombre entre las etiquetas. Las variantes de
+               class cambian sus colores. "d" con dos guiones delante controla el turno de aparición: un número mayor
+               hace que aparezca más tarde. -->
           <span class="etiqueta etiqueta--brillo entrada" style="--d:1">Aprender juntos</span>
+          <!-- APRENDE: Título principal de esta página. Cambia sus palabras; el texto dentro de em recibe el estilo
+               destacado. "d" con dos guiones delante controla el turno de aparición: un número mayor hace que aparezca
+               más tarde. -->
           <h1 class="entrada" style="--d:2">El mundo de <em>la oncología</em></h1>
+          <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
+               a otra línea. "d" con dos guiones delante controla el turno de aparición: un número mayor hace que
+               aparezca más tarde. -->
           <p class="entrada" style="--d:3">La oncología es la rama de la medicina encargada de estudiar, prevenir,
              diagnosticar y tratar enfermedades relacionadas con tumores y cáncer.</p>
+          <!-- APRENDE: Agrupa accesos a secciones de esta misma página; cada href con # debe apuntar al id de la sección
+               correspondiente. "d" con dos guiones delante controla el turno de aparición: un número mayor hace que
+               aparezca más tarde. -->
           <div class="saltos entrada" style="--d:4">
+            <!-- APRENDE: Salta al bloque cuyo id es "mitos"; cambia href y el id de destino juntos si lo renombras. -->
             <a href="#mitos">Mitos y realidades</a>
+            <!-- APRENDE: Salta al bloque cuyo id es "senales"; cambia href y el id de destino juntos si lo renombras. -->
             <a href="#senales">Señales de alerta</a>
+            <!-- APRENDE: Salta al bloque cuyo id es "cuestionario"; cambia href y el id de destino juntos si lo renombras. -->
             <a href="#cuestionario">Cuestionario</a>
           </div>
         </div>
+        <!-- APRENDE: Logo rodeado de anillos animados; cambia src para otro símbolo y busca .orbita en estilos.css
+             para su tamaño y velocidad. Imagen: cambia src="assets/img/logo-simbolo.png" por otro archivo; alt
+             describe la foto si no se ve o se usa lectura por voz. Aquí alt vacío indica un dibujo decorativo. "d" con
+             dos guiones delante controla el turno de aparición: un número mayor hace que aparezca más tarde. -->
         <div class="orbita entrada" style="--d:3" aria-hidden="true"><span></span><img src="assets/img/logo-simbolo.png" alt=""><span></span></div>
       </div>
+      <!-- APRENDE: Dibujo hecho con formas. viewBox establece el espacio de dibujo; su tamaño visible se ajusta en
+           estilos.css. -->
       <svg class="ola" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+        <!-- APRENDE: Trazo del dibujo: d contiene puntos y curvas (M empieza, L une, C curva, Z cierra). Para cambiar
+             solo el color, usa estilos.css. -->
         <path d="M0,38 C240,108 480,8 720,48 C960,88 1200,18 1440,58 L1440,120 L0,120 Z"/>
+        <!-- APRENDE: Trazo del dibujo: d contiene puntos y curvas (M empieza, L une, C curva, Z cierra). Para cambiar
+             solo el color, usa estilos.css. -->
         <path d="M0,72 C260,120 520,32 760,70 C1000,108 1220,58 1440,82 L1440,120 L0,120 Z"/>
       </svg>
     </section>
 
     <!-- ================= MITOS Y REALIDADES ================= -->
+    <!-- APRENDE: Agrupa una parte completa de la página. Para moverla, mueve desde section hasta su cierre
+         /section con todo lo que contiene. id="mitos" permite llegar a este bloque usando un enlace con #mitos. -->
     <section class="seccion" id="mitos">
+      <!-- APRENDE: Mantiene el contenido centrado y limita su ancho; cambia el valor de "ancho" con dos guiones
+           delante al principio de estilos.css. -->
       <div class="seccion__interior">
+        <!-- APRENDE: Agrupa la etiqueta, el título y la explicación de esta sección; cambia sus palabras dentro de
+             cada etiqueta. -->
         <div class="titulo-seccion revelar">
+          <!-- APRENDE: Texto corto que presenta una sección; escribe otro nombre entre las etiquetas. Las variantes de
+               class cambian sus colores. -->
           <span class="etiqueta">Comprobar lo que se dice</span>
+          <!-- APRENDE: Título de esta sección o tarjeta. Edita sus palabras y las de em si tiene una parte destacada. -->
           <h2>Mitos <em>y realidades</em></h2>
         </div>
 
+        <!-- APRENDE: Agrupa tarjetas. "grid" + dos guiones + "2", "grid" + dos guiones + "3" y "grid" + dos guiones +
+             "4" usan anchos mínimos diferentes; el espacio disponible decide cuántas caben por fila. -->
         <div class="grid grid--2 escalonado">
+          <!-- APRENDE: Tarjeta con frente y reverso que gira al usarla. Para añadir otra, copia todo este article;
+               cambia los textos de ambas caras. -->
           <article class="flip flip--texto flip--menta" tabindex="0">
+            <!-- APRENDE: Mantiene unidas las dos caras para que giren juntas; conserva dentro el frente y el reverso. -->
             <div class="flip__interior">
+              <!-- APRENDE: Una cara de la tarjeta. Frente muestra el resumen; atras muestra la explicación. Edita cada
+                   contenido por separado. -->
               <div class="flip__cara flip__frente">
+                <!-- APRENDE: Texto corto que presenta una sección; escribe otro nombre entre las etiquetas. Las variantes de
+                     class cambian sus colores. -->
                 <span class="etiqueta etiqueta--coral">Mito</span>
+                <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
                 <h3>El cáncer siempre es hereditario.</h3>
+                <!-- APRENDE: Invitación a usar la tarjeta; cambia el texto para indicar qué descubrirá la persona. -->
                 <span class="pista">Ver realidad</span>
               </div>
+              <!-- APRENDE: Una cara de la tarjeta. Frente muestra el resumen; atras muestra la explicación. Edita cada
+                   contenido por separado. -->
               <div class="flip__cara flip__atras">
+                <!-- APRENDE: Texto corto que presenta una sección; escribe otro nombre entre las etiquetas. Las variantes de
+                     class cambian sus colores. -->
                 <span class="etiqueta etiqueta--blanca">Realidad</span>
+                <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
                 <h3>No siempre</h3>
+                <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
+                     a otra línea. -->
                 <p>Algunos casos tienen relación familiar, pero muchos aparecen por una
                    combinación de distintos factores.</p>
               </div>
             </div>
           </article>
 
+          <!-- APRENDE: Tarjeta con frente y reverso que gira al usarla. Para añadir otra, copia todo este article;
+               cambia los textos de ambas caras. -->
           <article class="flip flip--texto flip--menta" tabindex="0">
+            <!-- APRENDE: Mantiene unidas las dos caras para que giren juntas; conserva dentro el frente y el reverso. -->
             <div class="flip__interior">
+              <!-- APRENDE: Una cara de la tarjeta. Frente muestra el resumen; atras muestra la explicación. Edita cada
+                   contenido por separado. -->
               <div class="flip__cara flip__frente">
+                <!-- APRENDE: Texto corto que presenta una sección; escribe otro nombre entre las etiquetas. Las variantes de
+                     class cambian sus colores. -->
                 <span class="etiqueta etiqueta--coral">Mito</span>
+                <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
                 <h3>Todos los tratamientos son iguales.</h3>
+                <!-- APRENDE: Invitación a usar la tarjeta; cambia el texto para indicar qué descubrirá la persona. -->
                 <span class="pista">Ver realidad</span>
               </div>
+              <!-- APRENDE: Una cara de la tarjeta. Frente muestra el resumen; atras muestra la explicación. Edita cada
+                   contenido por separado. -->
               <div class="flip__cara flip__atras">
+                <!-- APRENDE: Texto corto que presenta una sección; escribe otro nombre entre las etiquetas. Las variantes de
+                     class cambian sus colores. -->
                 <span class="etiqueta etiqueta--blanca">Realidad</span>
+                <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
                 <h3>Cada caso es distinto</h3>
+                <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
+                     a otra línea. -->
                 <p>Cada persona recibe una orientación según su diagnóstico, estado de
                    salud y evaluación médica.</p>
               </div>
             </div>
           </article>
 
+          <!-- APRENDE: Tarjeta con frente y reverso que gira al usarla. Para añadir otra, copia todo este article;
+               cambia los textos de ambas caras. -->
           <article class="flip flip--texto flip--menta" tabindex="0">
+            <!-- APRENDE: Mantiene unidas las dos caras para que giren juntas; conserva dentro el frente y el reverso. -->
             <div class="flip__interior">
+              <!-- APRENDE: Una cara de la tarjeta. Frente muestra el resumen; atras muestra la explicación. Edita cada
+                   contenido por separado. -->
               <div class="flip__cara flip__frente">
+                <!-- APRENDE: Texto corto que presenta una sección; escribe otro nombre entre las etiquetas. Las variantes de
+                     class cambian sus colores. -->
                 <span class="etiqueta etiqueta--coral">Mito</span>
+                <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
                 <h3>Una sola prueba siempre confirma cualquier cáncer.</h3>
+                <!-- APRENDE: Invitación a usar la tarjeta; cambia el texto para indicar qué descubrirá la persona. -->
                 <span class="pista">Ver realidad</span>
               </div>
+              <!-- APRENDE: Una cara de la tarjeta. Frente muestra el resumen; atras muestra la explicación. Edita cada
+                   contenido por separado. -->
               <div class="flip__cara flip__atras">
+                <!-- APRENDE: Texto corto que presenta una sección; escribe otro nombre entre las etiquetas. Las variantes de
+                     class cambian sus colores. -->
                 <span class="etiqueta etiqueta--blanca">Realidad</span>
+                <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
                 <h3>Suele hacer falta más de un estudio</h3>
+                <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
+                     a otra línea. -->
                 <p>El profesional puede necesitar una consulta y diferentes estudios para
                    comprender cada caso.</p>
               </div>
             </div>
           </article>
 
+          <!-- APRENDE: Tarjeta con frente y reverso que gira al usarla. Para añadir otra, copia todo este article;
+               cambia los textos de ambas caras. -->
           <article class="flip flip--texto flip--menta" tabindex="0">
+            <!-- APRENDE: Mantiene unidas las dos caras para que giren juntas; conserva dentro el frente y el reverso. -->
             <div class="flip__interior">
+              <!-- APRENDE: Una cara de la tarjeta. Frente muestra el resumen; atras muestra la explicación. Edita cada
+                   contenido por separado. -->
               <div class="flip__cara flip__frente">
+                <!-- APRENDE: Texto corto que presenta una sección; escribe otro nombre entre las etiquetas. Las variantes de
+                     class cambian sus colores. -->
                 <span class="etiqueta etiqueta--coral">Mito</span>
+                <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
                 <h3>No hace falta consultar si no existe dolor.</h3>
+                <!-- APRENDE: Invitación a usar la tarjeta; cambia el texto para indicar qué descubrirá la persona. -->
                 <span class="pista">Ver realidad</span>
               </div>
+              <!-- APRENDE: Una cara de la tarjeta. Frente muestra el resumen; atras muestra la explicación. Edita cada
+                   contenido por separado. -->
               <div class="flip__cara flip__atras">
+                <!-- APRENDE: Texto corto que presenta una sección; escribe otro nombre entre las etiquetas. Las variantes de
+                     class cambian sus colores. -->
                 <span class="etiqueta etiqueta--blanca">Realidad</span>
+                <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
                 <h3>El dolor no es el único aviso</h3>
+                <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
+                     a otra línea. -->
                 <p>Algunos cambios pueden no causar dolor. Los controles y la orientación
                    profesional son importantes.</p>
               </div>
@@ -146,74 +313,156 @@
     </section>
 
     <!-- ================= SEÑALES DE ALERTA ================= -->
+    <!-- APRENDE: Agrupa una parte completa de la página. Para moverla, mueve desde section hasta su cierre
+         /section con todo lo que contiene. id="senales" permite llegar a este bloque usando un enlace con
+         #senales. -->
     <section class="seccion seccion--suave" id="senales">
+      <!-- APRENDE: Mantiene el contenido centrado y limita su ancho; cambia el valor de "ancho" con dos guiones
+           delante al principio de estilos.css. -->
       <div class="seccion__interior">
+        <!-- APRENDE: Agrupa la etiqueta, el título y la explicación de esta sección; cambia sus palabras dentro de
+             cada etiqueta. -->
         <div class="titulo-seccion revelar">
+          <!-- APRENDE: Texto corto que presenta una sección; escribe otro nombre entre las etiquetas. Las variantes de
+               class cambian sus colores. -->
           <span class="etiqueta etiqueta--coral">Prestar atención</span>
+          <!-- APRENDE: Título de esta sección o tarjeta. Edita sus palabras y las de em si tiene una parte destacada. -->
           <h2>Cambios que <em>conviene consultar</em></h2>
+          <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
+               a otra línea. -->
           <p>Ninguno de estos signos significa por sí solo una enfermedad grave, pero
              todos merecen una consulta.</p>
         </div>
 
+        <!-- APRENDE: Agrupa tarjetas. "grid" + dos guiones + "2", "grid" + dos guiones + "3" y "grid" + dos guiones +
+             "4" usan anchos mínimos diferentes; el espacio disponible decide cuántas caben por fila. -->
         <div class="grid grid--4 escalonado">
+          <!-- APRENDE: Tarjeta con frente y reverso que gira al usarla. Para añadir otra, copia todo este article;
+               cambia los textos de ambas caras. -->
           <article class="flip flip--texto" tabindex="0">
+            <!-- APRENDE: Mantiene unidas las dos caras para que giren juntas; conserva dentro el frente y el reverso. -->
             <div class="flip__interior">
+              <!-- APRENDE: Una cara de la tarjeta. Frente muestra el resumen; atras muestra la explicación. Edita cada
+                   contenido por separado. -->
               <div class="flip__cara flip__frente">
+                <!-- APRENDE: Marco del pequeño dibujo. Cambia src de su img para otro icono; las variantes menta y coral
+                     cambian el fondo. Imagen: cambia src="assets/icons/ui/lupa.svg" por otro archivo; alt describe la foto si
+                     no se ve o se usa lectura por voz. Aquí alt vacío indica un dibujo decorativo. -->
                 <span class="icono"><img src="assets/icons/ui/lupa.svg" alt=""></span>
+                <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
                 <h3>Bultos nuevos</h3>
+                <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
+                     a otra línea. -->
                 <p>Un abultamiento que aparece y no desaparece.</p>
+                <!-- APRENDE: Invitación a usar la tarjeta; cambia el texto para indicar qué descubrirá la persona. -->
                 <span class="pista">Por qué</span>
               </div>
+              <!-- APRENDE: Una cara de la tarjeta. Frente muestra el resumen; atras muestra la explicación. Edita cada
+                   contenido por separado. -->
               <div class="flip__cara flip__atras">
+                <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
                 <h3>Bultos nuevos</h3>
+                <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
+                     a otra línea. -->
                 <p>La mayoría son benignos, pero solo un profesional puede revisarlos
                    y decidir si hace falta un estudio.</p>
               </div>
             </div>
           </article>
 
+          <!-- APRENDE: Tarjeta con frente y reverso que gira al usarla. Para añadir otra, copia todo este article;
+               cambia los textos de ambas caras. -->
           <article class="flip flip--texto flip--coral" tabindex="0">
+            <!-- APRENDE: Mantiene unidas las dos caras para que giren juntas; conserva dentro el frente y el reverso. -->
             <div class="flip__interior">
+              <!-- APRENDE: Una cara de la tarjeta. Frente muestra el resumen; atras muestra la explicación. Edita cada
+                   contenido por separado. -->
               <div class="flip__cara flip__frente">
+                <!-- APRENDE: Marco del pequeño dibujo. Cambia src de su img para otro icono; las variantes menta y coral
+                     cambian el fondo. Imagen: cambia src="assets/icons/ui/bateria.svg" por otro archivo; alt describe la foto
+                     si no se ve o se usa lectura por voz. Aquí alt vacío indica un dibujo decorativo. -->
                 <span class="icono icono--coral"><img src="assets/icons/ui/bateria.svg" alt=""></span>
+                <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
                 <h3>Cansancio persistente</h3>
+                <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
+                     a otra línea. -->
                 <p>Fatiga que no mejora con el descanso.</p>
+                <!-- APRENDE: Invitación a usar la tarjeta; cambia el texto para indicar qué descubrirá la persona. -->
                 <span class="pista">Por qué</span>
               </div>
+              <!-- APRENDE: Una cara de la tarjeta. Frente muestra el resumen; atras muestra la explicación. Edita cada
+                   contenido por separado. -->
               <div class="flip__cara flip__atras">
+                <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
                 <h3>Cansancio persistente</h3>
+                <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
+                     a otra línea. -->
                 <p>Puede tener muchas causas. Comentarlo en consulta ayuda a descartar
                    las más importantes.</p>
               </div>
             </div>
           </article>
 
+          <!-- APRENDE: Tarjeta con frente y reverso que gira al usarla. Para añadir otra, copia todo este article;
+               cambia los textos de ambas caras. -->
           <article class="flip flip--texto flip--menta" tabindex="0">
+            <!-- APRENDE: Mantiene unidas las dos caras para que giren juntas; conserva dentro el frente y el reverso. -->
             <div class="flip__interior">
+              <!-- APRENDE: Una cara de la tarjeta. Frente muestra el resumen; atras muestra la explicación. Edita cada
+                   contenido por separado. -->
               <div class="flip__cara flip__frente">
+                <!-- APRENDE: Marco del pequeño dibujo. Cambia src de su img para otro icono; las variantes menta y coral
+                     cambian el fondo. Imagen: cambia src="assets/icons/ui/balanza.svg" por otro archivo; alt describe la foto
+                     si no se ve o se usa lectura por voz. Aquí alt vacío indica un dibujo decorativo. -->
                 <span class="icono icono--menta"><img src="assets/icons/ui/balanza.svg" alt=""></span>
+                <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
                 <h3>Pérdida de peso sin motivo</h3>
+                <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
+                     a otra línea. -->
                 <p>Bajar de peso sin haber cambiado hábitos.</p>
+                <!-- APRENDE: Invitación a usar la tarjeta; cambia el texto para indicar qué descubrirá la persona. -->
                 <span class="pista">Por qué</span>
               </div>
+              <!-- APRENDE: Una cara de la tarjeta. Frente muestra el resumen; atras muestra la explicación. Edita cada
+                   contenido por separado. -->
               <div class="flip__cara flip__atras">
+                <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
                 <h3>Pérdida de peso sin motivo</h3>
+                <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
+                     a otra línea. -->
                 <p>Es un dato útil para el profesional, sobre todo si ocurre en pocas
                    semanas.</p>
               </div>
             </div>
           </article>
 
+          <!-- APRENDE: Tarjeta con frente y reverso que gira al usarla. Para añadir otra, copia todo este article;
+               cambia los textos de ambas caras. -->
           <article class="flip flip--texto flip--noche" tabindex="0">
+            <!-- APRENDE: Mantiene unidas las dos caras para que giren juntas; conserva dentro el frente y el reverso. -->
             <div class="flip__interior">
+              <!-- APRENDE: Una cara de la tarjeta. Frente muestra el resumen; atras muestra la explicación. Edita cada
+                   contenido por separado. -->
               <div class="flip__cara flip__frente">
+                <!-- APRENDE: Marco del pequeño dibujo. Cambia src de su img para otro icono; las variantes menta y coral
+                     cambian el fondo. Imagen: cambia src="assets/icons/ui/punto.svg" por otro archivo; alt describe la foto si
+                     no se ve o se usa lectura por voz. Aquí alt vacío indica un dibujo decorativo. -->
                 <span class="icono"><img src="assets/icons/ui/punto.svg" alt=""></span>
+                <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
                 <h3>Lunares que cambian</h3>
+                <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
+                     a otra línea. -->
                 <p>Cambios de color, borde o tamaño.</p>
+                <!-- APRENDE: Invitación a usar la tarjeta; cambia el texto para indicar qué descubrirá la persona. -->
                 <span class="pista">Por qué</span>
               </div>
+              <!-- APRENDE: Una cara de la tarjeta. Frente muestra el resumen; atras muestra la explicación. Edita cada
+                   contenido por separado. -->
               <div class="flip__cara flip__atras">
+                <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
                 <h3>Lunares que cambian</h3>
+                <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
+                     a otra línea. -->
                 <p>La revisión de la piel es rápida y sencilla, y permite actuar a tiempo
                    si algo llama la atención.</p>
               </div>
@@ -221,6 +470,7 @@
           </article>
         </div>
 
+        <!-- APRENDE: Nota informativa destacada; cambia el texto entre las etiquetas para mostrar otra aclaración. -->
         <p class="aviso revelar">Ante cualquier duda, la evaluación la realiza un profesional.</p>
       </div>
     </section>
@@ -229,104 +479,249 @@
          Cada pregunta usa botones de tipo radio. El CSS muestra si la
          respuesta es correcta, cuenta los aciertos y pinta la barra del
          marcador, todo sin JavaScript. -->
+    <!-- APRENDE: Agrupa una parte completa de la página. Para moverla, mueve desde section hasta su cierre
+         /section con todo lo que contiene. id="cuestionario" permite llegar a este bloque usando un enlace con
+         #cuestionario. -->
     <section class="seccion seccion--angosta" id="cuestionario">
+      <!-- APRENDE: Mantiene el contenido centrado y limita su ancho; cambia el valor de "ancho" con dos guiones
+           delante al principio de estilos.css. -->
       <div class="seccion__interior actividad">
+        <!-- APRENDE: Agrupa la etiqueta, el título y la explicación de esta sección; cambia sus palabras dentro de
+             cada etiqueta. -->
         <div class="titulo-seccion revelar">
+          <!-- APRENDE: Texto corto que presenta una sección; escribe otro nombre entre las etiquetas. Las variantes de
+               class cambian sus colores. -->
           <span class="etiqueta etiqueta--menta">Autoevaluación</span>
+          <!-- APRENDE: Título de esta sección o tarjeta. Edita sus palabras y las de em si tiene una parte destacada. -->
           <h2>Comprueba <em>lo aprendido</em></h2>
         </div>
 
+        <!-- APRENDE: Agrupa las cinco preguntas. Si agregas otra, también adapta el marcador y las reglas de
+             .actividad y .puntaje en estilos.css. -->
         <div class="quiz">
+          <!-- APRENDE: Una pregunta completa. Para copiarla, usa un name nuevo para su grupo y un id diferente para cada
+               opción; actualiza cada for. -->
           <div class="pregunta revelar">
+            <!-- APRENDE: Enunciado de la pregunta; puedes cambiar sus palabras y número sin tocar las opciones. -->
             <p class="pregunta__texto">1. ¿Qué estudia la oncología?</p>
+            <!-- APRENDE: Respuesta del cuestionario: "op" + dos guiones + "bien" la marca correcta y "op" + dos guiones +
+                 "mal" incorrecta. Las opciones de una pregunta comparten name="p1"; cada id es único y coincide con el for
+                 del label que sigue. Conserva el orden input, label y mensajes para que CSS funcione. -->
             <input class="op op--mal" type="radio" name="p1" id="p1a">
+            <!-- APRENDE: Texto para elegir o rellenar el campo "p1a"; for debe coincidir con su id. Cambia las palabras
+                 para otra indicación. -->
             <label for="p1a">Solamente las enfermedades del corazón.</label>
+            <!-- APRENDE: Respuesta del cuestionario: "op" + dos guiones + "bien" la marca correcta y "op" + dos guiones +
+                 "mal" incorrecta. Las opciones de una pregunta comparten name="p1"; cada id es único y coincide con el for
+                 del label que sigue. Conserva el orden input, label y mensajes para que CSS funcione. -->
             <input class="op op--bien" type="radio" name="p1" id="p1b">
+            <!-- APRENDE: Texto para elegir o rellenar el campo "p1b"; for debe coincidir con su id. Cambia las palabras
+                 para otra indicación. -->
             <label for="p1b">Las enfermedades relacionadas con tumores y cáncer.</label>
+            <!-- APRENDE: Respuesta del cuestionario: "op" + dos guiones + "bien" la marca correcta y "op" + dos guiones +
+                 "mal" incorrecta. Las opciones de una pregunta comparten name="p1"; cada id es único y coincide con el for
+                 del label que sigue. Conserva el orden input, label y mensajes para que CSS funcione. -->
             <input class="op op--mal" type="radio" name="p1" id="p1c">
+            <!-- APRENDE: Texto para elegir o rellenar el campo "p1c"; for debe coincidir con su id. Cambia las palabras
+                 para otra indicación. -->
             <label for="p1c">Únicamente las fracturas de huesos.</label>
+            <!-- APRENDE: Explicación que aparece tras responder: "fb" + dos guiones + "bien" para acierto y "fb" + dos
+                 guiones + "mal" para error; cambia ambos mensajes si cambias la pregunta. -->
             <p class="fb fb--bien">Correcto. La oncología estudia, previene, diagnostica y trata estas enfermedades.</p>
+            <!-- APRENDE: Explicación que aparece tras responder: "fb" + dos guiones + "bien" para acierto y "fb" + dos
+                 guiones + "mal" para error; cambia ambos mensajes si cambias la pregunta. -->
             <p class="fb fb--mal">Todavía no. Vuelve a leer la introducción de esta página.</p>
           </div>
 
+          <!-- APRENDE: Una pregunta completa. Para copiarla, usa un name nuevo para su grupo y un id diferente para cada
+               opción; actualiza cada for. -->
           <div class="pregunta revelar">
+            <!-- APRENDE: Enunciado de la pregunta; puedes cambiar sus palabras y número sin tocar las opciones. -->
             <p class="pregunta__texto">2. ¿La detección temprana puede ayudar?</p>
+            <!-- APRENDE: Respuesta del cuestionario: "op" + dos guiones + "bien" la marca correcta y "op" + dos guiones +
+                 "mal" incorrecta. Las opciones de una pregunta comparten name="p2"; cada id es único y coincide con el for
+                 del label que sigue. Conserva el orden input, label y mensajes para que CSS funcione. -->
             <input class="op op--bien" type="radio" name="p2" id="p2a">
+            <!-- APRENDE: Texto para elegir o rellenar el campo "p2a"; for debe coincidir con su id. Cambia las palabras
+                 para otra indicación. -->
             <label for="p2a">Sí, permite evaluar el caso y buscar atención oportuna.</label>
+            <!-- APRENDE: Respuesta del cuestionario: "op" + dos guiones + "bien" la marca correcta y "op" + dos guiones +
+                 "mal" incorrecta. Las opciones de una pregunta comparten name="p2"; cada id es único y coincide con el for
+                 del label que sigue. Conserva el orden input, label y mensajes para que CSS funcione. -->
             <input class="op op--mal" type="radio" name="p2" id="p2b">
+            <!-- APRENDE: Texto para elegir o rellenar el campo "p2b"; for debe coincidir con su id. Cambia las palabras
+                 para otra indicación. -->
             <label for="p2b">No, siempre da lo mismo cuándo se consulte.</label>
+            <!-- APRENDE: Explicación que aparece tras responder: "fb" + dos guiones + "bien" para acierto y "fb" + dos
+                 guiones + "mal" para error; cambia ambos mensajes si cambias la pregunta. -->
             <p class="fb fb--bien">Correcto. Consultar a tiempo amplía las opciones que puede ofrecer el profesional.</p>
+            <!-- APRENDE: Explicación que aparece tras responder: "fb" + dos guiones + "bien" para acierto y "fb" + dos
+                 guiones + "mal" para error; cambia ambos mensajes si cambias la pregunta. -->
             <p class="fb fb--mal">Revisa la sección "Cambios que conviene consultar".</p>
           </div>
 
+          <!-- APRENDE: Una pregunta completa. Para copiarla, usa un name nuevo para su grupo y un id diferente para cada
+               opción; actualiza cada for. -->
           <div class="pregunta revelar">
+            <!-- APRENDE: Enunciado de la pregunta; puedes cambiar sus palabras y número sin tocar las opciones. -->
             <p class="pregunta__texto">3. ¿Una página web puede dar un diagnóstico?</p>
+            <!-- APRENDE: Respuesta del cuestionario: "op" + dos guiones + "bien" la marca correcta y "op" + dos guiones +
+                 "mal" incorrecta. Las opciones de una pregunta comparten name="p3"; cada id es único y coincide con el for
+                 del label que sigue. Conserva el orden input, label y mensajes para que CSS funcione. -->
             <input class="op op--mal" type="radio" name="p3" id="p3a">
+            <!-- APRENDE: Texto para elegir o rellenar el campo "p3a"; for debe coincidir con su id. Cambia las palabras
+                 para otra indicación. -->
             <label for="p3a">Sí, con leer la información es suficiente.</label>
+            <!-- APRENDE: Respuesta del cuestionario: "op" + dos guiones + "bien" la marca correcta y "op" + dos guiones +
+                 "mal" incorrecta. Las opciones de una pregunta comparten name="p3"; cada id es único y coincide con el for
+                 del label que sigue. Conserva el orden input, label y mensajes para que CSS funcione. -->
             <input class="op op--bien" type="radio" name="p3" id="p3b">
+            <!-- APRENDE: Texto para elegir o rellenar el campo "p3b"; for debe coincidir con su id. Cambia las palabras
+                 para otra indicación. -->
             <label for="p3b">No, el diagnóstico corresponde a profesionales y estudios médicos.</label>
+            <!-- APRENDE: Explicación que aparece tras responder: "fb" + dos guiones + "bien" para acierto y "fb" + dos
+                 guiones + "mal" para error; cambia ambos mensajes si cambias la pregunta. -->
             <p class="fb fb--bien">Correcto. Un sitio web informa, pero no reemplaza una consulta.</p>
+            <!-- APRENDE: Explicación que aparece tras responder: "fb" + dos guiones + "bien" para acierto y "fb" + dos
+                 guiones + "mal" para error; cambia ambos mensajes si cambias la pregunta. -->
             <p class="fb fb--mal">No es así: la información en línea solo sirve para orientarse.</p>
           </div>
 
+          <!-- APRENDE: Una pregunta completa. Para copiarla, usa un name nuevo para su grupo y un id diferente para cada
+               opción; actualiza cada for. -->
           <div class="pregunta revelar">
+            <!-- APRENDE: Enunciado de la pregunta; puedes cambiar sus palabras y número sin tocar las opciones. -->
             <p class="pregunta__texto">4. ¿Todos los pacientes reciben exactamente el mismo tratamiento?</p>
+            <!-- APRENDE: Respuesta del cuestionario: "op" + dos guiones + "bien" la marca correcta y "op" + dos guiones +
+                 "mal" incorrecta. Las opciones de una pregunta comparten name="p4"; cada id es único y coincide con el for
+                 del label que sigue. Conserva el orden input, label y mensajes para que CSS funcione. -->
             <input class="op op--mal" type="radio" name="p4" id="p4a">
+            <!-- APRENDE: Texto para elegir o rellenar el campo "p4a"; for debe coincidir con su id. Cambia las palabras
+                 para otra indicación. -->
             <label for="p4a">Sí, existe un único tratamiento para todos.</label>
+            <!-- APRENDE: Respuesta del cuestionario: "op" + dos guiones + "bien" la marca correcta y "op" + dos guiones +
+                 "mal" incorrecta. Las opciones de una pregunta comparten name="p4"; cada id es único y coincide con el for
+                 del label que sigue. Conserva el orden input, label y mensajes para que CSS funcione. -->
             <input class="op op--bien" type="radio" name="p4" id="p4b">
+            <!-- APRENDE: Texto para elegir o rellenar el campo "p4b"; for debe coincidir con su id. Cambia las palabras
+                 para otra indicación. -->
             <label for="p4b">No, depende del diagnóstico y de la evaluación de cada persona.</label>
+            <!-- APRENDE: Explicación que aparece tras responder: "fb" + dos guiones + "bien" para acierto y "fb" + dos
+                 guiones + "mal" para error; cambia ambos mensajes si cambias la pregunta. -->
             <p class="fb fb--bien">Correcto. Por eso cada consulta empieza con una evaluación individual.</p>
+            <!-- APRENDE: Explicación que aparece tras responder: "fb" + dos guiones + "bien" para acierto y "fb" + dos
+                 guiones + "mal" para error; cambia ambos mensajes si cambias la pregunta. -->
             <p class="fb fb--mal">Recuerda el mito número 2 de esta misma página.</p>
           </div>
 
+          <!-- APRENDE: Una pregunta completa. Para copiarla, usa un name nuevo para su grupo y un id diferente para cada
+               opción; actualiza cada for. -->
           <div class="pregunta revelar">
+            <!-- APRENDE: Enunciado de la pregunta; puedes cambiar sus palabras y número sin tocar las opciones. -->
             <p class="pregunta__texto">5. ¿Es útil anotar tus dudas antes de una consulta?</p>
+            <!-- APRENDE: Respuesta del cuestionario: "op" + dos guiones + "bien" la marca correcta y "op" + dos guiones +
+                 "mal" incorrecta. Las opciones de una pregunta comparten name="p5"; cada id es único y coincide con el for
+                 del label que sigue. Conserva el orden input, label y mensajes para que CSS funcione. -->
             <input class="op op--bien" type="radio" name="p5" id="p5a">
+            <!-- APRENDE: Texto para elegir o rellenar el campo "p5a"; for debe coincidir con su id. Cambia las palabras
+                 para otra indicación. -->
             <label for="p5a">Sí, ayuda a aprovechar mejor el tiempo con el profesional.</label>
+            <!-- APRENDE: Respuesta del cuestionario: "op" + dos guiones + "bien" la marca correcta y "op" + dos guiones +
+                 "mal" incorrecta. Las opciones de una pregunta comparten name="p5"; cada id es único y coincide con el for
+                 del label que sigue. Conserva el orden input, label y mensajes para que CSS funcione. -->
             <input class="op op--mal" type="radio" name="p5" id="p5b">
+            <!-- APRENDE: Texto para elegir o rellenar el campo "p5b"; for debe coincidir con su id. Cambia las palabras
+                 para otra indicación. -->
             <label for="p5b">No, es mejor improvisar en el momento.</label>
+            <!-- APRENDE: Explicación que aparece tras responder: "fb" + dos guiones + "bien" para acierto y "fb" + dos
+                 guiones + "mal" para error; cambia ambos mensajes si cambias la pregunta. -->
             <p class="fb fb--bien">Correcto. Llevar las preguntas escritas evita olvidarlas durante la cita.</p>
+            <!-- APRENDE: Explicación que aparece tras responder: "fb" + dos guiones + "bien" para acierto y "fb" + dos
+                 guiones + "mal" para error; cambia ambos mensajes si cambias la pregunta. -->
             <p class="fb fb--mal">Anotar las dudas es justamente lo que recomienda el equipo de OncoMax.</p>
           </div>
         </div>
 
         <!-- Marcador: se queda pegado abajo mientras se responde. Cada barrita
              corresponde a una pregunta y el numero lo calcula counter(). -->
+        <!-- APRENDE: Marcador de cinco preguntas. Para cambiar la cantidad, adapta los span, el texto de 5 y las
+             reglas de .actividad en estilos.css. -->
         <div class="puntaje">
+          <!-- APRENDE: Cada span es una barrita para una pregunta. Si agregas una pregunta, agrega un span y su regla
+               correspondiente en estilos.css. -->
           <div class="puntaje__barra" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+          <!-- APRENDE: Etiqueta del marcador; el número y la frase de 5 se agregan desde .puntaje__texto::after en
+               estilos.css. -->
           <p class="puntaje__texto" aria-hidden="true">Correctas:</p>
+          <!-- APRENDE: Mensaje que aparece cuando las cinco respuestas son correctas; cambia las palabras para otra
+               felicitación. -->
           <p class="puntaje__perfecto">¡Perfecto, respondiste todo bien!</p>
+          <!-- APRENDE: Enlace: href="reserva.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
           <a class="boton boton--chico" href="reserva.html">¿Te quedaron dudas? Solicitar orientación</a>
         </div>
       </div>
     </section>
 
     <!-- ================= COMO SE DETECTA ================= -->
+    <!-- APRENDE: Agrupa una parte completa de la página. Para moverla, mueve desde section hasta su cierre
+         /section con todo lo que contiene. -->
     <section class="seccion seccion--blanca">
+      <!-- APRENDE: Mantiene el contenido centrado y limita su ancho; cambia el valor de "ancho" con dos guiones
+           delante al principio de estilos.css. -->
       <div class="seccion__interior dividido">
+        <!-- APRENDE: Columna del título que acompaña la lectura; cambia su distancia desde arriba en .dividido__lado
+             de estilos.css. -->
         <div class="dividido__lado revelar">
+          <!-- APRENDE: Agrupa la etiqueta, el título y la explicación de esta sección; cambia sus palabras dentro de
+               cada etiqueta. -->
           <div class="titulo-seccion">
+            <!-- APRENDE: Texto corto que presenta una sección; escribe otro nombre entre las etiquetas. Las variantes de
+                 class cambian sus colores. -->
             <span class="etiqueta">Preguntas frecuentes</span>
+            <!-- APRENDE: Título de esta sección o tarjeta. Edita sus palabras y las de em si tiene una parte destacada. -->
             <h2>Cómo se detecta y <em>por qué consultar a tiempo</em></h2>
           </div>
+          <!-- APRENDE: Coloca varios botones juntos. Copia un enlace a dentro de este bloque para añadir otro botón. -->
           <div class="acciones">
+            <!-- APRENDE: Enlace: href="asistencia.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
             <a class="boton" href="asistencia.html">Ver especialistas</a>
+            <!-- APRENDE: Enlace: href="lazos.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
             <a class="boton boton--claro" href="lazos.html">Lazos de apoyo</a>
           </div>
         </div>
+        <!-- APRENDE: Grupo cuyos hijos aparecen uno tras otro al bajar; agrega el nuevo bloque dentro para que
+             comparta ese efecto. -->
         <div class="escalonado">
+          <!-- APRENDE: Pregunta o bloque que se abre al pulsarlo. Copia hasta /details para sumar otro; agrega open para
+               que comience abierto. -->
           <details>
+            <!-- APRENDE: Texto que se pulsa para abrir la explicación; escribe la pregunta aquí y la respuesta en el
+                 párrafo siguiente. -->
             <summary>¿Cómo se detecta?</summary>
+            <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
+                 a otra línea. -->
             <p>Con controles médicos, análisis de sangre, biopsias, radiografías, ecografías,
                tomografías y otros estudios según cada caso.</p>
           </details>
+          <!-- APRENDE: Pregunta o bloque que se abre al pulsarlo. Copia hasta /details para sumar otro; agrega open para
+               que comience abierto. -->
           <details>
+            <!-- APRENDE: Texto que se pulsa para abrir la explicación; escribe la pregunta aquí y la respuesta en el
+                 párrafo siguiente. -->
             <summary>¿Por qué importa la detección temprana?</summary>
+            <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
+                 a otra línea. -->
             <p>La atención temprana permite orientar al paciente y definir un tratamiento
                oportuno según la evaluación profesional.</p>
           </details>
+          <!-- APRENDE: Pregunta o bloque que se abre al pulsarlo. Copia hasta /details para sumar otro; agrega open para
+               que comience abierto. -->
           <details>
+            <!-- APRENDE: Texto que se pulsa para abrir la explicación; escribe la pregunta aquí y la respuesta en el
+                 párrafo siguiente. -->
             <summary>¿Qué puedo hacer desde hoy?</summary>
+            <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
+                 a otra línea. -->
             <p>Mantener tus controles al día, avisar cualquier cambio que notes y pedir
                orientación cuando tengas dudas.</p>
           </details>
@@ -336,52 +731,130 @@
   </main>
 
   <!-- Boton fijo: abre una conversacion de WhatsApp en otra pestaña. -->
+  <!-- APRENDE: Botón de WhatsApp que acompaña al visitante en la esquina; cambia el número en href y la frase de
+       span. WhatsApp: cambia el número de href con código de país y sin + ni espacios; actualiza también el
+       teléfono visible, las otras páginas y WHATSAPP_CLINICA en reserva.js. target="_blank" abre otra pestaña;
+       conserva rel="noopener" para que esa pestaña no controle esta. -->
   <a class="whatsapp-fijo" href="https://wa.me/59164556725" target="_blank" rel="noopener" aria-label="Abrir WhatsApp">
+    <!-- APRENDE: Imagen: cambia src="assets/icons/whatsapp.svg" por otro archivo; alt describe la foto si no se ve
+         o se usa lectura por voz. Aquí alt vacío indica un dibujo decorativo. -->
     <img src="assets/icons/whatsapp.svg" alt="">
+    <!-- APRENDE: Texto o pieza pequeña dentro de otro bloque; si contiene palabras, puedes reemplazarlas entre las
+         etiquetas. -->
     <span>¿Hablamos?</span>
   </a>
 
   <!-- ================= PIE DE PAGINA ================= -->
+  <!-- APRENDE: Parte inferior que se repite en cada página. Si cambias contacto, redes o enlaces, repite el
+       cambio en los otros archivos HTML. -->
   <footer class="pie">
+    <!-- APRENDE: Distribuye las columnas del pie; modifica sus textos aquí y sus columnas en .pie__interior de
+         estilos.css. -->
     <div class="pie__interior">
+      <!-- APRENDE: Reúne los elementos que vienen dentro para colocarlos juntos. Para copiar el bloque, incluye su
+           cierre /div y todo su contenido. -->
       <div>
+        <!-- APRENDE: Logo del pie que lleva a Inicio; cambia src de la imagen si reemplazas la marca. Imagen: cambia
+             src="assets/img/logo-oncomax-horizontal.png" por otro archivo; alt describe la foto si no se ve o se usa
+             lectura por voz. Enlace: href="index.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
         <a class="pie__logo" href="index.html"><img src="assets/img/logo-oncomax-horizontal.png" alt="OncoMax" width="132" height="40"></a>
+        <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
+             a otra línea. -->
         <p>Centro Médico Integral Oncológico. Orientación, atención y acompañamiento humano.</p>
       </div>
+      <!-- APRENDE: Reúne los elementos que vienen dentro para colocarlos juntos. Para copiar el bloque, incluye su
+           cierre /div y todo su contenido. -->
       <div>
+        <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
         <h3>Páginas</h3>
+        <!-- APRENDE: Lista de elementos; agrega otra línea li antes del cierre /ul para sumar un elemento. -->
         <ul>
+          <!-- APRENDE: Un elemento de la lista; cambia su texto. Si contiene un enlace, cambia también href para su
+               destino. Enlace: href="index.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
           <li><a href="index.html">Inicio</a></li>
+          <!-- APRENDE: Un elemento de la lista; cambia su texto. Si contiene un enlace, cambia también href para su
+               destino. Enlace: href="servicios.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
           <li><a href="servicios.html">Servicios</a></li>
+          <!-- APRENDE: Un elemento de la lista; cambia su texto. Si contiene un enlace, cambia también href para su
+               destino. Enlace: href="asistencia.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
           <li><a href="asistencia.html">Asistencia Médica</a></li>
+          <!-- APRENDE: Un elemento de la lista; cambia su texto. Si contiene un enlace, cambia también href para su
+               destino. Enlace: href="nosotros.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
           <li><a href="nosotros.html">Nosotros</a></li>
+          <!-- APRENDE: Un elemento de la lista; cambia su texto. Si contiene un enlace, cambia también href para su
+               destino. Enlace: href="oncologia.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
           <li><a href="oncologia.html">Oncología</a></li>
+          <!-- APRENDE: Un elemento de la lista; cambia su texto. Si contiene un enlace, cambia también href para su
+               destino. Enlace: href="lazos.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
           <li><a href="lazos.html">Lazos de apoyo</a></li>
+          <!-- APRENDE: Un elemento de la lista; cambia su texto. Si contiene un enlace, cambia también href para su
+               destino. Enlace: href="reserva.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
           <li><a href="reserva.html">Reservar cita</a></li>
         </ul>
       </div>
+      <!-- APRENDE: Reúne los elementos que vienen dentro para colocarlos juntos. Para copiar el bloque, incluye su
+           cierre /div y todo su contenido. -->
       <div>
+        <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
         <h3>Contacto</h3>
+        <!-- APRENDE: Lista de elementos; agrega otra línea li antes del cierre /ul para sumar un elemento. -->
         <ul class="lista-datos">
+          <!-- APRENDE: Un elemento de la lista; cambia su texto. Si contiene un enlace, cambia también href para su
+               destino. Imagen: cambia src="assets/icons/whatsapp.svg" por otro archivo; alt describe la foto si no se ve
+               o se usa lectura por voz. Aquí alt vacío indica un dibujo decorativo. WhatsApp: cambia el número de href
+               con código de país y sin + ni espacios; actualiza también el teléfono visible, las otras páginas y
+               WHATSAPP_CLINICA en reserva.js. target="_blank" abre otra pestaña; conserva rel="noopener" para que esa
+               pestaña no controle esta. -->
           <li><span class="icono icono--chico"><img src="assets/icons/whatsapp.svg" alt=""></span><span><small>WhatsApp</small><a href="https://wa.me/59164556725" target="_blank" rel="noopener">+591 64556725</a></span></li>
+          <!-- APRENDE: Un elemento de la lista; cambia su texto. Si contiene un enlace, cambia también href para su
+               destino. Imagen: cambia src="assets/icons/ui/ubicacion.svg" por otro archivo; alt describe la foto si no
+               se ve o se usa lectura por voz. Aquí alt vacío indica un dibujo decorativo. -->
           <li><span class="icono icono--chico"><img src="assets/icons/ui/ubicacion.svg" alt=""></span><span><small>Dirección</small>Antofagasta entre Bolívar y Sucre</span></li>
+          <!-- APRENDE: Un elemento de la lista; cambia su texto. Si contiene un enlace, cambia también href para su
+               destino. Imagen: cambia src="assets/icons/ui/casa.svg" por otro archivo; alt describe la foto si no se ve
+               o se usa lectura por voz. Aquí alt vacío indica un dibujo decorativo. -->
           <li><span class="icono icono--chico"><img src="assets/icons/ui/casa.svg" alt=""></span><span><small>Ciudad</small>Oruro, Bolivia</span></li>
         </ul>
       </div>
+      <!-- APRENDE: Reúne los elementos que vienen dentro para colocarlos juntos. Para copiar el bloque, incluye su
+           cierre /div y todo su contenido. -->
       <div>
+        <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
         <h3>Síguenos</h3>
         <!-- Por ahora TikTok e Instagram usan # porque faltan los enlaces reales. -->
+        <!-- APRENDE: Grupo de enlaces de redes sociales; cambia cada href por la dirección completa del perfil
+             correspondiente. -->
         <div class="redes">
+          <!-- APRENDE: Imagen: cambia src="assets/icons/tiktok.svg" por otro archivo; alt describe la foto si no se ve o
+               se usa lectura por voz. Aquí alt vacío indica un dibujo decorativo. Enlace pendiente: sustituye href="#"
+               por la dirección real del perfil; ahora no abre una red social. -->
           <a href="#" aria-label="TikTok"><img src="assets/icons/tiktok.svg" alt=""></a>
+          <!-- APRENDE: Imagen: cambia src="assets/icons/instagram.svg" por otro archivo; alt describe la foto si no se
+               ve o se usa lectura por voz. Aquí alt vacío indica un dibujo decorativo. Enlace pendiente: sustituye
+               href="#" por la dirección real del perfil; ahora no abre una red social. -->
           <a href="#" aria-label="Instagram"><img src="assets/icons/instagram.svg" alt=""></a>
+          <!-- APRENDE: Imagen: cambia src="assets/icons/whatsapp.svg" por otro archivo; alt describe la foto si no se ve
+               o se usa lectura por voz. Aquí alt vacío indica un dibujo decorativo. WhatsApp: cambia el número de href
+               con código de país y sin + ni espacios; actualiza también el teléfono visible, las otras páginas y
+               WHATSAPP_CLINICA en reserva.js. target="_blank" abre otra pestaña; conserva rel="noopener" para que esa
+               pestaña no controle esta. -->
           <a href="https://wa.me/59164556725" target="_blank" rel="noopener" aria-label="WhatsApp"><img src="assets/icons/whatsapp.svg" alt=""></a>
+          <!-- APRENDE: Imagen: cambia src="assets/icons/facebook.svg" por otro archivo; alt describe la foto si no se ve
+               o se usa lectura por voz. Aquí alt vacío indica un dibujo decorativo. Enlace:
+               href="https://www.facebook.com/profile.php?id=61578464102459" elige el destino; el texto entre a y /a es
+               lo que se pulsa. target="_blank" abre otra pestaña; conserva rel="noopener" para que esa pestaña no
+               controle esta. -->
           <a href="https://www.facebook.com/profile.php?id=61578464102459" target="_blank" rel="noopener" aria-label="Facebook"><img src="assets/icons/facebook.svg" alt=""></a>
         </div>
       </div>
     </div>
     <!-- Palabra gigante decorativa. -->
+    <!-- APRENDE: Nombre grande de fondo, solo decorativo; cambia las letras aquí y su tamaño en estilos.css. -->
     <div class="pie__gigante" aria-hidden="true">OncoMax</div>
+    <!-- APRENDE: Última línea del sitio; cambia aquí el año y la información al pie. -->
     <div class="pie__abajo">
+      <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
+           a otra línea. -->
       <p>© 2026 <b>OncoMax</b> · Centro Médico Integral Oncológico · Oruro, Bolivia. La información de este sitio no reemplaza una consulta médica.</p>
     </div>
   </footer>

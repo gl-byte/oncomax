@@ -1,129 +1,294 @@
 <!DOCTYPE html>
+<!-- APRENDE A EDITAR asistencia.html
+Asistencia: especialistas y calendario ilustrativo de disponibilidad.
+Este archivo decide los textos, imágenes y enlaces. estilos.css decide su apariencia.
+Los comentarios como este son instrucciones: no aparecen en la página.
+Empieza cambiando un texto, guarda el archivo y recarga la página para ver el resultado.
+Las palabras entre > y < suelen ser texto visible. Conserva las etiquetas que las rodean.
+class conecta un bloque con su diseño en estilos.css; id le da un nombre único.
+Las etiquetas /div, /section y similares cierran lo que se abrió antes: mueve los bloques completos.
+Para cambiar un estilo, busca el nombre de class en assets/css/estilos.css.
+Para cambiar reservas, abre assets/js/reserva.js y conserva los name del formulario.
+Menú, pie y teléfonos están escritos en cada página: repite allí los cambios comunes. -->
+<!-- APRENDE: Abre la página; lang="es" indica que sus textos están en español. Conserva el cierre /html al
+     final. -->
 <html lang="es">
+<!-- APRENDE: Datos de la página que no forman parte del contenido visible; aquí se conectan los estilos y las
+     letras. -->
 <head>
+  <!-- APRENDE: Permite mostrar tildes y ñ correctamente; conserva UTF-8. -->
   <meta charset="UTF-8">
+  <!-- APRENDE: Adapta la página al ancho del celular; conserva este ajuste para que el diseño móvil funcione. -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- APRENDE: Resumen para buscadores; cambia el texto de content para describir esta página. -->
   <meta name="description" content="Especialistas de OncoMax, calendario de atención y pasos para solicitar una consulta.">
+  <!-- APRENDE: Color sugerido para la barra del navegador en móviles compatibles; cambia el código # de content. -->
   <meta name="theme-color" content="#260D37">
+  <!-- APRENDE: Nombre que aparece en la pestaña del navegador; cambia el texto entre title y /title. -->
   <title>Asistencia Médica | OncoMax</title>
+  <!-- APRENDE: Icono de la pestaña: cambia href por la ruta de otra imagen pequeña. -->
   <link rel="icon" href="assets/img/logo-simbolo.png">
   <!-- Tipografias: Nunito (redondeada como el logo) e Instrument Serif para los acentos. -->
+  <!-- APRENDE: Prepara la conexión con el servicio de letras para que carguen antes; conserva estas líneas si
+       usas Google Fonts. -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- APRENDE: Prepara la conexión con el servicio de letras para que carguen antes; conserva estas líneas si
+       usas Google Fonts. -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- APRENDE: Descarga Nunito e Instrument Serif. Para cambiar las letras, reemplaza este enlace y los valores
+       "fuente" con dos guiones delante y "fuente-acento" con dos guiones delante de estilos.css. -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Nunito:wght@400..900&amp;display=swap">
   <!-- Todos los estilos del sitio viven en un solo archivo compartido. -->
+  <!-- APRENDE: Conecta assets/css/estilos.css, que cambia la apariencia de las siete páginas; abre ese archivo
+       para modificar colores y medidas. -->
   <link rel="stylesheet" href="assets/css/estilos.css">
 </head>
+<!-- APRENDE: Comienza todo lo que ve el visitante. Los bloques aparecen en el orden en que los escribes aquí. -->
 <body>
   <!-- Barra de progreso de lectura (solo decorativa). -->
+  <!-- APRENDE: Barra decorativa que se llena al bajar por la página; cambia su altura y colores buscando
+       .progreso en estilos.css. -->
   <div class="progreso" aria-hidden="true"></div>
 
   <!-- ================= CABECERA ================= -->
+  <!-- APRENDE: Menú superior compartido visualmente por el sitio. Sus enlaces se repiten en las siete páginas:
+       actualízalos en todas si cambias el menú. -->
   <header class="cabecera">
+    <!-- APRENDE: Reúne el logo y el menú dentro de una franja centrada; cambia separación y ancho en
+         .cabecera__interior de estilos.css. -->
     <div class="cabecera__interior">
       <!-- El logo siempre lleva al inicio. -->
+      <!-- APRENDE: Logo que lleva a Inicio; cambia href para elegir el destino y src de su imagen para usar otro
+           logo. Enlace: href="index.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
       <a class="marca" href="index.html" aria-label="OncoMax, ir al inicio">
+        <!-- APRENDE: Imagen: cambia src="assets/img/logo-oncomax-horizontal.png" por otro archivo; alt describe la
+             foto si no se ve o se usa lectura por voz. -->
         <img src="assets/img/logo-oncomax-horizontal.png" alt="OncoMax" width="152" height="46">
       </a>
 
       <!-- Casilla escondida que abre el menu en celular; el label es el boton. -->
+      <!-- APRENDE: Casilla del menú móvil: al marcarse abre el menú mediante estilos.css. Conserva id="nav-toggle" y
+           su label con el mismo for. -->
       <input class="nav-toggle" id="nav-toggle" type="checkbox" aria-label="Abrir o cerrar el menu">
+      <!-- APRENDE: Botón del menú de celular. Sus tres span dibujan las rayas; for debe coincidir con el id de la
+           casilla nav-toggle. Texto para elegir o rellenar el campo "nav-toggle"; for debe coincidir con su id.
+           Cambia las palabras para otra indicación. -->
       <label class="hamburguesa" for="nav-toggle" aria-hidden="true">
+        <!-- APRENDE: Texto o pieza pequeña dentro de otro bloque; si contiene palabras, puedes reemplazarlas entre las
+             etiquetas. -->
         <span></span><span></span><span></span>
       </label>
 
+      <!-- APRENDE: Lista de páginas del menú; agrega otro enlace a dentro de este bloque para sumar una página. -->
       <nav class="nav" aria-label="Principal">
+        <!-- APRENDE: Enlace: href="index.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
         <a href="index.html">Inicio</a>
+        <!-- APRENDE: Enlace: href="servicios.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
         <a href="servicios.html">Servicios</a>
+        <!-- APRENDE: Enlace: href="asistencia.html" elige el destino; el texto entre a y /a es lo que se pulsa. activo
+             resalta esta página y aria-current="page" la identifica como actual; al crear otra página mueve ambas
+             marcas a su enlace. -->
         <a class="activo" aria-current="page" href="asistencia.html">Asistencia</a>
+        <!-- APRENDE: Enlace: href="nosotros.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
         <a href="nosotros.html">Nosotros</a>
+        <!-- APRENDE: Enlace: href="oncologia.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
         <a href="oncologia.html">Oncología</a>
+        <!-- APRENDE: Enlace: href="lazos.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
         <a href="lazos.html">Lazos</a>
+        <!-- APRENDE: Enlace: href="reserva.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
         <a class="nav__cta" href="reserva.html">Reservar cita</a>
       </nav>
     </div>
   </header>
 
+  <!-- APRENDE: Contenido principal de esta página; mueve o añade secciones dentro de este bloque. -->
   <main>
     <!-- ================= CABECERA DE LA PAGINA ================= -->
+    <!-- APRENDE: Presentación de esta página: título, explicación y enlaces rápidos. Cambia esos textos dentro de
+         este bloque. -->
     <section class="cabeza">
+      <!-- APRENDE: Fondo con tres manchas que se mueven. Cambia sus colores en .fondo-vivo y .mancha de estilos.css;
+           los span son decoración. -->
       <div class="fondo-vivo" aria-hidden="true"><span class="mancha mancha--1"></span><span class="mancha mancha--2"></span><span class="mancha mancha--3"></span></div>
+      <!-- APRENDE: Coloca la presentación junto al logo animado; en pantallas pequeñas se convierte en una columna. -->
       <div class="cabeza__interior">
+        <!-- APRENDE: Agrupa la ruta, el título y la explicación de esta página; puedes editar cada texto dentro de sus
+             etiquetas. -->
         <div class="cabeza__texto">
+          <!-- APRENDE: Muestra el recorrido Inicio / página actual; cambia el último texto al cambiar el nombre de esta
+               página. Enlace: href="index.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
           <nav class="migas entrada" aria-label="Ruta"><a href="index.html">Inicio</a><span aria-hidden="true">/</span><span>Asistencia Médica</span></nav>
+          <!-- APRENDE: Texto corto que presenta una sección; escribe otro nombre entre las etiquetas. Las variantes de
+               class cambian sus colores. "d" con dos guiones delante controla el turno de aparición: un número mayor
+               hace que aparezca más tarde. -->
           <span class="etiqueta etiqueta--brillo entrada" style="--d:1">Equipo especialista</span>
+          <!-- APRENDE: Título principal de esta página. Cambia sus palabras; el texto dentro de em recibe el estilo
+               destacado. "d" con dos guiones delante controla el turno de aparición: un número mayor hace que aparezca
+               más tarde. -->
           <h1 class="entrada" style="--d:2">Asistencia <em>Médica</em></h1>
+          <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
+               a otra línea. "d" con dos guiones delante controla el turno de aparición: un número mayor hace que
+               aparezca más tarde. -->
           <p class="entrada" style="--d:3">Oncología y acompañamiento experto. Conoce la trayectoria de cada
              profesional y cómo te puede ayudar.</p>
+          <!-- APRENDE: Coloca varios botones juntos. Copia un enlace a dentro de este bloque para añadir otro botón. "d"
+               con dos guiones delante controla el turno de aparición: un número mayor hace que aparezca más tarde. -->
           <div class="acciones entrada" style="--d:4">
+            <!-- APRENDE: Enlace: href="reserva.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
             <a class="boton" href="reserva.html">Reservar consulta</a>
+            <!-- APRENDE: Salta al bloque cuyo id es "calendario"; cambia href y el id de destino juntos si lo renombras. -->
             <a class="boton boton--vidrio" href="#calendario">Ver calendario</a>
           </div>
         </div>
+        <!-- APRENDE: Logo rodeado de anillos animados; cambia src para otro símbolo y busca .orbita en estilos.css
+             para su tamaño y velocidad. Imagen: cambia src="assets/img/logo-simbolo.png" por otro archivo; alt
+             describe la foto si no se ve o se usa lectura por voz. Aquí alt vacío indica un dibujo decorativo. "d" con
+             dos guiones delante controla el turno de aparición: un número mayor hace que aparezca más tarde. -->
         <div class="orbita entrada" style="--d:3" aria-hidden="true"><span></span><img src="assets/img/logo-simbolo.png" alt=""><span></span></div>
       </div>
+      <!-- APRENDE: Dibujo hecho con formas. viewBox establece el espacio de dibujo; su tamaño visible se ajusta en
+           estilos.css. -->
       <svg class="ola" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+        <!-- APRENDE: Trazo del dibujo: d contiene puntos y curvas (M empieza, L une, C curva, Z cierra). Para cambiar
+             solo el color, usa estilos.css. -->
         <path d="M0,38 C240,108 480,8 720,48 C960,88 1200,18 1440,58 L1440,120 L0,120 Z"/>
+        <!-- APRENDE: Trazo del dibujo: d contiene puntos y curvas (M empieza, L une, C curva, Z cierra). Para cambiar
+             solo el color, usa estilos.css. -->
         <path d="M0,72 C260,120 520,32 760,70 C1000,108 1220,58 1440,82 L1440,120 L0,120 Z"/>
       </svg>
     </section>
 
     <!-- ================= ESPECIALISTAS ================= -->
+    <!-- APRENDE: Agrupa una parte completa de la página. Para moverla, mueve desde section hasta su cierre
+         /section con todo lo que contiene. -->
     <section class="seccion">
+      <!-- APRENDE: Mantiene el contenido centrado y limita su ancho; cambia el valor de "ancho" con dos guiones
+           delante al principio de estilos.css. -->
       <div class="seccion__interior">
+        <!-- APRENDE: Agrupa la etiqueta, el título y la explicación de esta sección; cambia sus palabras dentro de
+             cada etiqueta. -->
         <div class="titulo-seccion revelar">
+          <!-- APRENDE: Texto corto que presenta una sección; escribe otro nombre entre las etiquetas. Las variantes de
+               class cambian sus colores. -->
           <span class="etiqueta">Especialistas</span>
+          <!-- APRENDE: Título de esta sección o tarjeta. Edita sus palabras y las de em si tiene una parte destacada. -->
           <h2>Quién te <em>atiende</em></h2>
         </div>
 
+        <!-- APRENDE: Agrupa tarjetas. "grid" + dos guiones + "2", "grid" + dos guiones + "3" y "grid" + dos guiones +
+             "4" usan anchos mínimos diferentes; el espacio disponible decide cuántas caben por fila. -->
         <div class="grid grid--3 escalonado">
+          <!-- APRENDE: Tarjeta con foto y explicación que aparece al usarla; copia el article completo para añadir otra
+               persona o servicio. "foco" con dos guiones delante elige el punto de la foto que se conserva (horizontal y
+               vertical); "zoom" con dos guiones delante acerca la imagen: 1 es normal y 2 el doble. Prueba variaciones
+               pequeñas. -->
           <article class="perfil" tabindex="0" style="--foco: 52% 35%; --zoom: 1.3">
+            <!-- APRENDE: Imagen: cambia src="assets/img/web/dra-elena-rosales.jpg" por otro archivo; alt describe la foto
+                 si no se ve o se usa lectura por voz. loading="lazy" espera a que la imagen se acerque a la pantalla para
+                 cargarla. -->
             <img class="perfil__foto" src="assets/img/web/dra-elena-rosales.jpg" alt="Dra. Elena Rosales" loading="lazy">
+            <!-- APRENDE: Información visible antes de abrir el detalle; si cambias un nombre, actualízalo también en
+                 perfil__detalle. -->
             <div class="perfil__base">
+              <!-- APRENDE: Pequeña etiqueta sobre la foto; cambia sus palabras para mostrar otra especialidad o categoría. -->
               <span class="chip">Oncología quirúrgica</span>
+              <!-- APRENDE: Título de esta sección o tarjeta. Edita sus palabras y las de em si tiene una parte destacada. -->
               <h2>Dra. Elena Rosales Sokolov</h2>
+              <!-- APRENDE: Invitación a usar la tarjeta; cambia el texto para indicar qué descubrirá la persona. -->
               <span class="pista">Ver perfil</span>
             </div>
+            <!-- APRENDE: Panel con la información ampliada. Cambia aquí especialidad, biografía o servicio; puedes agregar
+                 párrafos p. -->
             <div class="perfil__detalle">
+              <!-- APRENDE: Título de esta sección o tarjeta. Edita sus palabras y las de em si tiene una parte destacada. -->
               <h2>Dra. Elena Rosales Sokolov</h2>
+              <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
+                   a otra línea. -->
               <p><b>Especialidad:</b> oncología quirúrgica.</p>
+              <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
+                   a otra línea. -->
               <p><b>Enfoque:</b> evaluación y tratamiento quirúrgico de pacientes oncológicos,
                  con explicaciones claras antes y después del procedimiento.</p>
+              <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
+                   a otra línea. -->
               <p><b>Atiende:</b> lunes, jueves y viernes.</p>
+              <!-- APRENDE: Enlace: href="reserva.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
               <a class="boton boton--chico" href="reserva.html">Reservar consulta</a>
             </div>
           </article>
 
+          <!-- APRENDE: Tarjeta con foto y explicación que aparece al usarla; copia el article completo para añadir otra
+               persona o servicio. "foco" con dos guiones delante elige el punto de la foto que se conserva (horizontal y
+               vertical); "zoom" con dos guiones delante acerca la imagen: 1 es normal y 2 el doble. Prueba variaciones
+               pequeñas. -->
           <article class="perfil" tabindex="0" style="--foco: 55% 35%; --zoom: 1.3">
+            <!-- APRENDE: Imagen: cambia src="assets/img/web/dra-amara-orellio.jpg" por otro archivo; alt describe la foto
+                 si no se ve o se usa lectura por voz. loading="lazy" espera a que la imagen se acerque a la pantalla para
+                 cargarla. -->
             <img class="perfil__foto" src="assets/img/web/dra-amara-orellio.jpg" alt="Dra. Amara Orellio" loading="lazy">
+            <!-- APRENDE: Información visible antes de abrir el detalle; si cambias un nombre, actualízalo también en
+                 perfil__detalle. -->
             <div class="perfil__base">
+              <!-- APRENDE: Pequeña etiqueta sobre la foto; cambia sus palabras para mostrar otra especialidad o categoría. -->
               <span class="chip">Oncología médica e inmuno-oncología</span>
+              <!-- APRENDE: Título de esta sección o tarjeta. Edita sus palabras y las de em si tiene una parte destacada. -->
               <h2>Dra. Amara Orellio Rojo</h2>
+              <!-- APRENDE: Invitación a usar la tarjeta; cambia el texto para indicar qué descubrirá la persona. -->
               <span class="pista">Ver perfil</span>
             </div>
+            <!-- APRENDE: Panel con la información ampliada. Cambia aquí especialidad, biografía o servicio; puedes agregar
+                 párrafos p. -->
             <div class="perfil__detalle">
+              <!-- APRENDE: Título de esta sección o tarjeta. Edita sus palabras y las de em si tiene una parte destacada. -->
               <h2>Dra. Amara Orellio Rojo</h2>
+              <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
+                   a otra línea. -->
               <p><b>Especialidad:</b> oncología médica e inmuno-oncología.</p>
+              <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
+                   a otra línea. -->
               <p><b>Enfoque:</b> tratamiento integral y seguimiento clínico del paciente
                  a lo largo de todo el proceso.</p>
+              <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
+                   a otra línea. -->
               <p><b>Atiende:</b> martes, miércoles y viernes.</p>
+              <!-- APRENDE: Enlace: href="reserva.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
               <a class="boton boton--chico" href="reserva.html">Reservar consulta</a>
             </div>
           </article>
 
+          <!-- APRENDE: Tarjeta con foto y explicación que aparece al usarla; copia el article completo para añadir otra
+               persona o servicio. "foco" con dos guiones delante elige el punto de la foto que se conserva (horizontal y
+               vertical); "zoom" con dos guiones delante acerca la imagen: 1 es normal y 2 el doble. Prueba variaciones
+               pequeñas. -->
           <article class="perfil" tabindex="0" style="--foco: 100% 30%; --zoom: 1.3">
+            <!-- APRENDE: Imagen: cambia src="assets/img/web/asistencia-domiciliaria.jpg" por otro archivo; alt describe la
+                 foto si no se ve o se usa lectura por voz. loading="lazy" espera a que la imagen se acerque a la pantalla
+                 para cargarla. -->
             <img class="perfil__foto" src="assets/img/web/asistencia-domiciliaria.jpg" alt="Asistencia domiciliaria" loading="lazy">
+            <!-- APRENDE: Información visible antes de abrir el detalle; si cambias un nombre, actualízalo también en
+                 perfil__detalle. -->
             <div class="perfil__base">
+              <!-- APRENDE: Pequeña etiqueta sobre la foto; cambia sus palabras para mostrar otra especialidad o categoría. -->
               <span class="chip">Apoyo médico en casa</span>
+              <!-- APRENDE: Título de esta sección o tarjeta. Edita sus palabras y las de em si tiene una parte destacada. -->
               <h2>Asistencia domiciliaria</h2>
+              <!-- APRENDE: Invitación a usar la tarjeta; cambia el texto para indicar qué descubrirá la persona. -->
               <span class="pista">Ver detalles</span>
             </div>
+            <!-- APRENDE: Panel con la información ampliada. Cambia aquí especialidad, biografía o servicio; puedes agregar
+                 párrafos p. -->
             <div class="perfil__detalle">
+              <!-- APRENDE: Título de esta sección o tarjeta. Edita sus palabras y las de em si tiene una parte destacada. -->
               <h2>Asistencia domiciliaria</h2>
+              <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
+                   a otra línea. -->
               <p><b>¿Qué es?</b> Un servicio para orientar y acompañar a pacientes que
                  necesitan apoyo médico básico desde su hogar.</p>
+              <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
+                   a otra línea. -->
               <p><b>Incluye:</b> control básico, orientación de cuidados y coordinación
                  con el especialista responsable.</p>
+              <!-- APRENDE: Enlace: href="reserva.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
               <a class="boton boton--chico" href="reserva.html">Solicitar visita</a>
             </div>
           </article>
@@ -132,90 +297,190 @@
     </section>
 
     <!-- ================= PASOS PARA RESERVAR ================= -->
+    <!-- APRENDE: Agrupa una parte completa de la página. Para moverla, mueve desde section hasta su cierre
+         /section con todo lo que contiene. -->
     <section class="seccion seccion--suave">
+      <!-- APRENDE: Mantiene el contenido centrado y limita su ancho; cambia el valor de "ancho" con dos guiones
+           delante al principio de estilos.css. -->
       <div class="seccion__interior">
+        <!-- APRENDE: Agrupa la etiqueta, el título y la explicación de esta sección; cambia sus palabras dentro de
+             cada etiqueta. -->
         <div class="titulo-seccion titulo-seccion--centro revelar">
+          <!-- APRENDE: Texto corto que presenta una sección; escribe otro nombre entre las etiquetas. Las variantes de
+               class cambian sus colores. -->
           <span class="etiqueta">Cómo pedir tu cita</span>
+          <!-- APRENDE: Título de esta sección o tarjeta. Edita sus palabras y las de em si tiene una parte destacada. -->
           <h2>Solo <em>tres pasos</em></h2>
+          <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
+               a otra línea. -->
           <p>El proceso es el mismo para consultas en la clínica y para asistencia en casa.</p>
         </div>
 
+        <!-- APRENDE: Secuencia de pasos. Copia un article paso completo para agregar uno y revisa las columnas de
+             .pasos en estilos.css. -->
         <div class="pasos escalonado">
+          <!-- APRENDE: Un paso explicado con número, título y párrafo; edita los tres para adaptar el recorrido. -->
           <article class="paso">
+            <!-- APRENDE: Número visible del paso; cambia este texto si reordenas o agregas pasos. -->
             <div class="paso__numero">1</div>
+            <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
             <h3>Elige</h3>
+            <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
+                 a otra línea. -->
             <p>Selecciona la atención que necesitas: pediátrica, quirúrgica, acompañamiento o visita a domicilio.</p>
           </article>
+          <!-- APRENDE: Un paso explicado con número, título y párrafo; edita los tres para adaptar el recorrido. -->
           <article class="paso">
+            <!-- APRENDE: Número visible del paso; cambia este texto si reordenas o agregas pasos. -->
             <div class="paso__numero">2</div>
+            <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
             <h3>Solicita</h3>
+            <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
+                 a otra línea. -->
             <p>Completa los datos básicos de la reserva o escríbenos directamente por WhatsApp.</p>
           </article>
+          <!-- APRENDE: Un paso explicado con número, título y párrafo; edita los tres para adaptar el recorrido. -->
           <article class="paso">
+            <!-- APRENDE: Número visible del paso; cambia este texto si reordenas o agregas pasos. -->
             <div class="paso__numero">3</div>
+            <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
             <h3>Confirma</h3>
+            <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
+                 a otra línea. -->
             <p>La clínica revisa la agenda y confirma el horario por teléfono o por mensaje.</p>
           </article>
         </div>
 
+        <!-- APRENDE: Coloca varios botones juntos. Copia un enlace a dentro de este bloque para añadir otro botón. -->
         <div class="acciones acciones--centro revelar">
+          <!-- APRENDE: Enlace: href="reserva.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
           <a class="boton" href="reserva.html">Ir al formulario de reserva</a>
         </div>
       </div>
     </section>
 
     <!-- ================= CALENDARIO ================= -->
+    <!-- APRENDE: Agrupa una parte completa de la página. Para moverla, mueve desde section hasta su cierre
+         /section con todo lo que contiene. id="calendario" permite llegar a este bloque usando un enlace con
+         #calendario. -->
     <section class="seccion" id="calendario">
+      <!-- APRENDE: Mantiene el contenido centrado y limita su ancho; cambia el valor de "ancho" con dos guiones
+           delante al principio de estilos.css. -->
       <div class="seccion__interior">
+        <!-- APRENDE: Agrupa la etiqueta, el título y la explicación de esta sección; cambia sus palabras dentro de
+             cada etiqueta. -->
         <div class="titulo-seccion revelar">
+          <!-- APRENDE: Texto corto que presenta una sección; escribe otro nombre entre las etiquetas. Las variantes de
+               class cambian sus colores. -->
           <span class="etiqueta etiqueta--menta">Agenda semanal</span>
+          <!-- APRENDE: Título de esta sección o tarjeta. Edita sus palabras y las de em si tiene una parte destacada. -->
           <h2>Calendario <em>de atención</em></h2>
+          <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
+               a otra línea. -->
           <p>Así se organiza nuestra semana de consultas.</p>
         </div>
 
+        <!-- APRENDE: Permite desplazar la tabla hacia los lados si no cabe en un celular; conserva dentro la tabla
+             completa. -->
         <div class="tabla-envoltura revelar">
+          <!-- APRENDE: Tabla de disponibilidad escrita a mano. Cambiar sus celdas modifica lo que se ve; no consulta una
+               agenda real. -->
           <table class="calendario">
+            <!-- APRENDE: Encabezados de la tabla; cambia los nombres de sus columnas dentro de th. -->
             <thead>
+              <!-- APRENDE: Fila de la tabla. th nombra una columna y td contiene un dato; conserva la misma cantidad de
+                   celdas por fila. -->
               <tr><th>Día</th><th>Mañana</th><th>Tarde</th></tr>
             </thead>
+            <!-- APRENDE: Filas de datos de la tabla; copia una fila tr completa para añadir otro día. -->
             <tbody>
+              <!-- APRENDE: Fila de la tabla. th nombra una columna y td contiene un dato; conserva la misma cantidad de
+                   celdas por fila. -->
               <tr><td>Lunes</td><td><span class="estado estado--si">Disponible</span></td><td><span class="estado estado--si">Disponible</span></td></tr>
+              <!-- APRENDE: Fila de la tabla. th nombra una columna y td contiene un dato; conserva la misma cantidad de
+                   celdas por fila. -->
               <tr><td>Martes</td><td><span class="estado estado--no">Ocupado</span></td><td><span class="estado estado--si">Disponible</span></td></tr>
+              <!-- APRENDE: Fila de la tabla. th nombra una columna y td contiene un dato; conserva la misma cantidad de
+                   celdas por fila. -->
               <tr><td>Miércoles</td><td><span class="estado estado--si">Disponible</span></td><td><span class="estado estado--no">Ocupado</span></td></tr>
+              <!-- APRENDE: Fila de la tabla. th nombra una columna y td contiene un dato; conserva la misma cantidad de
+                   celdas por fila. -->
               <tr><td>Jueves</td><td><span class="estado estado--si">Disponible</span></td><td><span class="estado estado--si">Disponible</span></td></tr>
+              <!-- APRENDE: Fila de la tabla. th nombra una columna y td contiene un dato; conserva la misma cantidad de
+                   celdas por fila. -->
               <tr><td>Viernes</td><td><span class="estado estado--si">Disponible</span></td><td><span class="estado estado--si">Disponible</span></td></tr>
             </tbody>
           </table>
         </div>
+        <!-- APRENDE: Nota informativa destacada; cambia el texto entre las etiquetas para mostrar otra aclaración. -->
         <p class="aviso revelar">La disponibilidad del horario se confirma al momento de reservar.</p>
       </div>
     </section>
 
     <!-- ================= PREPARAR LA CONSULTA ================= -->
+    <!-- APRENDE: Agrupa una parte completa de la página. Para moverla, mueve desde section hasta su cierre
+         /section con todo lo que contiene. -->
     <section class="seccion seccion--blanca">
+      <!-- APRENDE: Mantiene el contenido centrado y limita su ancho; cambia el valor de "ancho" con dos guiones
+           delante al principio de estilos.css. -->
       <div class="seccion__interior dividido">
+        <!-- APRENDE: Columna del título que acompaña la lectura; cambia su distancia desde arriba en .dividido__lado
+             de estilos.css. -->
         <div class="dividido__lado revelar">
+          <!-- APRENDE: Agrupa la etiqueta, el título y la explicación de esta sección; cambia sus palabras dentro de
+               cada etiqueta. -->
           <div class="titulo-seccion">
+            <!-- APRENDE: Texto corto que presenta una sección; escribe otro nombre entre las etiquetas. Las variantes de
+                 class cambian sus colores. -->
             <span class="etiqueta etiqueta--coral">Antes de venir</span>
+            <!-- APRENDE: Título de esta sección o tarjeta. Edita sus palabras y las de em si tiene una parte destacada. -->
             <h2>Cómo preparar <em>tu consulta</em></h2>
+            <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
+                 a otra línea. -->
             <p>Estas recomendaciones ayudan a aprovechar mejor el tiempo con el profesional.</p>
           </div>
         </div>
+        <!-- APRENDE: Grupo cuyos hijos aparecen uno tras otro al bajar; agrega el nuevo bloque dentro para que
+             comparta ese efecto. -->
         <div class="escalonado">
+          <!-- APRENDE: Pregunta o bloque que se abre al pulsarlo. Copia hasta /details para sumar otro; agrega open para
+               que comience abierto. -->
           <details>
+            <!-- APRENDE: Texto que se pulsa para abrir la explicación; escribe la pregunta aquí y la respuesta en el
+                 párrafo siguiente. -->
             <summary>¿Qué documentos debo llevar?</summary>
+            <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
+                 a otra línea. -->
             <p>Tu documento de identidad y los estudios médicos que tengas, aunque sean antiguos.</p>
           </details>
+          <!-- APRENDE: Pregunta o bloque que se abre al pulsarlo. Copia hasta /details para sumar otro; agrega open para
+               que comience abierto. -->
           <details>
+            <!-- APRENDE: Texto que se pulsa para abrir la explicación; escribe la pregunta aquí y la respuesta en el
+                 párrafo siguiente. -->
             <summary>¿Puedo venir acompañado?</summary>
+            <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
+                 a otra línea. -->
             <p>Sí. Una persona de confianza puede ayudarte a anotar las indicaciones del profesional.</p>
           </details>
+          <!-- APRENDE: Pregunta o bloque que se abre al pulsarlo. Copia hasta /details para sumar otro; agrega open para
+               que comience abierto. -->
           <details>
+            <!-- APRENDE: Texto que se pulsa para abrir la explicación; escribe la pregunta aquí y la respuesta en el
+                 párrafo siguiente. -->
             <summary>¿Conviene anotar mis dudas?</summary>
+            <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
+                 a otra línea. -->
             <p>Sí. Escribir las preguntas antes de la cita evita olvidarlas durante la conversación.</p>
           </details>
+          <!-- APRENDE: Pregunta o bloque que se abre al pulsarlo. Copia hasta /details para sumar otro; agrega open para
+               que comience abierto. -->
           <details>
+            <!-- APRENDE: Texto que se pulsa para abrir la explicación; escribe la pregunta aquí y la respuesta en el
+                 párrafo siguiente. -->
             <summary>¿Con cuánta anticipación debo llegar?</summary>
+            <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
+                 a otra línea. -->
             <p>Diez minutos antes del horario reservado son suficientes para el registro.</p>
           </details>
         </div>
@@ -224,52 +489,130 @@
   </main>
 
   <!-- Boton fijo: abre una conversacion de WhatsApp en otra pestaña. -->
+  <!-- APRENDE: Botón de WhatsApp que acompaña al visitante en la esquina; cambia el número en href y la frase de
+       span. WhatsApp: cambia el número de href con código de país y sin + ni espacios; actualiza también el
+       teléfono visible, las otras páginas y WHATSAPP_CLINICA en reserva.js. target="_blank" abre otra pestaña;
+       conserva rel="noopener" para que esa pestaña no controle esta. -->
   <a class="whatsapp-fijo" href="https://wa.me/59164556725" target="_blank" rel="noopener" aria-label="Abrir WhatsApp">
+    <!-- APRENDE: Imagen: cambia src="assets/icons/whatsapp.svg" por otro archivo; alt describe la foto si no se ve
+         o se usa lectura por voz. Aquí alt vacío indica un dibujo decorativo. -->
     <img src="assets/icons/whatsapp.svg" alt="">
+    <!-- APRENDE: Texto o pieza pequeña dentro de otro bloque; si contiene palabras, puedes reemplazarlas entre las
+         etiquetas. -->
     <span>¿Hablamos?</span>
   </a>
 
   <!-- ================= PIE DE PAGINA ================= -->
+  <!-- APRENDE: Parte inferior que se repite en cada página. Si cambias contacto, redes o enlaces, repite el
+       cambio en los otros archivos HTML. -->
   <footer class="pie">
+    <!-- APRENDE: Distribuye las columnas del pie; modifica sus textos aquí y sus columnas en .pie__interior de
+         estilos.css. -->
     <div class="pie__interior">
+      <!-- APRENDE: Reúne los elementos que vienen dentro para colocarlos juntos. Para copiar el bloque, incluye su
+           cierre /div y todo su contenido. -->
       <div>
+        <!-- APRENDE: Logo del pie que lleva a Inicio; cambia src de la imagen si reemplazas la marca. Imagen: cambia
+             src="assets/img/logo-oncomax-horizontal.png" por otro archivo; alt describe la foto si no se ve o se usa
+             lectura por voz. Enlace: href="index.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
         <a class="pie__logo" href="index.html"><img src="assets/img/logo-oncomax-horizontal.png" alt="OncoMax" width="132" height="40"></a>
+        <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
+             a otra línea. -->
         <p>Centro Médico Integral Oncológico. Orientación, atención y acompañamiento humano.</p>
       </div>
+      <!-- APRENDE: Reúne los elementos que vienen dentro para colocarlos juntos. Para copiar el bloque, incluye su
+           cierre /div y todo su contenido. -->
       <div>
+        <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
         <h3>Páginas</h3>
+        <!-- APRENDE: Lista de elementos; agrega otra línea li antes del cierre /ul para sumar un elemento. -->
         <ul>
+          <!-- APRENDE: Un elemento de la lista; cambia su texto. Si contiene un enlace, cambia también href para su
+               destino. Enlace: href="index.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
           <li><a href="index.html">Inicio</a></li>
+          <!-- APRENDE: Un elemento de la lista; cambia su texto. Si contiene un enlace, cambia también href para su
+               destino. Enlace: href="servicios.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
           <li><a href="servicios.html">Servicios</a></li>
+          <!-- APRENDE: Un elemento de la lista; cambia su texto. Si contiene un enlace, cambia también href para su
+               destino. Enlace: href="asistencia.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
           <li><a href="asistencia.html">Asistencia Médica</a></li>
+          <!-- APRENDE: Un elemento de la lista; cambia su texto. Si contiene un enlace, cambia también href para su
+               destino. Enlace: href="nosotros.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
           <li><a href="nosotros.html">Nosotros</a></li>
+          <!-- APRENDE: Un elemento de la lista; cambia su texto. Si contiene un enlace, cambia también href para su
+               destino. Enlace: href="oncologia.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
           <li><a href="oncologia.html">Oncología</a></li>
+          <!-- APRENDE: Un elemento de la lista; cambia su texto. Si contiene un enlace, cambia también href para su
+               destino. Enlace: href="lazos.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
           <li><a href="lazos.html">Lazos de apoyo</a></li>
+          <!-- APRENDE: Un elemento de la lista; cambia su texto. Si contiene un enlace, cambia también href para su
+               destino. Enlace: href="reserva.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
           <li><a href="reserva.html">Reservar cita</a></li>
         </ul>
       </div>
+      <!-- APRENDE: Reúne los elementos que vienen dentro para colocarlos juntos. Para copiar el bloque, incluye su
+           cierre /div y todo su contenido. -->
       <div>
+        <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
         <h3>Contacto</h3>
+        <!-- APRENDE: Lista de elementos; agrega otra línea li antes del cierre /ul para sumar un elemento. -->
         <ul class="lista-datos">
+          <!-- APRENDE: Un elemento de la lista; cambia su texto. Si contiene un enlace, cambia también href para su
+               destino. Imagen: cambia src="assets/icons/whatsapp.svg" por otro archivo; alt describe la foto si no se ve
+               o se usa lectura por voz. Aquí alt vacío indica un dibujo decorativo. WhatsApp: cambia el número de href
+               con código de país y sin + ni espacios; actualiza también el teléfono visible, las otras páginas y
+               WHATSAPP_CLINICA en reserva.js. target="_blank" abre otra pestaña; conserva rel="noopener" para que esa
+               pestaña no controle esta. -->
           <li><span class="icono icono--chico"><img src="assets/icons/whatsapp.svg" alt=""></span><span><small>WhatsApp</small><a href="https://wa.me/59164556725" target="_blank" rel="noopener">+591 64556725</a></span></li>
+          <!-- APRENDE: Un elemento de la lista; cambia su texto. Si contiene un enlace, cambia también href para su
+               destino. Imagen: cambia src="assets/icons/ui/ubicacion.svg" por otro archivo; alt describe la foto si no
+               se ve o se usa lectura por voz. Aquí alt vacío indica un dibujo decorativo. -->
           <li><span class="icono icono--chico"><img src="assets/icons/ui/ubicacion.svg" alt=""></span><span><small>Dirección</small>Antofagasta entre Bolívar y Sucre</span></li>
+          <!-- APRENDE: Un elemento de la lista; cambia su texto. Si contiene un enlace, cambia también href para su
+               destino. Imagen: cambia src="assets/icons/ui/casa.svg" por otro archivo; alt describe la foto si no se ve
+               o se usa lectura por voz. Aquí alt vacío indica un dibujo decorativo. -->
           <li><span class="icono icono--chico"><img src="assets/icons/ui/casa.svg" alt=""></span><span><small>Ciudad</small>Oruro, Bolivia</span></li>
         </ul>
       </div>
+      <!-- APRENDE: Reúne los elementos que vienen dentro para colocarlos juntos. Para copiar el bloque, incluye su
+           cierre /div y todo su contenido. -->
       <div>
+        <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
         <h3>Síguenos</h3>
         <!-- Por ahora TikTok e Instagram usan # porque faltan los enlaces reales. -->
+        <!-- APRENDE: Grupo de enlaces de redes sociales; cambia cada href por la dirección completa del perfil
+             correspondiente. -->
         <div class="redes">
+          <!-- APRENDE: Imagen: cambia src="assets/icons/tiktok.svg" por otro archivo; alt describe la foto si no se ve o
+               se usa lectura por voz. Aquí alt vacío indica un dibujo decorativo. Enlace pendiente: sustituye href="#"
+               por la dirección real del perfil; ahora no abre una red social. -->
           <a href="#" aria-label="TikTok"><img src="assets/icons/tiktok.svg" alt=""></a>
+          <!-- APRENDE: Imagen: cambia src="assets/icons/instagram.svg" por otro archivo; alt describe la foto si no se
+               ve o se usa lectura por voz. Aquí alt vacío indica un dibujo decorativo. Enlace pendiente: sustituye
+               href="#" por la dirección real del perfil; ahora no abre una red social. -->
           <a href="#" aria-label="Instagram"><img src="assets/icons/instagram.svg" alt=""></a>
+          <!-- APRENDE: Imagen: cambia src="assets/icons/whatsapp.svg" por otro archivo; alt describe la foto si no se ve
+               o se usa lectura por voz. Aquí alt vacío indica un dibujo decorativo. WhatsApp: cambia el número de href
+               con código de país y sin + ni espacios; actualiza también el teléfono visible, las otras páginas y
+               WHATSAPP_CLINICA en reserva.js. target="_blank" abre otra pestaña; conserva rel="noopener" para que esa
+               pestaña no controle esta. -->
           <a href="https://wa.me/59164556725" target="_blank" rel="noopener" aria-label="WhatsApp"><img src="assets/icons/whatsapp.svg" alt=""></a>
+          <!-- APRENDE: Imagen: cambia src="assets/icons/facebook.svg" por otro archivo; alt describe la foto si no se ve
+               o se usa lectura por voz. Aquí alt vacío indica un dibujo decorativo. Enlace:
+               href="https://www.facebook.com/profile.php?id=61578464102459" elige el destino; el texto entre a y /a es
+               lo que se pulsa. target="_blank" abre otra pestaña; conserva rel="noopener" para que esa pestaña no
+               controle esta. -->
           <a href="https://www.facebook.com/profile.php?id=61578464102459" target="_blank" rel="noopener" aria-label="Facebook"><img src="assets/icons/facebook.svg" alt=""></a>
         </div>
       </div>
     </div>
     <!-- Palabra gigante decorativa. -->
+    <!-- APRENDE: Nombre grande de fondo, solo decorativo; cambia las letras aquí y su tamaño en estilos.css. -->
     <div class="pie__gigante" aria-hidden="true">OncoMax</div>
+    <!-- APRENDE: Última línea del sitio; cambia aquí el año y la información al pie. -->
     <div class="pie__abajo">
+      <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
+           a otra línea. -->
       <p>© 2026 <b>OncoMax</b> · Centro Médico Integral Oncológico · Oruro, Bolivia. La información de este sitio no reemplaza una consulta médica.</p>
     </div>
   </footer>
