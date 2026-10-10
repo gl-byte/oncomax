@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<!-- Archivo HTML de la pagina Oncologia. -->
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Información educativa sobre oncología: qué es, mitos y realidades, señales de alerta y un cuestionario interactivo.">
+  <meta name="theme-color" content="#260D37">
+  <title>Oncología | OncoMax</title>
+  <link rel="icon" href="assets/img/logo-simbolo.png">
+  <!-- Tipografias: Nunito (redondeada como el logo) e Instrument Serif para los acentos. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Nunito:wght@400..900&amp;display=swap">
+  <!-- Todos los estilos del sitio viven en un solo archivo compartido. -->
+  <link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+<body>
+  <!-- Barra de progreso de lectura (solo decorativa). -->
+  <div class="progreso" aria-hidden="true"></div>
+
+  <!-- ================= CABECERA ================= -->
+  <header class="cabecera">
+    <div class="cabecera__interior">
+      <!-- El logo siempre lleva al inicio. -->
+      <a class="marca" href="index.html" aria-label="OncoMax, ir al inicio">
+        <img src="assets/img/logo-oncomax-horizontal.png" alt="OncoMax" width="152" height="46">
+      </a>
+
+      <!-- Casilla escondida que abre el menu en celular; el label es el boton. -->
+      <input class="nav-toggle" id="nav-toggle" type="checkbox" aria-label="Abrir o cerrar el menu">
+      <label class="hamburguesa" for="nav-toggle" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </label>
+
+      <nav class="nav" aria-label="Principal">
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="asistencia.html">Asistencia</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a class="activo" aria-current="page" href="oncologia.html">Oncología</a>
+        <a href="lazos.html">Lazos</a>
+        <a class="nav__cta" href="reserva.html">Reservar cita</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= INTRODUCCION ================= -->
+    <section class="cabeza" id="informacion">
+      <div class="fondo-vivo" aria-hidden="true"><span class="mancha mancha--1"></span><span class="mancha mancha--2"></span><span class="mancha mancha--3"></span></div>
+      <div class="cabeza__interior">
+        <div class="cabeza__texto">
+          <nav class="migas entrada" aria-label="Ruta"><a href="index.html">Inicio</a><span aria-hidden="true">/</span><span>Oncología</span></nav>
+          <span class="etiqueta etiqueta--brillo entrada" style="--d:1">Aprender juntos</span>
+          <h1 class="entrada" style="--d:2">El mundo de <em>la oncología</em></h1>
+          <p class="entrada" style="--d:3">La oncología es la rama de la medicina encargada de estudiar, prevenir,
+             diagnosticar y tratar enfermedades relacionadas con tumores y cáncer.</p>
+          <!-- Estos enlaces llevan a secciones de esta misma pagina usando su id. -->
+          <div class="saltos entrada" style="--d:4">
+            <a href="#mitos">Mitos y realidades</a>
+            <a href="#senales">Señales de alerta</a>
+            <a href="#cuestionario">Cuestionario</a>
+          </div>
+        </div>
+        <div class="orbita entrada" style="--d:3" aria-hidden="true"><span></span><img src="assets/img/logo-simbolo.png" alt=""><span></span></div>
+      </div>
+      <svg class="ola" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,38 C240,108 480,8 720,48 C960,88 1200,18 1440,58 L1440,120 L0,120 Z"/>
+        <path d="M0,72 C260,120 520,32 760,70 C1000,108 1220,58 1440,82 L1440,120 L0,120 Z"/>
+      </svg>
+    </section>
+
+    <!-- ================= MITOS Y REALIDADES ================= -->
+    <section class="seccion" id="mitos">
+      <div class="seccion__interior">
+        <div class="titulo-seccion revelar">
+          <span class="etiqueta">Comprobar lo que se dice</span>
+          <h2>Mitos <em>y realidades</em></h2>
+          <p>Cada tarjeta muestra primero una creencia común. Al girarla aparece
+             la explicación correcta.</p>
+          <span class="pista-uso">Pasa el mouse, tócala o llega con la tecla Tab</span>
+        </div>
+
+        <div class="grid grid--2 escalonado">
+          <article class="flip flip--texto flip--menta" tabindex="0">
+            <div class="flip__interior">
+              <div class="flip__cara flip__frente">
+                <span class="etiqueta etiqueta--coral">Mito</span>
+                <h3>El cáncer siempre es hereditario.</h3>
+                <span class="pista">Ver realidad</span>
+              </div>
+              <div class="flip__cara flip__atras">
+                <span class="etiqueta etiqueta--blanca">Realidad</span>
+                <h3>No siempre</h3>
+                <p>Algunos casos tienen relación familiar, pero muchos aparecen por una
+                   combinación de distintos factores.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="flip flip--texto flip--menta" tabindex="0">
+            <div class="flip__interior">
+              <div class="flip__cara flip__frente">
+                <span class="etiqueta etiqueta--coral">Mito</span>
+                <h3>Todos los tratamientos son iguales.</h3>
+                <span class="pista">Ver realidad</span>
+              </div>
+              <div class="flip__cara flip__atras">
+                <span class="etiqueta etiqueta--blanca">Realidad</span>
+                <h3>Cada caso es distinto</h3>
+                <p>Cada persona recibe una orientación según su diagnóstico, estado de
+                   salud y evaluación médica.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="flip flip--texto flip--menta" tabindex="0">
+            <div class="flip__interior">
+              <div class="flip__cara flip__frente">
+                <span class="etiqueta etiqueta--coral">Mito</span>
+                <h3>Una sola prueba siempre confirma cualquier cáncer.</h3>
+                <span class="pista">Ver realidad</span>
+              </div>
+              <div class="flip__cara flip__atras">
+                <span class="etiqueta etiqueta--blanca">Realidad</span>
+                <h3>Suele hacer falta más de un estudio</h3>
+                <p>El profesional puede necesitar una consulta y diferentes estudios para
+                   comprender cada caso.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="flip flip--texto flip--menta" tabindex="0">
+            <div class="flip__interior">
+              <div class="flip__cara flip__frente">
+                <span class="etiqueta etiqueta--coral">Mito</span>
+                <h3>No hace falta consultar si no existe dolor.</h3>
+                <span class="pista">Ver realidad</span>
+              </div>
+              <div class="flip__cara flip__atras">
+                <span class="etiqueta etiqueta--blanca">Realidad</span>
+                <h3>El dolor no es el único aviso</h3>
+                <p>Algunos cambios pueden no causar dolor. Los controles y la orientación
+                   profesional son importantes.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SEÑALES DE ALERTA ================= -->
+    <section class="seccion seccion--suave" id="senales">
+      <div class="seccion__interior">
+        <div class="titulo-seccion revelar">
+          <span class="etiqueta etiqueta--coral">Prestar atención</span>
+          <h2>Cambios que <em>conviene consultar</em></h2>
+          <p>Ninguno de estos signos significa por sí solo una enfermedad grave, pero
+             todos merecen una consulta. Gira cada tarjeta para saber por qué.</p>
+        </div>
+
+        <div class="grid grid--4 escalonado">
+          <article class="flip flip--texto" tabindex="0">
+            <div class="flip__interior">
+              <div class="flip__cara flip__frente">
+                <span class="icono"><img src="assets/icons/ui/lupa.svg" alt=""></span>
+                <h3>Bultos nuevos</h3>
+                <p>Un abultamiento que aparece y no desaparece.</p>
+                <span class="pista">Por qué</span>
+              </div>
+              <div class="flip__cara flip__atras">
+                <h3>Bultos nuevos</h3>
+                <p>La mayoría son benignos, pero solo un profesional puede revisarlos
+                   y decidir si hace falta un estudio.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="flip flip--texto flip--coral" tabindex="0">
+            <div class="flip__interior">
+              <div class="flip__cara flip__frente">
+                <span class="icono icono--coral"><img src="assets/icons/ui/bateria.svg" alt=""></span>
+                <h3>Cansancio persistente</h3>
+                <p>Fatiga que no mejora con el descanso.</p>
+                <span class="pista">Por qué</span>
+              </div>
+              <div class="flip__cara flip__atras">
+                <h3>Cansancio persistente</h3>
+                <p>Puede tener muchas causas. Comentarlo en consulta ayuda a descartar
+                   las más importantes.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="flip flip--texto flip--menta" tabindex="0">
+            <div class="flip__interior">
+              <div class="flip__cara flip__frente">
+                <span class="icono icono--menta"><img src="assets/icons/ui/balanza.svg" alt=""></span>
+                <h3>Pérdida de peso sin motivo</h3>
+                <p>Bajar de peso sin haber cambiado hábitos.</p>
+                <span class="pista">Por qué</span>
+              </div>
+              <div class="flip__cara flip__atras">
+                <h3>Pérdida de peso sin motivo</h3>
+                <p>Es un dato útil para el profesional, sobre todo si ocurre en pocas
+                   semanas.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="flip flip--texto flip--noche" tabindex="0">
+            <div class="flip__interior">
+              <div class="flip__cara flip__frente">
+                <span class="icono"><img src="assets/icons/ui/punto.svg" alt=""></span>
+                <h3>Lunares que cambian</h3>
+                <p>Cambios de color, borde o tamaño.</p>
+                <span class="pista">Por qué</span>
+              </div>
+              <div class="flip__cara flip__atras">
+                <h3>Lunares que cambian</h3>
+                <p>La revisión de la piel es rápida y sencilla, y permite actuar a tiempo
+                   si algo llama la atención.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <p class="aviso revelar">Esta página es educativa. Ante cualquier duda, la evaluación la realiza un profesional.</p>
+      </div>
+    </section>
+
+    <!-- ================= CUESTIONARIO INTERACTIVO =================
+         Cada pregunta usa botones de tipo radio. El CSS muestra si la
+         respuesta es correcta, cuenta los aciertos y pinta la barra del
+         marcador, todo sin JavaScript. -->
+    <section class="seccion seccion--angosta" id="cuestionario">
+      <div class="seccion__interior actividad">
+        <div class="titulo-seccion revelar">
+          <span class="etiqueta etiqueta--menta">Actividad</span>
+          <h2>Comprueba <em>lo aprendido</em></h2>
+          <p>Elige una respuesta en cada pregunta. La página te dice al instante si
+             acertaste y te explica por qué.</p>
+        </div>
+
+        <div class="quiz">
+          <div class="pregunta revelar">
+            <p class="pregunta__texto">1. ¿Qué estudia la oncología?</p>
+            <input class="op op--mal" type="radio" name="p1" id="p1a">
+            <label for="p1a">Solamente las enfermedades del corazón.</label>
+            <input class="op op--bien" type="radio" name="p1" id="p1b">
+            <label for="p1b">Las enfermedades relacionadas con tumores y cáncer.</label>
+            <input class="op op--mal" type="radio" name="p1" id="p1c">
+            <label for="p1c">Únicamente las fracturas de huesos.</label>
+            <p class="fb fb--bien">Correcto. La oncología estudia, previene, diagnostica y trata estas enfermedades.</p>
+            <p class="fb fb--mal">Todavía no. Vuelve a leer la introducción de esta página.</p>
+          </div>
+
+          <div class="pregunta revelar">
+            <p class="pregunta__texto">2. ¿La detección temprana puede ayudar?</p>
+            <input class="op op--bien" type="radio" name="p2" id="p2a">
+            <label for="p2a">Sí, permite evaluar el caso y buscar atención oportuna.</label>
+            <input class="op op--mal" type="radio" name="p2" id="p2b">
+            <label for="p2b">No, siempre da lo mismo cuándo se consulte.</label>
+            <p class="fb fb--bien">Correcto. Consultar a tiempo amplía las opciones que puede ofrecer el profesional.</p>
+            <p class="fb fb--mal">Revisa la sección "Cambios que conviene consultar".</p>
+          </div>
+
+          <div class="pregunta revelar">
+            <p class="pregunta__texto">3. ¿Una página web puede dar un diagnóstico?</p>
+            <input class="op op--mal" type="radio" name="p3" id="p3a">
+            <label for="p3a">Sí, con leer la información es suficiente.</label>
+            <input class="op op--bien" type="radio" name="p3" id="p3b">
+            <label for="p3b">No, el diagnóstico corresponde a profesionales y estudios médicos.</label>
+            <p class="fb fb--bien">Correcto. Un sitio web informa, pero no reemplaza una consulta.</p>
+            <p class="fb fb--mal">No es así: la información en línea solo sirve para orientarse.</p>
+          </div>
+
+          <div class="pregunta revelar">
+            <p class="pregunta__texto">4. ¿Todos los pacientes reciben exactamente el mismo tratamiento?</p>
+            <input class="op op--mal" type="radio" name="p4" id="p4a">
+            <label for="p4a">Sí, existe un único tratamiento para todos.</label>
+            <input class="op op--bien" type="radio" name="p4" id="p4b">
+            <label for="p4b">No, depende del diagnóstico y de la evaluación de cada persona.</label>
+            <p class="fb fb--bien">Correcto. Por eso cada consulta empieza con una evaluación individual.</p>
+            <p class="fb fb--mal">Recuerda el mito número 2 de esta misma página.</p>
+          </div>
+
+          <div class="pregunta revelar">
+            <p class="pregunta__texto">5. ¿Es útil anotar tus dudas antes de una consulta?</p>
+            <input class="op op--bien" type="radio" name="p5" id="p5a">
+            <label for="p5a">Sí, ayuda a aprovechar mejor el tiempo con el profesional.</label>
+            <input class="op op--mal" type="radio" name="p5" id="p5b">
+            <label for="p5b">No, es mejor improvisar en el momento.</label>
+            <p class="fb fb--bien">Correcto. Llevar las preguntas escritas evita olvidarlas durante la cita.</p>
+            <p class="fb fb--mal">Anotar las dudas es justamente lo que recomienda el equipo de OncoMax.</p>
+          </div>
+        </div>
+
+        <!-- Marcador: se queda pegado abajo mientras se responde. Cada barrita
+             corresponde a una pregunta y el numero lo calcula counter(). -->
+        <div class="puntaje">
+          <div class="puntaje__barra" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+          <p class="puntaje__texto" aria-hidden="true">Correctas:</p>
+          <p class="puntaje__perfecto">¡Perfecto, respondiste todo bien!</p>
+          <a class="boton boton--chico" href="reserva.html">¿Te quedaron dudas? Solicitar orientación</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= COMO SE DETECTA ================= -->
+    <section class="seccion seccion--blanca">
+      <div class="seccion__interior dividido">
+        <div class="dividido__lado revelar">
+          <div class="titulo-seccion">
+            <span class="etiqueta">Preguntas frecuentes</span>
+            <h2>Cómo se detecta y <em>por qué consultar a tiempo</em></h2>
+          </div>
+          <div class="acciones">
+            <a class="boton" href="asistencia.html">Ver especialistas</a>
+            <a class="boton boton--claro" href="lazos.html">Lazos de apoyo</a>
+          </div>
+        </div>
+        <div class="escalonado">
+          <details>
+            <summary>¿Cómo se detecta?</summary>
+            <p>Con controles médicos, análisis de sangre, biopsias, radiografías, ecografías,
+               tomografías y otros estudios según cada caso.</p>
+          </details>
+          <details>
+            <summary>¿Por qué importa la detección temprana?</summary>
+            <p>La atención temprana permite orientar al paciente y definir un tratamiento
+               oportuno según la evaluación profesional.</p>
+          </details>
+          <details>
+            <summary>¿Qué puedo hacer desde hoy?</summary>
+            <p>Mantener tus controles al día, avisar cualquier cambio que notes y pedir
+               orientación cuando tengas dudas.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Boton fijo: abre una conversacion de WhatsApp en otra pestaña. -->
+  <a class="whatsapp-fijo" href="https://wa.me/59164556725" target="_blank" rel="noopener" aria-label="Abrir WhatsApp">
+    <img src="assets/icons/whatsapp.svg" alt="">
+    <span>¿Hablamos?</span>
+  </a>
+
+  <!-- ================= PIE DE PAGINA ================= -->
+  <footer class="pie">
+    <div class="pie__interior">
+      <div>
+        <a class="pie__logo" href="index.html"><img src="assets/img/logo-oncomax-horizontal.png" alt="OncoMax" width="132" height="40"></a>
+        <p>Centro Médico Integral Oncológico. Orientación, atención y acompañamiento humano.</p>
+      </div>
+      <div>
+        <h3>Páginas</h3>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="asistencia.html">Asistencia Médica</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="oncologia.html">Oncología</a></li>
+          <li><a href="lazos.html">Lazos de apoyo</a></li>
+          <li><a href="reserva.html">Reservar cita</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contacto</h3>
+        <ul class="lista-datos">
+          <li><span class="icono icono--chico"><img src="assets/icons/whatsapp.svg" alt=""></span><span><small>WhatsApp</small><a href="https://wa.me/59164556725" target="_blank" rel="noopener">+591 64556725</a></span></li>
+          <li><span class="icono icono--chico"><img src="assets/icons/ui/ubicacion.svg" alt=""></span><span><small>Dirección</small>Antofagasta entre Bolívar y Sucre</span></li>
+          <li><span class="icono icono--chico"><img src="assets/icons/ui/casa.svg" alt=""></span><span><small>Ciudad</small>Oruro, Bolivia</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Síguenos</h3>
+        <!-- Por ahora TikTok e Instagram usan # porque faltan los enlaces reales. -->
+        <div class="redes">
+          <a href="#" aria-label="TikTok"><img src="assets/icons/tiktok.svg" alt=""></a>
+          <a href="#" aria-label="Instagram"><img src="assets/icons/instagram.svg" alt=""></a>
+          <a href="https://wa.me/59164556725" target="_blank" rel="noopener" aria-label="WhatsApp"><img src="assets/icons/whatsapp.svg" alt=""></a>
+          <a href="https://www.facebook.com/profile.php?id=61578464102459" target="_blank" rel="noopener" aria-label="Facebook"><img src="assets/icons/facebook.svg" alt=""></a>
+        </div>
+      </div>
+    </div>
+    <!-- Palabra gigante decorativa. -->
+    <div class="pie__gigante" aria-hidden="true">OncoMax</div>
+    <div class="pie__abajo">
+      <p><b>OncoMax</b> · Proyecto educativo. La información del sitio no reemplaza una consulta médica.</p>
+    </div>
+  </footer>
+</body>
+</html>

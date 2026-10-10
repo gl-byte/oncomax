@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<!-- Esta linea indica que usamos la version actual de HTML. -->
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mensajes y consejos prácticos para pacientes, familias y amigos que acompañan un proceso oncológico.">
+  <meta name="theme-color" content="#260D37">
+  <title>Lazos de apoyo | OncoMax</title>
+  <link rel="icon" href="assets/img/logo-simbolo.png">
+  <!-- Tipografias: Nunito (redondeada como el logo) e Instrument Serif para los acentos. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Nunito:wght@400..900&amp;display=swap">
+  <!-- Todos los estilos del sitio viven en un solo archivo compartido. -->
+  <link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+<body>
+  <!-- Barra de progreso de lectura (solo decorativa). -->
+  <div class="progreso" aria-hidden="true"></div>
+
+  <!-- ================= CABECERA ================= -->
+  <header class="cabecera">
+    <div class="cabecera__interior">
+      <!-- El logo siempre lleva al inicio. -->
+      <a class="marca" href="index.html" aria-label="OncoMax, ir al inicio">
+        <img src="assets/img/logo-oncomax-horizontal.png" alt="OncoMax" width="152" height="46">
+      </a>
+
+      <!-- Casilla escondida que abre el menu en celular; el label es el boton. -->
+      <input class="nav-toggle" id="nav-toggle" type="checkbox" aria-label="Abrir o cerrar el menu">
+      <label class="hamburguesa" for="nav-toggle" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </label>
+
+      <nav class="nav" aria-label="Principal">
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="asistencia.html">Asistencia</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="oncologia.html">Oncología</a>
+        <a class="activo" aria-current="page" href="lazos.html">Lazos</a>
+        <a class="nav__cta" href="reserva.html">Reservar cita</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= CABECERA DE LA PAGINA ================= -->
+    <section class="cabeza">
+      <div class="fondo-vivo" aria-hidden="true"><span class="mancha mancha--1"></span><span class="mancha mancha--2"></span><span class="mancha mancha--3"></span></div>
+      <div class="cabeza__interior">
+        <div class="cabeza__texto">
+          <nav class="migas entrada" aria-label="Ruta"><a href="index.html">Inicio</a><span aria-hidden="true">/</span><span>Lazos de apoyo</span></nav>
+          <span class="etiqueta etiqueta--brillo entrada" style="--d:1">Acompañar</span>
+          <h1 class="entrada" style="--d:2">Lazos <em>de apoyo</em></h1>
+          <p class="entrada" style="--d:3">Un espacio con mensajes sencillos para pacientes, familiares y amigos.
+             Cada tarjeta guarda por detrás una acción concreta para hoy.</p>
+        </div>
+        <div class="orbita entrada" style="--d:3" aria-hidden="true"><span></span><img src="assets/img/logo-simbolo.png" alt=""><span></span></div>
+      </div>
+      <svg class="ola" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,38 C240,108 480,8 720,48 C960,88 1200,18 1440,58 L1440,120 L0,120 Z"/>
+        <path d="M0,72 C260,120 520,32 760,70 C1000,108 1220,58 1440,82 L1440,120 L0,120 Z"/>
+      </svg>
+    </section>
+
+    <!-- ================= MENSAJES QUE GIRAN ================= -->
+    <section class="seccion">
+      <div class="seccion__interior">
+        <div class="titulo-seccion titulo-seccion--centro revelar">
+          <span class="etiqueta">Mensajes</span>
+          <h2>Una palabra, <em>una acción</em></h2>
+          <span class="pista-uso">Pasa el mouse, toca la tarjeta o llega con la tecla Tab</span>
+        </div>
+
+        <div class="grid grid--3 escalonado">
+          <article class="flip flip--texto" tabindex="0">
+            <div class="flip__interior">
+              <div class="flip__cara flip__frente">
+                <span class="icono icono--coral"><img src="assets/icons/ui/corazon.svg" alt=""></span>
+                <span class="etiqueta etiqueta--numero">Paciente</span>
+                <h2>Para el paciente</h2>
+                <p>No tienes que vivir cada paso en soledad. Pedir apoyo también es cuidarte.</p>
+                <span class="pista">Descubrir consejo</span>
+              </div>
+              <div class="flip__cara flip__atras">
+                <span class="etiqueta etiqueta--blanca">Una acción para hoy</span>
+                <p>Elige a una persona de confianza y cuéntale qué tipo de ayuda necesitas:
+                   compañía, transporte, conversación o descanso.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="flip flip--texto flip--menta" tabindex="0">
+            <div class="flip__interior">
+              <div class="flip__cara flip__frente">
+                <span class="icono icono--menta"><img src="assets/icons/ui/casa.svg" alt=""></span>
+                <span class="etiqueta etiqueta--numero">Familia</span>
+                <h2>Para la familia</h2>
+                <p>Escuchar con calma puede ser una ayuda muy valiosa durante el tratamiento.</p>
+                <span class="pista">Descubrir consejo</span>
+              </div>
+              <div class="flip__cara flip__atras">
+                <span class="etiqueta etiqueta--blanca">Una acción para hoy</span>
+                <p>Pregunta: "¿Qué puedo hacer por ti hoy?". Una pregunta clara evita suponer
+                   lo que la otra persona necesita.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="flip flip--texto flip--coral" tabindex="0">
+            <div class="flip__interior">
+              <div class="flip__cara flip__frente">
+                <span class="icono"><img src="assets/icons/ui/mensaje.svg" alt=""></span>
+                <span class="etiqueta etiqueta--numero">Amistades</span>
+                <h2>Para los amigos</h2>
+                <p>Una llamada, una visita o un mensaje breve pueden acompañar mucho.</p>
+                <span class="pista">Descubrir consejo</span>
+              </div>
+              <div class="flip__cara flip__atras">
+                <span class="etiqueta etiqueta--blanca">Una acción para hoy</span>
+                <p>Envía un mensaje sencillo y sin exigir respuesta. Lo importante es
+                   recordar que sigues presente.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="flip flip--texto flip--noche" tabindex="0">
+            <div class="flip__interior">
+              <div class="flip__cara flip__frente">
+                <span class="icono icono--coral"><img src="assets/icons/ui/mano.svg" alt=""></span>
+                <span class="etiqueta etiqueta--numero">Cuidadores</span>
+                <h2>Para quien cuida</h2>
+                <p>Acompañar cansa. Cuidarte a ti también es cuidar al paciente.</p>
+                <span class="pista">Descubrir consejo</span>
+              </div>
+              <div class="flip__cara flip__atras">
+                <span class="etiqueta etiqueta--blanca">Una acción para hoy</span>
+                <p>Reserva un momento del día solo para ti y pide relevo cuando lo necesites:
+                   nadie puede acompañar sin descansar.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="flip flip--texto" tabindex="0">
+            <div class="flip__interior">
+              <div class="flip__cara flip__frente">
+                <span class="icono icono--menta"><img src="assets/icons/ui/lazo.svg" alt=""></span>
+                <span class="etiqueta etiqueta--numero">Palabras</span>
+                <h2>Qué decir</h2>
+                <p>A veces no hacen falta frases perfectas, sino presencia.</p>
+                <span class="pista">Descubrir consejo</span>
+              </div>
+              <div class="flip__cara flip__atras">
+                <span class="etiqueta etiqueta--blanca">Una acción para hoy</span>
+                <p>Cambia "sé fuerte" por "estoy aquí". La segunda frase acompaña sin
+                   exigirle nada a la otra persona.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="flip flip--texto flip--menta" tabindex="0">
+            <div class="flip__interior">
+              <div class="flip__cara flip__frente">
+                <span class="icono"><img src="assets/icons/ui/sonrisa.svg" alt=""></span>
+                <span class="etiqueta etiqueta--numero">Día a día</span>
+                <h2>La vida sigue</h2>
+                <p>Mantener rutinas y gustos personales también forma parte del cuidado.</p>
+                <span class="pista">Descubrir consejo</span>
+              </div>
+              <div class="flip__cara flip__atras">
+                <span class="etiqueta etiqueta--blanca">Una acción para hoy</span>
+                <p>Propón un plan sencillo y sin esfuerzo: una caminata corta, una serie
+                   compartida o una comida favorita.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FORMAS DE ACOMPAÑAR ================= -->
+    <section class="seccion seccion--suave">
+      <div class="seccion__interior dividido">
+        <div class="dividido__lado revelar">
+          <div class="titulo-seccion">
+            <span class="etiqueta etiqueta--menta">Guía rápida</span>
+            <h2>Formas de <em>acompañar</em></h2>
+            <p>Consejos que se abren al hacer clic en el título.</p>
+          </div>
+        </div>
+        <div class="escalonado">
+          <details>
+            <summary>Escuchar sin interrumpir</summary>
+            <p>Permite que la persona exprese cómo se siente sin obligarla a responder.</p>
+          </details>
+          <details>
+            <summary>Ofrecer ayuda concreta</summary>
+            <p>Por ejemplo, acompañar a una cita o ayudar con una tarea cotidiana.</p>
+          </details>
+          <details>
+            <summary>Respetar sus tiempos</summary>
+            <p>Cada persona enfrenta el proceso de una manera distinta.</p>
+          </details>
+          <details>
+            <summary>Acompañar durante una cita</summary>
+            <p>Puedes ayudar a anotar preguntas y recordar las indicaciones del profesional.</p>
+          </details>
+          <details>
+            <summary>Cuidar también al cuidador</summary>
+            <p>Quien acompaña necesita descansar, conversar y pedir ayuda cuando se siente cansado.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= LLAMADO FINAL ================= -->
+    <section class="seccion">
+      <div class="seccion__interior">
+        <div class="llamado revelar">
+          <div class="fondo-vivo" aria-hidden="true"><span class="mancha mancha--1"></span><span class="mancha mancha--2"></span><span class="mancha mancha--3"></span></div>
+          <h2>¿Necesitas orientación <em>para acompañar?</em></h2>
+          <p>El equipo de OncoMax también atiende a familiares y personas cuidadoras.</p>
+          <div class="acciones acciones--centro">
+            <a class="boton boton--blanco" href="reserva.html">Solicitar orientación</a>
+            <a class="boton boton--vidrio" href="nosotros.html">Conocer al equipo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Boton fijo: abre una conversacion de WhatsApp en otra pestaña. -->
+  <a class="whatsapp-fijo" href="https://wa.me/59164556725" target="_blank" rel="noopener" aria-label="Abrir WhatsApp">
+    <img src="assets/icons/whatsapp.svg" alt="">
+    <span>¿Hablamos?</span>
+  </a>
+
+  <!-- ================= PIE DE PAGINA ================= -->
+  <footer class="pie">
+    <div class="pie__interior">
+      <div>
+        <a class="pie__logo" href="index.html"><img src="assets/img/logo-oncomax-horizontal.png" alt="OncoMax" width="132" height="40"></a>
+        <p>Centro Médico Integral Oncológico. Orientación, atención y acompañamiento humano.</p>
+      </div>
+      <div>
+        <h3>Páginas</h3>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="asistencia.html">Asistencia Médica</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="oncologia.html">Oncología</a></li>
+          <li><a href="lazos.html">Lazos de apoyo</a></li>
+          <li><a href="reserva.html">Reservar cita</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contacto</h3>
+        <ul class="lista-datos">
+          <li><span class="icono icono--chico"><img src="assets/icons/whatsapp.svg" alt=""></span><span><small>WhatsApp</small><a href="https://wa.me/59164556725" target="_blank" rel="noopener">+591 64556725</a></span></li>
+          <li><span class="icono icono--chico"><img src="assets/icons/ui/ubicacion.svg" alt=""></span><span><small>Dirección</small>Antofagasta entre Bolívar y Sucre</span></li>
+          <li><span class="icono icono--chico"><img src="assets/icons/ui/casa.svg" alt=""></span><span><small>Ciudad</small>Oruro, Bolivia</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Síguenos</h3>
+        <!-- Por ahora TikTok e Instagram usan # porque faltan los enlaces reales. -->
+        <div class="redes">
+          <a href="#" aria-label="TikTok"><img src="assets/icons/tiktok.svg" alt=""></a>
+          <a href="#" aria-label="Instagram"><img src="assets/icons/instagram.svg" alt=""></a>
+          <a href="https://wa.me/59164556725" target="_blank" rel="noopener" aria-label="WhatsApp"><img src="assets/icons/whatsapp.svg" alt=""></a>
+          <a href="https://www.facebook.com/profile.php?id=61578464102459" target="_blank" rel="noopener" aria-label="Facebook"><img src="assets/icons/facebook.svg" alt=""></a>
+        </div>
+      </div>
+    </div>
+    <!-- Palabra gigante decorativa. -->
+    <div class="pie__gigante" aria-hidden="true">OncoMax</div>
+    <div class="pie__abajo">
+      <p><b>OncoMax</b> · Proyecto educativo. La información del sitio no reemplaza una consulta médica.</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<!-- Esta linea le dice al navegador que el documento usa HTML5. -->
+<html lang="es">
+<head>
+  <!-- head guarda datos que el navegador necesita, pero que casi no se ven en pantalla. -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="OncoMax: centro médico integral oncológico en Oruro, Bolivia. Orientación, asistencia médica y acompañamiento humano.">
+  <meta name="theme-color" content="#260D37">
+  <title>OncoMax | Inicio</title>
+  <link rel="icon" href="assets/img/logo-simbolo.png">
+  <!-- Tipografias: Nunito (redondeada como el logo) e Instrument Serif para los acentos. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Nunito:wght@400..900&amp;display=swap">
+  <!-- Todos los estilos del sitio viven en un solo archivo compartido. -->
+  <link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+<body>
+  <!-- Barra de progreso de lectura (solo decorativa). -->
+  <div class="progreso" aria-hidden="true"></div>
+
+  <!-- ================= CABECERA ================= -->
+  <header class="cabecera">
+    <div class="cabecera__interior">
+      <!-- El logo siempre lleva al inicio. -->
+      <a class="marca" href="index.html" aria-label="OncoMax, ir al inicio">
+        <img src="assets/img/logo-oncomax-horizontal.png" alt="OncoMax" width="152" height="46">
+      </a>
+
+      <!-- Casilla escondida que abre el menu en celular; el label es el boton. -->
+      <input class="nav-toggle" id="nav-toggle" type="checkbox" aria-label="Abrir o cerrar el menu">
+      <label class="hamburguesa" for="nav-toggle" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </label>
+
+      <nav class="nav" aria-label="Principal">
+        <a class="activo" aria-current="page" href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="asistencia.html">Asistencia</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="oncologia.html">Oncología</a>
+        <a href="lazos.html">Lazos</a>
+        <a class="nav__cta" href="reserva.html">Reservar cita</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= PORTADA ================= -->
+    <section class="portada">
+      <div class="fondo-vivo" aria-hidden="true"><span class="mancha mancha--1"></span><span class="mancha mancha--2"></span><span class="mancha mancha--3"></span></div>
+      <div class="portada__interior">
+        <div class="portada__texto">
+          <!-- "entrada" hace que cada linea aparezca al cargar; --d es el orden. -->
+          <span class="etiqueta etiqueta--brillo entrada">Centro médico integral · Oruro, Bolivia</span>
+          <span class="portada__marca entrada" style="--d:1">OncoMax · Centro Médico Integral Oncológico</span>
+          <h1 class="entrada" style="--d:2">Tu lucha es nuestra lucha, cuidamos de ti <em>con el corazón.</em></h1>
+          <p class="entrada" style="--d:3">En OncoMax brindamos orientación, asistencia médica y acompañamiento humano
+             para pacientes y familias durante todo el proceso de atención.</p>
+          <div class="acciones entrada" style="--d:4">
+            <a class="boton" href="reserva.html">Reservar una cita</a>
+            <a class="boton boton--vidrio" href="servicios.html">Ver servicios</a>
+          </div>
+
+          <!-- Caras del equipo + un dato que da confianza. -->
+          <div class="confianza entrada" style="--d:5">
+            <div class="avatares">
+              <img src="assets/img/web/cara-dra-elena-rosales.jpg" alt="" width="48" height="48">
+              <img src="assets/img/web/cara-doctor-abdon.jpg" alt="" width="48" height="48">
+              <img src="assets/img/web/cara-dra-amara-orellio.jpg" alt="" width="48" height="48">
+              <img src="assets/img/web/cara-enfermera-sofia.jpg" alt="" width="48" height="48">
+            </div>
+            <p><b>+7 años</b> acompañando pacientes y familias</p>
+          </div>
+        </div>
+
+        <!-- El video vive dentro de un marco con forma de celular. -->
+        <div class="portada__visual entrada" style="--d:3">
+          <p class="video-pie">Conoce OncoMax en un minuto</p>
+          <div class="telefono">
+            <video class="video" controls playsinline preload="metadata" poster="assets/img/web/equipo-oncomax.jpg">
+              <source src="assets/videos/video-inicio.mp4" type="video/mp4">
+              Tu navegador no puede reproducir este video.
+            </video>
+          </div>
+
+          <!-- Tarjetitas que flotan alrededor del video. -->
+          <div class="flotante flotante--1">
+            <span class="icono icono--chico icono--coral"><img src="assets/icons/ui/corazon.svg" alt=""></span>
+            <span><b>100%</b><small>Trato humano y respetuoso</small></span>
+          </div>
+          <div class="flotante flotante--2">
+            <span class="icono icono--chico icono--menta"><img src="assets/icons/ui/estetoscopio.svg" alt=""></span>
+            <span><b>3 áreas</b><small>de atención especializada</small></span>
+          </div>
+
+          <!-- Sello que gira: el texto sigue un circulo dibujado en SVG. -->
+          <a class="sello" href="reserva.html" aria-label="Reservar una cita">
+            <svg viewBox="0 0 200 200" aria-hidden="true">
+              <defs><path id="circulo-sello" d="M100,100 m-74,0 a74,74 0 1,1 148,0 a74,74 0 1,1 -148,0"/></defs>
+              <!-- textLength reparte las letras para cubrir el circulo completo. -->
+              <text><textPath href="#circulo-sello" textLength="462" lengthAdjust="spacing">Reserva tu cita · Cuidamos de ti · </textPath></text>
+            </svg>
+            <img src="assets/img/logo-simbolo.png" alt="">
+          </a>
+        </div>
+      </div>
+      <svg class="ola" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,38 C240,108 480,8 720,48 C960,88 1200,18 1440,58 L1440,120 L0,120 Z"/>
+        <path d="M0,72 C260,120 520,32 760,70 C1000,108 1220,58 1440,82 L1440,120 L0,120 Z"/>
+      </svg>
+    </section>
+
+    <!-- ================= CINTAS EN MOVIMIENTO =================
+         Cada lista se repite dos veces: cuando la primera sale de la
+         pantalla, la copia ocupa su lugar y el giro parece infinito. -->
+    <div class="cintas" aria-hidden="true">
+      <div class="cinta cinta--atras">
+        <div class="cinta__pista">
+          <ul><li>Atención cercana</li><li>Equipo especializado</li><li>La familia también cuenta</li><li>Palabras claras</li><li>Respeto y escucha</li></ul>
+          <ul><li>Atención cercana</li><li>Equipo especializado</li><li>La familia también cuenta</li><li>Palabras claras</li><li>Respeto y escucha</li></ul>
+        </div>
+      </div>
+      <div class="cinta">
+        <div class="cinta__pista">
+          <ul><li>Oncología pediátrica</li><li>Oncología quirúrgica</li><li>Acompañamiento integral</li><li>Asistencia domiciliaria</li><li>Lazos de apoyo</li></ul>
+          <ul><li>Oncología pediátrica</li><li>Oncología quirúrgica</li><li>Acompañamiento integral</li><li>Asistencia domiciliaria</li><li>Lazos de apoyo</li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= CIFRAS ================= -->
+    <section class="seccion">
+      <div class="seccion__interior">
+        <div class="titulo-seccion revelar">
+          <span class="etiqueta">OncoMax en números</span>
+          <h2>Cuidar es un trabajo <em>de todos los días</em></h2>
+        </div>
+        <!-- Cada numero cuenta desde cero con CSS (ver "contador" en estilos.css).
+             El texto .sr-solo es el que leen los lectores de pantalla. -->
+        <div class="cifras escalonado">
+          <div class="cifra cifra--oscura">
+            <span class="icono"><img src="assets/icons/ui/calendario.svg" alt=""></span>
+            <b><span class="contador" style="--fin:7" data-antes="+" aria-hidden="true"></span><span class="sr-solo">+7</span></b>
+            <span>Años acompañando pacientes</span>
+          </div>
+          <div class="cifra">
+            <span class="icono icono--menta"><img src="assets/icons/ui/equipo.svg" alt=""></span>
+            <b><span class="contador" style="--fin:5" aria-hidden="true"></span><span class="sr-solo">5</span></b>
+            <span>Especialistas y enfermeras</span>
+          </div>
+          <div class="cifra">
+            <span class="icono icono--coral"><img src="assets/icons/ui/estetoscopio.svg" alt=""></span>
+            <b><span class="contador" style="--fin:3" aria-hidden="true"></span><span class="sr-solo">3</span></b>
+            <span>Áreas de atención</span>
+          </div>
+          <div class="cifra">
+            <span class="icono"><img src="assets/icons/ui/corazon.svg" alt=""></span>
+            <b><span class="contador" style="--fin:100" data-despues="%" aria-hidden="true"></span><span class="sr-solo">100%</span></b>
+            <span>Trato humano y respetuoso</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= POR QUE ONCOMAX (tarjetas giratorias) ================= -->
+    <section class="seccion seccion--suave">
+      <div class="seccion__interior">
+        <div class="titulo-seccion titulo-seccion--centro revelar">
+          <span class="etiqueta">Nuestra forma de trabajar</span>
+          <h2>Por qué elegir <em>OncoMax</em></h2>
+          <p>Cada tarjeta gira y muestra la explicación completa por detrás.</p>
+          <span class="pista-uso">Pasa el mouse, tócala o llega con la tecla Tab</span>
+        </div>
+
+        <div class="grid grid--3 escalonado">
+          <article class="flip flip--texto" tabindex="0">
+            <div class="flip__interior">
+              <div class="flip__cara flip__frente">
+                <span class="icono icono--coral"><img src="assets/icons/ui/mensaje.svg" alt=""></span>
+                <h3>Atención cercana</h3>
+                <p>Explicamos cada paso con palabras claras y sin apuros.</p>
+                <span class="pista">Ver detalle</span>
+              </div>
+              <div class="flip__cara flip__atras">
+                <h3>Atención cercana</h3>
+                <p>El paciente recibe información comprensible sobre su situación, puede
+                   preguntar todas las veces que necesite y decide acompañado del profesional.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="flip flip--texto flip--menta" tabindex="0">
+            <div class="flip__interior">
+              <div class="flip__cara flip__frente">
+                <span class="icono icono--menta"><img src="assets/icons/ui/equipo.svg" alt=""></span>
+                <h3>Equipo especializado</h3>
+                <p>Oncología médica, quirúrgica y pediátrica en un mismo lugar.</p>
+                <span class="pista">Ver detalle</span>
+              </div>
+              <div class="flip__cara flip__atras">
+                <h3>Equipo especializado</h3>
+                <p>Doctores y enfermeras trabajan de forma coordinada, así el paciente no
+                   tiene que repetir su historia en cada consulta.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="flip flip--texto flip--coral" tabindex="0">
+            <div class="flip__interior">
+              <div class="flip__cara flip__frente">
+                <span class="icono"><img src="assets/icons/ui/casa.svg" alt=""></span>
+                <h3>La familia también cuenta</h3>
+                <p>Acompañamos a quienes cuidan al paciente.</p>
+                <span class="pista">Ver detalle</span>
+              </div>
+              <div class="flip__cara flip__atras">
+                <h3>La familia también cuenta</h3>
+                <p>Damos orientación a familiares y amigos para que sepan cómo ayudar,
+                   cómo escuchar y cómo cuidarse ellos mismos.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= MAPA DEL SITIO EN TARJETAS =================
+         Cada tarjeta es un enlace. Al pasar el mouse se llena de color
+         y despliega la descripcion larga de esa pagina. -->
+    <section class="seccion seccion--blanca">
+      <div class="seccion__interior">
+        <div class="titulo-seccion revelar">
+          <span class="etiqueta">Recorre el sitio</span>
+          <h2>Qué puedes <em>encontrar aquí</em></h2>
+          <p>Pasa el mouse sobre cada tarjeta para ver qué incluye esa página.</p>
+        </div>
+
+        <div class="rutas escalonado">
+          <a class="ruta ruta--ancha" href="servicios.html">
+            <img class="ruta__foto" src="assets/img/web/servicio-pediatrico.jpg" alt="" loading="lazy" style="--foco: 50% 45%; --zoom: 1.15">
+            <span class="ruta__num" aria-hidden="true">01</span>
+            <span class="icono"><img src="assets/icons/ui/estetoscopio.svg" alt=""></span>
+            <h3>Servicios</h3>
+            <p class="ruta__corto">Atención y acompañamiento integral.</p>
+            <p class="ruta__largo"><span>Conoce las áreas de atención disponibles: oncología pediátrica,
+               oncología quirúrgica y acompañamiento integral.</span></p>
+            <span class="ruta__ir">Entrar</span>
+          </a>
+
+          <a class="ruta" href="asistencia.html">
+            <span class="ruta__num" aria-hidden="true">02</span>
+            <span class="icono icono--menta"><img src="assets/icons/ui/escudo.svg" alt=""></span>
+            <h3>Asistencia Médica</h3>
+            <p class="ruta__corto">Especialistas y apoyo domiciliario.</p>
+            <p class="ruta__largo"><span>Revisa a los profesionales, el calendario de atención y los tres pasos
+               para solicitar una consulta.</span></p>
+            <span class="ruta__ir">Entrar</span>
+          </a>
+
+          <a class="ruta" href="nosotros.html">
+            <span class="ruta__num" aria-hidden="true">03</span>
+            <span class="icono"><img src="assets/icons/ui/equipo.svg" alt=""></span>
+            <h3>Nosotros</h3>
+            <p class="ruta__corto">El equipo humano de OncoMax.</p>
+            <p class="ruta__largo"><span>Descubre la historia de la clínica, la galería y la biografía de
+               doctores y enfermeras.</span></p>
+            <span class="ruta__ir">Entrar</span>
+          </a>
+
+          <a class="ruta" href="oncologia.html">
+            <span class="ruta__num" aria-hidden="true">04</span>
+            <span class="icono icono--coral"><img src="assets/icons/ui/libro.svg" alt=""></span>
+            <h3>Oncología</h3>
+            <p class="ruta__corto">Información educativa básica.</p>
+            <p class="ruta__largo"><span>Aprende con mitos y realidades, un cuestionario para autoevaluarte y
+               señales a las que conviene prestar atención.</span></p>
+            <span class="ruta__ir">Entrar</span>
+          </a>
+
+          <a class="ruta" href="lazos.html">
+            <span class="ruta__num" aria-hidden="true">05</span>
+            <span class="icono icono--menta"><img src="assets/icons/ui/lazo.svg" alt=""></span>
+            <h3>Lazos de apoyo</h3>
+            <p class="ruta__corto">Mensajes para pacientes y familias.</p>
+            <p class="ruta__largo"><span>Encuentra frases de aliento y consejos concretos para acompañar con
+               respeto y cariño.</span></p>
+            <span class="ruta__ir">Entrar</span>
+          </a>
+
+          <a class="ruta ruta--ancha" href="reserva.html">
+            <img class="ruta__foto" src="assets/img/web/dra-elena-rosales.jpg" alt="" loading="lazy" style="--foco: 55% 30%; --zoom: 1.2">
+            <span class="ruta__num" aria-hidden="true">06</span>
+            <span class="icono"><img src="assets/icons/ui/calendario.svg" alt=""></span>
+            <h3>Reservar cita</h3>
+            <p class="ruta__corto">Formulario de reserva.</p>
+            <p class="ruta__largo"><span>Elige un servicio, una fecha y deja tus datos de contacto. También
+               encontrarás el croquis para llegar.</span></p>
+            <span class="ruta__ir">Entrar</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PREGUNTAS FRECUENTES ================= -->
+    <section class="seccion seccion--suave" id="preguntas">
+      <div class="seccion__interior dividido">
+        <!-- Columna izquierda: se queda fija mientras se leen las preguntas. -->
+        <div class="dividido__lado revelar">
+          <div class="titulo-seccion">
+            <span class="etiqueta">Dudas comunes</span>
+            <h2>Preguntas <em>frecuentes</em></h2>
+            <p>Al hacer clic en una pregunta, el navegador abre la respuesta por sí solo.</p>
+          </div>
+          <div class="tarjeta-ayuda">
+            <div class="fondo-vivo" aria-hidden="true"><span class="mancha mancha--1"></span><span class="mancha mancha--2"></span><span class="mancha mancha--3"></span></div>
+            <h3>¿Tienes otra duda?</h3>
+            <p>Escríbenos por WhatsApp y te orientamos.</p>
+            <a class="boton boton--menta boton--chico" href="https://wa.me/59164556725" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+          </div>
+        </div>
+
+        <div class="escalonado">
+          <details>
+            <summary>¿Necesito una cita para recibir orientación?</summary>
+            <p>Sí, puedes solicitarla desde la página Reserva o comunicarte por WhatsApp.</p>
+          </details>
+          <details>
+            <summary>¿OncoMax atiende a niños?</summary>
+            <p>Sí, contamos con información y atención de oncología pediátrica.</p>
+          </details>
+          <details>
+            <summary>¿La información del sitio reemplaza al médico?</summary>
+            <p>No. Esta página es educativa y una evaluación siempre debe realizarla un profesional.</p>
+          </details>
+          <details>
+            <summary>¿Puedo ir acompañado a la consulta?</summary>
+            <p>Sí. Recomendamos venir con una persona de confianza que ayude a anotar las indicaciones.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= LLAMADO FINAL Y REDES ================= -->
+    <section class="seccion">
+      <div class="seccion__interior">
+        <div class="llamado revelar">
+          <div class="fondo-vivo" aria-hidden="true"><span class="mancha mancha--1"></span><span class="mancha mancha--2"></span><span class="mancha mancha--3"></span></div>
+          <span class="etiqueta etiqueta--brillo">Estamos para ti</span>
+          <h2>Hablemos <em>cuando lo necesites</em></h2>
+          <p>Escríbenos por WhatsApp o déjanos tus datos y la clínica se comunica contigo.</p>
+          <div class="acciones acciones--centro">
+            <a class="boton boton--blanco" href="reserva.html">Solicitar una cita</a>
+            <a class="boton boton--menta" href="https://wa.me/59164556725" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+          </div>
+          <!-- Por ahora TikTok e Instagram usan # porque faltan los enlaces reales. -->
+          <div class="redes">
+            <a href="#" aria-label="TikTok"><img src="assets/icons/tiktok.svg" alt=""></a>
+            <a href="#" aria-label="Instagram"><img src="assets/icons/instagram.svg" alt=""></a>
+            <a href="https://wa.me/59164556725" target="_blank" rel="noopener" aria-label="WhatsApp"><img src="assets/icons/whatsapp.svg" alt=""></a>
+            <a href="https://www.facebook.com/profile.php?id=61578464102459" target="_blank" rel="noopener" aria-label="Facebook"><img src="assets/icons/facebook.svg" alt=""></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Boton fijo: abre una conversacion de WhatsApp en otra pestaña. -->
+  <a class="whatsapp-fijo" href="https://wa.me/59164556725" target="_blank" rel="noopener" aria-label="Abrir WhatsApp">
+    <img src="assets/icons/whatsapp.svg" alt="">
+    <span>¿Hablamos?</span>
+  </a>
+
+  <!-- ================= PIE DE PAGINA ================= -->
+  <footer class="pie">
+    <div class="pie__interior">
+      <div>
+        <a class="pie__logo" href="index.html"><img src="assets/img/logo-oncomax-horizontal.png" alt="OncoMax" width="132" height="40"></a>
+        <p>Centro Médico Integral Oncológico. Orientación, atención y acompañamiento humano.</p>
+      </div>
+      <div>
+        <h3>Páginas</h3>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="asistencia.html">Asistencia Médica</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="oncologia.html">Oncología</a></li>
+          <li><a href="lazos.html">Lazos de apoyo</a></li>
+          <li><a href="reserva.html">Reservar cita</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contacto</h3>
+        <ul class="lista-datos">
+          <li><span class="icono icono--chico"><img src="assets/icons/whatsapp.svg" alt=""></span><span><small>WhatsApp</small><a href="https://wa.me/59164556725" target="_blank" rel="noopener">+591 64556725</a></span></li>
+          <li><span class="icono icono--chico"><img src="assets/icons/ui/ubicacion.svg" alt=""></span><span><small>Dirección</small>Antofagasta entre Bolívar y Sucre</span></li>
+          <li><span class="icono icono--chico"><img src="assets/icons/ui/casa.svg" alt=""></span><span><small>Ciudad</small>Oruro, Bolivia</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Síguenos</h3>
+        <!-- Por ahora TikTok e Instagram usan # porque faltan los enlaces reales. -->
+        <div class="redes">
+          <a href="#" aria-label="TikTok"><img src="assets/icons/tiktok.svg" alt=""></a>
+          <a href="#" aria-label="Instagram"><img src="assets/icons/instagram.svg" alt=""></a>
+          <a href="https://wa.me/59164556725" target="_blank" rel="noopener" aria-label="WhatsApp"><img src="assets/icons/whatsapp.svg" alt=""></a>
+          <a href="https://www.facebook.com/profile.php?id=61578464102459" target="_blank" rel="noopener" aria-label="Facebook"><img src="assets/icons/facebook.svg" alt=""></a>
+        </div>
+      </div>
+    </div>
+    <!-- Palabra gigante decorativa. -->
+    <div class="pie__gigante" aria-hidden="true">OncoMax</div>
+    <div class="pie__abajo">
+      <p><b>OncoMax</b> · Proyecto educativo. La información del sitio no reemplaza una consulta médica.</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Configuracion de la pagina. -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Servicios de OncoMax: oncología pediátrica, oncología quirúrgica y acompañamiento integral.">
+  <meta name="theme-color" content="#260D37">
+  <title>Servicios | OncoMax</title>
+  <link rel="icon" href="assets/img/logo-simbolo.png">
+  <!-- Tipografias: Nunito (redondeada como el logo) e Instrument Serif para los acentos. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Nunito:wght@400..900&amp;display=swap">
+  <!-- Todos los estilos del sitio viven en un solo archivo compartido. -->
+  <link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+<body>
+  <!-- Barra de progreso de lectura (solo decorativa). -->
+  <div class="progreso" aria-hidden="true"></div>
+
+  <!-- ================= CABECERA ================= -->
+  <header class="cabecera">
+    <div class="cabecera__interior">
+      <!-- El logo siempre lleva al inicio. -->
+      <a class="marca" href="index.html" aria-label="OncoMax, ir al inicio">
+        <img src="assets/img/logo-oncomax-horizontal.png" alt="OncoMax" width="152" height="46">
+      </a>
+
+      <!-- Casilla escondida que abre el menu en celular; el label es el boton. -->
+      <input class="nav-toggle" id="nav-toggle" type="checkbox" aria-label="Abrir o cerrar el menu">
+      <label class="hamburguesa" for="nav-toggle" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </label>
+
+      <nav class="nav" aria-label="Principal">
+        <a href="index.html">Inicio</a>
+        <a class="activo" aria-current="page" href="servicios.html">Servicios</a>
+        <a href="asistencia.html">Asistencia</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="oncologia.html">Oncología</a>
+        <a href="lazos.html">Lazos</a>
+        <a class="nav__cta" href="reserva.html">Reservar cita</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= CABECERA DE LA PAGINA ================= -->
+    <section class="cabeza">
+      <div class="fondo-vivo" aria-hidden="true"><span class="mancha mancha--1"></span><span class="mancha mancha--2"></span><span class="mancha mancha--3"></span></div>
+      <div class="cabeza__interior">
+        <div class="cabeza__texto">
+          <nav class="migas entrada" aria-label="Ruta"><a href="index.html">Inicio</a><span aria-hidden="true">/</span><span>Servicios</span></nav>
+          <span class="etiqueta etiqueta--brillo entrada" style="--d:1">Áreas de atención</span>
+          <h1 class="entrada" style="--d:2">Nuestros <em>servicios</em></h1>
+          <p class="entrada" style="--d:3">Atención médica y acompañamiento integral para pacientes y familias.</p>
+        </div>
+        <div class="orbita entrada" style="--d:3" aria-hidden="true"><span></span><img src="assets/img/logo-simbolo.png" alt=""><span></span></div>
+      </div>
+      <svg class="ola" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,38 C240,108 480,8 720,48 C960,88 1200,18 1440,58 L1440,120 L0,120 Z"/>
+        <path d="M0,72 C260,120 520,32 760,70 C1000,108 1220,58 1440,82 L1440,120 L0,120 Z"/>
+      </svg>
+    </section>
+
+    <!-- ================= LOS TRES SERVICIOS =================
+         Tarjetas con foto: al pasar el mouse, tocarlas o llegar con la
+         tecla Tab, un panel crece desde la esquina con el detalle. -->
+    <section class="seccion">
+      <div class="seccion__interior">
+        <div class="titulo-seccion revelar">
+          <span class="etiqueta">Especialidades</span>
+          <h2>Tres áreas, <em>un mismo cuidado</em></h2>
+          <span class="pista-uso">Pasa el mouse, toca la tarjeta o llega con la tecla Tab</span>
+        </div>
+
+        <div class="grid grid--3 escalonado">
+          <article class="perfil perfil--servicio" tabindex="0" style="--foco: 50% 45%; --zoom: 1.35">
+            <img class="perfil__foto" src="assets/img/web/servicio-pediatrico.jpg" alt="Oncóloga pediátrica" loading="lazy">
+            <div class="perfil__base">
+              <span class="chip">Niños y adolescentes</span>
+              <h2>Oncología pediátrica</h2>
+              <p>Atención para niños y adolescentes.</p>
+              <span class="pista">Ver detalles</span>
+            </div>
+            <div class="perfil__detalle">
+              <h2>Oncología pediátrica</h2>
+              <p><b>¿A quién ayuda?</b><br>A niños, adolescentes y sus familias.</p>
+              <p><b>¿Qué incluye?</b><br>Evaluación, orientación, seguimiento y comunicación adecuada para cada edad.</p>
+              <p><b>Objetivo:</b><br>Brindar una atención cercana que también incluya a la familia.</p>
+              <a class="boton boton--chico" href="reserva.html">Reservar consulta</a>
+            </div>
+          </article>
+
+          <article class="perfil perfil--servicio" tabindex="0" style="--foco: 60% 45%; --zoom: 1.35">
+            <img class="perfil__foto" src="assets/img/web/servicio-quirurgico.jpg" alt="Oncóloga quirúrgica" loading="lazy">
+            <div class="perfil__base">
+              <span class="chip">Tratamiento de tumores</span>
+              <h2>Oncología quirúrgica</h2>
+              <p>Evaluación y tratamiento de tumores.</p>
+              <span class="pista">Ver detalles</span>
+            </div>
+            <div class="perfil__detalle">
+              <h2>Oncología quirúrgica</h2>
+              <p><b>Primera etapa:</b><br>El especialista revisa estudios y antecedentes del paciente.</p>
+              <p><b>Plan de atención:</b><br>Se explica si una cirugía puede formar parte del tratamiento.</p>
+              <p><b>Seguimiento:</b><br>El equipo acompaña la preparación y la recuperación.</p>
+              <a class="boton boton--chico" href="reserva.html">Reservar consulta</a>
+            </div>
+          </article>
+
+          <article class="perfil perfil--servicio" tabindex="0" style="--foco: 100% 70%; --zoom: 2">
+            <img class="perfil__foto" src="assets/img/web/servicio-acompanamiento.jpg" alt="Acompañamiento integral" loading="lazy">
+            <div class="perfil__base">
+              <span class="chip">Paciente y entorno</span>
+              <h2>Acompañamiento integral</h2>
+              <p>Apoyo para el paciente y su entorno.</p>
+              <span class="pista">Ver detalles</span>
+            </div>
+            <div class="perfil__detalle">
+              <h2>Acompañamiento integral</h2>
+              <p><b>Apoyo médico:</b><br>Orientación durante controles y tratamientos.</p>
+              <p><b>Apoyo emocional:</b><br>Espacios para escuchar dudas, miedos y necesidades.</p>
+              <p><b>Apoyo familiar:</b><br>Consejos sencillos para acompañar al paciente.</p>
+              <a class="boton boton--chico" href="reserva.html">Reservar consulta</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SERVICIO DE APOYO ================= -->
+    <section class="seccion seccion--suave">
+      <div class="seccion__interior">
+        <div class="titulo-seccion revelar">
+          <span class="etiqueta etiqueta--menta">Servicio complementario</span>
+          <h2>También acompañamos <em>desde casa</em></h2>
+        </div>
+
+        <div class="grid grid--2 escalonado">
+          <article class="perfil" tabindex="0" style="--foco: 100% 10%; --zoom: 1.4">
+            <img class="perfil__foto" src="assets/img/web/asistencia-domiciliaria.jpg" alt="Asistencia domiciliaria" loading="lazy">
+            <div class="perfil__base">
+              <span class="chip">En tu hogar</span>
+              <h2>Asistencia domiciliaria</h2>
+              <p>Para pacientes que requieren apoyo médico básico en su hogar.</p>
+              <span class="pista">Ver detalles</span>
+            </div>
+            <div class="perfil__detalle">
+              <h2>Asistencia domiciliaria</h2>
+              <p><b>¿Para quién es?</b><br>Para pacientes con dificultad para trasladarse hasta la clínica.</p>
+              <p><b>¿Qué incluye?</b><br>Control básico, orientación de cuidados y coordinación con el especialista.</p>
+              <p><b>¿Cómo se solicita?</b><br>Desde la página Reserva o por WhatsApp.</p>
+              <a class="boton boton--chico" href="reserva.html">Solicitar visita</a>
+            </div>
+          </article>
+
+          <!-- El recorrido que sigue cualquiera de los servicios. -->
+          <article class="card">
+            <span class="icono icono--menta"><img src="assets/icons/ui/pulso.svg" alt=""></span>
+            <h2>Cómo funciona la atención</h2>
+            <p>Cualquiera de los tres servicios sigue el mismo recorrido:</p>
+            <details>
+              <summary>1. Primer contacto</summary>
+              <p>Recibimos tu solicitud por el formulario o por WhatsApp y revisamos el horario disponible.</p>
+            </details>
+            <details>
+              <summary>2. Consulta con el especialista</summary>
+              <p>El profesional revisa antecedentes, estudios previos y responde tus dudas.</p>
+            </details>
+            <details>
+              <summary>3. Plan y seguimiento</summary>
+              <p>Se explica el plan de atención en palabras claras y se agenda el siguiente control.</p>
+            </details>
+            <p class="aviso">Este sitio es educativo: el diagnóstico y el tratamiento siempre los define un profesional.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= LLAMADO FINAL ================= -->
+    <section class="seccion">
+      <div class="seccion__interior">
+        <div class="llamado revelar">
+          <div class="fondo-vivo" aria-hidden="true"><span class="mancha mancha--1"></span><span class="mancha mancha--2"></span><span class="mancha mancha--3"></span></div>
+          <h2>¿No sabes cuál servicio <em>necesitas?</em></h2>
+          <p>Escríbenos y te orientamos sobre cuál área corresponde a tu caso.</p>
+          <div class="acciones acciones--centro">
+            <a class="boton boton--blanco" href="reserva.html">Reservar una cita</a>
+            <a class="boton boton--menta" href="https://wa.me/59164556725" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Boton fijo: abre una conversacion de WhatsApp en otra pestaña. -->
+  <a class="whatsapp-fijo" href="https://wa.me/59164556725" target="_blank" rel="noopener" aria-label="Abrir WhatsApp">
+    <img src="assets/icons/whatsapp.svg" alt="">
+    <span>¿Hablamos?</span>
+  </a>
+
+  <!-- ================= PIE DE PAGINA ================= -->
+  <footer class="pie">
+    <div class="pie__interior">
+      <div>
+        <a class="pie__logo" href="index.html"><img src="assets/img/logo-oncomax-horizontal.png" alt="OncoMax" width="132" height="40"></a>
+        <p>Centro Médico Integral Oncológico. Orientación, atención y acompañamiento humano.</p>
+      </div>
+      <div>
+        <h3>Páginas</h3>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="asistencia.html">Asistencia Médica</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="oncologia.html">Oncología</a></li>
+          <li><a href="lazos.html">Lazos de apoyo</a></li>
+          <li><a href="reserva.html">Reservar cita</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contacto</h3>
+        <ul class="lista-datos">
+          <li><span class="icono icono--chico"><img src="assets/icons/whatsapp.svg" alt=""></span><span><small>WhatsApp</small><a href="https://wa.me/59164556725" target="_blank" rel="noopener">+591 64556725</a></span></li>
+          <li><span class="icono icono--chico"><img src="assets/icons/ui/ubicacion.svg" alt=""></span><span><small>Dirección</small>Antofagasta entre Bolívar y Sucre</span></li>
+          <li><span class="icono icono--chico"><img src="assets/icons/ui/casa.svg" alt=""></span><span><small>Ciudad</small>Oruro, Bolivia</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Síguenos</h3>
+        <!-- Por ahora TikTok e Instagram usan # porque faltan los enlaces reales. -->
+        <div class="redes">
+          <a href="#" aria-label="TikTok"><img src="assets/icons/tiktok.svg" alt=""></a>
+          <a href="#" aria-label="Instagram"><img src="assets/icons/instagram.svg" alt=""></a>
+          <a href="https://wa.me/59164556725" target="_blank" rel="noopener" aria-label="WhatsApp"><img src="assets/icons/whatsapp.svg" alt=""></a>
+          <a href="https://www.facebook.com/profile.php?id=61578464102459" target="_blank" rel="noopener" aria-label="Facebook"><img src="assets/icons/facebook.svg" alt=""></a>
+        </div>
+      </div>
+    </div>
+    <!-- Palabra gigante decorativa. -->
+    <div class="pie__gigante" aria-hidden="true">OncoMax</div>
+    <div class="pie__abajo">
+      <p><b>OncoMax</b> · Proyecto educativo. La información del sitio no reemplaza una consulta médica.</p>
+    </div>
+  </footer>
+</body>
+</html>
