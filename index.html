@@ -1,906 +1,788 @@
 <!DOCTYPE html>
-<!-- APRENDE A EDITAR index.html
-Inicio: presentación, video, cifras, accesos a las páginas y preguntas frecuentes.
-Este archivo decide los textos, imágenes y enlaces. estilos.css decide su apariencia.
-Los comentarios como este son instrucciones: no aparecen en la página.
-Empieza cambiando un texto, guarda el archivo y recarga la página para ver el resultado.
-Las palabras entre > y < suelen ser texto visible. Conserva las etiquetas que las rodean.
-class conecta un bloque con su diseño en estilos.css; id le da un nombre único.
-Las etiquetas /div, /section y similares cierran lo que se abrió antes: mueve los bloques completos.
-Para cambiar un estilo, busca el nombre de class en assets/css/estilos.css.
-Para cambiar reservas, abre assets/js/reserva.js y conserva los name del formulario.
-Menú, pie y teléfonos están escritos en cada página: repite allí los cambios comunes. -->
-<!-- APRENDE: Abre la página; lang="es" indica que sus textos están en español. Conserva el cierre /html al
-     final. -->
 <html lang="es">
-<!-- APRENDE: Datos de la página que no forman parte del contenido visible; aquí se conectan los estilos y las
-     letras. -->
+
 <head>
-  <!-- APRENDE: Permite mostrar tildes y ñ correctamente; conserva UTF-8. -->
-  <meta charset="UTF-8">
-  <!-- APRENDE: Adapta la página al ancho del celular; conserva este ajuste para que el diseño móvil funcione. -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- APRENDE: Resumen para buscadores; cambia el texto de content para describir esta página. -->
-  <meta name="description" content="OncoMax: centro médico integral oncológico en Oruro, Bolivia. Orientación, asistencia médica y acompañamiento humano.">
-  <!-- APRENDE: Color sugerido para la barra del navegador en móviles compatibles; cambia el código # de content. -->
-  <meta name="theme-color" content="#260D37">
-  <!-- APRENDE: Nombre que aparece en la pestaña del navegador; cambia el texto entre title y /title. -->
-  <title>OncoMax | Inicio</title>
-  <!-- APRENDE: Icono de la pestaña: cambia href por la ruta de otra imagen pequeña. -->
-  <link rel="icon" href="assets/img/logo-simbolo.png">
-  <!-- Tipografias: Nunito (redondeada como el logo) e Instrument Serif para los acentos. -->
-  <!-- APRENDE: Prepara la conexión con el servicio de letras para que carguen antes; conserva estas líneas si
-       usas Google Fonts. -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <!-- APRENDE: Prepara la conexión con el servicio de letras para que carguen antes; conserva estas líneas si
-       usas Google Fonts. -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- APRENDE: Descarga Nunito e Instrument Serif. Para cambiar las letras, reemplaza este enlace y los valores
-       "fuente" con dos guiones delante y "fuente-acento" con dos guiones delante de estilos.css. -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Nunito:wght@400..900&amp;display=swap">
-  <!-- Todos los estilos del sitio viven en un solo archivo compartido. -->
-  <!-- APRENDE: Conecta assets/css/estilos.css, que cambia la apariencia de las siete páginas; abre ese archivo
-       para modificar colores y medidas. -->
-  <link rel="stylesheet" href="assets/css/estilos.css">
-</head>
-<!-- APRENDE: Comienza todo lo que ve el visitante. Los bloques aparecen en el orden en que los escribes aquí. -->
-<body>
-  <!-- Barra de progreso de lectura (solo decorativa). -->
-  <!-- APRENDE: Barra decorativa que se llena al bajar por la página; cambia su altura y colores buscando
-       .progreso en estilos.css. -->
-  <div class="progreso" aria-hidden="true"></div>
 
-  <!-- ================= CABECERA ================= -->
-  <!-- APRENDE: Menú superior compartido visualmente por el sitio. Sus enlaces se repiten en las siete páginas:
-       actualízalos en todas si cambias el menú. -->
-  <header class="cabecera">
-    <!-- APRENDE: Reúne el logo y el menú dentro de una franja centrada; cambia separación y ancho en
-         .cabecera__interior de estilos.css. -->
-    <div class="cabecera__interior">
-      <!-- El logo siempre lleva al inicio. -->
-      <!-- APRENDE: Logo que lleva a Inicio; cambia href para elegir el destino y src de su imagen para usar otro
-           logo. Enlace: href="index.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
-      <a class="marca" href="index.html" aria-label="OncoMax, ir al inicio">
-        <!-- APRENDE: Imagen: cambia src="assets/img/logo-oncomax-horizontal.png" por otro archivo; alt describe la
-             foto si no se ve o se usa lectura por voz. -->
-        <img src="assets/img/logo-oncomax-horizontal.png" alt="OncoMax" width="152" height="46">
-      </a>
+    <meta charset="UTF-8">
 
-      <!-- Casilla escondida que abre el menu en celular; el label es el boton. -->
-      <!-- APRENDE: Casilla del menú móvil: al marcarse abre el menú mediante estilos.css. Conserva id="nav-toggle" y
-           su label con el mismo for. -->
-      <input class="nav-toggle" id="nav-toggle" type="checkbox" aria-label="Abrir o cerrar el menu">
-      <!-- APRENDE: Botón del menú de celular. Sus tres span dibujan las rayas; for debe coincidir con el id de la
-           casilla nav-toggle. Texto para elegir o rellenar el campo "nav-toggle"; for debe coincidir con su id.
-           Cambia las palabras para otra indicación. -->
-      <label class="hamburguesa" for="nav-toggle" aria-hidden="true">
-        <!-- APRENDE: Texto o pieza pequeña dentro de otro bloque; si contiene palabras, puedes reemplazarlas entre las
-             etiquetas. -->
-        <span></span><span></span><span></span>
-      </label>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Productos deportivos personalizados para equipos, clubes y competencias.">
+    <title>ZQ SPORT | Inicio</title>
 
-      <!-- APRENDE: Lista de páginas del menú; agrega otro enlace a dentro de este bloque para sumar una página. -->
-      <nav class="nav" aria-label="Principal">
-        <!-- APRENDE: Enlace: href="index.html" elige el destino; el texto entre a y /a es lo que se pulsa. activo
-             resalta esta página y aria-current="page" la identifica como actual; al crear otra página mueve ambas
-             marcas a su enlace. -->
-        <a class="activo" aria-current="page" href="index.html">Inicio</a>
-        <!-- APRENDE: Enlace: href="servicios.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
-        <a href="servicios.html">Servicios</a>
-        <!-- APRENDE: Enlace: href="asistencia.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
-        <a href="asistencia.html">Asistencia</a>
-        <!-- APRENDE: Enlace: href="nosotros.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
-        <a href="nosotros.html">Nosotros</a>
-        <!-- APRENDE: Enlace: href="oncologia.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
-        <a href="oncologia.html">Oncología</a>
-        <!-- APRENDE: Enlace: href="lazos.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
-        <a href="lazos.html">Lazos</a>
-        <!-- APRENDE: Enlace: href="reserva.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
-        <a class="nav__cta" href="reserva.html">Reservar cita</a>
+    <style>
+      :root {
+        --primary: #F15A38;
+        --secondary: #48B7BD;
+        --brand-deep: #0C2D3A;
+        --bg-main: #F4F7F6;
+        --surface: #FFFFFF;
+        --text-title: #091E26;
+        --text-body: #3A4D54;
+        --border: #E2EAE9;
+        --white: #FFFFFF;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        padding-bottom: 5.5rem;
+        margin: 0;
+        overflow-x: hidden;
+        background: var(--brand-deep);
+        color: var(--white);
+        font-family: "Segoe UI", Arial, sans-serif;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      .skip-link {
+        position: absolute;
+        left: -9999px;
+        top: 0;
+        background: var(--white);
+        color: var(--brand-deep);
+        padding: .75rem 1rem;
+        z-index: 20;
+      }
+
+      .skip-link:focus {
+        left: 1rem;
+        top: 1rem;
+      }
+
+      .hero {
+        min-height: 100vh;
+        background-image: linear-gradient(rgba(12, 45, 58, .26), rgba(12, 45, 58, .34)), url("assets/img/fondo.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 320px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        left: -5%;
+        bottom: 0;
+        width: 62%;
+        height: 10px;
+        background: var(--primary);
+        transform: skewX(-34deg);
+        transform-origin: left;
+      }
+
+      .hero-content {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 3rem 2rem;
+      }
+
+      .hero-copy {
+        max-width: 900px;
+      }
+
+      .hero-title {
+        margin: 0;
+        font-family: "Arial Narrow", "Impact", "Segoe UI", sans-serif;
+        font-size: clamp(3rem, 7.5vw, 7rem);
+        line-height: .9;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        text-wrap: balance;
+        text-shadow: 0 4px 24px rgba(0, 0, 0, .35);
+      }
+
+      .hero-subtitle {
+        max-width: 720px;
+        margin: 1.5rem auto 0;
+        font-size: clamp(1rem, 2vw, 1.35rem);
+        line-height: 1.6;
+        font-weight: 600;
+      }
+
+      .hero-actions {
+        display: flex;
+        justify-content: center;
+        gap: .75rem;
+        flex-wrap: wrap;
+        margin-top: 2rem;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: .9rem 1.35rem;
+        border: 2px solid transparent;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: .4px;
+        transition: all .2s ease-in-out;
+      }
+
+      .btn-primary {
+        background: var(--primary);
+        color: var(--white);
+      }
+
+      .btn-secondary {
+        border-color: var(--secondary);
+        background: rgba(12, 45, 58, .65);
+        color: var(--white);
+      }
+
+      .btn:hover,.btn:focus-visible {
+        background: var(--secondary);
+        border-color: var(--secondary);
+        transform: translateY(-2px) scale(1.02);
+      }
+
+      .main-menu {
+        min-height: 100vh;
+        background: rgba(8, 35, 46, .93);
+        border-left: 1px solid rgba(226, 234, 233, .22);
+        padding: 1.25rem 1.25rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        z-index: 2;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: .75rem;
+        padding: 0 0 .45rem;
+        border-bottom: 1px solid rgba(226, 234, 233, .12);
+      }
+
+      .brand img {
+        width: clamp(92px, 10vw, 128px);
+        height: auto;
+        max-height: 62px;
+        object-fit: contain;
+      }
+
+      .menu-list {
+        display: grid;
+        gap: .55rem;
+        margin-top: .7rem;
+      }
+
+      .mobile-home-menu {
+        display: none;
+        margin-top: 1rem;
+      }
+
+      .mobile-home-menu summary {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: .65rem;
+        color: var(--white);
+        background: var(--primary);
+        border: 1px solid rgba(255, 255, 255, .18);
+        border-radius: 6px;
+        padding: .85rem 1rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        cursor: pointer;
+        list-style: none;
+      }
+
+      .mobile-home-menu summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .hamburger-icon,
+      .hamburger-icon::before,
+      .hamburger-icon::after {
+        display: block;
+        width: 22px;
+        height: 3px;
+        background: var(--white);
+        border-radius: 2px;
+        content: "";
+      }
+
+      .hamburger-icon,
+      .hamburger-icon::before,
+      .hamburger-icon::after {
+        transition: transform .2s ease-in-out, background-color .2s ease-in-out;
+      }
+
+      .hamburger-icon::before {
+        transform: translateY(-7px);
+      }
+
+      .hamburger-icon::after {
+        transform: translateY(4px);
+      }
+
+      .mobile-links {
+        display: grid;
+        gap: .45rem;
+        padding-top: .75rem;
+      }
+
+      .mobile-links a {
+        color: var(--white);
+        background: rgba(12, 45, 58, .95);
+        border: 1px solid rgba(255, 255, 255, .16);
+        border-radius: 4px;
+        padding: .75rem;
+        text-align: center;
+        text-decoration: none;
+        font-weight: 800;
+      }
+
+      .mobile-links a.active,
+      .mobile-links a:hover,
+      .mobile-links a:focus-visible {
+        color: var(--brand-deep);
+        background: var(--secondary);
+      }
+
+      .menu-link,.catalog-menu summary {
+        display: block;
+        width: 100%;
+        padding: .8rem .9rem;
+        background: rgba(12, 45, 58, .85);
+        color: var(--white);
+        border: 1px solid rgba(226, 234, 233, .25);
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 750;
+        cursor: pointer;
+        transition: all .2s ease-in-out;
+      }
+
+      .menu-link:hover,.menu-link:focus-visible,.catalog-menu summary:hover,.catalog-menu summary:focus-visible {
+        background: var(--primary);
+        transform: translateX(-4px);
+      }
+
+      .menu-link.active {
+        background: var(--primary);
+        border-color: var(--primary);
+      }
+
+      .catalog-menu summary {
+        list-style: none;
+      }
+
+      .catalog-menu summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .catalog-menu summary::after {
+        content: "+";
+        float: right;
+        color: var(--secondary);
+        font-size: 1.2rem;
+        line-height: 1;
+      }
+
+      .catalog-menu[open] summary::after {
+        content: "−";
+        color: var(--white);
+      }
+
+      .submenu {
+        display: grid;
+        gap: .3rem;
+        padding: .5rem 0 0 .75rem;
+      }
+
+      .submenu a {
+        padding: .6rem .75rem;
+        color: var(--white);
+        border-left: 2px solid var(--secondary);
+        text-decoration: none;
+        font-size: .9rem;
+        transition: all .2s ease-in-out;
+      }
+
+      .submenu a:hover,.submenu a:focus-visible {
+        color: var(--secondary);
+        padding-left: 1rem;
+      }
+
+      .site-footer {
+        background: var(--brand-deep);
+        color: var(--white);
+        padding: 3rem max(1.25rem, 5vw) 1.25rem;
+        border-top: 4px solid var(--primary);
+      }
+
+      .footer-grid {
+        max-width: 1200px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr;
+        gap: 2rem;
+      }
+
+      .footer-title {
+        margin: 0 0 .75rem;
+        font-family: "Arial Narrow", "Impact", "Segoe UI", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .footer-copy,.footer-data {
+        color: #dce7e8;
+        line-height: 1.7;
+        margin: .25rem 0;
+      }
+
+      .footer-map {
+        display: block;
+        width: 100%;
+        height: 200px;
+        margin: .5rem 0 .75rem;
+        border: 2px solid rgba(72, 183, 189, .35);
+        border-radius: 14px;
+        background: rgba(255, 255, 255, .06);
+      }
+
+      .social-links {
+        display: flex;
+        gap: .65rem;
+        margin-top: 1rem;
+      }
+
+      .social-links a {
+        border: 1px solid rgba(255, 255, 255, .2);
+        border-radius: 6px;
+        transition: all .2s ease-in-out;
+      }
+
+      .social-links a:hover,.social-links a:focus-visible {
+        transform: translateY(-3px);
+        border-color: var(--secondary);
+      }
+
+      .social-links img {
+        width: 36px;
+        height: 36px;
+      }
+
+      .copyright {
+        max-width: 1200px;
+        margin: 2rem auto 0;
+        padding-top: 1rem;
+        border-top: 1px solid rgba(226, 234, 233, .18);
+        text-align: center;
+        color: #bcd0d3;
+        font-size: .9rem;
+      }
+
+      @media (max-width: 900px) {
+        .hero {
+          display: flex;
+          flex-direction: column;
+          min-height: 100vh;
+          overflow: visible;
+        }
+
+        .hero-content {
+          width: 100%;
+          min-height: 52vh;
+          padding: 4rem 1.25rem 2rem;
+        }
+
+        .hero-copy {
+          width: min(100%, 640px);
+          margin: 0 auto;
+        }
+
+        .main-menu {
+          width: 100%;
+          min-height: auto;
+          padding: 1rem max(1rem, 5vw) 1.25rem;
+          border-left: 0;
+          border-top: 1px solid rgba(226, 234, 233, .22);
+          justify-content: flex-start;
+        }
+
+        .brand {
+          justify-content: center;
+          padding: 0 0 .75rem;
+        }
+
+        .brand img {
+          width: clamp(92px, 28vw, 120px);
+          max-height: 62px;
+        }
+
+        .menu-list {
+          display: none;
+        }
+
+        .mobile-home-menu {
+          display: block;
+          width: 100%;
+          margin-top: 0;
+        }
+
+        .mobile-home-menu summary {
+          width: 100%;
+        }
+
+        .mobile-links {
+          grid-template-columns: 1fr;
+        }
+
+      }
+
+      @media (max-width: 640px) {
+        .hero-content {
+          min-height: 48vh;
+          padding: 3.25rem 1rem 1.5rem;
+        }
+
+        .hero-title {
+          font-size: clamp(2.6rem, 18vw, 4.2rem);
+          line-height: .92;
+          letter-spacing: 1px;
+        }
+
+        .hero-subtitle {
+          font-size: .98rem;
+          line-height: 1.5;
+          margin-top: 1rem;
+        }
+
+        .btn {
+          width: 100%;
+        }
+
+        .footer-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .site-footer {
+          padding-top: 2.25rem;
+        }
+
+      }
+
+      @media (prefers-reduced-motion:reduce) {
+        html {
+          scroll-behavior: auto
+        }
+
+        *,*::before,*::after {
+          transition: none!important
+        }
+
+      }
+
+      @keyframes entrada-suave {
+        from {
+          opacity: 0;
+          transform: translateY(14px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+      }
+
+      .hero-copy {
+        animation: entrada-suave .45s ease-out both;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      a:focus-visible,
+      summary:focus-visible {
+        outline: 3px solid var(--secondary);
+        outline-offset: 4px;
+      }
+
+      .mobile-links a,
+      .mobile-home-menu > summary,
+      .social-links a {
+        transition: background-color .2s ease-in-out, color .2s ease-in-out, transform .2s ease-in-out;
+      }
+
+      .mobile-home-menu[open] > summary .hamburger-icon {
+        background: transparent;
+      }
+
+      .mobile-home-menu[open] > summary .hamburger-icon::before {
+        transform: rotate(45deg);
+      }
+
+      .mobile-home-menu[open] > summary .hamburger-icon::after {
+        transform: translateY(-3px) rotate(-45deg);
+      }
+
+      .mobile-home-menu[open] .mobile-links {
+        animation: entrada-suave .2s ease-out;
+      }
+
+      .hero-categories {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: .6rem;
+        margin-top: 1.5rem;
+      }
+
+      .hero-categories a {
+        padding: .65rem .9rem;
+        color: var(--white);
+        background: rgba(12, 45, 58, .85);
+        border: 1px solid var(--secondary);
+        border-radius: 4px;
+        text-decoration: none;
+        font-weight: 700;
+        transition: background-color .2s ease-in-out, transform .2s ease-in-out;
+      }
+
+      .hero-categories a:hover,
+      .hero-categories a:focus-visible {
+        background: var(--brand-deep);
+        transform: translateY(-3px);
+      }
+
+      .quick-actions {
+        position: fixed;
+        right: max(1rem, env(safe-area-inset-right));
+        bottom: max(1rem, env(safe-area-inset-bottom));
+        z-index: 30;
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+      }
+
+      .quick-actions a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: .5rem;
+        min-height: 48px;
+        padding: .75rem 1rem;
+        color: var(--white);
+        background: var(--brand-deep);
+        border: 1px solid var(--secondary);
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 800;
+        box-shadow: 0 6px 20px rgba(9, 30, 38, .2);
+        transition: transform .2s ease-in-out, background-color .2s ease-in-out;
+      }
+
+      .quick-actions .quick-whatsapp {
+        background: var(--primary);
+        border-color: var(--primary);
+      }
+
+      .quick-actions img {
+        width: 24px;
+        height: 24px;
+      }
+
+      .quick-actions a:hover {
+        background: var(--secondary);
+        transform: translateY(-3px);
+      }
+
+      .btn:active,
+      .quick-actions a:active {
+        transform: scale(.98);
+      }
+
+      footer a {
+        color: inherit;
+        text-underline-offset: 3px;
+      }
+
+      footer a:hover {
+        color: var(--secondary);
+      }
+
+      @media (max-width: 700px) {
+        .quick-actions a {
+          padding: .7rem .85rem;
+        }
+
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+        *,
+        *::before,
+        *::after {
+          animation: none !important;
+          transition: none !important;
+        }
+
+      }
+    </style>
+
+    <meta name="theme-color" content="#0C2D3A">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="assets/css/dinamico.css">
+
+<script>
+document.documentElement.classList.add('zq-js');
+</script>
+
+<script src="assets/js/dinamico.js" defer></script>
+
+  </head>
+
+  <body id="inicio">
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <main id="contenido" class="hero">
+
+      <section class="hero-content" aria-labelledby="titulo-principal">
+        <div class="hero-copy">
+
+          <h1 id="titulo-principal" class="hero-title">ZQ SPORT</h1>
+
+          <p class="hero-subtitle">Diseños personalizados para equipos, clubes y competencias deportivas</p>
+
+          <div class="hero-categories" aria-label="Tipos de productos">
+            <a href="deportivos-varon.html">Uniformes</a>
+            <a href="poleras-dama.html">Poleras</a>
+            <a href="mochilas-varon.html">Mochilas</a>
+          </div>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="deportivos-varon.html">Explorar catálogo</a>
+            <a class="btn btn-secondary" href="ofertas.html">Ver ofertas</a>
+          </div>
+        </div>
+      </section>
+
+      <nav class="main-menu" aria-label="Navegación principal">
+        <div class="brand">
+          <img src="assets/img/logo-tienda.png" alt="ZQ SPORT">
+        </div>
+
+          <details class="mobile-home-menu">
+            <summary>
+              <span class="hamburger-icon" aria-hidden="true"></span>
+              Menu
+            </summary>
+
+            <div class="mobile-links">
+              <a class="active" aria-current="page" href="index.html">Inicio</a>
+              <a href="deportivos-varon.html">Deportivos Var&oacute;n</a>
+              <a href="deportivos-dama.html">Deportivos Dama</a>
+              <a href="poleras-varon.html">Poleras Var&oacute;n</a>
+              <a href="poleras-dama.html">Poleras Dama</a>
+              <a href="mochilas-varon.html">Mochilas Var&oacute;n</a>
+              <a href="mochilas-dama.html">Mochilas Dama</a>
+              <a href="galeria.html">Galer&iacute;a</a>
+              <a href="ofertas.html">Ofertas</a>
+              <a href="nosotros.html">Acerca de Nosotros</a>
+            </div>
+          </details>
+        <div class="menu-list">
+          <a class="menu-link active" href="index.html" aria-current="page">Inicio</a>
+
+          <details class="catalog-menu" open>
+            <summary>Catálogo</summary>
+            <div class="submenu">
+              <a href="deportivos-varon.html">Deportivos Varón</a>
+              <a href="deportivos-dama.html">Deportivos Dama</a>
+              <a href="poleras-varon.html">Poleras Varón</a>
+              <a href="poleras-dama.html">Poleras Dama</a>
+              <a href="mochilas-varon.html">Mochilas Varón</a>
+              <a href="mochilas-dama.html">Mochilas Dama</a>
+            </div>
+          </details>
+          <a class="menu-link" href="galeria.html">Galería</a>
+          <a class="menu-link" href="ofertas.html">Ofertas</a>
+
+        <a class="menu-link" href="nosotros.html">Acerca de Nosotros</a>
+        </div>
       </nav>
-    </div>
-  </header>
+    </main>
 
-  <!-- APRENDE: Contenido principal de esta página; mueve o añade secciones dentro de este bloque. -->
-  <main>
-    <!-- ================= PORTADA ================= -->
-    <!-- APRENDE: Primera sección de Inicio: texto, botones y video. Modifica su contenido aquí y su espacio
-         alrededor en .portada de estilos.css. -->
-    <section class="portada">
-      <!-- APRENDE: Fondo con tres manchas que se mueven. Cambia sus colores en .fondo-vivo y .mancha de estilos.css;
-           los span son decoración. -->
-      <div class="fondo-vivo" aria-hidden="true"><span class="mancha mancha--1"></span><span class="mancha mancha--2"></span><span class="mancha mancha--3"></span></div>
-      <!-- APRENDE: Distribuye texto y video en dos columnas; cambia grid-template-columns en estilos.css para dar
-           más espacio a uno de los lados. -->
-      <div class="portada__interior">
-        <!-- APRENDE: Agrupa el mensaje principal y sus botones; escribe aquí la presentación que quieras mostrar. -->
-        <div class="portada__texto">
-          <!-- "entrada" hace que cada linea aparezca al cargar; --d es el orden. -->
-          <!-- APRENDE: Texto corto que presenta una sección; escribe otro nombre entre las etiquetas. Las variantes de
-               class cambian sus colores. -->
-          <span class="etiqueta etiqueta--brillo entrada">Centro médico integral · Oruro, Bolivia</span>
-          <!-- APRENDE: Nombre descriptivo sobre el título; sustituye el texto entre las etiquetas para cambiarlo. "d"
-               con dos guiones delante controla el turno de aparición: un número mayor hace que aparezca más tarde. -->
-          <span class="portada__marca entrada" style="--d:1">OncoMax · Centro Médico Integral Oncológico</span>
-          <!-- APRENDE: Título principal de esta página. Cambia sus palabras; el texto dentro de em recibe el estilo
-               destacado. "d" con dos guiones delante controla el turno de aparición: un número mayor hace que aparezca
-               más tarde. -->
-          <h1 class="entrada" style="--d:2">Tu lucha es nuestra lucha, cuidamos de ti <em>con el corazón.</em></h1>
-          <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
-               a otra línea. "d" con dos guiones delante controla el turno de aparición: un número mayor hace que
-               aparezca más tarde. -->
-          <p class="entrada" style="--d:3">En OncoMax brindamos orientación, asistencia médica y acompañamiento humano
-             para pacientes y familias durante todo el proceso de atención.</p>
-          <!-- APRENDE: Coloca varios botones juntos. Copia un enlace a dentro de este bloque para añadir otro botón. "d"
-               con dos guiones delante controla el turno de aparición: un número mayor hace que aparezca más tarde. -->
-          <div class="acciones entrada" style="--d:4">
-            <!-- APRENDE: Enlace: href="reserva.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
-            <a class="boton" href="reserva.html">Reservar una cita</a>
-            <!-- APRENDE: Enlace: href="servicios.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
-            <a class="boton boton--vidrio" href="servicios.html">Ver servicios</a>
-          </div>
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <section>
+          <h2 class="footer-title">ZQ SPORT</h2>
+          <p class="footer-copy">Diseños personalizados para equipos, clubes y competencias deportivas.</p>
+        </section>
+        <section>
+          <h2 class="footer-title">Atención</h2>
 
-          <!-- Caras del equipo + un dato que da confianza. -->
-          <!-- APRENDE: Presenta pequeñas fotos y una cifra de experiencia; cambia las imágenes y el texto de años por
-               separado. "d" con dos guiones delante controla el turno de aparición: un número mayor hace que aparezca
-               más tarde. -->
-          <div class="confianza entrada" style="--d:5">
-            <!-- APRENDE: Fila de retratos circulares; copia una línea img para sumar una persona y cambia su src. -->
-            <div class="avatares">
-              <!-- APRENDE: Imagen: cambia src="assets/img/web/cara-dra-elena-rosales.jpg" por otro archivo; alt describe la
-                   foto si no se ve o se usa lectura por voz. Aquí alt vacío indica un dibujo decorativo. -->
-              <img src="assets/img/web/cara-dra-elena-rosales.jpg" alt="" width="48" height="48">
-              <!-- APRENDE: Imagen: cambia src="assets/img/web/cara-doctor-abdon.jpg" por otro archivo; alt describe la foto
-                   si no se ve o se usa lectura por voz. Aquí alt vacío indica un dibujo decorativo. -->
-              <img src="assets/img/web/cara-doctor-abdon.jpg" alt="" width="48" height="48">
-              <!-- APRENDE: Imagen: cambia src="assets/img/web/cara-dra-amara-orellio.jpg" por otro archivo; alt describe la
-                   foto si no se ve o se usa lectura por voz. Aquí alt vacío indica un dibujo decorativo. -->
-              <img src="assets/img/web/cara-dra-amara-orellio.jpg" alt="" width="48" height="48">
-              <!-- APRENDE: Imagen: cambia src="assets/img/web/cara-enfermera-sofia.jpg" por otro archivo; alt describe la
-                   foto si no se ve o se usa lectura por voz. Aquí alt vacío indica un dibujo decorativo. -->
-              <img src="assets/img/web/cara-enfermera-sofia.jpg" alt="" width="48" height="48">
-            </div>
-            <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
-                 a otra línea. -->
-            <p><b>+7 años</b> acompañando pacientes y familias</p>
+          <p class="footer-data">Dirección:</p>
+          <iframe
+            class="footer-map"
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3795.1749292313216!2d-67.07186892482153!3d-17.970596683019455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTfCsDU4JzE0LjIiUyA2N8KwMDQnMDkuNSJX!5e0!3m2!1ses!2sbo!4v1791676384972!5m2!1ses!2sbo"
+            title="Ubicación de ZQ SPORT en Google Maps"
+            width="600"
+            height="200"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin">
+          </iframe>
+          <p class="footer-data">Teléfono: <a href="tel:+59172478852">72478852</a></p>
+          <p class="footer-data">WhatsApp: <a href="https://wa.me/59172478852?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20los%20productos%20de%20ZQ%20SPORT.">72478852</a></p>
+        </section>
+        <section>
+          <h2 class="footer-title">Horario y redes</h2>
+          <p class="footer-data">Lunes a Sábado - 08:00 a 20:00</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook">
+              <img src="assets/icons/facebook.svg" alt="">
+            </a>
+            <a href="#" aria-label="Instagram">
+              <img src="assets/icons/instagram.svg" alt="">
+            </a>
+            <a href="https://wa.me/59172478852?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20los%20productos%20de%20ZQ%20SPORT." aria-label="Escribir a ZQ SPORT por WhatsApp">
+              <img src="assets/icons/whatsapp.svg" alt="">
+            </a>
+            <a href="#" aria-label="TikTok">
+              <img src="assets/icons/tiktok.svg" alt="">
+            </a>
           </div>
-        </div>
-
-        <!-- El video vive dentro de un marco con forma de celular. -->
-        <!-- APRENDE: Reúne el video y las tarjetas que lo acompañan; las posiciones se ajustan en estilos.css. "d" con
-             dos guiones delante controla el turno de aparición: un número mayor hace que aparezca más tarde. -->
-        <div class="portada__visual entrada" style="--d:3">
-          <!-- APRENDE: Texto sobre el video; cambia estas palabras para presentar otro contenido. -->
-          <p class="video-pie">Conoce OncoMax en un minuto</p>
-          <!-- APRENDE: Marco del video con forma de celular; ajusta width y border-radius en .telefono de estilos.css. -->
-          <div class="telefono">
-            <!-- APRENDE: Video: controls muestra los botones, playsinline lo mantiene dentro de la página y poster elige
-                 la foto previa. Cambia el archivo en source. -->
-            <video class="video" controls playsinline preload="metadata" poster="assets/img/web/equipo-oncomax.jpg">
-              <!-- APRENDE: Archivo del video: cambia src por otro MP4; si cambias el formato, adapta también type. -->
-              <source src="assets/videos/video-inicio.mp4" type="video/mp4">
-              Tu navegador no puede reproducir este video.
-            </video>
-          </div>
-
-          <!-- Tarjetitas que flotan alrededor del video. -->
-          <!-- APRENDE: Tarjeta pequeña al lado del video. Edita su número y explicación; las variantes 1 y 2 tienen
-               posiciones distintas en estilos.css. -->
-          <div class="flotante flotante--1">
-            <!-- APRENDE: Marco del pequeño dibujo. Cambia src de su img para otro icono; las variantes menta y coral
-                 cambian el fondo. Imagen: cambia src="assets/icons/ui/corazon.svg" por otro archivo; alt describe la foto
-                 si no se ve o se usa lectura por voz. Aquí alt vacío indica un dibujo decorativo. -->
-            <span class="icono icono--chico icono--coral"><img src="assets/icons/ui/corazon.svg" alt=""></span>
-            <!-- APRENDE: Texto o pieza pequeña dentro de otro bloque; si contiene palabras, puedes reemplazarlas entre las
-                 etiquetas. -->
-            <span><b>100%</b><small>Trato humano y respetuoso</small></span>
-          </div>
-          <!-- APRENDE: Tarjeta pequeña al lado del video. Edita su número y explicación; las variantes 1 y 2 tienen
-               posiciones distintas en estilos.css. -->
-          <div class="flotante flotante--2">
-            <!-- APRENDE: Marco del pequeño dibujo. Cambia src de su img para otro icono; las variantes menta y coral
-                 cambian el fondo. Imagen: cambia src="assets/icons/ui/estetoscopio.svg" por otro archivo; alt describe la
-                 foto si no se ve o se usa lectura por voz. Aquí alt vacío indica un dibujo decorativo. -->
-            <span class="icono icono--chico icono--menta"><img src="assets/icons/ui/estetoscopio.svg" alt=""></span>
-            <!-- APRENDE: Texto o pieza pequeña dentro de otro bloque; si contiene palabras, puedes reemplazarlas entre las
-                 etiquetas. -->
-            <span><b>3 áreas</b><small>de atención especializada</small></span>
-          </div>
-
-          <!-- Sello que gira: el texto sigue un circulo dibujado en SVG. -->
-          <!-- APRENDE: Enlace circular de reserva; cambia su href y las palabras de textPath para personalizarlo. En
-               este diseño permanece quieto. Enlace: href="reserva.html" elige el destino; el texto entre a y /a es lo
-               que se pulsa. -->
-          <a class="sello" href="reserva.html" aria-label="Reservar una cita">
-            <!-- APRENDE: Dibujo hecho con formas. viewBox establece el espacio de dibujo; su tamaño visible se ajusta en
-                 estilos.css. -->
-            <svg viewBox="0 0 200 200" aria-hidden="true">
-              <!-- APRENDE: Guarda el círculo que guía el texto del sello; su id debe coincidir con el href de textPath. -->
-              <defs><path id="circulo-sello" d="M100,100 m-74,0 a74,74 0 1,1 148,0 a74,74 0 1,1 -148,0"/></defs>
-              <!-- textLength reparte las letras para cubrir el circulo completo. -->
-              <!-- APRENDE: Palabras dibujadas en el sello; cambia la frase dentro de textPath y textLength para distribuirla
-                   por el círculo. -->
-              <text><textPath href="#circulo-sello" textLength="462" lengthAdjust="spacing">Reserva tu cita · Cuidamos de ti · </textPath></text>
-            </svg>
-            <!-- APRENDE: Imagen: cambia src="assets/img/logo-simbolo.png" por otro archivo; alt describe la foto si no se
-                 ve o se usa lectura por voz. Aquí alt vacío indica un dibujo decorativo. -->
-            <img src="assets/img/logo-simbolo.png" alt="">
-          </a>
-        </div>
+        </section>
       </div>
-      <!-- APRENDE: Dibujo hecho con formas. viewBox establece el espacio de dibujo; su tamaño visible se ajusta en
-           estilos.css. -->
-      <svg class="ola" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
-        <!-- APRENDE: Trazo del dibujo: d contiene puntos y curvas (M empieza, L une, C curva, Z cierra). Para cambiar
-             solo el color, usa estilos.css. -->
-        <path d="M0,38 C240,108 480,8 720,48 C960,88 1200,18 1440,58 L1440,120 L0,120 Z"/>
-        <!-- APRENDE: Trazo del dibujo: d contiene puntos y curvas (M empieza, L une, C curva, Z cierra). Para cambiar
-             solo el color, usa estilos.css. -->
-        <path d="M0,72 C260,120 520,32 760,70 C1000,108 1220,58 1440,82 L1440,120 L0,120 Z"/>
-      </svg>
-    </section>
+      <p class="copyright">© 2026 ZQ SPORT. Todos los derechos reservados.</p>
+    </footer>
 
-    <!-- ================= CINTAS EN MOVIMIENTO =================
-         Cada lista se repite dos veces: cuando la primera sale de la
-         pantalla, la copia ocupa su lugar y el giro parece infinito. -->
-    <!-- APRENDE: Dos cintas de palabras en movimiento; cambia cada lista y su copia de la misma manera para que el
-         recorrido no tenga cortes. -->
-    <div class="cintas" aria-hidden="true">
-      <!-- APRENDE: Una cinta inclinada; cambia sus palabras en los li y su velocidad en .cinta__pista de
-           estilos.css. -->
-      <div class="cinta cinta--atras">
-        <!-- APRENDE: Contiene la lista original y la copia que permiten el movimiento continuo; conserva ambas con el
-             mismo contenido. -->
-        <div class="cinta__pista">
-          <!-- APRENDE: Lista de elementos; agrega otra línea li antes del cierre /ul para sumar un elemento. -->
-          <ul><li>Atención cercana</li><li>Equipo especializado</li><li>La familia también cuenta</li><li>Palabras claras</li><li>Respeto y escucha</li></ul>
-          <!-- APRENDE: Lista de elementos; agrega otra línea li antes del cierre /ul para sumar un elemento. -->
-          <ul><li>Atención cercana</li><li>Equipo especializado</li><li>La familia también cuenta</li><li>Palabras claras</li><li>Respeto y escucha</li></ul>
-        </div>
-      </div>
-      <!-- APRENDE: Una cinta inclinada; cambia sus palabras en los li y su velocidad en .cinta__pista de
-           estilos.css. -->
-      <div class="cinta">
-        <!-- APRENDE: Contiene la lista original y la copia que permiten el movimiento continuo; conserva ambas con el
-             mismo contenido. -->
-        <div class="cinta__pista">
-          <!-- APRENDE: Lista de elementos; agrega otra línea li antes del cierre /ul para sumar un elemento. -->
-          <ul><li>Oncología pediátrica</li><li>Oncología quirúrgica</li><li>Acompañamiento integral</li><li>Asistencia domiciliaria</li><li>Lazos de apoyo</li></ul>
-          <!-- APRENDE: Lista de elementos; agrega otra línea li antes del cierre /ul para sumar un elemento. -->
-          <ul><li>Oncología pediátrica</li><li>Oncología quirúrgica</li><li>Acompañamiento integral</li><li>Asistencia domiciliaria</li><li>Lazos de apoyo</li></ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- ================= CIFRAS ================= -->
-    <!-- APRENDE: Agrupa una parte completa de la página. Para moverla, mueve desde section hasta su cierre
-         /section con todo lo que contiene. -->
-    <section class="seccion">
-      <!-- APRENDE: Mantiene el contenido centrado y limita su ancho; cambia el valor de "ancho" con dos guiones
-           delante al principio de estilos.css. -->
-      <div class="seccion__interior">
-        <!-- APRENDE: Agrupa la etiqueta, el título y la explicación de esta sección; cambia sus palabras dentro de
-             cada etiqueta. -->
-        <div class="titulo-seccion revelar">
-          <!-- APRENDE: Texto corto que presenta una sección; escribe otro nombre entre las etiquetas. Las variantes de
-               class cambian sus colores. -->
-          <span class="etiqueta">OncoMax en números</span>
-          <!-- APRENDE: Título de esta sección o tarjeta. Edita sus palabras y las de em si tiene una parte destacada. -->
-          <h2>Cuidar es un trabajo <em>de todos los días</em></h2>
-        </div>
-        <!-- Cada numero cuenta desde cero con CSS (ver "contador" en estilos.css).
-             El texto .sr-solo es el que leen los lectores de pantalla. -->
-        <!-- APRENDE: Fila de datos destacados; copia un bloque cifra completo para agregar otro dato y revisa las
-             columnas en estilos.css. -->
-        <div class="cifras escalonado">
-          <!-- APRENDE: Tarjeta con un número y su explicación; cambia "fin" con dos guiones delante en el contador y el
-               texto sr-solo para mantener ambos valores iguales. -->
-          <div class="cifra cifra--oscura">
-            <!-- APRENDE: Marco del pequeño dibujo. Cambia src de su img para otro icono; las variantes menta y coral
-                 cambian el fondo. Imagen: cambia src="assets/icons/ui/calendario.svg" por otro archivo; alt describe la
-                 foto si no se ve o se usa lectura por voz. Aquí alt vacío indica un dibujo decorativo. -->
-            <span class="icono"><img src="assets/icons/ui/calendario.svg" alt=""></span>
-            <!-- APRENDE: Texto destacado; cambia su contenido para resaltar otro dato. -->
-            <b><span class="contador" style="--fin:7" data-antes="+" aria-hidden="true"></span><span class="sr-solo">+7</span></b>
-            <!-- APRENDE: Texto o pieza pequeña dentro de otro bloque; si contiene palabras, puedes reemplazarlas entre las
-                 etiquetas. -->
-            <span>Años acompañando pacientes</span>
-          </div>
-          <!-- APRENDE: Tarjeta con un número y su explicación; cambia "fin" con dos guiones delante en el contador y el
-               texto sr-solo para mantener ambos valores iguales. -->
-          <div class="cifra">
-            <!-- APRENDE: Marco del pequeño dibujo. Cambia src de su img para otro icono; las variantes menta y coral
-                 cambian el fondo. Imagen: cambia src="assets/icons/ui/equipo.svg" por otro archivo; alt describe la foto
-                 si no se ve o se usa lectura por voz. Aquí alt vacío indica un dibujo decorativo. -->
-            <span class="icono icono--menta"><img src="assets/icons/ui/equipo.svg" alt=""></span>
-            <!-- APRENDE: Texto destacado; cambia su contenido para resaltar otro dato. -->
-            <b><span class="contador" style="--fin:5" aria-hidden="true"></span><span class="sr-solo">5</span></b>
-            <!-- APRENDE: Texto o pieza pequeña dentro de otro bloque; si contiene palabras, puedes reemplazarlas entre las
-                 etiquetas. -->
-            <span>Especialistas y enfermeras</span>
-          </div>
-          <!-- APRENDE: Tarjeta con un número y su explicación; cambia "fin" con dos guiones delante en el contador y el
-               texto sr-solo para mantener ambos valores iguales. -->
-          <div class="cifra">
-            <!-- APRENDE: Marco del pequeño dibujo. Cambia src de su img para otro icono; las variantes menta y coral
-                 cambian el fondo. Imagen: cambia src="assets/icons/ui/estetoscopio.svg" por otro archivo; alt describe la
-                 foto si no se ve o se usa lectura por voz. Aquí alt vacío indica un dibujo decorativo. -->
-            <span class="icono icono--coral"><img src="assets/icons/ui/estetoscopio.svg" alt=""></span>
-            <!-- APRENDE: Texto destacado; cambia su contenido para resaltar otro dato. -->
-            <b><span class="contador" style="--fin:3" aria-hidden="true"></span><span class="sr-solo">3</span></b>
-            <!-- APRENDE: Texto o pieza pequeña dentro de otro bloque; si contiene palabras, puedes reemplazarlas entre las
-                 etiquetas. -->
-            <span>Áreas de atención</span>
-          </div>
-          <!-- APRENDE: Tarjeta con un número y su explicación; cambia "fin" con dos guiones delante en el contador y el
-               texto sr-solo para mantener ambos valores iguales. -->
-          <div class="cifra">
-            <!-- APRENDE: Marco del pequeño dibujo. Cambia src de su img para otro icono; las variantes menta y coral
-                 cambian el fondo. Imagen: cambia src="assets/icons/ui/corazon.svg" por otro archivo; alt describe la foto
-                 si no se ve o se usa lectura por voz. Aquí alt vacío indica un dibujo decorativo. -->
-            <span class="icono"><img src="assets/icons/ui/corazon.svg" alt=""></span>
-            <!-- APRENDE: Texto destacado; cambia su contenido para resaltar otro dato. -->
-            <b><span class="contador" style="--fin:100" data-despues="%" aria-hidden="true"></span><span class="sr-solo">100%</span></b>
-            <!-- APRENDE: Texto o pieza pequeña dentro de otro bloque; si contiene palabras, puedes reemplazarlas entre las
-                 etiquetas. -->
-            <span>Trato humano y respetuoso</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= POR QUE ONCOMAX (tarjetas giratorias) ================= -->
-    <!-- APRENDE: Agrupa una parte completa de la página. Para moverla, mueve desde section hasta su cierre
-         /section con todo lo que contiene. -->
-    <section class="seccion seccion--suave">
-      <!-- APRENDE: Mantiene el contenido centrado y limita su ancho; cambia el valor de "ancho" con dos guiones
-           delante al principio de estilos.css. -->
-      <div class="seccion__interior">
-        <!-- APRENDE: Agrupa la etiqueta, el título y la explicación de esta sección; cambia sus palabras dentro de
-             cada etiqueta. -->
-        <div class="titulo-seccion titulo-seccion--centro revelar">
-          <!-- APRENDE: Texto corto que presenta una sección; escribe otro nombre entre las etiquetas. Las variantes de
-               class cambian sus colores. -->
-          <span class="etiqueta">Nuestra forma de trabajar</span>
-          <!-- APRENDE: Título de esta sección o tarjeta. Edita sus palabras y las de em si tiene una parte destacada. -->
-          <h2>Por qué elegir <em>OncoMax</em></h2>
-        </div>
-
-        <!-- APRENDE: Agrupa tarjetas. "grid" + dos guiones + "2", "grid" + dos guiones + "3" y "grid" + dos guiones +
-             "4" usan anchos mínimos diferentes; el espacio disponible decide cuántas caben por fila. -->
-        <div class="grid grid--3 escalonado">
-          <!-- APRENDE: Tarjeta con frente y reverso que gira al usarla. Para añadir otra, copia todo este article;
-               cambia los textos de ambas caras. -->
-          <article class="flip flip--texto" tabindex="0">
-            <!-- APRENDE: Mantiene unidas las dos caras para que giren juntas; conserva dentro el frente y el reverso. -->
-            <div class="flip__interior">
-              <!-- APRENDE: Una cara de la tarjeta. Frente muestra el resumen; atras muestra la explicación. Edita cada
-                   contenido por separado. -->
-              <div class="flip__cara flip__frente">
-                <!-- APRENDE: Marco del pequeño dibujo. Cambia src de su img para otro icono; las variantes menta y coral
-                     cambian el fondo. Imagen: cambia src="assets/icons/ui/mensaje.svg" por otro archivo; alt describe la foto
-                     si no se ve o se usa lectura por voz. Aquí alt vacío indica un dibujo decorativo. -->
-                <span class="icono icono--coral"><img src="assets/icons/ui/mensaje.svg" alt=""></span>
-                <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
-                <h3>Atención cercana</h3>
-                <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
-                     a otra línea. -->
-                <p>Explicamos cada paso con palabras claras y sin apuros.</p>
-                <!-- APRENDE: Invitación a usar la tarjeta; cambia el texto para indicar qué descubrirá la persona. -->
-                <span class="pista">Ver detalle</span>
-              </div>
-              <!-- APRENDE: Una cara de la tarjeta. Frente muestra el resumen; atras muestra la explicación. Edita cada
-                   contenido por separado. -->
-              <div class="flip__cara flip__atras">
-                <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
-                <h3>Atención cercana</h3>
-                <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
-                     a otra línea. -->
-                <p>El paciente recibe información comprensible sobre su situación, puede
-                   preguntar todas las veces que necesite y decide acompañado del profesional.</p>
-              </div>
-            </div>
-          </article>
-
-          <!-- APRENDE: Tarjeta con frente y reverso que gira al usarla. Para añadir otra, copia todo este article;
-               cambia los textos de ambas caras. -->
-          <article class="flip flip--texto flip--menta" tabindex="0">
-            <!-- APRENDE: Mantiene unidas las dos caras para que giren juntas; conserva dentro el frente y el reverso. -->
-            <div class="flip__interior">
-              <!-- APRENDE: Una cara de la tarjeta. Frente muestra el resumen; atras muestra la explicación. Edita cada
-                   contenido por separado. -->
-              <div class="flip__cara flip__frente">
-                <!-- APRENDE: Marco del pequeño dibujo. Cambia src de su img para otro icono; las variantes menta y coral
-                     cambian el fondo. Imagen: cambia src="assets/icons/ui/equipo.svg" por otro archivo; alt describe la foto
-                     si no se ve o se usa lectura por voz. Aquí alt vacío indica un dibujo decorativo. -->
-                <span class="icono icono--menta"><img src="assets/icons/ui/equipo.svg" alt=""></span>
-                <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
-                <h3>Equipo especializado</h3>
-                <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
-                     a otra línea. -->
-                <p>Oncología médica, quirúrgica y pediátrica en un mismo lugar.</p>
-                <!-- APRENDE: Invitación a usar la tarjeta; cambia el texto para indicar qué descubrirá la persona. -->
-                <span class="pista">Ver detalle</span>
-              </div>
-              <!-- APRENDE: Una cara de la tarjeta. Frente muestra el resumen; atras muestra la explicación. Edita cada
-                   contenido por separado. -->
-              <div class="flip__cara flip__atras">
-                <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
-                <h3>Equipo especializado</h3>
-                <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
-                     a otra línea. -->
-                <p>Doctores y enfermeras trabajan de forma coordinada, así el paciente no
-                   tiene que repetir su historia en cada consulta.</p>
-              </div>
-            </div>
-          </article>
-
-          <!-- APRENDE: Tarjeta con frente y reverso que gira al usarla. Para añadir otra, copia todo este article;
-               cambia los textos de ambas caras. -->
-          <article class="flip flip--texto flip--coral" tabindex="0">
-            <!-- APRENDE: Mantiene unidas las dos caras para que giren juntas; conserva dentro el frente y el reverso. -->
-            <div class="flip__interior">
-              <!-- APRENDE: Una cara de la tarjeta. Frente muestra el resumen; atras muestra la explicación. Edita cada
-                   contenido por separado. -->
-              <div class="flip__cara flip__frente">
-                <!-- APRENDE: Marco del pequeño dibujo. Cambia src de su img para otro icono; las variantes menta y coral
-                     cambian el fondo. Imagen: cambia src="assets/icons/ui/casa.svg" por otro archivo; alt describe la foto si
-                     no se ve o se usa lectura por voz. Aquí alt vacío indica un dibujo decorativo. -->
-                <span class="icono"><img src="assets/icons/ui/casa.svg" alt=""></span>
-                <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
-                <h3>La familia también cuenta</h3>
-                <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
-                     a otra línea. -->
-                <p>Acompañamos a quienes cuidan al paciente.</p>
-                <!-- APRENDE: Invitación a usar la tarjeta; cambia el texto para indicar qué descubrirá la persona. -->
-                <span class="pista">Ver detalle</span>
-              </div>
-              <!-- APRENDE: Una cara de la tarjeta. Frente muestra el resumen; atras muestra la explicación. Edita cada
-                   contenido por separado. -->
-              <div class="flip__cara flip__atras">
-                <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
-                <h3>La familia también cuenta</h3>
-                <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
-                     a otra línea. -->
-                <p>Damos orientación a familiares y amigos para que sepan cómo ayudar,
-                   cómo escuchar y cómo cuidarse ellos mismos.</p>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= MAPA DEL SITIO EN TARJETAS =================
-         Cada tarjeta es un enlace. Al pasar el mouse se llena de color
-         y despliega la descripcion larga de esa pagina. -->
-    <!-- APRENDE: Agrupa una parte completa de la página. Para moverla, mueve desde section hasta su cierre
-         /section con todo lo que contiene. -->
-    <section class="seccion seccion--blanca">
-      <!-- APRENDE: Mantiene el contenido centrado y limita su ancho; cambia el valor de "ancho" con dos guiones
-           delante al principio de estilos.css. -->
-      <div class="seccion__interior">
-        <!-- APRENDE: Agrupa la etiqueta, el título y la explicación de esta sección; cambia sus palabras dentro de
-             cada etiqueta. -->
-        <div class="titulo-seccion revelar">
-          <!-- APRENDE: Texto corto que presenta una sección; escribe otro nombre entre las etiquetas. Las variantes de
-               class cambian sus colores. -->
-          <span class="etiqueta">Recorre el sitio</span>
-          <!-- APRENDE: Título de esta sección o tarjeta. Edita sus palabras y las de em si tiene una parte destacada. -->
-          <h2>Qué puedes <em>encontrar aquí</em></h2>
-        </div>
-
-        <!-- APRENDE: Tarjetas que llevan a otras páginas; cada bloque a es una tarjeta completa que puedes copiar para
-             añadir otro acceso. -->
-        <div class="rutas escalonado">
-          <!-- APRENDE: Tarjeta que funciona como enlace; cambia href para el destino y sus textos para explicar la
-               página que abre. Enlace: href="servicios.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
-          <a class="ruta ruta--ancha" href="servicios.html">
-            <!-- APRENDE: Imagen: cambia src="assets/img/web/servicio-pediatrico.jpg" por otro archivo; alt describe la
-                 foto si no se ve o se usa lectura por voz. Aquí alt vacío indica un dibujo decorativo. loading="lazy"
-                 espera a que la imagen se acerque a la pantalla para cargarla. "foco" con dos guiones delante elige el
-                 punto de la foto que se conserva (horizontal y vertical); "zoom" con dos guiones delante acerca la imagen:
-                 1 es normal y 2 el doble. Prueba variaciones pequeñas. -->
-            <img class="ruta__foto" src="assets/img/web/servicio-pediatrico.jpg" alt="" loading="lazy" style="--foco: 50% 45%; --zoom: 1.15">
-            <!-- APRENDE: Número decorativo de la tarjeta; cámbialo para mantener el orden al agregar o mover accesos. -->
-            <span class="ruta__num" aria-hidden="true">01</span>
-            <!-- APRENDE: Marco del pequeño dibujo. Cambia src de su img para otro icono; las variantes menta y coral
-                 cambian el fondo. Imagen: cambia src="assets/icons/ui/estetoscopio.svg" por otro archivo; alt describe la
-                 foto si no se ve o se usa lectura por voz. Aquí alt vacío indica un dibujo decorativo. -->
-            <span class="icono"><img src="assets/icons/ui/estetoscopio.svg" alt=""></span>
-            <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
-            <h3>Servicios</h3>
-            <!-- APRENDE: Resumen que siempre aparece en la tarjeta; cambia estas palabras para presentar otro destino. -->
-            <p class="ruta__corto">Atención y acompañamiento integral.</p>
-            <!-- APRENDE: Descripción que se despliega al usar la tarjeta; cambia el texto dentro de span. -->
-            <p class="ruta__largo"><span>Conoce las áreas de atención disponibles: oncología pediátrica,
-               oncología quirúrgica y acompañamiento integral.</span></p>
-            <!-- APRENDE: Invitación a abrir el enlace; cambia la palabra Entrar si quieres otra indicación. -->
-            <span class="ruta__ir">Entrar</span>
-          </a>
-
-          <!-- APRENDE: Tarjeta que funciona como enlace; cambia href para el destino y sus textos para explicar la
-               página que abre. Enlace: href="asistencia.html" elige el destino; el texto entre a y /a es lo que se
-               pulsa. -->
-          <a class="ruta" href="asistencia.html">
-            <!-- APRENDE: Número decorativo de la tarjeta; cámbialo para mantener el orden al agregar o mover accesos. -->
-            <span class="ruta__num" aria-hidden="true">02</span>
-            <!-- APRENDE: Marco del pequeño dibujo. Cambia src de su img para otro icono; las variantes menta y coral
-                 cambian el fondo. Imagen: cambia src="assets/icons/ui/escudo.svg" por otro archivo; alt describe la foto
-                 si no se ve o se usa lectura por voz. Aquí alt vacío indica un dibujo decorativo. -->
-            <span class="icono icono--menta"><img src="assets/icons/ui/escudo.svg" alt=""></span>
-            <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
-            <h3>Asistencia Médica</h3>
-            <!-- APRENDE: Resumen que siempre aparece en la tarjeta; cambia estas palabras para presentar otro destino. -->
-            <p class="ruta__corto">Especialistas y apoyo domiciliario.</p>
-            <!-- APRENDE: Descripción que se despliega al usar la tarjeta; cambia el texto dentro de span. -->
-            <p class="ruta__largo"><span>Revisa a los profesionales, el calendario de atención y los tres pasos
-               para solicitar una consulta.</span></p>
-            <!-- APRENDE: Invitación a abrir el enlace; cambia la palabra Entrar si quieres otra indicación. -->
-            <span class="ruta__ir">Entrar</span>
-          </a>
-
-          <!-- APRENDE: Tarjeta que funciona como enlace; cambia href para el destino y sus textos para explicar la
-               página que abre. Enlace: href="nosotros.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
-          <a class="ruta" href="nosotros.html">
-            <!-- APRENDE: Número decorativo de la tarjeta; cámbialo para mantener el orden al agregar o mover accesos. -->
-            <span class="ruta__num" aria-hidden="true">03</span>
-            <!-- APRENDE: Marco del pequeño dibujo. Cambia src de su img para otro icono; las variantes menta y coral
-                 cambian el fondo. Imagen: cambia src="assets/icons/ui/equipo.svg" por otro archivo; alt describe la foto
-                 si no se ve o se usa lectura por voz. Aquí alt vacío indica un dibujo decorativo. -->
-            <span class="icono"><img src="assets/icons/ui/equipo.svg" alt=""></span>
-            <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
-            <h3>Nosotros</h3>
-            <!-- APRENDE: Resumen que siempre aparece en la tarjeta; cambia estas palabras para presentar otro destino. -->
-            <p class="ruta__corto">El equipo humano de OncoMax.</p>
-            <!-- APRENDE: Descripción que se despliega al usar la tarjeta; cambia el texto dentro de span. -->
-            <p class="ruta__largo"><span>Descubre la historia de la clínica, la galería y la biografía de
-               doctores y enfermeras.</span></p>
-            <!-- APRENDE: Invitación a abrir el enlace; cambia la palabra Entrar si quieres otra indicación. -->
-            <span class="ruta__ir">Entrar</span>
-          </a>
-
-          <!-- APRENDE: Tarjeta que funciona como enlace; cambia href para el destino y sus textos para explicar la
-               página que abre. Enlace: href="oncologia.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
-          <a class="ruta" href="oncologia.html">
-            <!-- APRENDE: Número decorativo de la tarjeta; cámbialo para mantener el orden al agregar o mover accesos. -->
-            <span class="ruta__num" aria-hidden="true">04</span>
-            <!-- APRENDE: Marco del pequeño dibujo. Cambia src de su img para otro icono; las variantes menta y coral
-                 cambian el fondo. Imagen: cambia src="assets/icons/ui/libro.svg" por otro archivo; alt describe la foto si
-                 no se ve o se usa lectura por voz. Aquí alt vacío indica un dibujo decorativo. -->
-            <span class="icono icono--coral"><img src="assets/icons/ui/libro.svg" alt=""></span>
-            <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
-            <h3>Oncología</h3>
-            <!-- APRENDE: Resumen que siempre aparece en la tarjeta; cambia estas palabras para presentar otro destino. -->
-            <p class="ruta__corto">Información básica sobre oncología.</p>
-            <!-- APRENDE: Descripción que se despliega al usar la tarjeta; cambia el texto dentro de span. -->
-            <p class="ruta__largo"><span>Aprende con mitos y realidades, un cuestionario para autoevaluarte y
-               señales a las que conviene prestar atención.</span></p>
-            <!-- APRENDE: Invitación a abrir el enlace; cambia la palabra Entrar si quieres otra indicación. -->
-            <span class="ruta__ir">Entrar</span>
-          </a>
-
-          <!-- APRENDE: Tarjeta que funciona como enlace; cambia href para el destino y sus textos para explicar la
-               página que abre. Enlace: href="lazos.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
-          <a class="ruta" href="lazos.html">
-            <!-- APRENDE: Número decorativo de la tarjeta; cámbialo para mantener el orden al agregar o mover accesos. -->
-            <span class="ruta__num" aria-hidden="true">05</span>
-            <!-- APRENDE: Marco del pequeño dibujo. Cambia src de su img para otro icono; las variantes menta y coral
-                 cambian el fondo. Imagen: cambia src="assets/icons/ui/lazo.svg" por otro archivo; alt describe la foto si
-                 no se ve o se usa lectura por voz. Aquí alt vacío indica un dibujo decorativo. -->
-            <span class="icono icono--menta"><img src="assets/icons/ui/lazo.svg" alt=""></span>
-            <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
-            <h3>Lazos de apoyo</h3>
-            <!-- APRENDE: Resumen que siempre aparece en la tarjeta; cambia estas palabras para presentar otro destino. -->
-            <p class="ruta__corto">Mensajes para pacientes y familias.</p>
-            <!-- APRENDE: Descripción que se despliega al usar la tarjeta; cambia el texto dentro de span. -->
-            <p class="ruta__largo"><span>Encuentra frases de aliento y consejos concretos para acompañar con
-               respeto y cariño.</span></p>
-            <!-- APRENDE: Invitación a abrir el enlace; cambia la palabra Entrar si quieres otra indicación. -->
-            <span class="ruta__ir">Entrar</span>
-          </a>
-
-          <!-- APRENDE: Tarjeta que funciona como enlace; cambia href para el destino y sus textos para explicar la
-               página que abre. Enlace: href="reserva.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
-          <a class="ruta ruta--ancha" href="reserva.html">
-            <!-- APRENDE: Imagen: cambia src="assets/img/web/dra-elena-rosales.jpg" por otro archivo; alt describe la foto
-                 si no se ve o se usa lectura por voz. Aquí alt vacío indica un dibujo decorativo. loading="lazy" espera a
-                 que la imagen se acerque a la pantalla para cargarla. "foco" con dos guiones delante elige el punto de la
-                 foto que se conserva (horizontal y vertical); "zoom" con dos guiones delante acerca la imagen: 1 es normal
-                 y 2 el doble. Prueba variaciones pequeñas. -->
-            <img class="ruta__foto" src="assets/img/web/dra-elena-rosales.jpg" alt="" loading="lazy" style="--foco: 55% 30%; --zoom: 1.2">
-            <!-- APRENDE: Número decorativo de la tarjeta; cámbialo para mantener el orden al agregar o mover accesos. -->
-            <span class="ruta__num" aria-hidden="true">06</span>
-            <!-- APRENDE: Marco del pequeño dibujo. Cambia src de su img para otro icono; las variantes menta y coral
-                 cambian el fondo. Imagen: cambia src="assets/icons/ui/calendario.svg" por otro archivo; alt describe la
-                 foto si no se ve o se usa lectura por voz. Aquí alt vacío indica un dibujo decorativo. -->
-            <span class="icono"><img src="assets/icons/ui/calendario.svg" alt=""></span>
-            <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
-            <h3>Reservar cita</h3>
-            <!-- APRENDE: Resumen que siempre aparece en la tarjeta; cambia estas palabras para presentar otro destino. -->
-            <p class="ruta__corto">Formulario de reserva.</p>
-            <!-- APRENDE: Descripción que se despliega al usar la tarjeta; cambia el texto dentro de span. -->
-            <p class="ruta__largo"><span>Elige un servicio, una fecha y deja tus datos de contacto. También
-               encontrarás el croquis para llegar.</span></p>
-            <!-- APRENDE: Invitación a abrir el enlace; cambia la palabra Entrar si quieres otra indicación. -->
-            <span class="ruta__ir">Entrar</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= PREGUNTAS FRECUENTES ================= -->
-    <!-- APRENDE: Agrupa una parte completa de la página. Para moverla, mueve desde section hasta su cierre
-         /section con todo lo que contiene. id="preguntas" permite llegar a este bloque usando un enlace con
-         #preguntas. -->
-    <section class="seccion seccion--suave" id="preguntas">
-      <!-- APRENDE: Mantiene el contenido centrado y limita su ancho; cambia el valor de "ancho" con dos guiones
-           delante al principio de estilos.css. -->
-      <div class="seccion__interior dividido">
-        <!-- Columna izquierda: se queda fija mientras se leen las preguntas. -->
-        <!-- APRENDE: Columna del título que acompaña la lectura; cambia su distancia desde arriba en .dividido__lado
-             de estilos.css. -->
-        <div class="dividido__lado revelar">
-          <!-- APRENDE: Agrupa la etiqueta, el título y la explicación de esta sección; cambia sus palabras dentro de
-               cada etiqueta. -->
-          <div class="titulo-seccion">
-            <!-- APRENDE: Texto corto que presenta una sección; escribe otro nombre entre las etiquetas. Las variantes de
-                 class cambian sus colores. -->
-            <span class="etiqueta">Dudas comunes</span>
-            <!-- APRENDE: Título de esta sección o tarjeta. Edita sus palabras y las de em si tiene una parte destacada. -->
-            <h2>Preguntas <em>frecuentes</em></h2>
-          </div>
-          <!-- APRENDE: Recuadro con invitación a pedir ayuda; cambia su mensaje y el destino de su botón. -->
-          <div class="tarjeta-ayuda">
-            <!-- APRENDE: Fondo con tres manchas que se mueven. Cambia sus colores en .fondo-vivo y .mancha de estilos.css;
-                 los span son decoración. -->
-            <div class="fondo-vivo" aria-hidden="true"><span class="mancha mancha--1"></span><span class="mancha mancha--2"></span><span class="mancha mancha--3"></span></div>
-            <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
-            <h3>¿Tienes otra duda?</h3>
-            <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
-                 a otra línea. -->
-            <p>Escríbenos por WhatsApp y te orientamos.</p>
-            <!-- APRENDE: WhatsApp: cambia el número de href con código de país y sin + ni espacios; actualiza también el
-                 teléfono visible, las otras páginas y WHATSAPP_CLINICA en reserva.js. target="_blank" abre otra pestaña;
-                 conserva rel="noopener" para que esa pestaña no controle esta. -->
-            <a class="boton boton--menta boton--chico" href="https://wa.me/59164556725" target="_blank" rel="noopener">Escribir por WhatsApp</a>
-          </div>
-        </div>
-
-        <!-- APRENDE: Grupo cuyos hijos aparecen uno tras otro al bajar; agrega el nuevo bloque dentro para que
-             comparta ese efecto. -->
-        <div class="escalonado">
-          <!-- APRENDE: Pregunta o bloque que se abre al pulsarlo. Copia hasta /details para sumar otro; agrega open para
-               que comience abierto. -->
-          <details>
-            <!-- APRENDE: Texto que se pulsa para abrir la explicación; escribe la pregunta aquí y la respuesta en el
-                 párrafo siguiente. -->
-            <summary>¿Necesito una cita para recibir orientación?</summary>
-            <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
-                 a otra línea. -->
-            <p>Sí, puedes solicitarla desde la página Reserva o comunicarte por WhatsApp.</p>
-          </details>
-          <!-- APRENDE: Pregunta o bloque que se abre al pulsarlo. Copia hasta /details para sumar otro; agrega open para
-               que comience abierto. -->
-          <details>
-            <!-- APRENDE: Texto que se pulsa para abrir la explicación; escribe la pregunta aquí y la respuesta en el
-                 párrafo siguiente. -->
-            <summary>¿OncoMax atiende a niños?</summary>
-            <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
-                 a otra línea. -->
-            <p>Sí, contamos con información y atención de oncología pediátrica.</p>
-          </details>
-          <!-- APRENDE: Pregunta o bloque que se abre al pulsarlo. Copia hasta /details para sumar otro; agrega open para
-               que comience abierto. -->
-          <details>
-            <!-- APRENDE: Texto que se pulsa para abrir la explicación; escribe la pregunta aquí y la respuesta en el
-                 párrafo siguiente. -->
-            <summary>¿La información del sitio reemplaza al médico?</summary>
-            <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
-                 a otra línea. -->
-            <p>No. La información del sitio es orientativa; una evaluación siempre debe realizarla un profesional.</p>
-          </details>
-          <!-- APRENDE: Pregunta o bloque que se abre al pulsarlo. Copia hasta /details para sumar otro; agrega open para
-               que comience abierto. -->
-          <details>
-            <!-- APRENDE: Texto que se pulsa para abrir la explicación; escribe la pregunta aquí y la respuesta en el
-                 párrafo siguiente. -->
-            <summary>¿Puedo ir acompañado a la consulta?</summary>
-            <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
-                 a otra línea. -->
-            <p>Sí. Recomendamos venir con una persona de confianza que ayude a anotar las indicaciones.</p>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= LLAMADO FINAL Y REDES ================= -->
-    <!-- APRENDE: Agrupa una parte completa de la página. Para moverla, mueve desde section hasta su cierre
-         /section con todo lo que contiene. -->
-    <section class="seccion">
-      <!-- APRENDE: Mantiene el contenido centrado y limita su ancho; cambia el valor de "ancho" con dos guiones
-           delante al principio de estilos.css. -->
-      <div class="seccion__interior">
-        <!-- APRENDE: Recuadro final con invitación y botones; cambia título, mensaje y enlaces para proponer otra
-             acción. -->
-        <div class="llamado revelar">
-          <!-- APRENDE: Fondo con tres manchas que se mueven. Cambia sus colores en .fondo-vivo y .mancha de estilos.css;
-               los span son decoración. -->
-          <div class="fondo-vivo" aria-hidden="true"><span class="mancha mancha--1"></span><span class="mancha mancha--2"></span><span class="mancha mancha--3"></span></div>
-          <!-- APRENDE: Texto corto que presenta una sección; escribe otro nombre entre las etiquetas. Las variantes de
-               class cambian sus colores. -->
-          <span class="etiqueta etiqueta--brillo">Estamos para ti</span>
-          <!-- APRENDE: Título de esta sección o tarjeta. Edita sus palabras y las de em si tiene una parte destacada. -->
-          <h2>Hablemos <em>cuando lo necesites</em></h2>
-          <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
-               a otra línea. -->
-          <p>Escríbenos por WhatsApp o déjanos tus datos y la clínica se comunica contigo.</p>
-          <!-- APRENDE: Coloca varios botones juntos. Copia un enlace a dentro de este bloque para añadir otro botón. -->
-          <div class="acciones acciones--centro">
-            <!-- APRENDE: Enlace: href="reserva.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
-            <a class="boton boton--blanco" href="reserva.html">Solicitar una cita</a>
-            <!-- APRENDE: WhatsApp: cambia el número de href con código de país y sin + ni espacios; actualiza también el
-                 teléfono visible, las otras páginas y WHATSAPP_CLINICA en reserva.js. target="_blank" abre otra pestaña;
-                 conserva rel="noopener" para que esa pestaña no controle esta. -->
-            <a class="boton boton--menta" href="https://wa.me/59164556725" target="_blank" rel="noopener">Escribir por WhatsApp</a>
-          </div>
-          <!-- Por ahora TikTok e Instagram usan # porque faltan los enlaces reales. -->
-          <!-- APRENDE: Grupo de enlaces de redes sociales; cambia cada href por la dirección completa del perfil
-               correspondiente. -->
-          <div class="redes">
-            <!-- APRENDE: Imagen: cambia src="assets/icons/tiktok.svg" por otro archivo; alt describe la foto si no se ve o
-                 se usa lectura por voz. Aquí alt vacío indica un dibujo decorativo. Enlace pendiente: sustituye href="#"
-                 por la dirección real del perfil; ahora no abre una red social. -->
-            <a href="#" aria-label="TikTok"><img src="assets/icons/tiktok.svg" alt=""></a>
-            <!-- APRENDE: Imagen: cambia src="assets/icons/instagram.svg" por otro archivo; alt describe la foto si no se
-                 ve o se usa lectura por voz. Aquí alt vacío indica un dibujo decorativo. Enlace pendiente: sustituye
-                 href="#" por la dirección real del perfil; ahora no abre una red social. -->
-            <a href="#" aria-label="Instagram"><img src="assets/icons/instagram.svg" alt=""></a>
-            <!-- APRENDE: Imagen: cambia src="assets/icons/whatsapp.svg" por otro archivo; alt describe la foto si no se ve
-                 o se usa lectura por voz. Aquí alt vacío indica un dibujo decorativo. WhatsApp: cambia el número de href
-                 con código de país y sin + ni espacios; actualiza también el teléfono visible, las otras páginas y
-                 WHATSAPP_CLINICA en reserva.js. target="_blank" abre otra pestaña; conserva rel="noopener" para que esa
-                 pestaña no controle esta. -->
-            <a href="https://wa.me/59164556725" target="_blank" rel="noopener" aria-label="WhatsApp"><img src="assets/icons/whatsapp.svg" alt=""></a>
-            <!-- APRENDE: Imagen: cambia src="assets/icons/facebook.svg" por otro archivo; alt describe la foto si no se ve
-                 o se usa lectura por voz. Aquí alt vacío indica un dibujo decorativo. Enlace:
-                 href="https://www.facebook.com/profile.php?id=61578464102459" elige el destino; el texto entre a y /a es
-                 lo que se pulsa. target="_blank" abre otra pestaña; conserva rel="noopener" para que esa pestaña no
-                 controle esta. -->
-            <a href="https://www.facebook.com/profile.php?id=61578464102459" target="_blank" rel="noopener" aria-label="Facebook"><img src="assets/icons/facebook.svg" alt=""></a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Boton fijo: abre una conversacion de WhatsApp en otra pestaña. -->
-  <!-- APRENDE: Botón de WhatsApp que acompaña al visitante en la esquina; cambia el número en href y la frase de
-       span. WhatsApp: cambia el número de href con código de país y sin + ni espacios; actualiza también el
-       teléfono visible, las otras páginas y WHATSAPP_CLINICA en reserva.js. target="_blank" abre otra pestaña;
-       conserva rel="noopener" para que esa pestaña no controle esta. -->
-  <a class="whatsapp-fijo" href="https://wa.me/59164556725" target="_blank" rel="noopener" aria-label="Abrir WhatsApp">
-    <!-- APRENDE: Imagen: cambia src="assets/icons/whatsapp.svg" por otro archivo; alt describe la foto si no se ve
-         o se usa lectura por voz. Aquí alt vacío indica un dibujo decorativo. -->
-    <img src="assets/icons/whatsapp.svg" alt="">
-    <!-- APRENDE: Texto o pieza pequeña dentro de otro bloque; si contiene palabras, puedes reemplazarlas entre las
-         etiquetas. -->
-    <span>¿Hablamos?</span>
-  </a>
-
-  <!-- ================= PIE DE PAGINA ================= -->
-  <!-- APRENDE: Parte inferior que se repite en cada página. Si cambias contacto, redes o enlaces, repite el
-       cambio en los otros archivos HTML. -->
-  <footer class="pie">
-    <!-- APRENDE: Distribuye las columnas del pie; modifica sus textos aquí y sus columnas en .pie__interior de
-         estilos.css. -->
-    <div class="pie__interior">
-      <!-- APRENDE: Reúne los elementos que vienen dentro para colocarlos juntos. Para copiar el bloque, incluye su
-           cierre /div y todo su contenido. -->
-      <div>
-        <!-- APRENDE: Logo del pie que lleva a Inicio; cambia src de la imagen si reemplazas la marca. Imagen: cambia
-             src="assets/img/logo-oncomax-horizontal.png" por otro archivo; alt describe la foto si no se ve o se usa
-             lectura por voz. Enlace: href="index.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
-        <a class="pie__logo" href="index.html"><img src="assets/img/logo-oncomax-horizontal.png" alt="OncoMax" width="132" height="40"></a>
-        <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
-             a otra línea. -->
-        <p>Centro Médico Integral Oncológico. Orientación, atención y acompañamiento humano.</p>
-      </div>
-      <!-- APRENDE: Reúne los elementos que vienen dentro para colocarlos juntos. Para copiar el bloque, incluye su
-           cierre /div y todo su contenido. -->
-      <div>
-        <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
-        <h3>Páginas</h3>
-        <!-- APRENDE: Lista de elementos; agrega otra línea li antes del cierre /ul para sumar un elemento. -->
-        <ul>
-          <!-- APRENDE: Un elemento de la lista; cambia su texto. Si contiene un enlace, cambia también href para su
-               destino. Enlace: href="index.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
-          <li><a href="index.html">Inicio</a></li>
-          <!-- APRENDE: Un elemento de la lista; cambia su texto. Si contiene un enlace, cambia también href para su
-               destino. Enlace: href="servicios.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
-          <li><a href="servicios.html">Servicios</a></li>
-          <!-- APRENDE: Un elemento de la lista; cambia su texto. Si contiene un enlace, cambia también href para su
-               destino. Enlace: href="asistencia.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
-          <li><a href="asistencia.html">Asistencia Médica</a></li>
-          <!-- APRENDE: Un elemento de la lista; cambia su texto. Si contiene un enlace, cambia también href para su
-               destino. Enlace: href="nosotros.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
-          <li><a href="nosotros.html">Nosotros</a></li>
-          <!-- APRENDE: Un elemento de la lista; cambia su texto. Si contiene un enlace, cambia también href para su
-               destino. Enlace: href="oncologia.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
-          <li><a href="oncologia.html">Oncología</a></li>
-          <!-- APRENDE: Un elemento de la lista; cambia su texto. Si contiene un enlace, cambia también href para su
-               destino. Enlace: href="lazos.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
-          <li><a href="lazos.html">Lazos de apoyo</a></li>
-          <!-- APRENDE: Un elemento de la lista; cambia su texto. Si contiene un enlace, cambia también href para su
-               destino. Enlace: href="reserva.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
-          <li><a href="reserva.html">Reservar cita</a></li>
-        </ul>
-      </div>
-      <!-- APRENDE: Reúne los elementos que vienen dentro para colocarlos juntos. Para copiar el bloque, incluye su
-           cierre /div y todo su contenido. -->
-      <div>
-        <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
-        <h3>Contacto</h3>
-        <!-- APRENDE: Lista de elementos; agrega otra línea li antes del cierre /ul para sumar un elemento. -->
-        <ul class="lista-datos">
-          <!-- APRENDE: Un elemento de la lista; cambia su texto. Si contiene un enlace, cambia también href para su
-               destino. Imagen: cambia src="assets/icons/whatsapp.svg" por otro archivo; alt describe la foto si no se ve
-               o se usa lectura por voz. Aquí alt vacío indica un dibujo decorativo. WhatsApp: cambia el número de href
-               con código de país y sin + ni espacios; actualiza también el teléfono visible, las otras páginas y
-               WHATSAPP_CLINICA en reserva.js. target="_blank" abre otra pestaña; conserva rel="noopener" para que esa
-               pestaña no controle esta. -->
-          <li><span class="icono icono--chico"><img src="assets/icons/whatsapp.svg" alt=""></span><span><small>WhatsApp</small><a href="https://wa.me/59164556725" target="_blank" rel="noopener">+591 64556725</a></span></li>
-          <!-- APRENDE: Un elemento de la lista; cambia su texto. Si contiene un enlace, cambia también href para su
-               destino. Imagen: cambia src="assets/icons/ui/ubicacion.svg" por otro archivo; alt describe la foto si no
-               se ve o se usa lectura por voz. Aquí alt vacío indica un dibujo decorativo. -->
-          <li><span class="icono icono--chico"><img src="assets/icons/ui/ubicacion.svg" alt=""></span><span><small>Dirección</small>Antofagasta entre Bolívar y Sucre</span></li>
-          <!-- APRENDE: Un elemento de la lista; cambia su texto. Si contiene un enlace, cambia también href para su
-               destino. Imagen: cambia src="assets/icons/ui/casa.svg" por otro archivo; alt describe la foto si no se ve
-               o se usa lectura por voz. Aquí alt vacío indica un dibujo decorativo. -->
-          <li><span class="icono icono--chico"><img src="assets/icons/ui/casa.svg" alt=""></span><span><small>Ciudad</small>Oruro, Bolivia</span></li>
-        </ul>
-      </div>
-      <!-- APRENDE: Reúne los elementos que vienen dentro para colocarlos juntos. Para copiar el bloque, incluye su
-           cierre /div y todo su contenido. -->
-      <div>
-        <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
-        <h3>Síguenos</h3>
-        <!-- Por ahora TikTok e Instagram usan # porque faltan los enlaces reales. -->
-        <!-- APRENDE: Grupo de enlaces de redes sociales; cambia cada href por la dirección completa del perfil
-             correspondiente. -->
-        <div class="redes">
-          <!-- APRENDE: Imagen: cambia src="assets/icons/tiktok.svg" por otro archivo; alt describe la foto si no se ve o
-               se usa lectura por voz. Aquí alt vacío indica un dibujo decorativo. Enlace pendiente: sustituye href="#"
-               por la dirección real del perfil; ahora no abre una red social. -->
-          <a href="#" aria-label="TikTok"><img src="assets/icons/tiktok.svg" alt=""></a>
-          <!-- APRENDE: Imagen: cambia src="assets/icons/instagram.svg" por otro archivo; alt describe la foto si no se
-               ve o se usa lectura por voz. Aquí alt vacío indica un dibujo decorativo. Enlace pendiente: sustituye
-               href="#" por la dirección real del perfil; ahora no abre una red social. -->
-          <a href="#" aria-label="Instagram"><img src="assets/icons/instagram.svg" alt=""></a>
-          <!-- APRENDE: Imagen: cambia src="assets/icons/whatsapp.svg" por otro archivo; alt describe la foto si no se ve
-               o se usa lectura por voz. Aquí alt vacío indica un dibujo decorativo. WhatsApp: cambia el número de href
-               con código de país y sin + ni espacios; actualiza también el teléfono visible, las otras páginas y
-               WHATSAPP_CLINICA en reserva.js. target="_blank" abre otra pestaña; conserva rel="noopener" para que esa
-               pestaña no controle esta. -->
-          <a href="https://wa.me/59164556725" target="_blank" rel="noopener" aria-label="WhatsApp"><img src="assets/icons/whatsapp.svg" alt=""></a>
-          <!-- APRENDE: Imagen: cambia src="assets/icons/facebook.svg" por otro archivo; alt describe la foto si no se ve
-               o se usa lectura por voz. Aquí alt vacío indica un dibujo decorativo. Enlace:
-               href="https://www.facebook.com/profile.php?id=61578464102459" elige el destino; el texto entre a y /a es
-               lo que se pulsa. target="_blank" abre otra pestaña; conserva rel="noopener" para que esa pestaña no
-               controle esta. -->
-          <a href="https://www.facebook.com/profile.php?id=61578464102459" target="_blank" rel="noopener" aria-label="Facebook"><img src="assets/icons/facebook.svg" alt=""></a>
-        </div>
-      </div>
-    </div>
-    <!-- Palabra gigante decorativa. -->
-    <!-- APRENDE: Nombre grande de fondo, solo decorativo; cambia las letras aquí y su tamaño en estilos.css. -->
-    <div class="pie__gigante" aria-hidden="true">OncoMax</div>
-    <!-- APRENDE: Última línea del sitio; cambia aquí el año y la información al pie. -->
-    <div class="pie__abajo">
-      <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
-           a otra línea. -->
-      <p>© 2026 <b>OncoMax</b> · Centro Médico Integral Oncológico · Oruro, Bolivia. La información de este sitio no reemplaza una consulta médica.</p>
-    </div>
-  </footer>
-</body>
+    <nav class="quick-actions" aria-label="Accesos rápidos">
+      <a href="#inicio" aria-label="Volver al inicio de la página" title="Volver arriba">&uarr;</a>
+      <a class="quick-whatsapp" href="https://wa.me/59172478852?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20los%20productos%20de%20ZQ%20SPORT." aria-label="Consultar con ZQ SPORT por WhatsApp">
+        <img src="assets/icons/whatsapp.svg" alt="">
+        WhatsApp
+      </a>
+    </nav>
+  </body>
 </html>

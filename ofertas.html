@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="description" content="Ofertas especiales en productos deportivos">
+    <title>Ofertas Especiales | ZQ SPORT</title>
+
+    <style>
+      :root {
+        --primary: #F15A38;
+        --secondary: #48B7BD;
+        --brand-deep: #0C2D3A;
+        --bg-main: #F4F7F6;
+        --surface: #FFFFFF;
+        --text-title: #091E26;
+        --text-body: #3A4D54;
+        --border: #E2EAE9;
+        --white: #FFFFFF
+      }
+
+      * {
+        box-sizing: border-box
+      }
+
+      body {
+        padding-bottom: 5.5rem;
+        margin: 0;
+        background: var(--bg-main);
+        color: var(--text-body);
+        font-family: "Segoe UI", Arial, sans-serif
+      }
+
+      img {
+        display: block;
+        max-width: 100%
+      }
+
+      header {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        background: var(--brand-deep)
+      }
+
+      .top {
+        background: transparent;
+        padding: .35rem 0 .35rem 4vw;
+        text-align: left;
+        flex: 0 0 auto
+      }
+
+      .logo {
+        width: clamp(86px, 9vw, 118px);
+        height: auto;
+        max-height: 58px;
+        object-fit: contain
+      }
+
+      .nav {
+        display: flex;
+        flex: 1 1 auto;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        background: transparent;
+        padding: .35rem 4vw .35rem 1rem
+      }
+
+      .nav a {
+        color: var(--white);
+        padding: .45rem .6rem;
+        text-decoration: none;
+        font-size: .84rem;
+        font-weight: 700;
+        border-bottom: 2px solid transparent
+      }
+
+      .nav a:hover,.nav a.active {
+        color: var(--secondary);
+        border-color: var(--secondary)
+      }
+
+      .mobile-menu {
+        display: none;
+        flex: 1 1 auto;
+        background: transparent;
+        padding: .35rem 4vw .35rem 1rem;
+      }
+
+      .mobile-menu summary {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: .65rem;
+        color: var(--white);
+        background: var(--primary);
+        border: 1px solid rgba(255, 255, 255, .18);
+        border-radius: 6px;
+        padding: .8rem 1rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        cursor: pointer;
+        list-style: none;
+      }
+
+      .mobile-menu summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .hamburger-icon,
+      .hamburger-icon::before,
+      .hamburger-icon::after {
+        display: block;
+        width: 22px;
+        height: 3px;
+        background: var(--white);
+        border-radius: 2px;
+        content: "";
+      }
+
+      .hamburger-icon,
+      .hamburger-icon::before,
+      .hamburger-icon::after {
+        transition: transform .2s ease-in-out, background-color .2s ease-in-out;
+      }
+
+      .hamburger-icon::before {
+        transform: translateY(-7px);
+      }
+
+      .hamburger-icon::after {
+        transform: translateY(4px);
+      }
+
+      .mobile-links {
+        display: grid;
+        gap: .45rem;
+        padding-top: .75rem;
+      }
+
+      .mobile-links a {
+        color: var(--white);
+        background: rgba(12, 45, 58, .95);
+        border: 1px solid rgba(255, 255, 255, .16);
+        border-radius: 4px;
+        padding: .75rem;
+        text-align: center;
+        text-decoration: none;
+        font-weight: 800;
+      }
+
+      .mobile-links a.active,
+      .mobile-links a:hover,
+      .mobile-links a:focus-visible {
+        color: var(--brand-deep);
+        background: var(--secondary);
+      }
+
+      .heading {
+        flex-basis: 100%;
+        background: var(--surface);
+        padding: 3.5rem 6vw;
+        border-bottom: 1px solid var(--border);
+        text-align: center
+      }
+
+      h1,h2 {
+        font-family: "Arial Narrow", "Impact", "Segoe UI", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 1px
+      }
+
+      .heading h1 {
+        margin: 0;
+        color: var(--text-title);
+        font-size: clamp(2.7rem, 6vw, 5rem)
+      }
+
+      .offers {
+        max-width: 1200px;
+        margin: auto;
+        padding: 2.5rem 1.25rem 4rem;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem
+      }
+
+      .card {
+        position: relative;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        overflow: hidden;
+        transition: all .2s ease-in-out
+      }
+
+      .card > img {
+        width: 100%;
+        aspect-ratio: 4 / 5;
+        object-fit: contain;
+        padding: .75rem;
+        background: var(--surface);
+      }
+
+      .badge {
+        position: absolute;
+        top: .75rem;
+        left: .75rem;
+        background: var(--primary);
+        color: var(--white);
+        padding: .45rem .65rem;
+        border-radius: 4px;
+        font-weight: 900
+      }
+
+      .body {
+        padding: 1rem
+      }
+
+      .body h2 {
+        color: var(--text-title);
+        font-size: 1.2rem
+      }
+
+      .old {
+        text-decoration: line-through;
+        color: #718087
+      }
+
+      .new {
+        color: var(--primary);
+        font-size: 1.55rem;
+        font-weight: 900
+      }
+
+      .btn {
+        display: block;
+        background: var(--primary);
+        color: var(--white);
+        padding: .85rem;
+        border-radius: 6px;
+        text-align: center;
+        text-decoration: none;
+        font-weight: 800;
+        transition: all .2s ease-in-out
+      }
+
+      .btn:hover {
+        background: var(--secondary);
+        transform: scale(1.02)
+      }
+
+      .footer {
+        background: var(--brand-deep);
+        color: var(--white);
+        padding: 3rem 5vw 1rem;
+        border-top: 4px solid var(--primary)
+      }
+
+      .footer-grid {
+        max-width: 1200px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr;
+        gap: 2rem
+      }
+
+      .footer p {
+        color: #dce7e8;
+        line-height: 1.6
+      }
+
+      .social {
+        display: flex;
+        gap: .5rem
+      }
+
+      .social img {
+        width: 36px
+      }
+
+      .copy {
+        text-align: center;
+        border-top: 1px solid #ffffff2b;
+        padding-top: 1rem
+      }
+
+      @media(max-width:950px) {
+        .offers {
+          grid-template-columns: repeat(2, 1fr)
+        }
+
+      }
+
+      @media(max-width:650px) {
+        .nav {
+          display: none
+        }
+
+        .mobile-menu {
+          display: block
+        }
+
+        .offers,.footer-grid {
+          grid-template-columns: 1fr
+        }
+
+      }
+
+      @keyframes entrada-suave {
+        from {
+          opacity: 0;
+          transform: translateY(14px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+      }
+
+      .heading h1 {
+        animation: entrada-suave .45s ease-out both;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      a:focus-visible,
+      summary:focus-visible {
+        outline: 3px solid var(--secondary);
+        outline-offset: 4px;
+      }
+
+      .mobile-links a,
+      .mobile-menu > summary,
+      .nav a,
+      .social a {
+        transition: background-color .2s ease-in-out, color .2s ease-in-out, transform .2s ease-in-out;
+      }
+
+      .mobile-menu[open] > summary .hamburger-icon {
+        background: transparent;
+      }
+
+      .mobile-menu[open] > summary .hamburger-icon::before {
+        transform: rotate(45deg);
+      }
+
+      .mobile-menu[open] > summary .hamburger-icon::after {
+        transform: translateY(-3px) rotate(-45deg);
+      }
+
+      .mobile-menu[open] .mobile-links {
+        animation: entrada-suave .2s ease-out;
+      }
+
+      .card:hover,
+      .card:focus-within {
+        border-color: var(--secondary);
+        transform: translateY(-4px) scale(1.02);
+        box-shadow: 0 14px 32px rgba(9, 30, 38, .12);
+      }
+
+      .quick-actions {
+        position: fixed;
+        right: max(1rem, env(safe-area-inset-right));
+        bottom: max(1rem, env(safe-area-inset-bottom));
+        z-index: 30;
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+      }
+
+      .quick-actions a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: .5rem;
+        min-height: 48px;
+        padding: .75rem 1rem;
+        color: var(--white);
+        background: var(--brand-deep);
+        border: 1px solid var(--secondary);
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 800;
+        box-shadow: 0 6px 20px rgba(9, 30, 38, .2);
+        transition: transform .2s ease-in-out, background-color .2s ease-in-out;
+      }
+
+      .quick-actions .quick-whatsapp {
+        background: var(--primary);
+        border-color: var(--primary);
+      }
+
+      .quick-actions img {
+        width: 24px;
+        height: 24px;
+      }
+
+      .quick-actions a:hover {
+        background: var(--secondary);
+        transform: translateY(-3px);
+      }
+
+      .btn:active,
+      .quick-actions a:active {
+        transform: scale(.98);
+      }
+
+      footer a {
+        color: inherit;
+        text-underline-offset: 3px;
+      }
+
+      footer a:hover {
+        color: var(--secondary);
+      }
+
+      .heading {
+        min-width: 0;
+        overflow-wrap: anywhere;
+      }
+
+      @media (max-width: 700px) {
+        .mobile-menu {
+          flex: 1 1 calc(100% - 120px);
+          min-width: 0;
+        }
+
+        .mobile-menu[open] {
+          flex-basis: 100%;
+        }
+
+        .heading h1 {
+          font-size: clamp(2rem, 9vw, 3.5rem);
+        }
+
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+        *,
+        *::before,
+        *::after {
+          animation: none !important;
+          transition: none !important;
+        }
+
+        .card:hover,
+        .card:focus-within {
+          transform: none;
+        }
+
+      }
+    </style>
+
+    <meta name="theme-color" content="#0C2D3A">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="assets/css/dinamico.css">
+
+<script>
+document.documentElement.classList.add('zq-js');
+</script>
+
+<script src="assets/js/dinamico.js" defer></script>
+
+  </head>
+
+  <body id="inicio">
+
+    <header>
+      <div class="top">
+        <a href="index.html">
+          <img class="logo" src="assets/img/logo-tienda.png" alt="ZQ SPORT">
+        </a>
+      </div>
+
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="deportivos-varon.html">Deportivos Varón</a>
+        <a href="deportivos-dama.html">Deportivos Dama</a>
+        <a href="poleras-varon.html">Poleras Varón</a>
+        <a href="poleras-dama.html">Poleras Dama</a>
+        <a href="mochilas-varon.html">Mochilas Varón</a>
+        <a href="mochilas-dama.html">Mochilas Dama</a>
+        <a href="galeria.html">Galería</a>
+        <a class="active" href="ofertas.html" aria-current="page">Ofertas</a>
+        <a href="nosotros.html">Acerca de Nosotros</a>
+      </nav>
+
+      <details class="mobile-menu">
+        <summary>
+          <span class="hamburger-icon" aria-hidden="true"></span>
+          Menu
+        </summary>
+
+        <div class="mobile-links">
+        <a href="index.html">Inicio</a>
+        <a href="deportivos-varon.html">Deportivos Var&oacute;n</a>
+        <a href="deportivos-dama.html">Deportivos Dama</a>
+        <a href="poleras-varon.html">Poleras Var&oacute;n</a>
+        <a href="poleras-dama.html">Poleras Dama</a>
+        <a href="mochilas-varon.html">Mochilas Var&oacute;n</a>
+        <a href="mochilas-dama.html">Mochilas Dama</a>
+        <a href="galeria.html">Galer&iacute;a</a>
+        <a class="active" aria-current="page" href="ofertas.html">Ofertas</a>
+        <a href="nosotros.html">Acerca de Nosotros</a>
+        </div>
+      </details>
+
+    </header>
+
+    <div class="heading">
+        <h1>Ofertas Especiales</h1>
+        <p>Promociones preparadas para equipar a tu grupo.</p>
+      </div>
+
+    <main class="offers">
+
+      <article class="card">
+        <span class="badge">-20%</span>
+
+        <img src="assets/img/combo-uniforme-titan.jpeg" alt="Oferta uniforme Titán" loading="lazy" decoding="async">
+        <div class="body">
+          <h2>Combo Uniforme Titán</h2>
+          <p class="old">Antes: Bs. 180</p>
+          <p class="new">Ahora: Bs. 144</p>
+
+          <a class="btn" href="https://wa.me/59172478852?text=Hola%2C%20quiero%20reservar%20la%20oferta%3A%20Combo%20Uniforme%20Tit%C3%A1n.%20Cantidad%3A%20__.%20Talla%3A%20__.%20Color%3A%20__.">Reservar por WhatsApp</a>
+        </div>
+      </article>
+      <article class="card">
+        <span class="badge">-15%</span>
+
+        <img src="assets/img/conjunto-aurora.jpeg" alt="Oferta conjunto Aurora" loading="lazy" decoding="async">
+        <div class="body">
+          <h2>Conjunto Aurora</h2>
+          <p class="old">Antes: Bs. 200</p>
+          <p class="new">Ahora: Bs. 170</p>
+          <a class="btn" href="https://wa.me/59172478852?text=Hola%2C%20quiero%20reservar%20la%20oferta%3A%20Conjunto%20Aurora.%20Cantidad%3A%20__.%20Talla%3A%20__.%20Color%3A%20__.">Reservar por WhatsApp</a>
+        </div>
+      </article>
+      <article class="card">
+        <span class="badge">-25%</span>
+
+        <img src="assets/img/Pack-polera-fenix.jpeg" alt="Oferta polera Fénix" loading="lazy" decoding="async">
+        <div class="body">
+          <h2>Pack Polera Fénix</h2>
+          <p class="old">Antes: Bs. 160</p>
+          <p class="new">Ahora: Bs. 120</p>
+          <a class="btn" href="https://wa.me/59172478852?text=Hola%2C%20quiero%20reservar%20la%20oferta%3A%20Pack%20Polera%20F%C3%A9nix.%20Cantidad%3A%20__.%20Talla%3A%20__.%20Color%3A%20__.">Reservar por WhatsApp</a>
+        </div>
+      </article>
+      <article class="card">
+        <span class="badge">-18%</span>
+
+        <img src="assets/img/mochila-team-pro.jpeg" alt="Oferta mochila Team Pro" loading="lazy" decoding="async">
+        <div class="body">
+          <h2>Mochila Team Pro</h2>
+          <p class="old">Antes: Bs. 150</p>
+          <p class="new">Ahora: Bs. 123</p>
+          <a class="btn" href="https://wa.me/59172478852?text=Hola%2C%20quiero%20reservar%20la%20oferta%3A%20Mochila%20Team%20Pro.%20Cantidad%3A%20__.%20Talla%3A%20__.%20Color%3A%20__.">Reservar por WhatsApp</a>
+        </div>
+      </article>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-grid">
+        <section>
+          <h2>ZQ SPORT</h2>
+          <p>Diseños personalizados para equipos, clubes y competencias deportivas.</p>
+        </section>
+        <section>
+          <h2>Atención</h2>
+          <p>Dirección: <a href="https://www.google.com/maps/search/?api=1&amp;query=-17.970611%2C-67.069306" target="_blank" rel="noopener noreferrer">Ver ubicación en Google Maps</a><br>Teléfono: <a href="tel:+59172478852">72478852</a><br>WhatsApp: <a href="https://wa.me/59172478852?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20los%20productos%20de%20ZQ%20SPORT.">72478852</a></p>
+        </section>
+        <section>
+          <h2>Horario y redes</h2>
+          <p>Lunes a Sábado - 08:00 a 20:00</p>
+          <div class="social">
+            <a href="#">
+              <img src="assets/icons/facebook.svg" alt="Facebook">
+            </a>
+            <a href="#">
+              <img src="assets/icons/instagram.svg" alt="Instagram">
+            </a>
+            <a href="https://wa.me/59172478852?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20los%20productos%20de%20ZQ%20SPORT." aria-label="Escribir a ZQ SPORT por WhatsApp">
+              <img src="assets/icons/whatsapp.svg" alt="WhatsApp">
+            </a>
+            <a href="#">
+              <img src="assets/icons/tiktok.svg" alt="TikTok">
+            </a>
+          </div>
+        </section>
+      </div>
+      <p class="copy">© 2026 ZQ SPORT. Todos los derechos reservados.</p>
+    </footer>
+
+    <nav class="quick-actions" aria-label="Accesos rápidos">
+      <a href="#inicio" aria-label="Volver al inicio de la página" title="Volver arriba">&uarr;</a>
+      <a class="quick-whatsapp" href="https://wa.me/59172478852?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20los%20productos%20de%20ZQ%20SPORT." aria-label="Consultar con ZQ SPORT por WhatsApp">
+        <img src="assets/icons/whatsapp.svg" alt="">
+        WhatsApp
+      </a>
+    </nav>
+  </body>
+</html>

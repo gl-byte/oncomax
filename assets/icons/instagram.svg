@@ -1,13 +1,42 @@
-<!-- APRENDE: Icono instagram. Este archivo dibuja una imagen con formas. Para usar otro icono en la página,
-     cambia src de su img en HTML. Para probar otro color aquí, cambia stroke o fill; algunas reglas de
-     estilos.css lo convierten en blanco. -->
-<!-- APRENDE: Espacio de dibujo: viewBox="0 0 24 24" equivale a una hoja de 24 por 24 unidades. Conserva este
-     marco para no recortar el símbolo. El color se elige en fill de cada forma. El tamaño en la página se
-     ajusta en estilos.css, no cambiando este marco. -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="Instagram">
-    <!-- APRENDE: Trazo de una parte del icono. fill="#743795" colorea su interior; cambia el código para otro
-       tono. d indica por dónde se dibuja: M mueve el lápiz, L dibuja una recta, H/V una línea
-       horizontal/vertical, C una curva y A un arco; Z cierra la figura. Mayúsculas indican posiciones y
-       minúsculas desplazamientos. Prueba cambiar una medida cada vez para observar la forma. -->
-  <path fill="#743795" d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9zm4.5 3.3a4.7 4.7 0 1 1 0 9.4 4.7 4.7 0 0 1 0-9.4zm0 2a2.7 2.7 0 1 0 0 5.4 2.7 2.7 0 0 0 0-5.4zm5-2.4a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2z"/>
+<!-- Este dibujo esta guardado en el proyecto y no necesita descargar iconos de internet. -->
+<!-- Empieza el dibujo del icono; puede agrandarse conservando su forma. -->
+<!-- xmlns indica que este archivo es un dibujo que el navegador puede mostrar. -->
+<!-- viewBox define el espacio del dibujo que se ajusta al tamaño del icono. -->
+<!-- role indica si esta parte debe anunciarse como una imagen, un menú o un botón. -->
+<!-- aria-labelledby usa el título indicado como nombre de esta sección. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-labelledby="title">
+<!-- Elige el texto que aparece en la pestaña del navegador. -->
+<!-- id le da el nombre title; sirve para encontrarla o abrirla desde un enlace. -->
+<title id="title">Instagram</title>
+<!-- Dibuja un rectángulo con el tamaño, las esquinas y el color indicados. -->
+<!-- width fija el ancho inicial; aumentar el número lo hace más grande. -->
+<!-- height fija el alto inicial; aumentar el número lo hace más grande. -->
+<!-- rx redondea las esquinas del rectángulo. -->
+<!-- fill elige el color interior; none deja el interior vacío. -->
+<rect width="32" height="32" rx="4" fill="#F15A38"/>
+<!-- Dibuja un rectángulo con el tamaño, las esquinas y el color indicados. -->
+<!-- x coloca la figura en la dirección horizontal del dibujo. -->
+<!-- y coloca la figura en la dirección vertical del dibujo. -->
+<!-- width fija el ancho inicial; aumentar el número lo hace más grande. -->
+<!-- height fija el alto inicial; aumentar el número lo hace más grande. -->
+<!-- rx redondea las esquinas del rectángulo. -->
+<!-- fill elige el color interior; none deja el interior vacío. -->
+<!-- stroke elige el color de la línea que rodea la figura. -->
+<!-- stroke-width fija el grosor de la línea. -->
+<rect x="7" y="7" width="18" height="18" rx="5" fill="none" stroke="#fff" stroke-width="2"/>
+<!-- Dibuja un círculo con el centro y el tamaño indicados. -->
+<!-- cx coloca el centro del círculo en la dirección horizontal. -->
+<!-- cy coloca el centro del círculo en la dirección vertical. -->
+<!-- r fija el tamaño del círculo desde su centro hasta el borde. -->
+<!-- fill elige el color interior; none deja el interior vacío. -->
+<!-- stroke elige el color de la línea que rodea la figura. -->
+<!-- stroke-width fija el grosor de la línea. -->
+<circle cx="16" cy="16" r="4" fill="none" stroke="#fff" stroke-width="2"/>
+<!-- Dibuja un círculo con el centro y el tamaño indicados. -->
+<!-- cx coloca el centro del círculo en la dirección horizontal. -->
+<!-- cy coloca el centro del círculo en la dirección vertical. -->
+<!-- r fija el tamaño del círculo desde su centro hasta el borde. -->
+<!-- fill elige el color interior; none deja el interior vacío. -->
+<circle cx="22" cy="10" r="1.3" fill="#fff"/>
+<!-- Termina el dibujo del icono. -->
 </svg>

@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Uniformes y conjuntos de dama de ZQ SPORT">
+  <title>Deportivos Dama | ZQ SPORT</title>
+
+    <style>
+      :root {
+        --primary: #F15A38;
+        --secondary: #48B7BD;
+        --brand-deep: #0C2D3A;
+        --bg-main: #F4F7F6;
+        --surface: #FFFFFF;
+        --text-title: #091E26;
+        --text-body: #3A4D54;
+        --border: #E2EAE9;
+        --white: #FFFFFF;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        padding-bottom: 5.5rem;
+        margin: 0;
+        background: var(--bg-main);
+        color: var(--text-body);
+        font-family: "Segoe UI", Arial, sans-serif;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      header {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        background: var(--brand-deep);
+      }
+
+      .topbar {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        background: transparent;
+        padding: .35rem 0 .35rem max(1rem, 4vw);
+        flex: 0 0 auto;
+      }
+
+      .logo {
+        width: clamp(86px, 9vw, 118px);
+        height: auto;
+        max-height: 58px;
+        object-fit: contain;
+      }
+
+      .page-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1 1 auto;
+        flex-wrap: wrap;
+        gap: .3rem;
+        background: transparent;
+        padding: .35rem max(1rem, 4vw) .35rem 1rem;
+      }
+
+      .page-nav a {
+        color: var(--white);
+        padding: .45rem .6rem;
+        border-bottom: 2px solid transparent;
+        text-decoration: none;
+        font-size: .84rem;
+        font-weight: 700;
+        transition: all .2s ease-in-out;
+      }
+
+      .page-nav a:hover,
+      .page-nav a:focus-visible,
+      .page-nav a.active {
+        color: var(--secondary);
+        border-color: var(--secondary);
+      }
+
+      .mobile-menu {
+        display: none;
+        flex: 1 1 auto;
+        background: transparent;
+        padding: .35rem max(1rem, 4vw) .35rem 1rem;
+      }
+
+      .mobile-menu summary {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: .65rem;
+        color: var(--white);
+        background: var(--primary);
+        border: 1px solid rgba(255, 255, 255, .18);
+        border-radius: 6px;
+        padding: .8rem 1rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        cursor: pointer;
+        list-style: none;
+      }
+
+      .mobile-menu summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .hamburger-icon,
+      .hamburger-icon::before,
+      .hamburger-icon::after {
+        display: block;
+        width: 22px;
+        height: 3px;
+        background: var(--white);
+        border-radius: 2px;
+        content: "";
+      }
+
+      .hamburger-icon,
+      .hamburger-icon::before,
+      .hamburger-icon::after {
+        transition: transform .2s ease-in-out, background-color .2s ease-in-out;
+      }
+
+      .hamburger-icon::before {
+        transform: translateY(-7px);
+      }
+
+      .hamburger-icon::after {
+        transform: translateY(4px);
+      }
+
+      .mobile-links {
+        display: grid;
+        gap: .45rem;
+        padding-top: .75rem;
+      }
+
+      .mobile-links a {
+        color: var(--white);
+        background: rgba(12, 45, 58, .95);
+        border: 1px solid rgba(255, 255, 255, .16);
+        border-radius: 4px;
+        padding: .75rem;
+        text-align: center;
+        text-decoration: none;
+        font-weight: 800;
+      }
+
+      .mobile-links a.active,
+      .mobile-links a:hover,
+      .mobile-links a:focus-visible {
+        color: var(--brand-deep);
+        background: var(--secondary);
+      }
+
+      .page-header {
+        flex-basis: 100%;
+        position: relative;
+        overflow: hidden;
+        background: var(--surface);
+        border-bottom: 1px solid var(--border);
+        padding: 3.5rem max(1.25rem, 6vw) 3rem;
+        text-align: center;
+      }
+
+      .page-header::after {
+        content: "";
+        position: absolute;
+        left: 35%;
+        bottom: 0;
+        width: 30%;
+        height: 7px;
+        background: var(--primary);
+        transform: skewX(-35deg);
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: "Arial Narrow", "Impact", "Segoe UI", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .page-header h1 {
+        margin: 0;
+        color: var(--text-title);
+        font-size: clamp(2.4rem, 6vw, 5rem);
+        line-height: .95;
+      }
+
+      .page-header p {
+        margin: 1rem auto 0;
+        max-width: 760px;
+        font-size: 1.08rem;
+      }
+
+      .catalog {
+        max-width: 1200px;
+        margin: auto;
+        padding: 2.5rem 1.25rem 4rem;
+      }
+
+      .products-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 1rem;
+      }
+
+      .product-card {
+        display: flex;
+        flex-direction: column;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        overflow: hidden;
+        box-shadow: 0 8px 25px rgba(9, 30, 38, .06);
+        transition: transform .2s ease-in-out, box-shadow .2s ease-in-out, border-color .2s ease-in-out;
+      }
+
+      .product-card > img {
+        width: 100%;
+        aspect-ratio: 4 / 5;
+        object-fit: contain;
+        padding: .75rem;
+        background: var(--surface);
+      }
+
+      .card-body {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        padding: 1rem;
+      }
+
+      .product-kind {
+        margin: 0 0 .55rem;
+        color: var(--text-body);
+        font-size: .8rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: .4px;
+      }
+
+      .card-body h2 {
+        margin: 0 0 .5rem;
+        color: var(--text-title);
+        font-size: 1.2rem;
+      }
+
+      .card-body p {
+        line-height: 1.55;
+      }
+
+      .price {
+        color: var(--primary);
+        font-size: 1.35rem;
+        font-weight: 900;
+      }
+
+      .btn-detail {
+        display: block;
+        margin-top: auto;
+        background: var(--brand-deep);
+        color: var(--white);
+        padding: .8rem 1rem;
+        border-radius: 6px;
+        text-align: center;
+        text-decoration: none;
+        font-weight: 800;
+        transition: all .2s ease-in-out;
+      }
+
+      .btn-detail:hover,
+      .btn-detail:focus-visible {
+        background: var(--secondary);
+      }
+
+      .product-modal {
+        display: none;
+        position: fixed;
+        inset: 0;
+        z-index: 100;
+        overflow-y: auto;
+        padding: 1rem;
+        background: rgba(9, 30, 38, .94);
+      }
+
+      .product-modal:target {
+        display: grid;
+        justify-items: center;
+        align-items: start;
+      }
+
+      .modal-card {
+        min-width: 0;
+        width: min(1100px, 100%);
+        min-height: calc(100vh - 2rem);
+        background: var(--surface);
+        border: 2px solid var(--secondary);
+        border-radius: 6px;
+        padding: clamp(1rem, 3vw, 2.25rem);
+      }
+
+      .modal-close {
+        padding: .75rem;
+        border-radius: 6px;
+        display: block;
+        width: max-content;
+        margin-left: auto;
+        color: var(--brand-deep);
+        text-decoration: none;
+        font-weight: 900;
+      }
+
+      .modal-content {
+        display: grid;
+        grid-template-columns: 1.15fr 1fr;
+        align-items: center;
+        gap: clamp(1.25rem, 4vw, 3rem);
+        margin-top: 1rem;
+      }
+
+      .modal-content img {
+        width: 100%;
+        max-height: 62vh;
+        object-fit: contain;
+        border-radius: 6px;
+      }
+
+      .modal-info h2 {
+        margin-top: 0;
+        color: var(--text-title);
+        font-size: clamp(2rem, 4vw, 3.6rem);
+      }
+
+      .modal-info p {
+        line-height: 1.65;
+      }
+
+      .btn-whatsapp {
+        display: inline-block;
+        margin-top: .75rem;
+        background: var(--primary);
+        color: var(--white);
+        padding: .9rem 1.1rem;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 800;
+        transition: all .2s ease-in-out;
+      }
+
+      .btn-whatsapp:hover,
+      .btn-whatsapp:focus-visible {
+        background: var(--secondary);
+        transform: scale(1.02);
+      }
+
+      .modal-navigation {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-top: 1.5rem;
+        padding-top: 1rem;
+        border-top: 1px solid var(--border);
+      }
+
+      .modal-navigation a {
+        display: grid;
+        place-items: center;
+        width: 52px;
+        height: 46px;
+        background: var(--brand-deep);
+        color: var(--white);
+        border-radius: 6px;
+        text-decoration: none;
+        font-size: 1.6rem;
+        font-weight: 900;
+        transition: background .2s ease-in-out;
+      }
+
+      .modal-navigation a:hover,
+      .modal-navigation a:focus-visible {
+        background: var(--secondary);
+      }
+
+      .site-footer {
+        background: var(--brand-deep);
+        color: var(--white);
+        padding: 3rem max(1.25rem, 5vw) 1.25rem;
+        border-top: 4px solid var(--primary);
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr;
+        gap: 2rem;
+        max-width: 1200px;
+        margin: auto;
+      }
+
+      .site-footer h2 {
+        margin-top: 0;
+      }
+
+      .site-footer p {
+        color: #DCE7E8;
+        line-height: 1.65;
+      }
+
+      .social {
+        display: flex;
+        gap: .55rem;
+      }
+
+      .social img {
+        width: 36px;
+        height: 36px;
+      }
+
+      .copy {
+        max-width: 1200px;
+        margin: 2rem auto 0;
+        padding-top: 1rem;
+        border-top: 1px solid rgba(255, 255, 255, .16);
+        text-align: center;
+        font-size: .9rem;
+      }
+
+      @media (max-width: 1000px) {
+        .products-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+      }
+
+      @media (max-width: 700px) {
+        .page-nav {
+          display: none;
+        }
+
+        .mobile-menu {
+          display: block;
+        }
+
+        .products-grid,
+        .footer-grid,
+        .modal-content {
+          grid-template-columns: 1fr;
+        }
+
+        .modal-card {
+          min-height: calc(100vh - 1rem);
+        }
+
+        .modal-content img {
+          max-height: 36vh;
+        }
+
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+        *,
+        *::before,
+        *::after {
+          transition: none !important;
+        }
+
+      }
+
+      @keyframes entrada-suave {
+        from {
+          opacity: 0;
+          transform: translateY(14px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+      }
+
+      .page-header h1 {
+        animation: entrada-suave .45s ease-out both;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      a:focus-visible,
+      summary:focus-visible {
+        outline: 3px solid var(--secondary);
+        outline-offset: 4px;
+      }
+
+      .mobile-links a,
+      .mobile-menu > summary,
+      .page-nav a,
+      .social a {
+        transition: background-color .2s ease-in-out, color .2s ease-in-out, transform .2s ease-in-out;
+      }
+
+      .mobile-menu[open] > summary .hamburger-icon {
+        background: transparent;
+      }
+
+      .mobile-menu[open] > summary .hamburger-icon::before {
+        transform: rotate(45deg);
+      }
+
+      .mobile-menu[open] > summary .hamburger-icon::after {
+        transform: translateY(-3px) rotate(-45deg);
+      }
+
+      .mobile-menu[open] .mobile-links {
+        animation: entrada-suave .2s ease-out;
+      }
+
+      .product-card:hover,
+      .product-card:focus-within {
+        border-color: var(--secondary);
+        transform: translateY(-4px) scale(1.02);
+        box-shadow: 0 14px 32px rgba(9, 30, 38, .12);
+      }
+
+      .product-modal:target .modal-card {
+        animation: entrada-suave .25s ease-out;
+      }
+
+      body:has(.product-modal:target) {
+        overflow: hidden;
+      }
+
+      body:has(.product-modal:target) > header,
+      body:has(.product-modal:target) .products-grid,
+      body:has(.product-modal:target) > footer,
+      body:has(.product-modal:target) > .quick-actions {
+        visibility: hidden;
+      }
+
+      .modal-close:hover,
+      .modal-navigation a:focus-visible {
+        background: var(--secondary);
+      }
+
+      .quick-actions {
+        position: fixed;
+        right: max(1rem, env(safe-area-inset-right));
+        bottom: max(1rem, env(safe-area-inset-bottom));
+        z-index: 30;
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+      }
+
+      .quick-actions a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: .5rem;
+        min-height: 48px;
+        padding: .75rem 1rem;
+        color: var(--white);
+        background: var(--brand-deep);
+        border: 1px solid var(--secondary);
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 800;
+        box-shadow: 0 6px 20px rgba(9, 30, 38, .2);
+        transition: transform .2s ease-in-out, background-color .2s ease-in-out;
+      }
+
+      .quick-actions .quick-whatsapp {
+        background: var(--primary);
+        border-color: var(--primary);
+      }
+
+      .quick-actions img {
+        width: 24px;
+        height: 24px;
+      }
+
+      .quick-actions a:hover {
+        background: var(--secondary);
+        transform: translateY(-3px);
+      }
+
+      .btn-detail:active,
+      .btn-whatsapp:active,
+      .quick-actions a:active {
+        transform: scale(.98);
+      }
+
+      footer a {
+        color: inherit;
+        text-underline-offset: 3px;
+      }
+
+      footer a:hover {
+        color: var(--secondary);
+      }
+
+      .page-header,
+      .card-body,
+      .modal-info {
+        min-width: 0;
+        overflow-wrap: anywhere;
+      }
+
+      @media (max-width: 700px) {
+        .mobile-menu {
+          flex: 1 1 calc(100% - 120px);
+          min-width: 0;
+        }
+
+        .mobile-menu[open] {
+          flex-basis: 100%;
+        }
+
+        .page-header h1 {
+          font-size: clamp(2rem, 9vw, 3.5rem);
+        }
+
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+        *,
+        *::before,
+        *::after {
+          animation: none !important;
+          transition: none !important;
+        }
+
+        .product-card:hover,
+        .product-card:focus-within {
+          transform: none;
+        }
+
+      }
+    </style>
+
+    <meta name="theme-color" content="#0C2D3A">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="assets/css/dinamico.css">
+
+<script>
+document.documentElement.classList.add('zq-js');
+</script>
+
+<script src="assets/js/dinamico.js" defer></script>
+
+  </head>
+
+<body id="inicio">
+
+  <header>
+    <div class="topbar">
+      <a href="index.html"><img class="logo" src="assets/img/logo-tienda.png" alt="ZQ SPORT"></a>
+    </div>
+
+    <nav class="page-nav" aria-label="Navegacion principal">
+      <a href="index.html">Inicio</a>
+      <a href="deportivos-varon.html">Deportivos Var&oacute;n</a>
+      <a class="active" aria-current="page" href="deportivos-dama.html">Deportivos Dama</a>
+      <a href="poleras-varon.html">Poleras Var&oacute;n</a>
+      <a href="poleras-dama.html">Poleras Dama</a>
+      <a href="mochilas-varon.html">Mochilas Var&oacute;n</a>
+      <a href="mochilas-dama.html">Mochilas Dama</a>
+      <a href="galeria.html">Galer&iacute;a</a>
+      <a href="ofertas.html">Ofertas</a>
+      <a href="nosotros.html">Acerca de Nosotros</a>
+    </nav>
+
+      <details class="mobile-menu">
+        <summary>
+          <span class="hamburger-icon" aria-hidden="true"></span>
+          Menu
+        </summary>
+
+        <div class="mobile-links">
+        <a href="index.html">Inicio</a>
+        <a href="deportivos-varon.html">Deportivos Var&oacute;n</a>
+        <a class="active" aria-current="page" href="deportivos-dama.html">Deportivos Dama</a>
+        <a href="poleras-varon.html">Poleras Var&oacute;n</a>
+        <a href="poleras-dama.html">Poleras Dama</a>
+        <a href="mochilas-varon.html">Mochilas Var&oacute;n</a>
+        <a href="mochilas-dama.html">Mochilas Dama</a>
+        <a href="galeria.html">Galer&iacute;a</a>
+        <a href="ofertas.html">Ofertas</a>
+        <a href="nosotros.html">Acerca de Nosotros</a>
+        </div>
+      </details>
+
+  </header>
+
+  <div class="page-header">
+      <h1>Cat&aacute;logo de Deportivos Dama</h1>
+      <p>Uniformes y conjuntos de dama para deporte, trabajo y uso diario.</p>
+    </div>
+
+  <main class="catalog">
+
+    <section class="products-grid" aria-label="Productos de deportivos dama">
+
+      <article id="producto-1" class="product-card">
+
+        <img
+          src="assets/img/uniforme-aurora.jpeg"
+          alt="Uniforme Aurora: Uniforme de trabajo con bata blanca y pantalón celeste; detalles celestes en cuello y bolsillos."
+          loading="lazy"
+          decoding="async">
+        <div class="card-body">
+          <p class="product-kind">Uniforme de trabajo</p>
+          <h2>Uniforme Aurora</h2>
+          <p>Uniforme de trabajo con bata blanca y pantalón celeste; detalles celestes en cuello y bolsillos.</p>
+          <p class="price">Bs. 120</p>
+
+          <a class="btn-detail" href="#detalle-1">Ver detalles</a>
+        </div>
+      </article>
+
+      <article id="producto-2" class="product-card">
+
+        <img
+          src="assets/img/conjunto-vertice.jpeg"
+          alt="Conjunto Vértice: Conjunto casual de blusa con mangas fruncidas y pantalón largo de corte amplio."
+          loading="lazy"
+          decoding="async">
+        <div class="card-body">
+          <p class="product-kind">Conjunto casual</p>
+          <h2>Conjunto Vértice</h2>
+          <p>Conjunto casual de blusa con mangas fruncidas y pantalón largo de corte amplio.</p>
+          <p class="price">Bs. 145</p>
+
+          <a class="btn-detail" href="#detalle-2">Ver detalles</a>
+        </div>
+      </article>
+
+      <article id="producto-3" class="product-card">
+
+        <img
+          src="assets/img/uniforme-impulso.jpeg"
+          alt="Uniforme Impulso: Conjunto de trabajo con blusa de cuello cruzado y pantalón largo en color vino."
+          loading="lazy"
+          decoding="async">
+        <div class="card-body">
+          <p class="product-kind">Uniforme de trabajo</p>
+          <h2>Uniforme Impulso</h2>
+          <p>Conjunto de trabajo con blusa de cuello cruzado y pantalón largo en color vino.</p>
+          <p class="price">Bs. 170</p>
+
+          <a class="btn-detail" href="#detalle-3">Ver detalles</a>
+        </div>
+      </article>
+
+      <article id="producto-4" class="product-card">
+
+        <img
+          src="assets/img/conjunto-victoria-dama.jpeg"
+          alt="Conjunto Victoria: Top deportivo y short con estampado en azul y blanco."
+          loading="lazy"
+          decoding="async">
+        <div class="card-body">
+          <p class="product-kind">Conjunto deportivo</p>
+          <h2>Conjunto Victoria</h2>
+          <p>Top deportivo y short con estampado en azul y blanco.</p>
+          <p class="price">Bs. 195</p>
+
+          <a class="btn-detail" href="#detalle-4">Ver detalles</a>
+        </div>
+      </article>
+    </section>
+
+    <section id="detalle-1" class="product-modal" aria-labelledby="titulo-detalle-1">
+      <article class="modal-card">
+
+        <a class="modal-close" href="#producto-1" aria-label="Cerrar detalle de Uniforme Aurora">&times; Cerrar</a>
+        <div class="modal-content">
+
+          <img
+            src="assets/img/uniforme-aurora.jpeg"
+            alt="Uniforme Aurora en vista completa"
+            loading="lazy"
+            decoding="async">
+          <div class="modal-info">
+            <p class="product-kind">Uniforme de trabajo</p>
+            <h2 id="titulo-detalle-1">Uniforme Aurora</h2>
+            <p>Uniforme de trabajo con bata blanca y pantalón celeste; detalles celestes en cuello y bolsillos.</p>
+            <p><strong>Disponibilidad:</strong> Consulta las tallas por WhatsApp.</p>
+            <p><strong>Colores de la imagen:</strong> Blanco y celeste</p>
+            <p class="price">Bs. 120</p>
+
+            <a class="btn-whatsapp" href="https://wa.me/59172478852?text=Hola%2C%20quiero%20reservar%20el%20producto%3A%20Uniforme%20Aurora.%20Talla%3A%20__.%20Color%3A%20__.%20Cantidad%3A%20__.">Comprar / Reservar por WhatsApp</a>
+          </div>
+        </div>
+
+        <nav class="modal-navigation" aria-label="Cambiar de producto">
+          <a href="#detalle-4" aria-label="Producto anterior">&lt;</a>
+          <a href="#detalle-2" aria-label="Producto siguiente">&gt;</a>
+        </nav>
+      </article>
+    </section>
+
+    <section id="detalle-2" class="product-modal" aria-labelledby="titulo-detalle-2">
+      <article class="modal-card">
+
+        <a class="modal-close" href="#producto-2" aria-label="Cerrar detalle de Conjunto Vértice">&times; Cerrar</a>
+        <div class="modal-content">
+
+          <img
+            src="assets/img/conjunto-vertice.jpeg"
+            alt="Conjunto Vértice en vista completa"
+            loading="lazy"
+            decoding="async">
+          <div class="modal-info">
+            <p class="product-kind">Conjunto casual</p>
+            <h2 id="titulo-detalle-2">Conjunto Vértice</h2>
+            <p>Conjunto casual de blusa con mangas fruncidas y pantalón largo de corte amplio.</p>
+            <p><strong>Disponibilidad:</strong> Consulta las tallas por WhatsApp.</p>
+            <p><strong>Colores de la imagen:</strong> Beige</p>
+            <p class="price">Bs. 145</p>
+
+            <a class="btn-whatsapp" href="https://wa.me/59172478852?text=Hola%2C%20quiero%20reservar%20el%20producto%3A%20Conjunto%20V%C3%A9rtice.%20Talla%3A%20__.%20Color%3A%20__.%20Cantidad%3A%20__.">Comprar / Reservar por WhatsApp</a>
+          </div>
+        </div>
+
+        <nav class="modal-navigation" aria-label="Cambiar de producto">
+          <a href="#detalle-1" aria-label="Producto anterior">&lt;</a>
+          <a href="#detalle-3" aria-label="Producto siguiente">&gt;</a>
+        </nav>
+      </article>
+    </section>
+
+    <section id="detalle-3" class="product-modal" aria-labelledby="titulo-detalle-3">
+      <article class="modal-card">
+
+        <a class="modal-close" href="#producto-3" aria-label="Cerrar detalle de Uniforme Impulso">&times; Cerrar</a>
+        <div class="modal-content">
+
+          <img
+            src="assets/img/uniforme-impulso.jpeg"
+            alt="Uniforme Impulso en vista completa"
+            loading="lazy"
+            decoding="async">
+          <div class="modal-info">
+            <p class="product-kind">Uniforme de trabajo</p>
+            <h2 id="titulo-detalle-3">Uniforme Impulso</h2>
+            <p>Conjunto de trabajo con blusa de cuello cruzado y pantalón largo en color vino.</p>
+            <p><strong>Disponibilidad:</strong> Consulta las tallas por WhatsApp.</p>
+            <p><strong>Colores de la imagen:</strong> Vino</p>
+            <p class="price">Bs. 170</p>
+
+            <a class="btn-whatsapp" href="https://wa.me/59172478852?text=Hola%2C%20quiero%20reservar%20el%20producto%3A%20Uniforme%20Impulso.%20Talla%3A%20__.%20Color%3A%20__.%20Cantidad%3A%20__.">Comprar / Reservar por WhatsApp</a>
+          </div>
+        </div>
+
+        <nav class="modal-navigation" aria-label="Cambiar de producto">
+          <a href="#detalle-2" aria-label="Producto anterior">&lt;</a>
+          <a href="#detalle-4" aria-label="Producto siguiente">&gt;</a>
+        </nav>
+      </article>
+    </section>
+
+    <section id="detalle-4" class="product-modal" aria-labelledby="titulo-detalle-4">
+      <article class="modal-card">
+
+        <a class="modal-close" href="#producto-4" aria-label="Cerrar detalle de Conjunto Victoria">&times; Cerrar</a>
+        <div class="modal-content">
+
+          <img
+            src="assets/img/conjunto-victoria-dama.jpeg"
+            alt="Conjunto Victoria en vista completa"
+            loading="lazy"
+            decoding="async">
+          <div class="modal-info">
+            <p class="product-kind">Conjunto deportivo</p>
+            <h2 id="titulo-detalle-4">Conjunto Victoria</h2>
+            <p>Top deportivo y short con estampado en azul y blanco.</p>
+            <p><strong>Disponibilidad:</strong> Consulta las tallas por WhatsApp.</p>
+            <p><strong>Colores de la imagen:</strong> Azul y blanco</p>
+            <p class="price">Bs. 195</p>
+
+            <a class="btn-whatsapp" href="https://wa.me/59172478852?text=Hola%2C%20quiero%20reservar%20el%20producto%3A%20Conjunto%20Victoria.%20Talla%3A%20__.%20Color%3A%20__.%20Cantidad%3A%20__.">Comprar / Reservar por WhatsApp</a>
+          </div>
+        </div>
+
+        <nav class="modal-navigation" aria-label="Cambiar de producto">
+          <a href="#detalle-3" aria-label="Producto anterior">&lt;</a>
+          <a href="#detalle-1" aria-label="Producto siguiente">&gt;</a>
+        </nav>
+      </article>
+    </section>
+  </main>
+
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <section>
+          <h2>ZQ SPORT</h2>
+          <p>Dise&ntilde;os personalizados para equipos, clubes y competencias deportivas.</p>
+        </section>
+        <section>
+          <h2>Atenci&oacute;n</h2>
+
+          <p>Direcci&oacute;n: <a href="https://www.google.com/maps/search/?api=1&amp;query=-17.970611%2C-67.069306" target="_blank" rel="noopener noreferrer">Ver ubicación en Google Maps</a></p>
+          <p>Tel&eacute;fono: <a href="tel:+59172478852">72478852</a></p>
+          <p>WhatsApp: <a href="https://wa.me/59172478852?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20los%20productos%20de%20ZQ%20SPORT.">72478852</a></p>
+        </section>
+        <section>
+          <h2>Horario y redes</h2>
+          <p>Lunes a S&aacute;bado - 08:00 a 20:00</p>
+          <div class="social">
+            <a href="#" aria-label="Facebook"><img src="assets/icons/facebook.svg" alt=""></a>
+            <a href="#" aria-label="Instagram"><img src="assets/icons/instagram.svg" alt=""></a>
+            <a href="https://wa.me/59172478852?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20los%20productos%20de%20ZQ%20SPORT." aria-label="Escribir a ZQ SPORT por WhatsApp"><img src="assets/icons/whatsapp.svg" alt=""></a>
+            <a href="#" aria-label="TikTok"><img src="assets/icons/tiktok.svg" alt=""></a>
+          </div>
+        </section>
+      </div>
+      <p class="copy">&copy; 2026 ZQ SPORT. Todos los derechos reservados.</p>
+    </footer>
+
+    <nav class="quick-actions" aria-label="Accesos rápidos">
+      <a href="#inicio" aria-label="Volver al inicio de la página" title="Volver arriba">&uarr;</a>
+      <a class="quick-whatsapp" href="https://wa.me/59172478852?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20los%20productos%20de%20ZQ%20SPORT." aria-label="Consultar con ZQ SPORT por WhatsApp">
+        <img src="assets/icons/whatsapp.svg" alt="">
+        WhatsApp
+      </a>
+    </nav>
+  </body>
+</html>
