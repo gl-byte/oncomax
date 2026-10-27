@@ -1,22 +1,13 @@
-<!-- Este dibujo esta guardado en el proyecto y no necesita descargar iconos de internet. -->
-<!-- Empieza el dibujo del icono; puede agrandarse conservando su forma. -->
-<!-- xmlns indica que este archivo es un dibujo que el navegador puede mostrar. -->
-<!-- viewBox define el espacio del dibujo que se ajusta al tamaño del icono. -->
-<!-- role indica si esta parte debe anunciarse como una imagen, un menú o un botón. -->
-<!-- aria-labelledby usa el título indicado como nombre de esta sección. -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-labelledby="title">
-<!-- Elige el texto que aparece en la pestaña del navegador. -->
-<!-- id le da el nombre title; sirve para encontrarla o abrirla desde un enlace. -->
-<title id="title">Facebook</title>
-<!-- Dibuja un rectángulo con el tamaño, las esquinas y el color indicados. -->
-<!-- width fija el ancho inicial; aumentar el número lo hace más grande. -->
-<!-- height fija el alto inicial; aumentar el número lo hace más grande. -->
-<!-- rx redondea las esquinas del rectángulo. -->
-<!-- fill elige el color interior; none deja el interior vacío. -->
-<rect width="32" height="32" rx="4" fill="#48B7BD"/>
-<!-- Dibuja la figura del icono siguiendo el recorrido guardado en d. -->
-<!-- fill elige el color interior; none deja el interior vacío. -->
-<!-- d guarda el recorrido del símbolo; cambiar esos números cambia su figura. -->
-<path fill="#fff" d="M18.2 27V17.2h3.3l.5-3.8h-3.8V11c0-1.1.3-1.9 1.9-1.9h2V5.7c-.4 0-1.6-.2-2.9-.2-2.9 0-4.9 1.8-4.9 5v2.8H11v3.8h3.3V27h3.9z"/>
-<!-- Termina el dibujo del icono. -->
+<!-- APRENDE: Icono facebook. Este archivo dibuja una imagen con formas. Para usar otro icono en la página,
+     cambia src de su img en HTML. Para probar otro color aquí, cambia stroke o fill; algunas reglas de
+     estilos.css lo convierten en blanco. -->
+<!-- APRENDE: Espacio de dibujo: viewBox="0 0 24 24" equivale a una hoja de 24 por 24 unidades. Conserva este
+     marco para no recortar el símbolo. El color se elige en fill de cada forma. El tamaño en la página se
+     ajusta en estilos.css, no cambiando este marco. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="Facebook">
+    <!-- APRENDE: Trazo de una parte del icono. fill="#743795" colorea su interior; cambia el código para otro
+       tono. d indica por dónde se dibuja: M mueve el lápiz, L dibuja una recta, H/V una línea
+       horizontal/vertical, C una curva y A un arco; Z cierra la figura. Mayúsculas indican posiciones y
+       minúsculas desplazamientos. Prueba cambiar una medida cada vez para observar la forma. -->
+  <path fill="#743795" d="M14 8.2V6.6c0-.8.5-1 1.1-1H17V2.3c-.9-.1-1.8-.2-2.7-.2-2.7 0-4.5 1.6-4.5 4.3v1.8H7v3.7h2.8V22H14V11.9h2.8l.5-3.7H14z"/>
 </svg>

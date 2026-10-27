@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- APRENDE A EDITAR servicios.html
-Servicios: tarjetas de atención y pasos para solicitar ayuda.
+Servicios: especialidades, tratamientos, servicios de apoyo y convenios de la clínica.
 Este archivo decide los textos, imágenes y enlaces. estilos.css decide su apariencia.
 Los comentarios como este son instrucciones: no aparecen en la página.
 Empieza cambiando un texto, guarda el archivo y recarga la página para ver el resultado.
@@ -21,7 +21,7 @@ Menú, pie y teléfonos están escritos en cada página: repite allí los cambio
   <!-- APRENDE: Adapta la página al ancho del celular; conserva este ajuste para que el diseño móvil funcione. -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- APRENDE: Resumen para buscadores; cambia el texto de content para describir esta página. -->
-  <meta name="description" content="Servicios de OncoMax: oncología pediátrica, oncología quirúrgica y acompañamiento integral.">
+  <meta name="description" content="Servicios de OncoMax: Oncología Clínica, Hematología y Psicooncología, tratamientos que realizamos y servicios de apoyo diagnóstico y convenios.">
   <!-- APRENDE: Color sugerido para la barra del navegador en móviles compatibles; cambia el código # de content. -->
   <meta name="theme-color" content="#260D37">
   <!-- APRENDE: Nombre que aparece en la pestaña del navegador; cambia el texto entre title y /title. -->
@@ -121,7 +121,7 @@ Menú, pie y teléfonos están escritos en cada página: repite allí los cambio
           <!-- APRENDE: Texto corto que presenta una sección; escribe otro nombre entre las etiquetas. Las variantes de
                class cambian sus colores. "d" con dos guiones delante controla el turno de aparición: un número mayor
                hace que aparezca más tarde. -->
-          <span class="etiqueta etiqueta--brillo entrada" style="--d:1">Áreas de atención</span>
+          <span class="etiqueta etiqueta--brillo entrada" style="--d:1">Especialidades y servicios de apoyo</span>
           <!-- APRENDE: Título principal de esta página. Cambia sus palabras; el texto dentro de em recibe el estilo
                destacado. "d" con dos guiones delante controla el turno de aparición: un número mayor hace que aparezca
                más tarde. -->
@@ -129,7 +129,21 @@ Menú, pie y teléfonos están escritos en cada página: repite allí los cambio
           <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
                a otra línea. "d" con dos guiones delante controla el turno de aparición: un número mayor hace que
                aparezca más tarde. -->
-          <p class="entrada" style="--d:3">Atención médica y acompañamiento integral para pacientes y familias.</p>
+          <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa a
+               otra línea. "d" con dos guiones delante controla el turno de aparición: un número mayor hace que aparezca
+               más tarde. -->
+          <p class="entrada" style="--d:3">Especialidades, tratamientos y servicios de apoyo para una atención integral y oportuna.</p>
+          <!-- APRENDE: Agrupa accesos a secciones de esta misma página; cada href con # debe apuntar al id de la sección
+               correspondiente. "d" con dos guiones delante controla el turno de aparición: un número mayor hace que
+               aparezca más tarde. -->
+          <div class="saltos entrada" style="--d:4">
+            <!-- APRENDE: Enlace: href="#especialidades" elige el destino; el texto entre a y /a es lo que se pulsa. -->
+            <a href="#especialidades">Especialidades</a>
+            <!-- APRENDE: Enlace: href="#tratamientos" elige el destino; el texto entre a y /a es lo que se pulsa. -->
+            <a href="#tratamientos">Tratamientos</a>
+            <!-- APRENDE: Enlace: href="#convenios" elige el destino; el texto entre a y /a es lo que se pulsa. -->
+            <a href="#convenios">Apoyo y convenios</a>
+          </div>
         </div>
         <!-- APRENDE: Logo rodeado de anillos animados; cambia src para otro símbolo y busca .orbita en estilos.css
              para su tamaño y velocidad. Imagen: cambia src="assets/img/logo-simbolo.png" por otro archivo; alt
@@ -149,262 +163,672 @@ Menú, pie y teléfonos están escritos en cada página: repite allí los cambio
       </svg>
     </section>
 
-    <!-- ================= LOS TRES SERVICIOS =================
-         Tarjetas con foto: al pasar el mouse, tocarlas o llegar con la
-         tecla Tab, un panel crece desde la esquina con el detalle. -->
-    <!-- APRENDE: Agrupa una parte completa de la página. Para moverla, mueve desde section hasta su cierre
-         /section con todo lo que contiene. -->
-    <section class="seccion">
+    <!-- ================= ESPECIALIDADES ================= -->
+    <!-- APRENDE: Agrupa una parte completa de la página. Para moverla, mueve desde section hasta su cierre /section
+         con todo lo que contiene. id le da un nombre único: otros enlaces pueden llevar directo aquí escribiendo #
+         y ese nombre. -->
+    <section class="seccion" id="especialidades">
       <!-- APRENDE: Mantiene el contenido centrado y limita su ancho; cambia el valor de "ancho" con dos guiones
            delante al principio de estilos.css. -->
       <div class="seccion__interior">
         <!-- APRENDE: Agrupa la etiqueta, el título y la explicación de esta sección; cambia sus palabras dentro de
              cada etiqueta. -->
         <div class="titulo-seccion revelar">
-          <!-- APRENDE: Texto corto que presenta una sección; escribe otro nombre entre las etiquetas. Las variantes de
-               class cambian sus colores. -->
-          <span class="etiqueta">Especialidades</span>
-          <!-- APRENDE: Título de esta sección o tarjeta. Edita sus palabras y las de em si tiene una parte destacada. -->
-          <h2>Tres áreas, <em>un mismo cuidado</em></h2>
+          <!-- APRENDE: Texto corto que presenta una sección; escribe otro nombre entre las etiquetas. Las variantes
+               de class cambian sus colores. -->
+          <span class="etiqueta">1. Especialidades</span>
+          <!-- APRENDE: Título de esta sección o tarjeta. Edita sus palabras y las de em si tiene una parte
+               destacada. -->
+          <h2>Tres especialidades, <em>un mismo equipo</em></h2>
+          <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las
+               pasa a otra línea. -->
+          <p>Atención especializada, humana y cercana para el paciente oncológico y su familia.</p>
         </div>
 
-        <!-- APRENDE: Agrupa tarjetas. "grid" + dos guiones + "2", "grid" + dos guiones + "3" y "grid" + dos guiones +
-             "4" usan anchos mínimos diferentes; el espacio disponible decide cuántas caben por fila. -->
+        <!-- APRENDE: Agrupa tarjetas. "grid" + dos guiones + "2", "grid" + dos guiones + "3" y "grid" + dos guiones
+             + "4" usan anchos mínimos diferentes; el espacio disponible decide cuántas caben por fila. -->
         <div class="grid grid--3 escalonado">
-          <!-- APRENDE: Tarjeta con foto y explicación que aparece al usarla; copia el article completo para añadir otra
-               persona o servicio. "foco" con dos guiones delante elige el punto de la foto que se conserva (horizontal y
-               vertical); "zoom" con dos guiones delante acerca la imagen: 1 es normal y 2 el doble. Prueba variaciones
-               pequeñas. -->
-          <article class="perfil perfil--servicio" tabindex="0" style="--foco: 50% 45%; --zoom: 1.35">
-            <!-- APRENDE: Imagen: cambia src="assets/img/web/servicio-pediatrico.jpg" por otro archivo; alt describe la
-                 foto si no se ve o se usa lectura por voz. loading="lazy" espera a que la imagen se acerque a la pantalla
-                 para cargarla. -->
-            <img class="perfil__foto" src="assets/img/web/servicio-pediatrico.jpg" alt="Oncóloga pediátrica" loading="lazy">
-            <!-- APRENDE: Información visible antes de abrir el detalle; si cambias un nombre, actualízalo también en
-                 perfil__detalle. -->
-            <div class="perfil__base">
-              <!-- APRENDE: Pequeña etiqueta sobre la foto; cambia sus palabras para mostrar otra especialidad o categoría. -->
-              <span class="chip">Niños y adolescentes</span>
-              <!-- APRENDE: Título de esta sección o tarjeta. Edita sus palabras y las de em si tiene una parte destacada. -->
-              <h2>Oncología pediátrica</h2>
-              <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
-                   a otra línea. -->
-              <p>Atención para niños y adolescentes.</p>
-              <!-- APRENDE: Invitación a usar la tarjeta; cambia el texto para indicar qué descubrirá la persona. -->
-              <span class="pista">Ver detalles</span>
+          <!-- APRENDE: Tarjeta de una especialidad con la foto de su profesional; copia el article completo para
+               sumar otra. Las variantes menta y coral cambian el color del marco de la foto. -->
+          <article class="especialidad">
+            <!-- APRENDE: Marco redondo de la foto; cambia src de su img para otra persona. El pequeño icono de la
+                 esquina indica el área. -->
+            <div class="especialidad__foto">
+              <!-- APRENDE: Imagen: cambia src="assets/img/especialistas/dra-lizeth-flores.jpg" por otro archivo;
+                   alt describe la foto si no se ve o se usa lectura por voz. loading="lazy" espera a que la imagen
+                   se acerque a la pantalla para cargarla. -->
+              <img src="assets/img/especialistas/dra-lizeth-flores.jpg" alt="Dra. Lizeth Lucía Flores Choque" loading="lazy">
+              <!-- APRENDE: Marco del pequeño dibujo. Cambia src de su img para otro icono; las variantes menta y
+                   coral cambian el fondo. Imagen: cambia src="assets/icons/ui/estetoscopio.svg" por otro archivo;
+                   alt describe la foto si no se ve o se usa lectura por voz. Aquí alt vacío indica un dibujo
+                   decorativo. -->
+              <span class="icono icono--chico"><img src="assets/icons/ui/estetoscopio.svg" alt=""></span>
             </div>
-            <!-- APRENDE: Panel con la información ampliada. Cambia aquí especialidad, biografía o servicio; puedes agregar
-                 párrafos p. -->
-            <div class="perfil__detalle">
-              <!-- APRENDE: Título de esta sección o tarjeta. Edita sus palabras y las de em si tiene una parte destacada. -->
-              <h2>Oncología pediátrica</h2>
-              <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
-                   a otra línea. -->
-              <p><b>¿A quién ayuda?</b><br>A niños, adolescentes y sus familias.</p>
-              <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
-                   a otra línea. -->
-              <p><b>¿Qué incluye?</b><br>Evaluación, orientación, seguimiento y comunicación adecuada para cada edad.</p>
-              <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
-                   a otra línea. -->
-              <p><b>Objetivo:</b><br>Brindar una atención cercana que también incluya a la familia.</p>
-              <!-- APRENDE: Enlace: href="reserva.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
-              <a class="boton boton--chico" href="reserva.html">Reservar consulta</a>
+            <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
+            <h3>Oncología Clínica</h3>
+            <!-- APRENDE: Nombre de quien atiende esta especialidad; escríbelo igual que en la página Asistencia
+                 para que la información coincida. -->
+            <p class="especialidad__profesional">Dra. Lizeth Lucía Flores Choque</p>
+            <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br
+                 las pasa a otra línea. -->
+            <p>Diagnóstico, estadificación y tratamiento médico del cáncer; quimioterapia y seguimiento del paciente oncológico.</p>
+            <!-- APRENDE: Enlace: href="asistencia.html#lizeth-flores" elige el destino; el texto entre a y /a es lo
+                 que se pulsa. -->
+            <a class="boton boton--chico" href="asistencia.html#lizeth-flores">Ver perfil</a>
+          </article>
+
+          <!-- APRENDE: Tarjeta de una especialidad con la foto de su profesional; copia el article completo para
+               sumar otra. Las variantes menta y coral cambian el color del marco de la foto. -->
+          <article class="especialidad especialidad--menta">
+            <!-- APRENDE: Marco redondo de la foto; cambia src de su img para otra persona. El pequeño icono de la
+                 esquina indica el área. -->
+            <div class="especialidad__foto">
+              <!-- APRENDE: Imagen: cambia src="assets/img/especialistas/dra-lourdes-magne.jpg" por otro archivo;
+                   alt describe la foto si no se ve o se usa lectura por voz. loading="lazy" espera a que la imagen
+                   se acerque a la pantalla para cargarla. -->
+              <img src="assets/img/especialistas/dra-lourdes-magne.jpg" alt="Dra. Lourdes Magne Apaza" loading="lazy">
+              <!-- APRENDE: Marco del pequeño dibujo. Cambia src de su img para otro icono; las variantes menta y
+                   coral cambian el fondo. Imagen: cambia src="assets/icons/ui/gota.svg" por otro archivo; alt
+                   describe la foto si no se ve o se usa lectura por voz. Aquí alt vacío indica un dibujo
+                   decorativo. -->
+              <span class="icono icono--chico icono--menta"><img src="assets/icons/ui/gota.svg" alt=""></span>
+            </div>
+            <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
+            <h3>Hematología (Hemato-Oncología)</h3>
+            <!-- APRENDE: Nombre de quien atiende esta especialidad; escríbelo igual que en la página Asistencia
+                 para que la información coincida. -->
+            <p class="especialidad__profesional">Dra. Lourdes Magne Apaza</p>
+            <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br
+                 las pasa a otra línea. -->
+            <p>Especialista en Hematología y Hemoterapia. Diagnóstico y tratamiento de enfermedades de la sangre (anemias, trastornos de la coagulación, leucemias, linfomas y otras hemopatías).</p>
+            <!-- APRENDE: Enlace: href="asistencia.html#lourdes-magne" elige el destino; el texto entre a y /a es lo
+                 que se pulsa. -->
+            <a class="boton boton--chico" href="asistencia.html#lourdes-magne">Ver perfil</a>
+          </article>
+
+          <!-- APRENDE: Tarjeta de una especialidad con la foto de su profesional; copia el article completo para
+               sumar otra. Las variantes menta y coral cambian el color del marco de la foto. -->
+          <article class="especialidad especialidad--coral">
+            <!-- APRENDE: Marco redondo de la foto; cambia src de su img para otra persona. El pequeño icono de la
+                 esquina indica el área. -->
+            <div class="especialidad__foto">
+              <!-- APRENDE: Imagen: cambia src="assets/img/especialistas/lic-juana-choque.jpg" por otro archivo; alt
+                   describe la foto si no se ve o se usa lectura por voz. loading="lazy" espera a que la imagen se
+                   acerque a la pantalla para cargarla. -->
+              <img src="assets/img/especialistas/lic-juana-choque.jpg" alt="Lic. Juana Alejandra Choque Tarifa" loading="lazy">
+              <!-- APRENDE: Marco del pequeño dibujo. Cambia src de su img para otro icono; las variantes menta y
+                   coral cambian el fondo. Imagen: cambia src="assets/icons/ui/mensaje.svg" por otro archivo; alt
+                   describe la foto si no se ve o se usa lectura por voz. Aquí alt vacío indica un dibujo
+                   decorativo. -->
+              <span class="icono icono--chico icono--coral"><img src="assets/icons/ui/mensaje.svg" alt=""></span>
+            </div>
+            <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
+            <h3>Psicología Oncológica (Psicooncología)</h3>
+            <!-- APRENDE: Nombre de quien atiende esta especialidad; escríbelo igual que en la página Asistencia
+                 para que la información coincida. -->
+            <p class="especialidad__profesional">Lic. Juana Alejandra Choque Tarifa</p>
+            <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br
+                 las pasa a otra línea. -->
+            <p>Acompañamiento emocional al paciente y su familia durante el diagnóstico y tratamiento; manejo de ansiedad, duelo y adherencia al tratamiento.</p>
+            <!-- APRENDE: Enlace: href="asistencia.html#juana-choque" elige el destino; el texto entre a y /a es lo
+                 que se pulsa. -->
+            <a class="boton boton--chico" href="asistencia.html#juana-choque">Ver perfil</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TRATAMIENTOS ================= -->
+    <!-- APRENDE: Agrupa una parte completa de la página. Para moverla, mueve desde section hasta su cierre /section
+         con todo lo que contiene. id le da un nombre único: otros enlaces pueden llevar directo aquí escribiendo #
+         y ese nombre. -->
+    <section class="seccion seccion--suave" id="tratamientos">
+      <!-- APRENDE: Mantiene el contenido centrado y limita su ancho; cambia el valor de "ancho" con dos guiones
+           delante al principio de estilos.css. -->
+      <div class="seccion__interior">
+        <!-- APRENDE: Agrupa la etiqueta, el título y la explicación de esta sección; cambia sus palabras dentro de
+             cada etiqueta. -->
+        <div class="titulo-seccion titulo-seccion--centro revelar">
+          <!-- APRENDE: Texto corto que presenta una sección; escribe otro nombre entre las etiquetas. Las variantes
+               de class cambian sus colores. -->
+          <span class="etiqueta">2. Tratamientos</span>
+          <!-- APRENDE: Título de esta sección o tarjeta. Edita sus palabras y las de em si tiene una parte
+               destacada. -->
+          <h2>Tratamientos <em>que realizamos</em></h2>
+          <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las
+               pasa a otra línea. -->
+          <p>Conoce en qué consiste cada tratamiento y qué área del Centro es responsable de él.</p>
+        </div>
+
+        <!-- APRENDE: Agrupa tarjetas. "grid" + dos guiones + "2", "grid" + dos guiones + "3" y "grid" + dos guiones
+             + "4" usan anchos mínimos diferentes; el espacio disponible decide cuántas caben por fila. -->
+        <div class="grid grid--3 escalonado">
+          <!-- APRENDE: Tarjeta con frente y reverso que gira al usarla. Para añadir otra, copia todo este article;
+               cambia los textos de ambas caras. -->
+          <article class="flip flip--texto" tabindex="0">
+            <!-- APRENDE: Mantiene unidas las dos caras para que giren juntas; conserva dentro el frente y el
+                 reverso. -->
+            <div class="flip__interior">
+              <!-- APRENDE: Una cara de la tarjeta. Frente muestra el resumen; atras muestra la explicación. Edita
+                   cada contenido por separado. -->
+              <div class="flip__cara flip__frente">
+                <!-- APRENDE: Marco del pequeño dibujo. Cambia src de su img para otro icono; las variantes menta y
+                     coral cambian el fondo. Imagen: cambia src="assets/icons/ui/jeringa.svg" por otro archivo; alt
+                     describe la foto si no se ve o se usa lectura por voz. Aquí alt vacío indica un dibujo
+                     decorativo. -->
+                <span class="icono"><img src="assets/icons/ui/jeringa.svg" alt=""></span>
+                <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
+                <h3>Quimioterapia</h3>
+                <!-- APRENDE: Indica qué área se encarga del tratamiento; cambia el texto entre las etiquetas. -->
+                <span class="responsable">Oncología Clínica / Enfermería</span>
+                <!-- APRENDE: Invitación a usar la tarjeta; cambia el texto para indicar qué descubrirá la
+                     persona. -->
+                <span class="pista">En qué consiste</span>
+              </div>
+              <!-- APRENDE: Una cara de la tarjeta. Frente muestra el resumen; atras muestra la explicación. Edita
+                   cada contenido por separado. -->
+              <div class="flip__cara flip__atras">
+                <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
+                <h3>Quimioterapia</h3>
+                <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y
+                     br las pasa a otra línea. -->
+                <p>Medicamentos contra el cáncer según esquemas indicados por el especialista; aplicación supervisada y control de efectos secundarios.</p>
+                <!-- APRENDE: Texto corto que presenta una sección; escribe otro nombre entre las etiquetas. Las
+                     variantes de class cambian sus colores. -->
+                <span class="etiqueta etiqueta--blanca">Oncología Clínica / Enfermería</span>
+              </div>
             </div>
           </article>
 
-          <!-- APRENDE: Tarjeta con foto y explicación que aparece al usarla; copia el article completo para añadir otra
-               persona o servicio. "foco" con dos guiones delante elige el punto de la foto que se conserva (horizontal y
-               vertical); "zoom" con dos guiones delante acerca la imagen: 1 es normal y 2 el doble. Prueba variaciones
-               pequeñas. -->
-          <article class="perfil perfil--servicio" tabindex="0" style="--foco: 60% 45%; --zoom: 1.35">
-            <!-- APRENDE: Imagen: cambia src="assets/img/web/servicio-quirurgico.jpg" por otro archivo; alt describe la
-                 foto si no se ve o se usa lectura por voz. loading="lazy" espera a que la imagen se acerque a la pantalla
-                 para cargarla. -->
-            <img class="perfil__foto" src="assets/img/web/servicio-quirurgico.jpg" alt="Oncóloga quirúrgica" loading="lazy">
-            <!-- APRENDE: Información visible antes de abrir el detalle; si cambias un nombre, actualízalo también en
-                 perfil__detalle. -->
-            <div class="perfil__base">
-              <!-- APRENDE: Pequeña etiqueta sobre la foto; cambia sus palabras para mostrar otra especialidad o categoría. -->
-              <span class="chip">Tratamiento de tumores</span>
-              <!-- APRENDE: Título de esta sección o tarjeta. Edita sus palabras y las de em si tiene una parte destacada. -->
-              <h2>Oncología quirúrgica</h2>
-              <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
-                   a otra línea. -->
-              <p>Evaluación y tratamiento de tumores.</p>
-              <!-- APRENDE: Invitación a usar la tarjeta; cambia el texto para indicar qué descubrirá la persona. -->
-              <span class="pista">Ver detalles</span>
-            </div>
-            <!-- APRENDE: Panel con la información ampliada. Cambia aquí especialidad, biografía o servicio; puedes agregar
-                 párrafos p. -->
-            <div class="perfil__detalle">
-              <!-- APRENDE: Título de esta sección o tarjeta. Edita sus palabras y las de em si tiene una parte destacada. -->
-              <h2>Oncología quirúrgica</h2>
-              <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
-                   a otra línea. -->
-              <p><b>Primera etapa:</b><br>El especialista revisa estudios y antecedentes del paciente.</p>
-              <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
-                   a otra línea. -->
-              <p><b>Plan de atención:</b><br>Se explica si una cirugía puede formar parte del tratamiento.</p>
-              <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
-                   a otra línea. -->
-              <p><b>Seguimiento:</b><br>El equipo acompaña la preparación y la recuperación.</p>
-              <!-- APRENDE: Enlace: href="reserva.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
-              <a class="boton boton--chico" href="reserva.html">Reservar consulta</a>
+          <!-- APRENDE: Tarjeta con frente y reverso que gira al usarla. Para añadir otra, copia todo este article;
+               cambia los textos de ambas caras. -->
+          <article class="flip flip--texto flip--menta" tabindex="0">
+            <!-- APRENDE: Mantiene unidas las dos caras para que giren juntas; conserva dentro el frente y el
+                 reverso. -->
+            <div class="flip__interior">
+              <!-- APRENDE: Una cara de la tarjeta. Frente muestra el resumen; atras muestra la explicación. Edita
+                   cada contenido por separado. -->
+              <div class="flip__cara flip__frente">
+                <!-- APRENDE: Marco del pequeño dibujo. Cambia src de su img para otro icono; las variantes menta y
+                     coral cambian el fondo. Imagen: cambia src="assets/icons/ui/pastilla.svg" por otro archivo; alt
+                     describe la foto si no se ve o se usa lectura por voz. Aquí alt vacío indica un dibujo
+                     decorativo. -->
+                <span class="icono icono--menta"><img src="assets/icons/ui/pastilla.svg" alt=""></span>
+                <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
+                <h3>Hormonoterapia</h3>
+                <!-- APRENDE: Indica qué área se encarga del tratamiento; cambia el texto entre las etiquetas. -->
+                <span class="responsable">Oncología Clínica</span>
+                <!-- APRENDE: Invitación a usar la tarjeta; cambia el texto para indicar qué descubrirá la
+                     persona. -->
+                <span class="pista">En qué consiste</span>
+              </div>
+              <!-- APRENDE: Una cara de la tarjeta. Frente muestra el resumen; atras muestra la explicación. Edita
+                   cada contenido por separado. -->
+              <div class="flip__cara flip__atras">
+                <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
+                <h3>Hormonoterapia</h3>
+                <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y
+                     br las pasa a otra línea. -->
+                <p>Bloquea o reduce las hormonas que estimulan ciertos tumores (mama, próstata, endometrio).</p>
+                <!-- APRENDE: Texto corto que presenta una sección; escribe otro nombre entre las etiquetas. Las
+                     variantes de class cambian sus colores. -->
+                <span class="etiqueta etiqueta--blanca">Oncología Clínica</span>
+              </div>
             </div>
           </article>
 
-          <!-- APRENDE: Tarjeta con foto y explicación que aparece al usarla; copia el article completo para añadir otra
-               persona o servicio. "foco" con dos guiones delante elige el punto de la foto que se conserva (horizontal y
-               vertical); "zoom" con dos guiones delante acerca la imagen: 1 es normal y 2 el doble. Prueba variaciones
-               pequeñas. -->
-          <article class="perfil perfil--servicio" tabindex="0" style="--foco: 100% 70%; --zoom: 2">
-            <!-- APRENDE: Imagen: cambia src="assets/img/web/servicio-acompanamiento.jpg" por otro archivo; alt describe la
-                 foto si no se ve o se usa lectura por voz. loading="lazy" espera a que la imagen se acerque a la pantalla
-                 para cargarla. -->
-            <img class="perfil__foto" src="assets/img/web/servicio-acompanamiento.jpg" alt="Acompañamiento integral" loading="lazy">
-            <!-- APRENDE: Información visible antes de abrir el detalle; si cambias un nombre, actualízalo también en
-                 perfil__detalle. -->
-            <div class="perfil__base">
-              <!-- APRENDE: Pequeña etiqueta sobre la foto; cambia sus palabras para mostrar otra especialidad o categoría. -->
-              <span class="chip">Paciente y entorno</span>
-              <!-- APRENDE: Título de esta sección o tarjeta. Edita sus palabras y las de em si tiene una parte destacada. -->
-              <h2>Acompañamiento integral</h2>
-              <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
-                   a otra línea. -->
-              <p>Apoyo para el paciente y su entorno.</p>
-              <!-- APRENDE: Invitación a usar la tarjeta; cambia el texto para indicar qué descubrirá la persona. -->
-              <span class="pista">Ver detalles</span>
+          <!-- APRENDE: Tarjeta con frente y reverso que gira al usarla. Para añadir otra, copia todo este article;
+               cambia los textos de ambas caras. -->
+          <article class="flip flip--texto flip--coral" tabindex="0">
+            <!-- APRENDE: Mantiene unidas las dos caras para que giren juntas; conserva dentro el frente y el
+                 reverso. -->
+            <div class="flip__interior">
+              <!-- APRENDE: Una cara de la tarjeta. Frente muestra el resumen; atras muestra la explicación. Edita
+                   cada contenido por separado. -->
+              <div class="flip__cara flip__frente">
+                <!-- APRENDE: Marco del pequeño dibujo. Cambia src de su img para otro icono; las variantes menta y
+                     coral cambian el fondo. Imagen: cambia src="assets/icons/ui/escudo.svg" por otro archivo; alt
+                     describe la foto si no se ve o se usa lectura por voz. Aquí alt vacío indica un dibujo
+                     decorativo. -->
+                <span class="icono icono--coral"><img src="assets/icons/ui/escudo.svg" alt=""></span>
+                <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
+                <h3>Inmunoterapia</h3>
+                <!-- APRENDE: Indica qué área se encarga del tratamiento; cambia el texto entre las etiquetas. -->
+                <span class="responsable">Oncología Clínica</span>
+                <!-- APRENDE: Invitación a usar la tarjeta; cambia el texto para indicar qué descubrirá la
+                     persona. -->
+                <span class="pista">En qué consiste</span>
+              </div>
+              <!-- APRENDE: Una cara de la tarjeta. Frente muestra el resumen; atras muestra la explicación. Edita
+                   cada contenido por separado. -->
+              <div class="flip__cara flip__atras">
+                <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
+                <h3>Inmunoterapia</h3>
+                <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y
+                     br las pasa a otra línea. -->
+                <p>Activa el sistema inmunológico del paciente para reconocer y atacar las células tumorales.</p>
+                <!-- APRENDE: Texto corto que presenta una sección; escribe otro nombre entre las etiquetas. Las
+                     variantes de class cambian sus colores. -->
+                <span class="etiqueta etiqueta--blanca">Oncología Clínica</span>
+              </div>
             </div>
-            <!-- APRENDE: Panel con la información ampliada. Cambia aquí especialidad, biografía o servicio; puedes agregar
-                 párrafos p. -->
-            <div class="perfil__detalle">
-              <!-- APRENDE: Título de esta sección o tarjeta. Edita sus palabras y las de em si tiene una parte destacada. -->
-              <h2>Acompañamiento integral</h2>
-              <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
-                   a otra línea. -->
-              <p><b>Apoyo médico:</b><br>Orientación durante controles y tratamientos.</p>
-              <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
-                   a otra línea. -->
-              <p><b>Apoyo emocional:</b><br>Espacios para escuchar dudas, miedos y necesidades.</p>
-              <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
-                   a otra línea. -->
-              <p><b>Apoyo familiar:</b><br>Consejos sencillos para acompañar al paciente.</p>
-              <!-- APRENDE: Enlace: href="reserva.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
-              <a class="boton boton--chico" href="reserva.html">Reservar consulta</a>
+          </article>
+
+          <!-- APRENDE: Tarjeta con frente y reverso que gira al usarla. Para añadir otra, copia todo este article;
+               cambia los textos de ambas caras. -->
+          <article class="flip flip--texto flip--noche" tabindex="0">
+            <!-- APRENDE: Mantiene unidas las dos caras para que giren juntas; conserva dentro el frente y el
+                 reverso. -->
+            <div class="flip__interior">
+              <!-- APRENDE: Una cara de la tarjeta. Frente muestra el resumen; atras muestra la explicación. Edita
+                   cada contenido por separado. -->
+              <div class="flip__cara flip__frente">
+                <!-- APRENDE: Marco del pequeño dibujo. Cambia src de su img para otro icono; las variantes menta y
+                     coral cambian el fondo. Imagen: cambia src="assets/icons/ui/diana.svg" por otro archivo; alt
+                     describe la foto si no se ve o se usa lectura por voz. Aquí alt vacío indica un dibujo
+                     decorativo. -->
+                <span class="icono"><img src="assets/icons/ui/diana.svg" alt=""></span>
+                <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
+                <h3>Terapias dirigidas</h3>
+                <!-- APRENDE: Indica qué área se encarga del tratamiento; cambia el texto entre las etiquetas. -->
+                <span class="responsable">Oncología Clínica / Hematología</span>
+                <!-- APRENDE: Invitación a usar la tarjeta; cambia el texto para indicar qué descubrirá la
+                     persona. -->
+                <span class="pista">En qué consiste</span>
+              </div>
+              <!-- APRENDE: Una cara de la tarjeta. Frente muestra el resumen; atras muestra la explicación. Edita
+                   cada contenido por separado. -->
+              <div class="flip__cara flip__atras">
+                <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
+                <h3>Terapias dirigidas</h3>
+                <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y
+                     br las pasa a otra línea. -->
+                <p>Medicamentos que actúan sobre blancos específicos del tumor, con menor daño a las células sanas.</p>
+                <!-- APRENDE: Texto corto que presenta una sección; escribe otro nombre entre las etiquetas. Las
+                     variantes de class cambian sus colores. -->
+                <span class="etiqueta etiqueta--blanca">Oncología Clínica / Hematología</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- APRENDE: Tarjeta con frente y reverso que gira al usarla. Para añadir otra, copia todo este article;
+               cambia los textos de ambas caras. -->
+          <article class="flip flip--texto" tabindex="0">
+            <!-- APRENDE: Mantiene unidas las dos caras para que giren juntas; conserva dentro el frente y el
+                 reverso. -->
+            <div class="flip__interior">
+              <!-- APRENDE: Una cara de la tarjeta. Frente muestra el resumen; atras muestra la explicación. Edita
+                   cada contenido por separado. -->
+              <div class="flip__cara flip__frente">
+                <!-- APRENDE: Marco del pequeño dibujo. Cambia src de su img para otro icono; las variantes menta y
+                     coral cambian el fondo. Imagen: cambia src="assets/icons/ui/pulso.svg" por otro archivo; alt
+                     describe la foto si no se ve o se usa lectura por voz. Aquí alt vacío indica un dibujo
+                     decorativo. -->
+                <span class="icono"><img src="assets/icons/ui/pulso.svg" alt=""></span>
+                <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
+                <h3>Tratamiento oncohematológico</h3>
+                <!-- APRENDE: Indica qué área se encarga del tratamiento; cambia el texto entre las etiquetas. -->
+                <span class="responsable">Hematología</span>
+                <!-- APRENDE: Invitación a usar la tarjeta; cambia el texto para indicar qué descubrirá la
+                     persona. -->
+                <span class="pista">En qué consiste</span>
+              </div>
+              <!-- APRENDE: Una cara de la tarjeta. Frente muestra el resumen; atras muestra la explicación. Edita
+                   cada contenido por separado. -->
+              <div class="flip__cara flip__atras">
+                <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
+                <h3>Tratamiento oncohematológico</h3>
+                <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y
+                     br las pasa a otra línea. -->
+                <p>Tratamiento de leucemias, linfomas y mieloma múltiple, con control hematológico durante la quimioterapia.</p>
+                <!-- APRENDE: Texto corto que presenta una sección; escribe otro nombre entre las etiquetas. Las
+                     variantes de class cambian sus colores. -->
+                <span class="etiqueta etiqueta--blanca">Hematología</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- APRENDE: Tarjeta con frente y reverso que gira al usarla. Para añadir otra, copia todo este article;
+               cambia los textos de ambas caras. -->
+          <article class="flip flip--texto flip--menta" tabindex="0">
+            <!-- APRENDE: Mantiene unidas las dos caras para que giren juntas; conserva dentro el frente y el
+                 reverso. -->
+            <div class="flip__interior">
+              <!-- APRENDE: Una cara de la tarjeta. Frente muestra el resumen; atras muestra la explicación. Edita
+                   cada contenido por separado. -->
+              <div class="flip__cara flip__frente">
+                <!-- APRENDE: Marco del pequeño dibujo. Cambia src de su img para otro icono; las variantes menta y
+                     coral cambian el fondo. Imagen: cambia src="assets/icons/ui/microscopio.svg" por otro archivo;
+                     alt describe la foto si no se ve o se usa lectura por voz. Aquí alt vacío indica un dibujo
+                     decorativo. -->
+                <span class="icono icono--menta"><img src="assets/icons/ui/microscopio.svg" alt=""></span>
+                <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
+                <h3>Biopsia y aspirado de médula ósea</h3>
+                <!-- APRENDE: Indica qué área se encarga del tratamiento; cambia el texto entre las etiquetas. -->
+                <span class="responsable">Hematología</span>
+                <!-- APRENDE: Invitación a usar la tarjeta; cambia el texto para indicar qué descubrirá la
+                     persona. -->
+                <span class="pista">En qué consiste</span>
+              </div>
+              <!-- APRENDE: Una cara de la tarjeta. Frente muestra el resumen; atras muestra la explicación. Edita
+                   cada contenido por separado. -->
+              <div class="flip__cara flip__atras">
+                <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
+                <h3>Biopsia y aspirado de médula ósea</h3>
+                <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y
+                     br las pasa a otra línea. -->
+                <p>Procedimiento para el diagnóstico y seguimiento de enfermedades de la sangre.</p>
+                <!-- APRENDE: Texto corto que presenta una sección; escribe otro nombre entre las etiquetas. Las
+                     variantes de class cambian sus colores. -->
+                <span class="etiqueta etiqueta--blanca">Hematología</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- APRENDE: Tarjeta con frente y reverso que gira al usarla. Para añadir otra, copia todo este article;
+               cambia los textos de ambas caras. -->
+          <article class="flip flip--texto flip--coral" tabindex="0">
+            <!-- APRENDE: Mantiene unidas las dos caras para que giren juntas; conserva dentro el frente y el
+                 reverso. -->
+            <div class="flip__interior">
+              <!-- APRENDE: Una cara de la tarjeta. Frente muestra el resumen; atras muestra la explicación. Edita
+                   cada contenido por separado. -->
+              <div class="flip__cara flip__frente">
+                <!-- APRENDE: Marco del pequeño dibujo. Cambia src de su img para otro icono; las variantes menta y
+                     coral cambian el fondo. Imagen: cambia src="assets/icons/ui/gota.svg" por otro archivo; alt
+                     describe la foto si no se ve o se usa lectura por voz. Aquí alt vacío indica un dibujo
+                     decorativo. -->
+                <span class="icono icono--coral"><img src="assets/icons/ui/gota.svg" alt=""></span>
+                <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
+                <h3>Hemoterapia y anticoagulación</h3>
+                <!-- APRENDE: Indica qué área se encarga del tratamiento; cambia el texto entre las etiquetas. -->
+                <span class="responsable">Hematología</span>
+                <!-- APRENDE: Invitación a usar la tarjeta; cambia el texto para indicar qué descubrirá la
+                     persona. -->
+                <span class="pista">En qué consiste</span>
+              </div>
+              <!-- APRENDE: Una cara de la tarjeta. Frente muestra el resumen; atras muestra la explicación. Edita
+                   cada contenido por separado. -->
+              <div class="flip__cara flip__atras">
+                <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
+                <h3>Hemoterapia y anticoagulación</h3>
+                <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y
+                     br las pasa a otra línea. -->
+                <p>Indicación de transfusiones, manejo de anemias y control de trombosis asociada al cáncer.</p>
+                <!-- APRENDE: Texto corto que presenta una sección; escribe otro nombre entre las etiquetas. Las
+                     variantes de class cambian sus colores. -->
+                <span class="etiqueta etiqueta--blanca">Hematología</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- APRENDE: Tarjeta con frente y reverso que gira al usarla. Para añadir otra, copia todo este article;
+               cambia los textos de ambas caras. -->
+          <article class="flip flip--texto flip--noche" tabindex="0">
+            <!-- APRENDE: Mantiene unidas las dos caras para que giren juntas; conserva dentro el frente y el
+                 reverso. -->
+            <div class="flip__interior">
+              <!-- APRENDE: Una cara de la tarjeta. Frente muestra el resumen; atras muestra la explicación. Edita
+                   cada contenido por separado. -->
+              <div class="flip__cara flip__frente">
+                <!-- APRENDE: Marco del pequeño dibujo. Cambia src de su img para otro icono; las variantes menta y
+                     coral cambian el fondo. Imagen: cambia src="assets/icons/ui/mano.svg" por otro archivo; alt
+                     describe la foto si no se ve o se usa lectura por voz. Aquí alt vacío indica un dibujo
+                     decorativo. -->
+                <span class="icono"><img src="assets/icons/ui/mano.svg" alt=""></span>
+                <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
+                <h3>Cuidados paliativos y manejo del dolor</h3>
+                <!-- APRENDE: Indica qué área se encarga del tratamiento; cambia el texto entre las etiquetas. -->
+                <span class="responsable">Equipo interdisciplinario</span>
+                <!-- APRENDE: Invitación a usar la tarjeta; cambia el texto para indicar qué descubrirá la
+                     persona. -->
+                <span class="pista">En qué consiste</span>
+              </div>
+              <!-- APRENDE: Una cara de la tarjeta. Frente muestra el resumen; atras muestra la explicación. Edita
+                   cada contenido por separado. -->
+              <div class="flip__cara flip__atras">
+                <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
+                <h3>Cuidados paliativos y manejo del dolor</h3>
+                <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y
+                     br las pasa a otra línea. -->
+                <p>Alivio de síntomas y del dolor oncológico para mejorar la calidad de vida en cualquier etapa.</p>
+                <!-- APRENDE: Texto corto que presenta una sección; escribe otro nombre entre las etiquetas. Las
+                     variantes de class cambian sus colores. -->
+                <span class="etiqueta etiqueta--blanca">Equipo interdisciplinario</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- APRENDE: Tarjeta con frente y reverso que gira al usarla. Para añadir otra, copia todo este article;
+               cambia los textos de ambas caras. -->
+          <article class="flip flip--texto" tabindex="0">
+            <!-- APRENDE: Mantiene unidas las dos caras para que giren juntas; conserva dentro el frente y el
+                 reverso. -->
+            <div class="flip__interior">
+              <!-- APRENDE: Una cara de la tarjeta. Frente muestra el resumen; atras muestra la explicación. Edita
+                   cada contenido por separado. -->
+              <div class="flip__cara flip__frente">
+                <!-- APRENDE: Marco del pequeño dibujo. Cambia src de su img para otro icono; las variantes menta y
+                     coral cambian el fondo. Imagen: cambia src="assets/icons/ui/corazon.svg" por otro archivo; alt
+                     describe la foto si no se ve o se usa lectura por voz. Aquí alt vacío indica un dibujo
+                     decorativo. -->
+                <span class="icono"><img src="assets/icons/ui/corazon.svg" alt=""></span>
+                <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
+                <h3>Psicooncología</h3>
+                <!-- APRENDE: Indica qué área se encarga del tratamiento; cambia el texto entre las etiquetas. -->
+                <span class="responsable">Psicología Oncológica</span>
+                <!-- APRENDE: Invitación a usar la tarjeta; cambia el texto para indicar qué descubrirá la
+                     persona. -->
+                <span class="pista">En qué consiste</span>
+              </div>
+              <!-- APRENDE: Una cara de la tarjeta. Frente muestra el resumen; atras muestra la explicación. Edita
+                   cada contenido por separado. -->
+              <div class="flip__cara flip__atras">
+                <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
+                <h3>Psicooncología</h3>
+                <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y
+                     br las pasa a otra línea. -->
+                <p>Psicoterapia individual y familiar, preparación emocional para el tratamiento, apoyo en el diagnóstico y acompañamiento en el duelo.</p>
+                <!-- APRENDE: Texto corto que presenta una sección; escribe otro nombre entre las etiquetas. Las
+                     variantes de class cambian sus colores. -->
+                <span class="etiqueta etiqueta--blanca">Psicología Oncológica</span>
+              </div>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ================= SERVICIO DE APOYO ================= -->
-    <!-- APRENDE: Agrupa una parte completa de la página. Para moverla, mueve desde section hasta su cierre
-         /section con todo lo que contiene. -->
-    <section class="seccion seccion--suave">
+    <!-- ================= SERVICIOS DE APOYO DIAGNOSTICO Y CONVENIOS ================= -->
+    <!-- APRENDE: Agrupa una parte completa de la página. Para moverla, mueve desde section hasta su cierre /section
+         con todo lo que contiene. id le da un nombre único: otros enlaces pueden llevar directo aquí escribiendo #
+         y ese nombre. -->
+    <section class="seccion" id="convenios">
       <!-- APRENDE: Mantiene el contenido centrado y limita su ancho; cambia el valor de "ancho" con dos guiones
            delante al principio de estilos.css. -->
       <div class="seccion__interior">
         <!-- APRENDE: Agrupa la etiqueta, el título y la explicación de esta sección; cambia sus palabras dentro de
              cada etiqueta. -->
         <div class="titulo-seccion revelar">
-          <!-- APRENDE: Texto corto que presenta una sección; escribe otro nombre entre las etiquetas. Las variantes de
-               class cambian sus colores. -->
-          <span class="etiqueta etiqueta--menta">Servicio complementario</span>
-          <!-- APRENDE: Título de esta sección o tarjeta. Edita sus palabras y las de em si tiene una parte destacada. -->
-          <h2>También acompañamos <em>desde casa</em></h2>
+          <!-- APRENDE: Texto corto que presenta una sección; escribe otro nombre entre las etiquetas. Las variantes
+               de class cambian sus colores. -->
+          <span class="etiqueta">3. Apoyo diagnóstico y convenios</span>
+          <!-- APRENDE: Título de esta sección o tarjeta. Edita sus palabras y las de em si tiene una parte
+               destacada. -->
+          <h2>Servicios de apoyo <em>y convenios</em></h2>
+          <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las
+               pasa a otra línea. -->
+          <p>Con el fin de ofrecer una atención integral y oportuna, el Centro trabaja en coordinación con instituciones aliadas que complementan los servicios propios. Gracias a estos acuerdos, el paciente accede a estudios y tratamientos complementarios, incluida la radioterapia, sin trámites adicionales y con atención preferente.</p>
         </div>
 
-        <!-- APRENDE: Agrupa tarjetas. "grid" + dos guiones + "2", "grid" + dos guiones + "3" y "grid" + dos guiones +
-             "4" usan anchos mínimos diferentes; el espacio disponible decide cuántas caben por fila. -->
-        <div class="grid grid--2 escalonado">
-          <!-- APRENDE: Tarjeta con foto y explicación que aparece al usarla; copia el article completo para añadir otra
-               persona o servicio. "foco" con dos guiones delante elige el punto de la foto que se conserva (horizontal y
-               vertical); "zoom" con dos guiones delante acerca la imagen: 1 es normal y 2 el doble. Prueba variaciones
-               pequeñas. -->
-          <article class="perfil" tabindex="0" style="--foco: 100% 10%; --zoom: 1.4">
-            <!-- APRENDE: Imagen: cambia src="assets/img/web/asistencia-domiciliaria.jpg" por otro archivo; alt describe la
-                 foto si no se ve o se usa lectura por voz. loading="lazy" espera a que la imagen se acerque a la pantalla
-                 para cargarla. -->
-            <img class="perfil__foto" src="assets/img/web/asistencia-domiciliaria.jpg" alt="Asistencia domiciliaria" loading="lazy">
-            <!-- APRENDE: Información visible antes de abrir el detalle; si cambias un nombre, actualízalo también en
-                 perfil__detalle. -->
-            <div class="perfil__base">
-              <!-- APRENDE: Pequeña etiqueta sobre la foto; cambia sus palabras para mostrar otra especialidad o categoría. -->
-              <span class="chip">En tu hogar</span>
-              <!-- APRENDE: Título de esta sección o tarjeta. Edita sus palabras y las de em si tiene una parte destacada. -->
-              <h2>Asistencia domiciliaria</h2>
-              <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
-                   a otra línea. -->
-              <p>Para pacientes que requieren apoyo médico básico en su hogar.</p>
-              <!-- APRENDE: Invitación a usar la tarjeta; cambia el texto para indicar qué descubrirá la persona. -->
-              <span class="pista">Ver detalles</span>
+        <!-- APRENDE: Agrupa las tarjetas de servicios de apoyo; el espacio disponible decide cuántas caben por
+             fila. -->
+        <div class="apoyos escalonado">
+          <!-- APRENDE: Tarjeta de un servicio coordinado con instituciones aliadas; copia el article completo para
+               sumar otro. La variante destacado la pinta en oscuro para resaltarla. -->
+          <article class="apoyo">
+            <!-- APRENDE: Une el icono y el nombre del servicio en una misma fila. -->
+            <div class="apoyo__cabeza">
+              <!-- APRENDE: Marco del pequeño dibujo. Cambia src de su img para otro icono; las variantes menta y
+                   coral cambian el fondo. Imagen: cambia src="assets/icons/ui/tubo.svg" por otro archivo; alt
+                   describe la foto si no se ve o se usa lectura por voz. Aquí alt vacío indica un dibujo
+                   decorativo. -->
+              <span class="icono icono--menta"><img src="assets/icons/ui/tubo.svg" alt=""></span>
+              <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
+              <h3>Laboratorio clínico</h3>
             </div>
-            <!-- APRENDE: Panel con la información ampliada. Cambia aquí especialidad, biografía o servicio; puedes agregar
-                 párrafos p. -->
-            <div class="perfil__detalle">
-              <!-- APRENDE: Título de esta sección o tarjeta. Edita sus palabras y las de em si tiene una parte destacada. -->
-              <h2>Asistencia domiciliaria</h2>
-              <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
-                   a otra línea. -->
-              <p><b>¿Para quién es?</b><br>Para pacientes con dificultad para trasladarse hasta la clínica.</p>
-              <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
-                   a otra línea. -->
-              <p><b>¿Qué incluye?</b><br>Control básico, orientación de cuidados y coordinación con el especialista.</p>
-              <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
-                   a otra línea. -->
-              <p><b>¿Cómo se solicita?</b><br>Desde la página Reserva o por WhatsApp.</p>
-              <!-- APRENDE: Enlace: href="reserva.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
-              <a class="boton boton--chico" href="reserva.html">Solicitar visita</a>
-            </div>
+            <!-- APRENDE: Detalle del servicio: el texto dentro de b es el título pequeño y lo demás la
+                 explicación. -->
+            <p class="apoyo__dato"><b>Servicios que se coordinan</b>Hemograma, química sanguínea, coagulación, marcadores tumorales y otros análisis.</p>
+            <!-- APRENDE: Beneficio para el paciente; la marca de verificación se dibuja desde estilos.css, así que
+                 solo cambia el texto. -->
+            <p class="apoyo__beneficio">Toma de muestra coordinada y resultados al médico tratante.</p>
           </article>
 
-          <!-- El recorrido que sigue cualquiera de los servicios. -->
-          <!-- APRENDE: Recuadro simple de contenido; cambia sus textos aquí, y el relleno y fondo en .card de
-               estilos.css. -->
-          <article class="card">
-            <!-- APRENDE: Marco del pequeño dibujo. Cambia src de su img para otro icono; las variantes menta y coral
-                 cambian el fondo. Imagen: cambia src="assets/icons/ui/pulso.svg" por otro archivo; alt describe la foto si
-                 no se ve o se usa lectura por voz. Aquí alt vacío indica un dibujo decorativo. -->
-            <span class="icono icono--menta"><img src="assets/icons/ui/pulso.svg" alt=""></span>
-            <!-- APRENDE: Título de esta sección o tarjeta. Edita sus palabras y las de em si tiene una parte destacada. -->
-            <h2>Cómo funciona la atención</h2>
-            <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
-                 a otra línea. -->
-            <p>Cualquiera de los tres servicios sigue el mismo recorrido:</p>
-            <!-- APRENDE: Pregunta o bloque que se abre al pulsarlo. Copia hasta /details para sumar otro; agrega open para
-                 que comience abierto. -->
-            <details>
-              <!-- APRENDE: Texto que se pulsa para abrir la explicación; escribe la pregunta aquí y la respuesta en el
-                   párrafo siguiente. -->
-              <summary>1. Primer contacto</summary>
-              <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
-                   a otra línea. -->
-              <p>Recibimos tu solicitud por el formulario o por WhatsApp y revisamos el horario disponible.</p>
-            </details>
-            <!-- APRENDE: Pregunta o bloque que se abre al pulsarlo. Copia hasta /details para sumar otro; agrega open para
-                 que comience abierto. -->
-            <details>
-              <!-- APRENDE: Texto que se pulsa para abrir la explicación; escribe la pregunta aquí y la respuesta en el
-                   párrafo siguiente. -->
-              <summary>2. Consulta con el especialista</summary>
-              <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
-                   a otra línea. -->
-              <p>El profesional revisa antecedentes, estudios previos y responde tus dudas.</p>
-            </details>
-            <!-- APRENDE: Pregunta o bloque que se abre al pulsarlo. Copia hasta /details para sumar otro; agrega open para
-                 que comience abierto. -->
-            <details>
-              <!-- APRENDE: Texto que se pulsa para abrir la explicación; escribe la pregunta aquí y la respuesta en el
-                   párrafo siguiente. -->
-              <summary>3. Plan y seguimiento</summary>
-              <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las pasa
-                   a otra línea. -->
-              <p>Se explica el plan de atención en palabras claras y se agenda el siguiente control.</p>
-            </details>
-            <!-- APRENDE: Nota informativa destacada; cambia el texto entre las etiquetas para mostrar otra aclaración. -->
-            <p class="aviso">El diagnóstico y el tratamiento siempre los define un profesional.</p>
+          <!-- APRENDE: Tarjeta de un servicio coordinado con instituciones aliadas; copia el article completo para
+               sumar otro. La variante destacado la pinta en oscuro para resaltarla. -->
+          <article class="apoyo">
+            <!-- APRENDE: Une el icono y el nombre del servicio en una misma fila. -->
+            <div class="apoyo__cabeza">
+              <!-- APRENDE: Marco del pequeño dibujo. Cambia src de su img para otro icono; las variantes menta y
+                   coral cambian el fondo. Imagen: cambia src="assets/icons/ui/escaner.svg" por otro archivo; alt
+                   describe la foto si no se ve o se usa lectura por voz. Aquí alt vacío indica un dibujo
+                   decorativo. -->
+              <span class="icono icono--menta"><img src="assets/icons/ui/escaner.svg" alt=""></span>
+              <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
+              <h3>Imagenología</h3>
+            </div>
+            <!-- APRENDE: Detalle del servicio: el texto dentro de b es el título pequeño y lo demás la
+                 explicación. -->
+            <p class="apoyo__dato"><b>Servicios que se coordinan</b>Radiografía, ecografía, mamografía, tomografía y resonancia magnética.</p>
+            <!-- APRENDE: Beneficio para el paciente; la marca de verificación se dibuja desde estilos.css, así que
+                 solo cambia el texto. -->
+            <p class="apoyo__beneficio">Programación preferente del estudio e informe disponible para el control médico.</p>
+          </article>
+
+          <!-- APRENDE: Tarjeta de un servicio coordinado con instituciones aliadas; copia el article completo para
+               sumar otro. La variante destacado la pinta en oscuro para resaltarla. -->
+          <article class="apoyo apoyo--destacado">
+            <!-- APRENDE: Une el icono y el nombre del servicio en una misma fila. -->
+            <div class="apoyo__cabeza">
+              <!-- APRENDE: Marco del pequeño dibujo. Cambia src de su img para otro icono; las variantes menta y
+                   coral cambian el fondo. Imagen: cambia src="assets/icons/ui/radiacion.svg" por otro archivo; alt
+                   describe la foto si no se ve o se usa lectura por voz. Aquí alt vacío indica un dibujo
+                   decorativo. -->
+              <span class="icono icono--menta"><img src="assets/icons/ui/radiacion.svg" alt=""></span>
+              <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
+              <h3>Radioterapia</h3>
+            </div>
+            <!-- APRENDE: Detalle del servicio: el texto dentro de b es el título pequeño y lo demás la
+                 explicación. -->
+            <p class="apoyo__dato"><b>Servicios que se coordinan</b>Radioterapia indicada por el especialista, sola o combinada con quimioterapia (radio-quimioterapia).</p>
+            <!-- APRENDE: Beneficio para el paciente; la marca de verificación se dibuja desde estilos.css, así que
+                 solo cambia el texto. -->
+            <p class="apoyo__beneficio">Derivación coordinada por el Centro y seguimiento conjunto durante el tratamiento.</p>
+          </article>
+
+          <!-- APRENDE: Tarjeta de un servicio coordinado con instituciones aliadas; copia el article completo para
+               sumar otro. La variante destacado la pinta en oscuro para resaltarla. -->
+          <article class="apoyo">
+            <!-- APRENDE: Une el icono y el nombre del servicio en una misma fila. -->
+            <div class="apoyo__cabeza">
+              <!-- APRENDE: Marco del pequeño dibujo. Cambia src de su img para otro icono; las variantes menta y
+                   coral cambian el fondo. Imagen: cambia src="assets/icons/ui/microscopio.svg" por otro archivo;
+                   alt describe la foto si no se ve o se usa lectura por voz. Aquí alt vacío indica un dibujo
+                   decorativo. -->
+              <span class="icono icono--menta"><img src="assets/icons/ui/microscopio.svg" alt=""></span>
+              <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
+              <h3>Anatomía patológica</h3>
+            </div>
+            <!-- APRENDE: Detalle del servicio: el texto dentro de b es el título pequeño y lo demás la
+                 explicación. -->
+            <p class="apoyo__dato"><b>Servicios que se coordinan</b>Estudios de biopsias y citologías.</p>
+            <!-- APRENDE: Beneficio para el paciente; la marca de verificación se dibuja desde estilos.css, así que
+                 solo cambia el texto. -->
+            <p class="apoyo__beneficio">Envío y seguimiento de la muestra por el Centro.</p>
+          </article>
+
+          <!-- APRENDE: Tarjeta de un servicio coordinado con instituciones aliadas; copia el article completo para
+               sumar otro. La variante destacado la pinta en oscuro para resaltarla. -->
+          <article class="apoyo">
+            <!-- APRENDE: Une el icono y el nombre del servicio en una misma fila. -->
+            <div class="apoyo__cabeza">
+              <!-- APRENDE: Marco del pequeño dibujo. Cambia src de su img para otro icono; las variantes menta y
+                   coral cambian el fondo. Imagen: cambia src="assets/icons/ui/derivar.svg" por otro archivo; alt
+                   describe la foto si no se ve o se usa lectura por voz. Aquí alt vacío indica un dibujo
+                   decorativo. -->
+              <span class="icono icono--menta"><img src="assets/icons/ui/derivar.svg" alt=""></span>
+              <!-- APRENDE: Título de un bloque pequeño; reemplaza el texto entre las etiquetas. -->
+              <h3>Otros servicios</h3>
+            </div>
+            <!-- APRENDE: Detalle del servicio: el texto dentro de b es el título pequeño y lo demás la
+                 explicación. -->
+            <p class="apoyo__dato"><b>Servicios que se coordinan</b>Derivación a hospitales y profesionales de otras especialidades cuando el caso lo requiere.</p>
+            <!-- APRENDE: Beneficio para el paciente; la marca de verificación se dibuja desde estilos.css, así que
+                 solo cambia el texto. -->
+            <p class="apoyo__beneficio">Continuidad de la atención y comunicación directa entre profesionales.</p>
           </article>
         </div>
+      </div>
+    </section>
+
+    <!-- ================= COMO FUNCIONA LA ATENCION ================= -->
+    <!-- APRENDE: Agrupa una parte completa de la página. Para moverla, mueve desde section hasta su cierre /section
+         con todo lo que contiene. -->
+    <section class="seccion seccion--angosta seccion--suave">
+      <!-- APRENDE: Mantiene el contenido centrado y limita su ancho; cambia el valor de "ancho" con dos guiones
+           delante al principio de estilos.css. -->
+      <div class="seccion__interior">
+        <!-- APRENDE: Agrupa la etiqueta, el título y la explicación de esta sección; cambia sus palabras dentro de
+             cada etiqueta. -->
+        <div class="titulo-seccion revelar">
+          <!-- APRENDE: Texto corto que presenta una sección; escribe otro nombre entre las etiquetas. Las variantes
+               de class cambian sus colores. -->
+          <span class="etiqueta">El recorrido</span>
+          <!-- APRENDE: Título de esta sección o tarjeta. Edita sus palabras y las de em si tiene una parte
+               destacada. -->
+          <h2>Cómo funciona <em>la atención</em></h2>
+          <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br las
+               pasa a otra línea. -->
+          <p>Cualquiera de nuestras especialidades sigue el mismo recorrido:</p>
+        </div>
+        <!-- APRENDE: Grupo cuyos hijos aparecen uno tras otro al bajar; agrega el nuevo bloque dentro para que
+             comparta ese efecto. -->
+        <div class="escalonado">
+          <!-- APRENDE: Pregunta o bloque que se abre al pulsarlo. Copia hasta /details para sumar otro; agrega open
+               para que comience abierto. -->
+          <details>
+            <!-- APRENDE: Texto que se pulsa para abrir la explicación; escribe la pregunta aquí y la respuesta en
+                 el párrafo siguiente. -->
+            <summary>1. Primer contacto</summary>
+            <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br
+                 las pasa a otra línea. -->
+            <p>Recibimos tu solicitud por el formulario o por WhatsApp y revisamos el horario disponible.</p>
+          </details>
+          <!-- APRENDE: Pregunta o bloque que se abre al pulsarlo. Copia hasta /details para sumar otro; agrega open
+               para que comience abierto. -->
+          <details>
+            <!-- APRENDE: Texto que se pulsa para abrir la explicación; escribe la pregunta aquí y la respuesta en
+                 el párrafo siguiente. -->
+            <summary>2. Consulta con el especialista</summary>
+            <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br
+                 las pasa a otra línea. -->
+            <p>El profesional revisa antecedentes, estudios previos y responde tus dudas.</p>
+          </details>
+          <!-- APRENDE: Pregunta o bloque que se abre al pulsarlo. Copia hasta /details para sumar otro; agrega open
+               para que comience abierto. -->
+          <details>
+            <!-- APRENDE: Texto que se pulsa para abrir la explicación; escribe la pregunta aquí y la respuesta en
+                 el párrafo siguiente. -->
+            <summary>3. Plan y seguimiento</summary>
+            <!-- APRENDE: Párrafo visible: cambia sus palabras conservando las etiquetas. b destaca palabras y br
+                 las pasa a otra línea. -->
+            <p>Se explica el plan de atención en palabras claras y se agenda el siguiente control.</p>
+          </details>
+        </div>
+        <!-- APRENDE: Nota informativa destacada; cambia el texto entre las etiquetas para mostrar otra
+             aclaración. -->
+        <p class="aviso revelar">El diagnóstico y el tratamiento siempre los define un profesional.</p>
       </div>
     </section>
 
@@ -496,7 +920,7 @@ Menú, pie y teléfonos están escritos en cada página: repite allí los cambio
           <li><a href="oncologia.html">Oncología</a></li>
           <!-- APRENDE: Un elemento de la lista; cambia su texto. Si contiene un enlace, cambia también href para su
                destino. Enlace: href="lazos.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
-          <li><a href="lazos.html">Lazos de apoyo</a></li>
+          <li><a href="lazos.html">Lazos oncológicos</a></li>
           <!-- APRENDE: Un elemento de la lista; cambia su texto. Si contiene un enlace, cambia también href para su
                destino. Enlace: href="reserva.html" elige el destino; el texto entre a y /a es lo que se pulsa. -->
           <li><a href="reserva.html">Reservar cita</a></li>

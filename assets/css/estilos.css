@@ -7259,3 +7259,1438 @@ legend {
    negativo puede sacarla fuera. */
     left: 6px; }
 }
+
+/* ---------- 34. Especialidades de la clinica ----------
+   Tarjetas con la foto redonda de cada profesional. "tono" con dos
+   guiones delante guarda el degradado del marco y de la franja. */
+/* APRENDE: Afecta a .especialidad. Busca class="especialidad" o ese nombre junto a otras clases en el HTML
+   para localizar las piezas. */
+.especialidad {
+  /* APRENDE: Degradado guardado para esta tarjeta: lo usan el marco, la franja y los detalles. Las variantes
+   menta y coral lo cambian por otro. */
+  --tono: var(--grad-marca);
+  /* APRENDE: relative permite ubicar piezas dentro; absolute las superpone en su referencia; fixed las fija a
+   la pantalla; sticky las mantiene al bajar. */
+  position: relative;
+  /* APRENDE: hidden recorta lo que sobresale; auto permite desplazarlo si no cabe; clip recorta sin crear un
+   área desplazable. */
+  overflow: hidden;
+  /* APRENDE: isolate mantiene juntas las capas de este bloque; conserva el fondo detrás sin perderlo bajo
+   otras secciones. */
+  isolation: isolate;
+  /* APRENDE: grid coloca en cuadrícula, flex en fila o columna, block ocupa una línea y none oculta la
+   pieza. */
+  display: flex;
+  /* APRENDE: column coloca de arriba hacia abajo; row de izquierda a derecha. */
+  flex-direction: column;
+  /* APRENDE: Alinea las piezas: center centra; start o flex-start las lleva al inicio; stretch las estira. */
+  align-items: flex-start;
+  /* APRENDE: Espacio interior entre borde y contenido: cuatro medidas son arriba, derecha, abajo e izquierda;
+   aumenta para dar más aire. */
+  padding: 32px;
+  /* APRENDE: Redondea esquinas: aumenta para suavizarlas; 50% puede formar un círculo y 999px una
+   pastilla. */
+  border-radius: var(--radio-l);
+  /* APRENDE: Fondo: cambia el color o los tonos del degradado; transparent deja ver lo que hay debajo. */
+  background: var(--blanco);
+  /* APRENDE: Borde: grosor, tipo de línea y color; aumenta el primer número para engrosarlo o usa 0 para
+   quitarlo. */
+  border: 1px solid var(--linea);
+  /* APRENDE: Sombra: cada grupo indica desplazamiento horizontal, vertical, difuminado, tamaño y color;
+   aumenta el difuminado para suavizarla. */
+  box-shadow: var(--sombra-s);
+  /* APRENDE: Suaviza cambios de apariencia; las duraciones en segundos controlan cuánto tarda. .6s tarda el
+   doble que .3s. */
+  transition: transform .6s var(--rebote), box-shadow .6s;
+}
+/* APRENDE: Afecta a .especialidad--menta. Busca class="especialidad--menta" o ese nombre junto a otras clases
+   en el HTML para localizar las piezas. */
+.especialidad--menta {
+  /* APRENDE: Degradado guardado para esta tarjeta: lo usan el marco, la franja y los detalles. Las variantes
+   menta y coral lo cambian por otro. */
+  --tono: var(--grad-menta);
+}
+/* APRENDE: Afecta a .especialidad--coral. Busca class="especialidad--coral" o ese nombre junto a otras clases
+   en el HTML para localizar las piezas. */
+.especialidad--coral {
+  /* APRENDE: Degradado guardado para esta tarjeta: lo usan el marco, la franja y los detalles. Las variantes
+   menta y coral lo cambian por otro. */
+  --tono: var(--grad-coral);
+}
+/* APRENDE: Afecta a .especialidad:hover. Busca class="especialidad" o ese nombre junto a otras clases en el
+   HTML para localizar las piezas. Se activa al pasar el mouse. */
+.especialidad:hover {
+  /* APRENDE: translateX/Y desplaza, rotate gira y scale cambia tamaño visualmente; prueba cambios
+   pequeños. */
+  transform: translateY(-8px);
+  /* APRENDE: Sombra: cada grupo indica desplazamiento horizontal, vertical, difuminado, tamaño y color;
+   aumenta el difuminado para suavizarla. */
+  box-shadow: var(--sombra-m);
+}
+/* APRENDE: Afecta a .especialidad::before. Busca class="especialidad" o ese nombre junto a otras clases en el
+   HTML para localizar las piezas. Dibuja una parte extra sin escribirla en HTML. */
+.especialidad::before {
+  /* APRENDE: Agrega texto o decoración desde el diseño; comillas vacías crean un adorno. Cambia la frase o
+   símbolo entre comillas. */
+  content: "";
+  /* APRENDE: relative permite ubicar piezas dentro; absolute las superpone en su referencia; fixed las fija a
+   la pantalla; sticky las mantiene al bajar. */
+  position: absolute;
+  /* APRENDE: Distancias a los bordes: una medida sirve para todos; cuatro siguen arriba, derecha, abajo e
+   izquierda. 0 cubre toda la referencia. */
+  inset: 0 0 auto 0;
+  /* APRENDE: Orden de capas: un número mayor queda delante; los negativos colocan fondos detrás del
+   contenido. */
+  z-index: -1;
+  /* APRENDE: Medida de alto; aumenta para agrandar. % depende del bloque que lo contiene; auto deja calcular
+   al navegador. */
+  height: 112px;
+  /* APRENDE: Fondo: cambia el color o los tonos del degradado; transparent deja ver lo que hay debajo. */
+  background: var(--tono);
+  /* APRENDE: Visibilidad: 0 invisible, 1 totalmente visible y .5 a la mitad; la pieza sigue ocupando
+   espacio. */
+  opacity: .16;
+}
+/* APRENDE: Afecta a .especialidad__foto. Busca class="especialidad__foto" o ese nombre junto a otras clases
+   en el HTML para localizar las piezas. */
+.especialidad__foto {
+  /* APRENDE: relative permite ubicar piezas dentro; absolute las superpone en su referencia; fixed las fija a
+   la pantalla; sticky las mantiene al bajar. */
+  position: relative;
+  /* APRENDE: Medida de ancho; aumenta para agrandar. % depende del bloque que lo contiene; auto deja calcular
+   al navegador. */
+  width: 136px;
+  /* APRENDE: Medida de alto; aumenta para agrandar. % depende del bloque que lo contiene; auto deja calcular
+   al navegador. */
+  height: 136px;
+  /* APRENDE: Espacio por fuera en el lado inferior; aumenta para separar más, 0 quita ese espacio. */
+  margin-bottom: 22px;
+  /* APRENDE: Espacio interior entre borde y contenido: cuatro medidas son arriba, derecha, abajo e izquierda;
+   aumenta para dar más aire. */
+  padding: 5px;
+  /* APRENDE: Redondea esquinas: aumenta para suavizarlas; 50% puede formar un círculo y 999px una
+   pastilla. */
+  border-radius: 50%;
+  /* APRENDE: Fondo: cambia el color o los tonos del degradado; transparent deja ver lo que hay debajo. */
+  background: var(--tono);
+  /* APRENDE: Sombra: cada grupo indica desplazamiento horizontal, vertical, difuminado, tamaño y color;
+   aumenta el difuminado para suavizarla. */
+  box-shadow: var(--sombra-m);
+  /* APRENDE: Suaviza cambios de apariencia; las duraciones en segundos controlan cuánto tarda. .6s tarda el
+   doble que .3s. */
+  transition: transform .6s var(--rebote);
+}
+/* APRENDE: Afecta a .especialidad:hover .especialidad__foto. Busca class="especialidad" o ese nombre junto a
+   otras clases en el HTML para localizar las piezas. Se activa al pasar el mouse. */
+.especialidad:hover .especialidad__foto {
+  /* APRENDE: translateX/Y desplaza, rotate gira y scale cambia tamaño visualmente; prueba cambios
+   pequeños. */
+  transform: scale(1.06) rotate(-3deg);
+}
+/* APRENDE: Afecta a .especialidad__foto > img. Busca class="especialidad__foto" o ese nombre junto a otras
+   clases en el HTML para localizar las piezas. */
+.especialidad__foto > img {
+  /* APRENDE: Medida de ancho; aumenta para agrandar. % depende del bloque que lo contiene; auto deja calcular
+   al navegador. */
+  width: 100%;
+  /* APRENDE: Medida de alto; aumenta para agrandar. % depende del bloque que lo contiene; auto deja calcular
+   al navegador. */
+  height: 100%;
+  /* APRENDE: Redondea esquinas: aumenta para suavizarlas; 50% puede formar un círculo y 999px una
+   pastilla. */
+  border-radius: 50%;
+  /* APRENDE: Borde: grosor, tipo de línea y color; aumenta el primer número para engrosarlo o usa 0 para
+   quitarlo. */
+  border: 4px solid var(--blanco);
+  /* APRENDE: cover llena el marco recortando la foto; contain la muestra entera y puede dejar espacios
+   alrededor. */
+  object-fit: cover;
+  /* APRENDE: Parte de la foto que se conserva: porcentaje horizontal y vertical; cambia --foco en HTML para
+   ajustar solo una foto. */
+  object-position: 50% 20%;
+}
+/* APRENDE: Afecta a .especialidad__foto .icono. Busca class="especialidad__foto" o ese nombre junto a otras
+   clases en el HTML para localizar las piezas. */
+.especialidad__foto .icono {
+  /* APRENDE: relative permite ubicar piezas dentro; absolute las superpone en su referencia; fixed las fija a
+   la pantalla; sticky las mantiene al bajar. */
+  position: absolute;
+  /* APRENDE: Distancia desde el borde derecho de su referencia; ajusta para mover la pieza. Un valor negativo
+   puede sacarla fuera. */
+  right: -4px;
+  /* APRENDE: Distancia desde el borde inferior de su referencia; ajusta para mover la pieza. Un valor
+   negativo puede sacarla fuera. */
+  bottom: 2px;
+  /* APRENDE: Borde: grosor, tipo de línea y color; aumenta el primer número para engrosarlo o usa 0 para
+   quitarlo. */
+  border: 3px solid var(--blanco);
+}
+/* APRENDE: Afecta a .especialidad h3. Busca class="especialidad" o ese nombre junto a otras clases en el HTML
+   para localizar las piezas. */
+.especialidad h3 {
+  /* APRENDE: Espacio por fuera en el lado inferior; aumenta para separar más, 0 quita ese espacio. */
+  margin-bottom: 4px;
+}
+/* APRENDE: Afecta a .especialidad__profesional. Busca class="especialidad__profesional" o ese nombre junto a
+   otras clases en el HTML para localizar las piezas. */
+.especialidad__profesional {
+  /* APRENDE: Espacio por fuera en el lado inferior; aumenta para separar más, 0 quita ese espacio. */
+  margin-bottom: 14px;
+  /* APRENDE: Grosor de letras: 400 normal; 800 o 900 muy marcado. Reduce el número para aligerarlas. */
+  font-weight: 800;
+  /* APRENDE: Color de letras o dibujos que usan currentColor; cambia el código # o la referencia var para
+   otro tono. */
+  color: var(--violeta-600);
+}
+/* APRENDE: Afecta a .especialidad p. Busca class="especialidad" o ese nombre junto a otras clases en el HTML
+   para localizar las piezas. */
+.especialidad p {
+  /* APRENDE: Color de letras o dibujos que usan currentColor; cambia el código # o la referencia var para
+   otro tono. */
+  color: var(--tinta-suave);
+}
+/* APRENDE: Afecta a .especialidad .boton. Busca class="especialidad" o ese nombre junto a otras clases en el
+   HTML para localizar las piezas. */
+.especialidad .boton {
+  /* APRENDE: Espacio por fuera en el lado superior; aumenta para separar más, 0 quita ese espacio. */
+  margin-top: auto;
+}
+
+/* ---------- 35. Tratamientos y servicios de apoyo ---------- */
+/* APRENDE: Afecta a .responsable. Busca class="responsable" o ese nombre junto a otras clases en el HTML para
+   localizar las piezas. */
+.responsable {
+  /* APRENDE: grid coloca en cuadrícula, flex en fila o columna, block ocupa una línea y none oculta la
+   pieza. */
+  display: inline-flex;
+  /* APRENDE: Alinea las piezas: center centra; start o flex-start las lleva al inicio; stretch las estira. */
+  align-items: center;
+  /* APRENDE: Separación entre piezas; aumenta para alejarlas. Dos medidas indican separación entre filas y
+   columnas. */
+  gap: 8px;
+  /* APRENDE: Espacio por fuera en el lado superior; aumenta para separar más, 0 quita ese espacio. */
+  margin-top: 4px;
+  /* APRENDE: Espacio interior entre borde y contenido: cuatro medidas son arriba, derecha, abajo e izquierda;
+   aumenta para dar más aire. */
+  padding: 6px 12px;
+  /* APRENDE: Redondea esquinas: aumenta para suavizarlas; 50% puede formar un círculo y 999px una
+   pastilla. */
+  border-radius: 999px;
+  /* APRENDE: Fondo: cambia el color o los tonos del degradado; transparent deja ver lo que hay debajo. */
+  background: var(--lavanda-50);
+  /* APRENDE: Borde: grosor, tipo de línea y color; aumenta el primer número para engrosarlo o usa 0 para
+   quitarlo. */
+  border: 1px solid var(--lavanda-200);
+  /* APRENDE: Color de letras o dibujos que usan currentColor; cambia el código # o la referencia var para
+   otro tono. */
+  color: var(--violeta-700);
+  /* APRENDE: Tamaño de letras: aumenta la medida para agrandarlas. clamp(mínimo, flexible, máximo) limita
+   cuánto cambian con la pantalla. */
+  font-size: 13px;
+  /* APRENDE: Grosor de letras: 400 normal; 800 o 900 muy marcado. Reduce el número para aligerarlas. */
+  font-weight: 800;
+  /* APRENDE: Separación de renglones: aumenta el valor para dar más espacio; 1.65 es 1.65 veces el tamaño de
+   letra. */
+  line-height: 1.3;
+}
+/* APRENDE: Afecta a .responsable::before. Busca class="responsable" o ese nombre junto a otras clases en el
+   HTML para localizar las piezas. Dibuja una parte extra sin escribirla en HTML. */
+.responsable::before {
+  /* APRENDE: Agrega texto o decoración desde el diseño; comillas vacías crean un adorno. Cambia la frase o
+   símbolo entre comillas. */
+  content: "";
+  /* APRENDE: Cuánto crece o se encoge la pieza; none mantiene su tamaño y 0 0 100% reserva una fila
+   completa. */
+  flex: none;
+  /* APRENDE: Medida de ancho; aumenta para agrandar. % depende del bloque que lo contiene; auto deja calcular
+   al navegador. */
+  width: 8px;
+  /* APRENDE: Medida de alto; aumenta para agrandar. % depende del bloque que lo contiene; auto deja calcular
+   al navegador. */
+  height: 8px;
+  /* APRENDE: Redondea esquinas: aumenta para suavizarlas; 50% puede formar un círculo y 999px una
+   pastilla. */
+  border-radius: 50%;
+  /* APRENDE: Fondo: cambia el color o los tonos del degradado; transparent deja ver lo que hay debajo. */
+  background: var(--menta-500);
+}
+/* APRENDE: Afecta a .flip__atras .etiqueta. Busca class="flip__atras" o ese nombre junto a otras clases en el
+   HTML para localizar las piezas. */
+.flip__atras .etiqueta {
+  /* APRENDE: Espacio exterior: cuatro medidas son arriba, derecha, abajo e izquierda; dos son vertical y
+   horizontal. auto puede centrar la caja. */
+  margin: 8px 0 0;
+}
+/* APRENDE: Afecta a .apoyos. Busca class="apoyos" o ese nombre junto a otras clases en el HTML para localizar
+   las piezas. */
+.apoyos {
+  /* APRENDE: grid coloca en cuadrícula, flex en fila o columna, block ocupa una línea y none oculta la
+   pieza. */
+  display: grid;
+  /* APRENDE: Anchos de columnas: 1fr 1fr crea dos iguales; repeat(3, 1fr) tres. auto-fit acomoda las que
+   caben y minmax limita sus tamaños. */
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  /* APRENDE: Separación entre piezas; aumenta para alejarlas. Dos medidas indican separación entre filas y
+   columnas. */
+  gap: 22px;
+}
+/* APRENDE: Afecta a .apoyo. Busca class="apoyo" o ese nombre junto a otras clases en el HTML para localizar
+   las piezas. */
+.apoyo {
+  /* APRENDE: grid coloca en cuadrícula, flex en fila o columna, block ocupa una línea y none oculta la
+   pieza. */
+  display: flex;
+  /* APRENDE: column coloca de arriba hacia abajo; row de izquierda a derecha. */
+  flex-direction: column;
+  /* APRENDE: Separación entre piezas; aumenta para alejarlas. Dos medidas indican separación entre filas y
+   columnas. */
+  gap: 16px;
+  /* APRENDE: Espacio interior entre borde y contenido: cuatro medidas son arriba, derecha, abajo e izquierda;
+   aumenta para dar más aire. */
+  padding: 30px;
+  /* APRENDE: Redondea esquinas: aumenta para suavizarlas; 50% puede formar un círculo y 999px una
+   pastilla. */
+  border-radius: var(--radio-l);
+  /* APRENDE: Fondo: cambia el color o los tonos del degradado; transparent deja ver lo que hay debajo. */
+  background: var(--blanco);
+  /* APRENDE: Borde: grosor, tipo de línea y color; aumenta el primer número para engrosarlo o usa 0 para
+   quitarlo. */
+  border: 1px solid var(--linea);
+  /* APRENDE: Sombra: cada grupo indica desplazamiento horizontal, vertical, difuminado, tamaño y color;
+   aumenta el difuminado para suavizarla. */
+  box-shadow: var(--sombra-s);
+  /* APRENDE: Suaviza cambios de apariencia; las duraciones en segundos controlan cuánto tarda. .6s tarda el
+   doble que .3s. */
+  transition: transform .6s var(--rebote), box-shadow .6s;
+}
+/* APRENDE: Afecta a .apoyo:hover. Busca class="apoyo" o ese nombre junto a otras clases en el HTML para
+   localizar las piezas. Se activa al pasar el mouse. */
+.apoyo:hover {
+  /* APRENDE: translateX/Y desplaza, rotate gira y scale cambia tamaño visualmente; prueba cambios
+   pequeños. */
+  transform: translateY(-6px);
+  /* APRENDE: Sombra: cada grupo indica desplazamiento horizontal, vertical, difuminado, tamaño y color;
+   aumenta el difuminado para suavizarla. */
+  box-shadow: var(--sombra-m);
+}
+/* APRENDE: Afecta a .apoyo__cabeza. Busca class="apoyo__cabeza" o ese nombre junto a otras clases en el HTML
+   para localizar las piezas. */
+.apoyo__cabeza {
+  /* APRENDE: grid coloca en cuadrícula, flex en fila o columna, block ocupa una línea y none oculta la
+   pieza. */
+  display: flex;
+  /* APRENDE: Alinea las piezas: center centra; start o flex-start las lleva al inicio; stretch las estira. */
+  align-items: center;
+  /* APRENDE: Separación entre piezas; aumenta para alejarlas. Dos medidas indican separación entre filas y
+   columnas. */
+  gap: 16px;
+}
+/* APRENDE: Afecta a .apoyo__cabeza h3. Busca class="apoyo__cabeza" o ese nombre junto a otras clases en el
+   HTML para localizar las piezas. */
+.apoyo__cabeza h3 {
+  /* APRENDE: Espacio exterior: cuatro medidas son arriba, derecha, abajo e izquierda; dos son vertical y
+   horizontal. auto puede centrar la caja. */
+  margin: 0;
+}
+/* APRENDE: Afecta a .apoyo__dato. Busca class="apoyo__dato" o ese nombre junto a otras clases en el HTML para
+   localizar las piezas. */
+.apoyo__dato {
+  /* APRENDE: Espacio exterior: cuatro medidas son arriba, derecha, abajo e izquierda; dos son vertical y
+   horizontal. auto puede centrar la caja. */
+  margin: 0;
+  /* APRENDE: Color de letras o dibujos que usan currentColor; cambia el código # o la referencia var para
+   otro tono. */
+  color: var(--tinta-suave);
+}
+/* APRENDE: Afecta a .apoyo__dato b. Busca class="apoyo__dato" o ese nombre junto a otras clases en el HTML
+   para localizar las piezas. */
+.apoyo__dato b {
+  /* APRENDE: grid coloca en cuadrícula, flex en fila o columna, block ocupa una línea y none oculta la
+   pieza. */
+  display: block;
+  /* APRENDE: Espacio por fuera en el lado inferior; aumenta para separar más, 0 quita ese espacio. */
+  margin-bottom: 4px;
+  /* APRENDE: Color de letras o dibujos que usan currentColor; cambia el código # o la referencia var para
+   otro tono. */
+  color: var(--ciruela-800);
+  /* APRENDE: Tamaño de letras: aumenta la medida para agrandarlas. clamp(mínimo, flexible, máximo) limita
+   cuánto cambian con la pantalla. */
+  font-size: 12.5px;
+  /* APRENDE: Separación entre letras: valores negativos las juntan y positivos las separan. */
+  letter-spacing: .08em;
+  /* APRENDE: uppercase muestra mayúsculas; none muestra las palabras como se escribieron en HTML. */
+  text-transform: uppercase;
+}
+/* APRENDE: Afecta a .apoyo__beneficio. Busca class="apoyo__beneficio" o ese nombre junto a otras clases en el
+   HTML para localizar las piezas. */
+.apoyo__beneficio {
+  /* APRENDE: grid coloca en cuadrícula, flex en fila o columna, block ocupa una línea y none oculta la
+   pieza. */
+  display: flex;
+  /* APRENDE: Separación entre piezas; aumenta para alejarlas. Dos medidas indican separación entre filas y
+   columnas. */
+  gap: 12px;
+  /* APRENDE: Espacio exterior: cuatro medidas son arriba, derecha, abajo e izquierda; dos son vertical y
+   horizontal. auto puede centrar la caja. */
+  margin: auto 0 0;
+  /* APRENDE: Espacio interior entre borde y contenido: cuatro medidas son arriba, derecha, abajo e izquierda;
+   aumenta para dar más aire. */
+  padding: 14px 16px;
+  /* APRENDE: Redondea esquinas: aumenta para suavizarlas; 50% puede formar un círculo y 999px una
+   pastilla. */
+  border-radius: var(--radio);
+  /* APRENDE: Fondo: cambia el color o los tonos del degradado; transparent deja ver lo que hay debajo. */
+  background: var(--menta-100);
+  /* APRENDE: Color de letras o dibujos que usan currentColor; cambia el código # o la referencia var para
+   otro tono. */
+  color: var(--menta-700);
+  /* APRENDE: Tamaño de letras: aumenta la medida para agrandarlas. clamp(mínimo, flexible, máximo) limita
+   cuánto cambian con la pantalla. */
+  font-size: 15px;
+  /* APRENDE: Grosor de letras: 400 normal; 800 o 900 muy marcado. Reduce el número para aligerarlas. */
+  font-weight: 700;
+}
+/* APRENDE: Afecta a .apoyo__beneficio::before. Busca class="apoyo__beneficio" o ese nombre junto a otras
+   clases en el HTML para localizar las piezas. Dibuja una parte extra sin escribirla en HTML. */
+.apoyo__beneficio::before {
+  /* APRENDE: Agrega texto o decoración desde el diseño; comillas vacías crean un adorno. Cambia la frase o
+   símbolo entre comillas. */
+  content: "\2713";
+  /* APRENDE: Cuánto crece o se encoge la pieza; none mantiene su tamaño y 0 0 100% reserva una fila
+   completa. */
+  flex: none;
+  /* APRENDE: grid coloca en cuadrícula, flex en fila o columna, block ocupa una línea y none oculta la
+   pieza. */
+  display: grid;
+  /* APRENDE: Alinea en ambas direcciones; center centra el dibujo o número en su caja. */
+  place-items: center;
+  /* APRENDE: Medida de ancho; aumenta para agrandar. % depende del bloque que lo contiene; auto deja calcular
+   al navegador. */
+  width: 24px;
+  /* APRENDE: Medida de alto; aumenta para agrandar. % depende del bloque que lo contiene; auto deja calcular
+   al navegador. */
+  height: 24px;
+  /* APRENDE: Redondea esquinas: aumenta para suavizarlas; 50% puede formar un círculo y 999px una
+   pastilla. */
+  border-radius: 50%;
+  /* APRENDE: Fondo: cambia el color o los tonos del degradado; transparent deja ver lo que hay debajo. */
+  background: var(--menta-500);
+  /* APRENDE: Color de letras o dibujos que usan currentColor; cambia el código # o la referencia var para
+   otro tono. */
+  color: var(--blanco);
+  /* APRENDE: Tamaño de letras: aumenta la medida para agrandarlas. clamp(mínimo, flexible, máximo) limita
+   cuánto cambian con la pantalla. */
+  font-size: 13px;
+}
+/* APRENDE: Afecta a .apoyo--destacado. Busca class="apoyo--destacado" o ese nombre junto a otras clases en el
+   HTML para localizar las piezas. */
+.apoyo--destacado {
+  /* APRENDE: Fondo: cambia el color o los tonos del degradado; transparent deja ver lo que hay debajo. */
+  background: var(--ciruela-900);
+  /* APRENDE: Color del borde; cambia el código o referencia para destacarlo. */
+  border-color: transparent;
+  /* APRENDE: Color de letras o dibujos que usan currentColor; cambia el código # o la referencia var para
+   otro tono. */
+  color: var(--blanco);
+}
+/* APRENDE: Afecta a .apoyo--destacado h3. Busca class="apoyo--destacado" o ese nombre junto a otras clases en
+   el HTML para localizar las piezas. */
+.apoyo--destacado h3 {
+  /* APRENDE: Color de letras o dibujos que usan currentColor; cambia el código # o la referencia var para
+   otro tono. */
+  color: var(--blanco);
+}
+/* APRENDE: Afecta a .apoyo--destacado .apoyo__dato. Busca class="apoyo--destacado" o ese nombre junto a otras
+   clases en el HTML para localizar las piezas. */
+.apoyo--destacado .apoyo__dato {
+  /* APRENDE: Color de letras o dibujos que usan currentColor; cambia el código # o la referencia var para
+   otro tono. */
+  color: #D8CBE6;
+}
+/* APRENDE: Afecta a .apoyo--destacado .apoyo__dato b. Busca class="apoyo--destacado" o ese nombre junto a
+   otras clases en el HTML para localizar las piezas. */
+.apoyo--destacado .apoyo__dato b {
+  /* APRENDE: Color de letras o dibujos que usan currentColor; cambia el código # o la referencia var para
+   otro tono. */
+  color: var(--lavanda-300);
+}
+/* APRENDE: Afecta a .apoyo--destacado .icono. Busca class="apoyo--destacado" o ese nombre junto a otras
+   clases en el HTML para localizar las piezas. */
+.apoyo--destacado .icono {
+  /* APRENDE: Fondo: cambia el color o los tonos del degradado; transparent deja ver lo que hay debajo. */
+  background: rgba(255, 255, 255, .12);
+}
+/* APRENDE: Afecta a .apoyo--destacado .icono img. Busca class="apoyo--destacado" o ese nombre junto a otras
+   clases en el HTML para localizar las piezas. */
+.apoyo--destacado .icono img {
+  /* APRENDE: blur difumina, saturate intensifica colores y brightness(0) invert(1) vuelve blanco el icono;
+   ajusta los números. */
+  filter: brightness(0) invert(1);
+}
+
+/* ---------- 36. Fichas de las especialistas ---------- */
+/* APRENDE: Afecta a .fichas. Busca class="fichas" o ese nombre junto a otras clases en el HTML para localizar
+   las piezas. */
+.fichas {
+  /* APRENDE: grid coloca en cuadrícula, flex en fila o columna, block ocupa una línea y none oculta la
+   pieza. */
+  display: grid;
+  /* APRENDE: Separación entre piezas; aumenta para alejarlas. Dos medidas indican separación entre filas y
+   columnas. */
+  gap: 40px;
+}
+/* APRENDE: Afecta a .ficha. Busca class="ficha" o ese nombre junto a otras clases en el HTML para localizar
+   las piezas. */
+.ficha {
+  /* APRENDE: Degradado guardado para esta tarjeta: lo usan el marco, la franja y los detalles. Las variantes
+   menta y coral lo cambian por otro. */
+  --tono: var(--grad-marca);
+  /* APRENDE: Color liso que acompaña al degradado: pinta la especialidad y las pastillas al pasar el mouse.
+   Cambia la referencia var por otro color guardado. */
+  --color-tono: var(--violeta-600);
+  /* APRENDE: grid coloca en cuadrícula, flex en fila o columna, block ocupa una línea y none oculta la
+   pieza. */
+  display: grid;
+  /* APRENDE: Anchos de columnas: 1fr 1fr crea dos iguales; repeat(3, 1fr) tres. auto-fit acomoda las que
+   caben y minmax limita sus tamaños. */
+  grid-template-columns: 280px 1fr;
+  /* APRENDE: Separación entre piezas; aumenta para alejarlas. Dos medidas indican separación entre filas y
+   columnas. */
+  gap: clamp(26px, 4vw, 52px);
+  /* APRENDE: Alinea las piezas: center centra; start o flex-start las lleva al inicio; stretch las estira. */
+  align-items: start;
+  /* APRENDE: Espacio interior entre borde y contenido: cuatro medidas son arriba, derecha, abajo e izquierda;
+   aumenta para dar más aire. */
+  padding: clamp(24px, 4vw, 44px);
+  /* APRENDE: Redondea esquinas: aumenta para suavizarlas; 50% puede formar un círculo y 999px una
+   pastilla. */
+  border-radius: var(--radio-xl);
+  /* APRENDE: Fondo: cambia el color o los tonos del degradado; transparent deja ver lo que hay debajo. */
+  background: var(--blanco);
+  /* APRENDE: Borde: grosor, tipo de línea y color; aumenta el primer número para engrosarlo o usa 0 para
+   quitarlo. */
+  border: 1px solid var(--linea);
+  /* APRENDE: Sombra: cada grupo indica desplazamiento horizontal, vertical, difuminado, tamaño y color;
+   aumenta el difuminado para suavizarla. */
+  box-shadow: var(--sombra-s);
+  /* APRENDE: Espacio que se deja arriba al llegar con un enlace #; evita que la cabecera tape el inicio de la
+   tarjeta. */
+  scroll-margin-top: 110px;
+  /* APRENDE: Suaviza cambios de apariencia; las duraciones en segundos controlan cuánto tarda. .6s tarda el
+   doble que .3s. */
+  transition: box-shadow .6s;
+}
+/* APRENDE: Afecta a .ficha--menta. Busca class="ficha--menta" o ese nombre junto a otras clases en el HTML
+   para localizar las piezas. */
+.ficha--menta {
+  /* APRENDE: Degradado guardado para esta tarjeta: lo usan el marco, la franja y los detalles. Las variantes
+   menta y coral lo cambian por otro. */
+  --tono: var(--grad-menta);
+  /* APRENDE: Color liso que acompaña al degradado: pinta la especialidad y las pastillas al pasar el mouse.
+   Cambia la referencia var por otro color guardado. */
+  --color-tono: var(--menta-700);
+}
+/* APRENDE: Afecta a .ficha--coral. Busca class="ficha--coral" o ese nombre junto a otras clases en el HTML
+   para localizar las piezas. */
+.ficha--coral {
+  /* APRENDE: Degradado guardado para esta tarjeta: lo usan el marco, la franja y los detalles. Las variantes
+   menta y coral lo cambian por otro. */
+  --tono: var(--grad-coral);
+  /* APRENDE: Color liso que acompaña al degradado: pinta la especialidad y las pastillas al pasar el mouse.
+   Cambia la referencia var por otro color guardado. */
+  --color-tono: var(--coral-700);
+}
+/* APRENDE: Afecta a .ficha:hover. Busca class="ficha" o ese nombre junto a otras clases en el HTML para
+   localizar las piezas. Se activa al pasar el mouse. */
+.ficha:hover {
+  /* APRENDE: Sombra: cada grupo indica desplazamiento horizontal, vertical, difuminado, tamaño y color;
+   aumenta el difuminado para suavizarla. */
+  box-shadow: var(--sombra-m);
+}
+/* APRENDE: Afecta a .ficha:target. Busca class="ficha" o ese nombre junto a otras clases en el HTML para
+   localizar las piezas. Se activa cuando un enlace con # lleva directo a esta pieza. */
+.ficha:target {
+  /* APRENDE: Sombra: cada grupo indica desplazamiento horizontal, vertical, difuminado, tamaño y color;
+   aumenta el difuminado para suavizarla. */
+  box-shadow: 0 0 0 3px var(--color-tono), var(--sombra-m);
+  /* APRENDE: Movimiento: nombre, duración (s), posibles retraso, ritmo y repeticiones; aumenta los segundos
+   para ralentizar e infinite para repetir. */
+  animation: fichaLlamar 1s var(--rebote);
+}
+/* APRENDE: Afecta a .ficha__foto. Busca class="ficha__foto" o ese nombre junto a otras clases en el HTML para
+   localizar las piezas. */
+.ficha__foto {
+  /* APRENDE: relative permite ubicar piezas dentro; absolute las superpone en su referencia; fixed las fija a
+   la pantalla; sticky las mantiene al bajar. */
+  position: sticky;
+  /* APRENDE: Distancia desde el borde superior de su referencia; ajusta para mover la pieza. Un valor
+   negativo puede sacarla fuera. */
+  top: 110px;
+  /* APRENDE: isolate mantiene juntas las capas de este bloque; conserva el fondo detrás sin perderlo bajo
+   otras secciones. */
+  isolation: isolate;
+}
+/* APRENDE: Afecta a .ficha__foto::before. Busca class="ficha__foto" o ese nombre junto a otras clases en el
+   HTML para localizar las piezas. Dibuja una parte extra sin escribirla en HTML. */
+.ficha__foto::before {
+  /* APRENDE: Agrega texto o decoración desde el diseño; comillas vacías crean un adorno. Cambia la frase o
+   símbolo entre comillas. */
+  content: "";
+  /* APRENDE: relative permite ubicar piezas dentro; absolute las superpone en su referencia; fixed las fija a
+   la pantalla; sticky las mantiene al bajar. */
+  position: absolute;
+  /* APRENDE: Distancias a los bordes: una medida sirve para todos; cuatro siguen arriba, derecha, abajo e
+   izquierda. 0 cubre toda la referencia. */
+  inset: 16px -14px -14px 16px;
+  /* APRENDE: Orden de capas: un número mayor queda delante; los negativos colocan fondos detrás del
+   contenido. */
+  z-index: -1;
+  /* APRENDE: Redondea esquinas: aumenta para suavizarlas; 50% puede formar un círculo y 999px una
+   pastilla. */
+  border-radius: var(--radio-l);
+  /* APRENDE: Fondo: cambia el color o los tonos del degradado; transparent deja ver lo que hay debajo. */
+  background: var(--tono);
+  /* APRENDE: Suaviza cambios de apariencia; las duraciones en segundos controlan cuánto tarda. .6s tarda el
+   doble que .3s. */
+  transition: transform .7s var(--rebote);
+}
+/* APRENDE: Afecta a .ficha:hover .ficha__foto::before. Busca class="ficha" o ese nombre junto a otras clases
+   en el HTML para localizar las piezas. Se activa al pasar el mouse. Dibuja una parte extra sin escribirla en
+   HTML. */
+.ficha:hover .ficha__foto::before {
+  /* APRENDE: translateX/Y desplaza, rotate gira y scale cambia tamaño visualmente; prueba cambios
+   pequeños. */
+  transform: translate(6px, 6px) rotate(2deg);
+}
+/* APRENDE: Afecta a .ficha__foto img. Busca class="ficha__foto" o ese nombre junto a otras clases en el HTML
+   para localizar las piezas. */
+.ficha__foto img {
+  /* APRENDE: Medida de ancho; aumenta para agrandar. % depende del bloque que lo contiene; auto deja calcular
+   al navegador. */
+  width: 100%;
+  /* APRENDE: Proporción ancho / alto: 16 / 9 horizontal, 9 / 16 vertical y 1 cuadrada; cambia para otro
+   formato. */
+  aspect-ratio: 1;
+  /* APRENDE: Redondea esquinas: aumenta para suavizarlas; 50% puede formar un círculo y 999px una
+   pastilla. */
+  border-radius: var(--radio-l);
+  /* APRENDE: Borde: grosor, tipo de línea y color; aumenta el primer número para engrosarlo o usa 0 para
+   quitarlo. */
+  border: 5px solid var(--blanco);
+  /* APRENDE: cover llena el marco recortando la foto; contain la muestra entera y puede dejar espacios
+   alrededor. */
+  object-fit: cover;
+  /* APRENDE: Parte de la foto que se conserva: porcentaje horizontal y vertical; cambia --foco en HTML para
+   ajustar solo una foto. */
+  object-position: 50% 20%;
+  /* APRENDE: Sombra: cada grupo indica desplazamiento horizontal, vertical, difuminado, tamaño y color;
+   aumenta el difuminado para suavizarla. */
+  box-shadow: var(--sombra-m);
+}
+/* APRENDE: Afecta a .ficha h3. Busca class="ficha" o ese nombre junto a otras clases en el HTML para
+   localizar las piezas. */
+.ficha h3 {
+  /* APRENDE: Espacio por fuera en el lado inferior; aumenta para separar más, 0 quita ese espacio. */
+  margin-bottom: 6px;
+  /* APRENDE: Tamaño de letras: aumenta la medida para agrandarlas. clamp(mínimo, flexible, máximo) limita
+   cuánto cambian con la pantalla. */
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+}
+/* APRENDE: Afecta a .ficha__cargo. Busca class="ficha__cargo" o ese nombre junto a otras clases en el HTML
+   para localizar las piezas. */
+.ficha__cargo {
+  /* APRENDE: Espacio por fuera en el lado inferior; aumenta para separar más, 0 quita ese espacio. */
+  margin-bottom: 14px;
+  /* APRENDE: Tamaño de letras: aumenta la medida para agrandarlas. clamp(mínimo, flexible, máximo) limita
+   cuánto cambian con la pantalla. */
+  font-size: 1.1rem;
+  /* APRENDE: Grosor de letras: 400 normal; 800 o 900 muy marcado. Reduce el número para aligerarlas. */
+  font-weight: 800;
+  /* APRENDE: Color de letras o dibujos que usan currentColor; cambia el código # o la referencia var para
+   otro tono. */
+  color: var(--color-tono);
+}
+/* APRENDE: Afecta a .ficha__bio. Busca class="ficha__bio" o ese nombre junto a otras clases en el HTML para
+   localizar las piezas. */
+.ficha__bio {
+  /* APRENDE: Color de letras o dibujos que usan currentColor; cambia el código # o la referencia var para
+   otro tono. */
+  color: var(--tinta-suave);
+}
+/* APRENDE: Afecta a .ficha h4. Busca class="ficha" o ese nombre junto a otras clases en el HTML para
+   localizar las piezas. */
+.ficha h4 {
+  /* APRENDE: grid coloca en cuadrícula, flex en fila o columna, block ocupa una línea y none oculta la
+   pieza. */
+  display: flex;
+  /* APRENDE: Alinea las piezas: center centra; start o flex-start las lleva al inicio; stretch las estira. */
+  align-items: center;
+  /* APRENDE: Separación entre piezas; aumenta para alejarlas. Dos medidas indican separación entre filas y
+   columnas. */
+  gap: 10px;
+  /* APRENDE: Espacio exterior: cuatro medidas son arriba, derecha, abajo e izquierda; dos son vertical y
+   horizontal. auto puede centrar la caja. */
+  margin: 26px 0 14px;
+  /* APRENDE: Tamaño de letras: aumenta la medida para agrandarlas. clamp(mínimo, flexible, máximo) limita
+   cuánto cambian con la pantalla. */
+  font-size: 1.05rem;
+  /* APRENDE: Color de letras o dibujos que usan currentColor; cambia el código # o la referencia var para
+   otro tono. */
+  color: var(--ciruela-900);
+}
+/* APRENDE: Afecta a .ficha h4::before. Busca class="ficha" o ese nombre junto a otras clases en el HTML para
+   localizar las piezas. Dibuja una parte extra sin escribirla en HTML. */
+.ficha h4::before {
+  /* APRENDE: Agrega texto o decoración desde el diseño; comillas vacías crean un adorno. Cambia la frase o
+   símbolo entre comillas. */
+  content: "";
+  /* APRENDE: Medida de ancho; aumenta para agrandar. % depende del bloque que lo contiene; auto deja calcular
+   al navegador. */
+  width: 28px;
+  /* APRENDE: Medida de alto; aumenta para agrandar. % depende del bloque que lo contiene; auto deja calcular
+   al navegador. */
+  height: 3px;
+  /* APRENDE: Redondea esquinas: aumenta para suavizarlas; 50% puede formar un círculo y 999px una
+   pastilla. */
+  border-radius: 3px;
+  /* APRENDE: Fondo: cambia el color o los tonos del degradado; transparent deja ver lo que hay debajo. */
+  background: var(--tono);
+}
+/* APRENDE: Afecta a .atiende. Busca class="atiende" o ese nombre junto a otras clases en el HTML para
+   localizar las piezas. */
+.atiende {
+  /* APRENDE: grid coloca en cuadrícula, flex en fila o columna, block ocupa una línea y none oculta la
+   pieza. */
+  display: flex;
+  /* APRENDE: wrap permite pasar a otra fila si no caben; nowrap intenta mantener una sola fila. */
+  flex-wrap: wrap;
+  /* APRENDE: Separación entre piezas; aumenta para alejarlas. Dos medidas indican separación entre filas y
+   columnas. */
+  gap: 8px;
+  /* APRENDE: Espacio exterior: cuatro medidas son arriba, derecha, abajo e izquierda; dos son vertical y
+   horizontal. auto puede centrar la caja. */
+  margin: 0;
+  /* APRENDE: Espacio interior entre borde y contenido: cuatro medidas son arriba, derecha, abajo e izquierda;
+   aumenta para dar más aire. */
+  padding: 0;
+  /* APRENDE: none quita puntos de lista o el indicador normal del desplegable; el diseño usa su propia
+   decoración. */
+  list-style: none;
+}
+/* APRENDE: Afecta a .atiende li. Busca class="atiende" o ese nombre junto a otras clases en el HTML para
+   localizar las piezas. */
+.atiende li {
+  /* APRENDE: Espacio interior entre borde y contenido: cuatro medidas son arriba, derecha, abajo e izquierda;
+   aumenta para dar más aire. */
+  padding: 8px 14px;
+  /* APRENDE: Redondea esquinas: aumenta para suavizarlas; 50% puede formar un círculo y 999px una
+   pastilla. */
+  border-radius: 999px;
+  /* APRENDE: Fondo: cambia el color o los tonos del degradado; transparent deja ver lo que hay debajo. */
+  background: var(--lavanda-50);
+  /* APRENDE: Borde: grosor, tipo de línea y color; aumenta el primer número para engrosarlo o usa 0 para
+   quitarlo. */
+  border: 1px solid var(--lavanda-200);
+  /* APRENDE: Color de letras o dibujos que usan currentColor; cambia el código # o la referencia var para
+   otro tono. */
+  color: var(--ciruela-800);
+  /* APRENDE: Tamaño de letras: aumenta la medida para agrandarlas. clamp(mínimo, flexible, máximo) limita
+   cuánto cambian con la pantalla. */
+  font-size: 14.5px;
+  /* APRENDE: Grosor de letras: 400 normal; 800 o 900 muy marcado. Reduce el número para aligerarlas. */
+  font-weight: 700;
+  /* APRENDE: Separación de renglones: aumenta el valor para dar más espacio; 1.65 es 1.65 veces el tamaño de
+   letra. */
+  line-height: 1.3;
+  /* APRENDE: Suaviza cambios de apariencia; las duraciones en segundos controlan cuánto tarda. .6s tarda el
+   doble que .3s. */
+  transition: background .3s, color .3s, border-color .3s, transform .4s var(--rebote);
+}
+/* APRENDE: Afecta a .atiende li:hover. Busca class="atiende" o ese nombre junto a otras clases en el HTML
+   para localizar las piezas. Se activa al pasar el mouse. */
+.atiende li:hover {
+  /* APRENDE: Fondo: cambia el color o los tonos del degradado; transparent deja ver lo que hay debajo. */
+  background: var(--color-tono);
+  /* APRENDE: Color del borde; cambia el código o referencia para destacarlo. */
+  border-color: var(--color-tono);
+  /* APRENDE: Color de letras o dibujos que usan currentColor; cambia el código # o la referencia var para
+   otro tono. */
+  color: var(--blanco);
+  /* APRENDE: translateX/Y desplaza, rotate gira y scale cambia tamaño visualmente; prueba cambios
+   pequeños. */
+  transform: translateY(-3px);
+}
+/* APRENDE: Afecta a .ficha details. Busca class="ficha" o ese nombre junto a otras clases en el HTML para
+   localizar las piezas. */
+.ficha details {
+  /* APRENDE: Espacio por fuera en el lado superior; aumenta para separar más, 0 quita ese espacio. */
+  margin-top: 24px;
+}
+/* APRENDE: Afecta a .formacion. Busca class="formacion" o ese nombre junto a otras clases en el HTML para
+   localizar las piezas. */
+.formacion {
+  /* APRENDE: grid coloca en cuadrícula, flex en fila o columna, block ocupa una línea y none oculta la
+   pieza. */
+  display: grid;
+  /* APRENDE: Separación entre piezas; aumenta para alejarlas. Dos medidas indican separación entre filas y
+   columnas. */
+  gap: 10px;
+  /* APRENDE: none quita puntos de lista o el indicador normal del desplegable; el diseño usa su propia
+   decoración. */
+  list-style: none;
+}
+/* APRENDE: Afecta a .formacion li. Busca class="formacion" o ese nombre junto a otras clases en el HTML para
+   localizar las piezas. */
+.formacion li {
+  /* APRENDE: relative permite ubicar piezas dentro; absolute las superpone en su referencia; fixed las fija a
+   la pantalla; sticky las mantiene al bajar. */
+  position: relative;
+  /* APRENDE: Espacio por dentro en el lado izquierdo; aumenta para separar más, 0 quita ese espacio. */
+  padding-left: 24px;
+}
+/* APRENDE: Afecta a .formacion li::before. Busca class="formacion" o ese nombre junto a otras clases en el
+   HTML para localizar las piezas. Dibuja una parte extra sin escribirla en HTML. */
+.formacion li::before {
+  /* APRENDE: Agrega texto o decoración desde el diseño; comillas vacías crean un adorno. Cambia la frase o
+   símbolo entre comillas. */
+  content: "";
+  /* APRENDE: relative permite ubicar piezas dentro; absolute las superpone en su referencia; fixed las fija a
+   la pantalla; sticky las mantiene al bajar. */
+  position: absolute;
+  /* APRENDE: Distancia desde el borde izquierdo de su referencia; ajusta para mover la pieza. Un valor
+   negativo puede sacarla fuera. */
+  left: 0;
+  /* APRENDE: Distancia desde el borde superior de su referencia; ajusta para mover la pieza. Un valor
+   negativo puede sacarla fuera. */
+  top: .55em;
+  /* APRENDE: Medida de ancho; aumenta para agrandar. % depende del bloque que lo contiene; auto deja calcular
+   al navegador. */
+  width: 10px;
+  /* APRENDE: Medida de alto; aumenta para agrandar. % depende del bloque que lo contiene; auto deja calcular
+   al navegador. */
+  height: 10px;
+  /* APRENDE: Redondea esquinas: aumenta para suavizarlas; 50% puede formar un círculo y 999px una
+   pastilla. */
+  border-radius: 50%;
+  /* APRENDE: Fondo: cambia el color o los tonos del degradado; transparent deja ver lo que hay debajo. */
+  background: var(--tono);
+}
+/* APRENDE: Afecta a .ficha .acciones. Busca class="ficha" o ese nombre junto a otras clases en el HTML para
+   localizar las piezas. */
+.ficha .acciones {
+  /* APRENDE: Espacio por fuera en el lado superior; aumenta para separar más, 0 quita ese espacio. */
+  margin-top: 26px;
+}
+/* APRENDE: Afecta a .equipo-real. Busca class="equipo-real" o ese nombre junto a otras clases en el HTML para
+   localizar las piezas. */
+.equipo-real {
+  /* APRENDE: Límite máximo de ancho; aumenta para agrandar. % depende del bloque que lo contiene; auto deja
+   calcular al navegador. */
+  max-width: 1000px;
+  /* APRENDE: Espacio exterior: cuatro medidas son arriba, derecha, abajo e izquierda; dos son vertical y
+   horizontal. auto puede centrar la caja. */
+  margin: 0 auto;
+}
+/* APRENDE: Afecta a .equipo-real .perfil. Busca class="equipo-real" o ese nombre junto a otras clases en el
+   HTML para localizar las piezas. */
+.equipo-real .perfil {
+  /* APRENDE: Medida mínima de alto; aumenta para agrandar. % depende del bloque que lo contiene; auto deja
+   calcular al navegador. */
+  min-height: 430px;
+}
+/* APRENDE: Pasos del movimiento fichaLlamar: from o 0% es el inicio; to o 100% el final. Cambia
+   desplazamientos y giros dentro para otra trayectoria. */
+@keyframes fichaLlamar {
+  /* APRENDE: Momento del movimiento: 50%. Ajusta los valores de este paso para cambiar cómo empieza, termina
+   o pasa por aquí. */
+  50% {
+    /* APRENDE: translateX/Y desplaza, rotate gira y scale cambia tamaño visualmente; prueba cambios
+   pequeños. */
+    transform: scale(1.015);
+  }
+}
+
+/* ---------- 37. Lazos oncologicos ----------
+   Cada tarjeta guarda su color en "lazo" con dos guiones delante: el
+   dibujo, la etiqueta y el fondo suave lo toman de ahi. */
+/* APRENDE: Afecta a .paleta. Busca class="paleta" o ese nombre junto a otras clases en el HTML para localizar
+   las piezas. */
+.paleta {
+  /* APRENDE: grid coloca en cuadrícula, flex en fila o columna, block ocupa una línea y none oculta la
+   pieza. */
+  display: flex;
+  /* APRENDE: wrap permite pasar a otra fila si no caben; nowrap intenta mantener una sola fila. */
+  flex-wrap: wrap;
+  /* APRENDE: Distribuye las piezas: center centra, space-between separa extremos y flex-end lleva al final de
+   la fila o columna. */
+  justify-content: center;
+  /* APRENDE: Separación entre piezas; aumenta para alejarlas. Dos medidas indican separación entre filas y
+   columnas. */
+  gap: 10px;
+  /* APRENDE: Límite máximo de ancho; aumenta para agrandar. % depende del bloque que lo contiene; auto deja
+   calcular al navegador. */
+  max-width: 980px;
+  /* APRENDE: Espacio exterior: cuatro medidas son arriba, derecha, abajo e izquierda; dos son vertical y
+   horizontal. auto puede centrar la caja. */
+  margin: 0 auto 50px;
+}
+/* APRENDE: Afecta a .paleta__color. Busca class="paleta__color" o ese nombre junto a otras clases en el HTML
+   para localizar las piezas. */
+.paleta__color {
+  /* APRENDE: grid coloca en cuadrícula, flex en fila o columna, block ocupa una línea y none oculta la
+   pieza. */
+  display: inline-flex;
+  /* APRENDE: Alinea las piezas: center centra; start o flex-start las lleva al inicio; stretch las estira. */
+  align-items: center;
+  /* APRENDE: Separación entre piezas; aumenta para alejarlas. Dos medidas indican separación entre filas y
+   columnas. */
+  gap: 8px;
+  /* APRENDE: Espacio interior entre borde y contenido: cuatro medidas son arriba, derecha, abajo e izquierda;
+   aumenta para dar más aire. */
+  padding: 7px 14px 7px 8px;
+  /* APRENDE: Redondea esquinas: aumenta para suavizarlas; 50% puede formar un círculo y 999px una
+   pastilla. */
+  border-radius: 999px;
+  /* APRENDE: Fondo: cambia el color o los tonos del degradado; transparent deja ver lo que hay debajo. */
+  background: var(--blanco);
+  /* APRENDE: Borde: grosor, tipo de línea y color; aumenta el primer número para engrosarlo o usa 0 para
+   quitarlo. */
+  border: 1px solid var(--linea);
+  /* APRENDE: Color de letras o dibujos que usan currentColor; cambia el código # o la referencia var para
+   otro tono. */
+  color: var(--ciruela-800);
+  /* APRENDE: Tamaño de letras: aumenta la medida para agrandarlas. clamp(mínimo, flexible, máximo) limita
+   cuánto cambian con la pantalla. */
+  font-size: 14px;
+  /* APRENDE: Grosor de letras: 400 normal; 800 o 900 muy marcado. Reduce el número para aligerarlas. */
+  font-weight: 800;
+  /* APRENDE: none quita el subrayado y underline lo agrega; cambia para ajustar los enlaces. */
+  text-decoration: none;
+  /* APRENDE: Sombra: cada grupo indica desplazamiento horizontal, vertical, difuminado, tamaño y color;
+   aumenta el difuminado para suavizarla. */
+  box-shadow: var(--sombra-s);
+  /* APRENDE: Suaviza cambios de apariencia; las duraciones en segundos controlan cuánto tarda. .6s tarda el
+   doble que .3s. */
+  transition: transform .4s var(--rebote), border-color .3s, box-shadow .3s;
+}
+/* APRENDE: Afecta a .paleta__color::before. Busca class="paleta__color" o ese nombre junto a otras clases en
+   el HTML para localizar las piezas. Dibuja una parte extra sin escribirla en HTML. */
+.paleta__color::before {
+  /* APRENDE: Agrega texto o decoración desde el diseño; comillas vacías crean un adorno. Cambia la frase o
+   símbolo entre comillas. */
+  content: "";
+  /* APRENDE: Medida de ancho; aumenta para agrandar. % depende del bloque que lo contiene; auto deja calcular
+   al navegador. */
+  width: 18px;
+  /* APRENDE: Medida de alto; aumenta para agrandar. % depende del bloque que lo contiene; auto deja calcular
+   al navegador. */
+  height: 18px;
+  /* APRENDE: Redondea esquinas: aumenta para suavizarlas; 50% puede formar un círculo y 999px una
+   pastilla. */
+  border-radius: 50%;
+  /* APRENDE: Fondo: cambia el color o los tonos del degradado; transparent deja ver lo que hay debajo. */
+  background: var(--lazo);
+  /* APRENDE: Sombra: cada grupo indica desplazamiento horizontal, vertical, difuminado, tamaño y color;
+   aumenta el difuminado para suavizarla. */
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .15);
+}
+/* APRENDE: Afecta a .paleta__color:hover. Busca class="paleta__color" o ese nombre junto a otras clases en el
+   HTML para localizar las piezas. Se activa al pasar el mouse. */
+.paleta__color:hover {
+  /* APRENDE: translateX/Y desplaza, rotate gira y scale cambia tamaño visualmente; prueba cambios
+   pequeños. */
+  transform: translateY(-3px);
+  /* APRENDE: Color del borde; cambia el código o referencia para destacarlo. */
+  border-color: var(--lazo);
+  /* APRENDE: Sombra: cada grupo indica desplazamiento horizontal, vertical, difuminado, tamaño y color;
+   aumenta el difuminado para suavizarla. */
+  box-shadow: var(--sombra-m);
+}
+/* APRENDE: Afecta a .lazos. Busca class="lazos" o ese nombre junto a otras clases en el HTML para localizar
+   las piezas. */
+.lazos {
+  /* APRENDE: grid coloca en cuadrícula, flex en fila o columna, block ocupa una línea y none oculta la
+   pieza. */
+  display: grid;
+  /* APRENDE: Anchos de columnas: 1fr 1fr crea dos iguales; repeat(3, 1fr) tres. auto-fit acomoda las que
+   caben y minmax limita sus tamaños. */
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 330px), 1fr));
+  /* APRENDE: Separación entre piezas; aumenta para alejarlas. Dos medidas indican separación entre filas y
+   columnas. */
+  gap: 20px;
+}
+/* APRENDE: Afecta a .lazo. Busca class="lazo" o ese nombre junto a otras clases en el HTML para localizar las
+   piezas. */
+.lazo {
+  /* APRENDE: grid coloca en cuadrícula, flex en fila o columna, block ocupa una línea y none oculta la
+   pieza. */
+  display: grid;
+  /* APRENDE: Anchos de columnas: 1fr 1fr crea dos iguales; repeat(3, 1fr) tres. auto-fit acomoda las que
+   caben y minmax limita sus tamaños. */
+  grid-template-columns: 88px 1fr;
+  /* APRENDE: Separación entre piezas; aumenta para alejarlas. Dos medidas indican separación entre filas y
+   columnas. */
+  gap: 16px;
+  /* APRENDE: Alinea las piezas: center centra; start o flex-start las lleva al inicio; stretch las estira. */
+  align-items: start;
+  /* APRENDE: Espacio interior entre borde y contenido: cuatro medidas son arriba, derecha, abajo e izquierda;
+   aumenta para dar más aire. */
+  padding: 26px 24px 26px 16px;
+  /* APRENDE: Redondea esquinas: aumenta para suavizarlas; 50% puede formar un círculo y 999px una
+   pastilla. */
+  border-radius: var(--radio-l);
+  /* APRENDE: Fondo: cambia el color o los tonos del degradado; transparent deja ver lo que hay debajo.
+   color-mix mezcla el color del lazo con otro: sube el porcentaje para un tono más intenso. */
+  background: color-mix(in srgb, var(--lazo) 11%, var(--blanco));
+  /* APRENDE: Borde: grosor, tipo de línea y color; aumenta el primer número para engrosarlo o usa 0 para
+   quitarlo. color-mix mezcla el color del lazo con otro: sube el porcentaje para un tono más intenso. */
+  border: 1px solid color-mix(in srgb, var(--lazo) 30%, transparent);
+  /* APRENDE: Espacio que se deja arriba al llegar con un enlace #; evita que la cabecera tape el inicio de la
+   tarjeta. */
+  scroll-margin-top: 120px;
+  /* APRENDE: Suaviza cambios de apariencia; las duraciones en segundos controlan cuánto tarda. .6s tarda el
+   doble que .3s. */
+  transition: transform .6s var(--rebote), box-shadow .6s, background .4s;
+}
+/* APRENDE: Afecta a .lazo:hover. Busca class="lazo" o ese nombre junto a otras clases en el HTML para
+   localizar las piezas. Se activa al pasar el mouse. */
+.lazo:hover {
+  /* APRENDE: translateX/Y desplaza, rotate gira y scale cambia tamaño visualmente; prueba cambios
+   pequeños. */
+  transform: translateY(-8px);
+  /* APRENDE: Fondo: cambia el color o los tonos del degradado; transparent deja ver lo que hay debajo.
+   color-mix mezcla el color del lazo con otro: sube el porcentaje para un tono más intenso. */
+  background: color-mix(in srgb, var(--lazo) 18%, var(--blanco));
+  /* APRENDE: Sombra: cada grupo indica desplazamiento horizontal, vertical, difuminado, tamaño y color;
+   aumenta el difuminado para suavizarla. color-mix mezcla el color del lazo con otro: sube el porcentaje para
+   un tono más intenso. */
+  box-shadow: 0 22px 44px -22px color-mix(in srgb, var(--lazo) 75%, #000000);
+}
+/* APRENDE: Afecta a .lazo:target. Busca class="lazo" o ese nombre junto a otras clases en el HTML para
+   localizar las piezas. Se activa cuando un enlace con # lleva directo a esta pieza. */
+.lazo:target {
+  /* APRENDE: Sombra: cada grupo indica desplazamiento horizontal, vertical, difuminado, tamaño y color;
+   aumenta el difuminado para suavizarla. */
+  box-shadow: 0 0 0 3px var(--lazo), var(--sombra-m);
+  /* APRENDE: Movimiento: nombre, duración (s), posibles retraso, ritmo y repeticiones; aumenta los segundos
+   para ralentizar e infinite para repetir. */
+  animation: fichaLlamar 1s var(--rebote) 2;
+}
+/* APRENDE: Afecta a .lazo__dibujo, .sello-lazo. Busca class="lazo__dibujo" o ese nombre junto a otras clases
+   en el HTML para localizar las piezas. */
+.lazo__dibujo,
+.sello-lazo {
+  /* APRENDE: hidden recorta lo que sobresale; auto permite desplazarlo si no cabe; clip recorta sin crear un
+   área desplazable. */
+  overflow: visible;
+  /* APRENDE: blur difumina, saturate intensifica colores y brightness(0) invert(1) vuelve blanco el icono;
+   ajusta los números. color-mix mezcla el color del lazo con otro: sube el porcentaje para un tono más
+   intenso. */
+  filter: drop-shadow(0 8px 10px color-mix(in srgb, var(--lazo) 45%, transparent)) drop-shadow(0 1px 1px rgba(0, 0, 0, .2));
+  /* APRENDE: Punto de giro o crecimiento: center usa el centro y los porcentajes permiten moverlo. */
+  transform-origin: 50% 12%;
+}
+/* APRENDE: Afecta a .lazo__dibujo. Busca class="lazo__dibujo" o ese nombre junto a otras clases en el HTML
+   para localizar las piezas. */
+.lazo__dibujo {
+  /* APRENDE: Medida de ancho; aumenta para agrandar. % depende del bloque que lo contiene; auto deja calcular
+   al navegador. */
+  width: 88px;
+  /* APRENDE: Medida de alto; aumenta para agrandar. % depende del bloque que lo contiene; auto deja calcular
+   al navegador. */
+  height: auto;
+}
+/* APRENDE: Afecta a .lazo:hover .lazo__dibujo. Busca class="lazo" o ese nombre junto a otras clases en el
+   HTML para localizar las piezas. Se activa al pasar el mouse. */
+.lazo:hover .lazo__dibujo {
+  /* APRENDE: Movimiento: nombre, duración (s), posibles retraso, ritmo y repeticiones; aumenta los segundos
+   para ralentizar e infinite para repetir. */
+  animation: lazoMecer 1.6s ease-in-out infinite;
+}
+/* APRENDE: Afecta a .lazo__dibujo path, .sello-lazo path. Busca class="lazo__dibujo" o ese nombre junto a
+   otras clases en el HTML para localizar las piezas. */
+.lazo__dibujo path,
+.sello-lazo path {
+  /* APRENDE: Color interior del dibujo; currentColor usa el color de su bloque. */
+  fill: none;
+  /* APRENDE: Grosor de la línea del dibujo: aumenta el número para una cinta más ancha. */
+  stroke-width: 15;
+  /* APRENDE: Forma de las uniones de la línea: round las redondea y miter las deja en punta. */
+  stroke-linejoin: round;
+}
+/* APRENDE: Afecta a .lazo__atras. Busca class="lazo__atras" o ese nombre junto a otras clases en el HTML para
+   localizar las piezas. */
+.lazo__atras {
+  /* APRENDE: Color de la línea del dibujo; cambia el código o la referencia var para otro tono. color-mix
+   mezcla el color del lazo con otro: sube el porcentaje para un tono más intenso. */
+  stroke: color-mix(in srgb, var(--lazo) 72%, #000000);
+}
+/* APRENDE: Afecta a .lazo__frente. Busca class="lazo__frente" o ese nombre junto a otras clases en el HTML
+   para localizar las piezas. */
+.lazo__frente {
+  /* APRENDE: Color de la línea del dibujo; cambia el código o la referencia var para otro tono. */
+  stroke: var(--lazo);
+}
+/* APRENDE: Afecta a .lazo__dibujo .lazo__brillo, .sello-lazo .lazo__brillo. Busca class="lazo__dibujo" o ese
+   nombre junto a otras clases en el HTML para localizar las piezas. */
+.lazo__dibujo .lazo__brillo,
+.sello-lazo .lazo__brillo {
+  /* APRENDE: Color de la línea del dibujo; cambia el código o la referencia var para otro tono. */
+  stroke: rgba(255, 255, 255, .5);
+  /* APRENDE: Grosor de la línea del dibujo: aumenta el número para una cinta más ancha. */
+  stroke-width: 3;
+  /* APRENDE: Forma de los extremos de la línea: round los redondea y butt los corta rectos. */
+  stroke-linecap: round;
+}
+/* APRENDE: Afecta a .lazo__color. Busca class="lazo__color" o ese nombre junto a otras clases en el HTML para
+   localizar las piezas. */
+.lazo__color {
+  /* APRENDE: grid coloca en cuadrícula, flex en fila o columna, block ocupa una línea y none oculta la
+   pieza. */
+  display: inline-flex;
+  /* APRENDE: Espacio por fuera en el lado inferior; aumenta para separar más, 0 quita ese espacio. */
+  margin-bottom: 10px;
+  /* APRENDE: Espacio interior entre borde y contenido: cuatro medidas son arriba, derecha, abajo e izquierda;
+   aumenta para dar más aire. */
+  padding: 5px 14px;
+  /* APRENDE: Redondea esquinas: aumenta para suavizarlas; 50% puede formar un círculo y 999px una
+   pastilla. */
+  border-radius: 999px;
+  /* APRENDE: Fondo: cambia el color o los tonos del degradado; transparent deja ver lo que hay debajo. */
+  background: var(--lazo);
+  /* APRENDE: Color de letras o dibujos que usan currentColor; cambia el código # o la referencia var para
+   otro tono. */
+  color: var(--lazo-texto, var(--blanco));
+  /* APRENDE: Tamaño de letras: aumenta la medida para agrandarlas. clamp(mínimo, flexible, máximo) limita
+   cuánto cambian con la pantalla. */
+  font-size: 15px;
+  /* APRENDE: Grosor de letras: 400 normal; 800 o 900 muy marcado. Reduce el número para aligerarlas. */
+  font-weight: 900;
+  /* APRENDE: Sombra: cada grupo indica desplazamiento horizontal, vertical, difuminado, tamaño y color;
+   aumenta el difuminado para suavizarla. */
+  box-shadow: 0 8px 16px -10px var(--lazo);
+}
+/* APRENDE: Afecta a .lazo h3. Busca class="lazo" o ese nombre junto a otras clases en el HTML para localizar
+   las piezas. */
+.lazo h3 {
+  /* APRENDE: Espacio por fuera en el lado inferior; aumenta para separar más, 0 quita ese espacio. */
+  margin-bottom: 6px;
+  /* APRENDE: Color de letras o dibujos que usan currentColor; cambia el código # o la referencia var para
+   otro tono. */
+  color: var(--ciruela-900);
+}
+/* APRENDE: Afecta a .lazo p. Busca class="lazo" o ese nombre junto a otras clases en el HTML para localizar
+   las piezas. */
+.lazo p {
+  /* APRENDE: Espacio exterior: cuatro medidas son arriba, derecha, abajo e izquierda; dos son vertical y
+   horizontal. auto puede centrar la caja. */
+  margin: 0;
+  /* APRENDE: Color de letras o dibujos que usan currentColor; cambia el código # o la referencia var para
+   otro tono. */
+  color: var(--tinta);
+  /* APRENDE: Tamaño de letras: aumenta la medida para agrandarlas. clamp(mínimo, flexible, máximo) limita
+   cuánto cambian con la pantalla. */
+  font-size: 15px;
+  /* APRENDE: Separación de renglones: aumenta el valor para dar más espacio; 1.65 es 1.65 veces el tamaño de
+   letra. */
+  line-height: 1.55;
+}
+/* APRENDE: Afecta a .orbita--lazo. Busca class="orbita--lazo" o ese nombre junto a otras clases en el HTML
+   para localizar las piezas. */
+.orbita--lazo {
+  /* APRENDE: Color del lazo grande: sustituye el código # por otro para pintarlo de otro tono. */
+  --lazo: #A47ED6;
+}
+/* APRENDE: Afecta a .sello-lazo. Busca class="sello-lazo" o ese nombre junto a otras clases en el HTML para
+   localizar las piezas. */
+.sello-lazo {
+  /* APRENDE: relative permite ubicar piezas dentro; absolute las superpone en su referencia; fixed las fija a
+   la pantalla; sticky las mantiene al bajar. */
+  position: absolute;
+  /* APRENDE: Distancias a los bordes: una medida sirve para todos; cuatro siguen arriba, derecha, abajo e
+   izquierda. 0 cubre toda la referencia. */
+  inset: 16% 30%;
+  /* APRENDE: Medida de ancho; aumenta para agrandar. % depende del bloque que lo contiene; auto deja calcular
+   al navegador. */
+  width: 40%;
+  /* APRENDE: Medida de alto; aumenta para agrandar. % depende del bloque que lo contiene; auto deja calcular
+   al navegador. */
+  height: 68%;
+  /* APRENDE: Movimiento: nombre, duración (s), posibles retraso, ritmo y repeticiones; aumenta los segundos
+   para ralentizar e infinite para repetir. */
+  animation: lazoMecer 5s ease-in-out infinite;
+}
+/* APRENDE: Afecta a .lema-mano. Busca class="lema-mano" o ese nombre junto a otras clases en el HTML para
+   localizar las piezas. */
+.lema-mano {
+  /* APRENDE: grid coloca en cuadrícula, flex en fila o columna, block ocupa una línea y none oculta la
+   pieza. */
+  display: inline-block;
+  /* APRENDE: Espacio por fuera en el lado superior; aumenta para separar más, 0 quita ese espacio. */
+  margin-top: 6px;
+  /* APRENDE: Elige las letras; var(--fuente) toma la elección del principio del archivo. Cambia allí para
+   todo el sitio. */
+  font-family: var(--fuente-acento);
+  /* APRENDE: italic muestra cursiva; normal la quita. */
+  font-style: italic;
+  /* APRENDE: Tamaño de letras: aumenta la medida para agrandarlas. clamp(mínimo, flexible, máximo) limita
+   cuánto cambian con la pantalla. */
+  font-size: clamp(1.4rem, 2.4vw, 1.9rem);
+  /* APRENDE: Color de letras o dibujos que usan currentColor; cambia el código # o la referencia var para
+   otro tono. */
+  color: var(--lavanda-300);
+  /* APRENDE: translateX/Y desplaza, rotate gira y scale cambia tamaño visualmente; prueba cambios
+   pequeños. */
+  transform: rotate(-3deg);
+}
+/* APRENDE: Afecta a .frases. Busca class="frases" o ese nombre junto a otras clases en el HTML para localizar
+   las piezas. */
+.frases {
+  /* APRENDE: grid coloca en cuadrícula, flex en fila o columna, block ocupa una línea y none oculta la
+   pieza. */
+  display: grid;
+  /* APRENDE: Anchos de columnas: 1fr 1fr crea dos iguales; repeat(3, 1fr) tres. auto-fit acomoda las que
+   caben y minmax limita sus tamaños. */
+  grid-template-columns: 1fr 1fr;
+  /* APRENDE: Separación entre piezas; aumenta para alejarlas. Dos medidas indican separación entre filas y
+   columnas. */
+  gap: 22px;
+}
+/* APRENDE: Afecta a .frase. Busca class="frase" o ese nombre junto a otras clases en el HTML para localizar
+   las piezas. */
+.frase {
+  /* APRENDE: relative permite ubicar piezas dentro; absolute las superpone en su referencia; fixed las fija a
+   la pantalla; sticky las mantiene al bajar. */
+  position: relative;
+  /* APRENDE: hidden recorta lo que sobresale; auto permite desplazarlo si no cabe; clip recorta sin crear un
+   área desplazable. */
+  overflow: hidden;
+  /* APRENDE: isolate mantiene juntas las capas de este bloque; conserva el fondo detrás sin perderlo bajo
+   otras secciones. */
+  isolation: isolate;
+  /* APRENDE: Espacio interior entre borde y contenido: cuatro medidas son arriba, derecha, abajo e izquierda;
+   aumenta para dar más aire. */
+  padding: 44px 36px;
+  /* APRENDE: Redondea esquinas: aumenta para suavizarlas; 50% puede formar un círculo y 999px una
+   pastilla. */
+  border-radius: var(--radio-xl);
+  /* APRENDE: Color de letras o dibujos que usan currentColor; cambia el código # o la referencia var para
+   otro tono. */
+  color: var(--blanco);
+  /* APRENDE: Sombra: cada grupo indica desplazamiento horizontal, vertical, difuminado, tamaño y color;
+   aumenta el difuminado para suavizarla. */
+  box-shadow: var(--sombra-m);
+}
+/* APRENDE: Afecta a .frase::before. Busca class="frase" o ese nombre junto a otras clases en el HTML para
+   localizar las piezas. Dibuja una parte extra sin escribirla en HTML. */
+.frase::before {
+  /* APRENDE: Agrega texto o decoración desde el diseño; comillas vacías crean un adorno. Cambia la frase o
+   símbolo entre comillas. */
+  content: "\2665";
+  /* APRENDE: grid coloca en cuadrícula, flex en fila o columna, block ocupa una línea y none oculta la
+   pieza. */
+  display: block;
+  /* APRENDE: Espacio por fuera en el lado inferior; aumenta para separar más, 0 quita ese espacio. */
+  margin-bottom: 12px;
+  /* APRENDE: Tamaño de letras: aumenta la medida para agrandarlas. clamp(mínimo, flexible, máximo) limita
+   cuánto cambian con la pantalla. */
+  font-size: 2rem;
+  /* APRENDE: Separación de renglones: aumenta el valor para dar más espacio; 1.65 es 1.65 veces el tamaño de
+   letra. */
+  line-height: 1;
+  /* APRENDE: Color de letras o dibujos que usan currentColor; cambia el código # o la referencia var para
+   otro tono. */
+  color: var(--coral-500);
+  /* APRENDE: Movimiento: nombre, duración (s), posibles retraso, ritmo y repeticiones; aumenta los segundos
+   para ralentizar e infinite para repetir. */
+  animation: latidoCorazon 1.8s ease-in-out infinite;
+}
+/* APRENDE: Afecta a .frase blockquote. Busca class="frase" o ese nombre junto a otras clases en el HTML para
+   localizar las piezas. */
+.frase blockquote {
+  /* APRENDE: Espacio exterior: cuatro medidas son arriba, derecha, abajo e izquierda; dos son vertical y
+   horizontal. auto puede centrar la caja. */
+  margin: 0;
+  /* APRENDE: Elige las letras; var(--fuente) toma la elección del principio del archivo. Cambia allí para
+   todo el sitio. */
+  font-family: var(--fuente-acento);
+  /* APRENDE: italic muestra cursiva; normal la quita. */
+  font-style: italic;
+  /* APRENDE: Tamaño de letras: aumenta la medida para agrandarlas. clamp(mínimo, flexible, máximo) limita
+   cuánto cambian con la pantalla. */
+  font-size: clamp(1.9rem, 3.6vw, 2.8rem);
+  /* APRENDE: Separación de renglones: aumenta el valor para dar más espacio; 1.65 es 1.65 veces el tamaño de
+   letra. */
+  line-height: 1.1;
+}
+/* APRENDE: Afecta a .frase--clara. Busca class="frase--clara" o ese nombre junto a otras clases en el HTML
+   para localizar las piezas. */
+.frase--clara {
+  /* APRENDE: Fondo: cambia el color o los tonos del degradado; transparent deja ver lo que hay debajo. */
+  background: var(--lavanda-100);
+  /* APRENDE: Color de letras o dibujos que usan currentColor; cambia el código # o la referencia var para
+   otro tono. */
+  color: var(--violeta-700);
+  /* APRENDE: Sombra: cada grupo indica desplazamiento horizontal, vertical, difuminado, tamaño y color;
+   aumenta el difuminado para suavizarla. */
+  box-shadow: none;
+}
+/* APRENDE: Pasos del movimiento lazoMecer: from o 0% es el inicio; to o 100% el final. Cambia desplazamientos
+   y giros dentro para otra trayectoria. */
+@keyframes lazoMecer {
+  /* APRENDE: Momento del movimiento: 0%, 100%. Ajusta los valores de este paso para cambiar cómo empieza,
+   termina o pasa por aquí. */
+  0%, 100% {
+    /* APRENDE: translateX/Y desplaza, rotate gira y scale cambia tamaño visualmente; prueba cambios
+   pequeños. */
+    transform: rotate(0deg);
+  }
+  /* APRENDE: Momento del movimiento: 30%. Ajusta los valores de este paso para cambiar cómo empieza, termina
+   o pasa por aquí. */
+  30% {
+    /* APRENDE: translateX/Y desplaza, rotate gira y scale cambia tamaño visualmente; prueba cambios
+   pequeños. */
+    transform: rotate(-7deg);
+  }
+  /* APRENDE: Momento del movimiento: 70%. Ajusta los valores de este paso para cambiar cómo empieza, termina
+   o pasa por aquí. */
+  70% {
+    /* APRENDE: translateX/Y desplaza, rotate gira y scale cambia tamaño visualmente; prueba cambios
+   pequeños. */
+    transform: rotate(6deg);
+  }
+}
+/* APRENDE: Pasos del movimiento latidoCorazon: from o 0% es el inicio; to o 100% el final. Cambia
+   desplazamientos y giros dentro para otra trayectoria. */
+@keyframes latidoCorazon {
+  /* APRENDE: Momento del movimiento: 0%, 100%. Ajusta los valores de este paso para cambiar cómo empieza,
+   termina o pasa por aquí. */
+  0%, 100% {
+    /* APRENDE: translateX/Y desplaza, rotate gira y scale cambia tamaño visualmente; prueba cambios
+   pequeños. */
+    transform: scale(1);
+  }
+  /* APRENDE: Momento del movimiento: 15%. Ajusta los valores de este paso para cambiar cómo empieza, termina
+   o pasa por aquí. */
+  15% {
+    /* APRENDE: translateX/Y desplaza, rotate gira y scale cambia tamaño visualmente; prueba cambios
+   pequeños. */
+    transform: scale(1.25);
+  }
+  /* APRENDE: Momento del movimiento: 30%. Ajusta los valores de este paso para cambiar cómo empieza, termina
+   o pasa por aquí. */
+  30% {
+    /* APRENDE: translateX/Y desplaza, rotate gira y scale cambia tamaño visualmente; prueba cambios
+   pequeños. */
+    transform: scale(1);
+  }
+  /* APRENDE: Momento del movimiento: 45%. Ajusta los valores de este paso para cambiar cómo empieza, termina
+   o pasa por aquí. */
+  45% {
+    /* APRENDE: translateX/Y desplaza, rotate gira y scale cambia tamaño visualmente; prueba cambios
+   pequeños. */
+    transform: scale(1.15);
+  }
+}
+/* APRENDE: Pasos del movimiento lazoTrazo: from o 0% es el inicio; to o 100% el final. Cambia desplazamientos
+   y giros dentro para otra trayectoria. */
+@keyframes lazoTrazo {
+  /* APRENDE: Momento del movimiento: from. Ajusta los valores de este paso para cambiar cómo empieza, termina
+   o pasa por aquí. */
+  from {
+    /* APRENDE: Cuánto de la línea queda escondido: 100 la oculta completa y 0 la muestra entera. Con esto el
+   lazo parece dibujarse solo. */
+    stroke-dashoffset: 100;
+  }
+  /* APRENDE: Momento del movimiento: to. Ajusta los valores de este paso para cambiar cómo empieza, termina o
+   pasa por aquí. */
+  to {
+    /* APRENDE: Cuánto de la línea queda escondido: 100 la oculta completa y 0 la muestra entera. Con esto el
+   lazo parece dibujarse solo. */
+    stroke-dashoffset: 0;
+  }
+}
+/* APRENDE: Condición de uso: @media (prefers-reduced-motion: no-preference). Este bloque adapta el movimiento
+   a las preferencias o al tipo de pantalla. */
+@media (prefers-reduced-motion: no-preference) {
+  /* APRENDE: Aplica este efecto solo si el navegador entiende (animation-timeline: view()). Conserva el
+   bloque para que otros navegadores puedan mostrar el contenido sin ese efecto. */
+  @supports (animation-timeline: view()) {
+    /* APRENDE: Afecta a .lazo__dibujo path. Busca class="lazo__dibujo" o ese nombre junto a otras clases en
+   el HTML para localizar las piezas. */
+    .lazo__dibujo path {
+      /* APRENDE: Divide la línea en tramos; con 100 la línea completa es un solo tramo que el movimiento
+   puede ir mostrando. */
+      stroke-dasharray: 100;
+      /* APRENDE: Movimiento: nombre, duración (s), posibles retraso, ritmo y repeticiones; aumenta los
+   segundos para ralentizar e infinite para repetir. */
+      animation: lazoTrazo linear both;
+      /* APRENDE: Conecta el movimiento con el desplazamiento o la entrada de la pieza en pantalla; conserva
+   la referencia para ese efecto. */
+      animation-timeline: view();
+      /* APRENDE: Tramo de lectura donde ocurre el movimiento; cambia porcentajes o distancias para adelantar
+   o retrasar. */
+      animation-range: entry 10% cover 35%;
+    }
+  }
+}
+/* APRENDE: Estas reglas se aplican cuando la pantalla mide como máximo 860px. Cambia ese límite para
+   adelantar o retrasar la adaptación del diseño. */
+@media (max-width: 860px) {
+  /* APRENDE: Afecta a .ficha. Busca class="ficha" o ese nombre junto a otras clases en el HTML para localizar
+   las piezas. */
+  .ficha {
+    /* APRENDE: Anchos de columnas: 1fr 1fr crea dos iguales; repeat(3, 1fr) tres. auto-fit acomoda las que
+   caben y minmax limita sus tamaños. */
+    grid-template-columns: 1fr;
+  }
+  /* APRENDE: Afecta a .ficha__foto. Busca class="ficha__foto" o ese nombre junto a otras clases en el HTML
+   para localizar las piezas. */
+  .ficha__foto {
+    /* APRENDE: relative permite ubicar piezas dentro; absolute las superpone en su referencia; fixed las fija
+   a la pantalla; sticky las mantiene al bajar. */
+    position: relative;
+    /* APRENDE: Distancia desde el borde superior de su referencia; ajusta para mover la pieza. Un valor
+   negativo puede sacarla fuera. */
+    top: auto;
+    /* APRENDE: Medida de ancho; aumenta para agrandar. % depende del bloque que lo contiene; auto deja
+   calcular al navegador. */
+    width: min(240px, 72%);
+  }
+  /* APRENDE: Afecta a .frases. Busca class="frases" o ese nombre junto a otras clases en el HTML para
+   localizar las piezas. */
+  .frases {
+    /* APRENDE: Anchos de columnas: 1fr 1fr crea dos iguales; repeat(3, 1fr) tres. auto-fit acomoda las que
+   caben y minmax limita sus tamaños. */
+    grid-template-columns: 1fr;
+  }
+}
+/* APRENDE: Estas reglas se aplican cuando la pantalla mide como máximo 640px. Cambia ese límite para
+   adelantar o retrasar la adaptación del diseño. */
+@media (max-width: 640px) {
+  /* APRENDE: Afecta a .lazo. Busca class="lazo" o ese nombre junto a otras clases en el HTML para localizar
+   las piezas. */
+  .lazo {
+    /* APRENDE: Anchos de columnas: 1fr 1fr crea dos iguales; repeat(3, 1fr) tres. auto-fit acomoda las que
+   caben y minmax limita sus tamaños. */
+    grid-template-columns: 66px 1fr;
+    /* APRENDE: Espacio interior entre borde y contenido: cuatro medidas son arriba, derecha, abajo e
+   izquierda; aumenta para dar más aire. */
+    padding: 22px 18px 22px 12px;
+  }
+  /* APRENDE: Afecta a .lazo__dibujo. Busca class="lazo__dibujo" o ese nombre junto a otras clases en el HTML
+   para localizar las piezas. */
+  .lazo__dibujo {
+    /* APRENDE: Medida de ancho; aumenta para agrandar. % depende del bloque que lo contiene; auto deja
+   calcular al navegador. */
+    width: 66px;
+  }
+  /* APRENDE: Afecta a .especialidad, .apoyo. Busca class="especialidad" o ese nombre junto a otras clases en
+   el HTML para localizar las piezas. */
+  .especialidad,
+  .apoyo {
+    /* APRENDE: Espacio interior entre borde y contenido: cuatro medidas son arriba, derecha, abajo e
+   izquierda; aumenta para dar más aire. */
+    padding: 26px;
+  }
+}
